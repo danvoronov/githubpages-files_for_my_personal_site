@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="nojs html" lang="ru-RU">
+ <head>
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+    <title>soshenko33</title>
+     <meta name="description" content="Дан Воронов. Киев">
+	 <meta name="author" content="Dan Voronov"> 
+   </head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>  
+   <style>
+	   #wrapper{ width:900px; padding: 10px 20px;  }
+
+		.door{
+		    width:225px;
+		    height:100%;
+		    display:block;
+		    float:left;
+		    text-align: center;
+		    cursor: pointer;
+		}
+		.door img {
+			width: 224px; 
+			}
+				
+		#logo{
+		    width:300px;
+		    height:100%;
+		    margin-top: 15px;
+		    display:block;
+		    float:left;
+		}
+		#mainContent{
+			margin: 20px;
+		    width:560px;
+		    display:block;
+		    float:left;
+		    font-size: 20pt;
+		    font-family: sans-serif;
+		}
+
+</style>
+	<script>
+
+
+$( document ).ready(function() {
+			
+	$('.door').each(function(){  $(this).attr("play", "0"); 		});
+			
+			    var audioElement1 = document.createElement('audio');
+				audioElement1.setAttribute('src', 'snd/d1.mp3');
+			    var audioElement2 = document.createElement('audio');
+				audioElement2.setAttribute('src', 'snd/d2.mp3');
+			    var audioElement3 = document.createElement('audio');
+				audioElement3.setAttribute('src', 'snd/d3.mp3');
+			    var audioElement4 = document.createElement('audio');
+				audioElement4.setAttribute('src', 'snd/d4.mp3');
+			    var audioElement5 = document.createElement('audio');
+				audioElement5.setAttribute('src', 'snd/d5.mp3');
+			    var audioElement6 = document.createElement('audio');
+				audioElement6.setAttribute('src', 'snd/d6.mp3');
+			    var audioElement7 = document.createElement('audio');
+				audioElement7.setAttribute('src', 'snd/d7.mp3');
+			    var audioElement8 = document.createElement('audio');
+				audioElement8.setAttribute('src', 'snd/d8.mp3');
+			    var audioElement9 = document.createElement('audio');
+				audioElement9.setAttribute('src', 'snd/d9.mp3');
+			    var audioElement10 = document.createElement('audio');
+				audioElement10.setAttribute('src', 'snd/d10.mp3');
+			    var audioElement11 = document.createElement('audio');
+				audioElement11.setAttribute('src', 'snd/d11.mp3');
+			    var audioElement12 = document.createElement('audio');
+				audioElement12.setAttribute('src', 'snd/d12.mp3');
+																    
+				audioElement1.addEventListener('ended', function() {  this.play();}, false);
+				audioElement2.addEventListener('ended', function() {  this.play();}, false);
+				audioElement3.addEventListener('ended', function() {  this.play();}, false);    
+				audioElement4.addEventListener('ended', function() {  this.play();}, false);
+				audioElement5.addEventListener('ended', function() {  this.play();}, false);
+				audioElement2.addEventListener('ended', function() {  this.play();}, false);
+				audioElement6.addEventListener('ended', function() {  this.play();}, false);
+				audioElement7.addEventListener('ended', function() {  this.play();}, false);
+				audioElement8.addEventListener('ended', function() {  this.play();}, false);						    
+				audioElement9.addEventListener('ended', function() {  this.play();}, false);
+				audioElement10.addEventListener('ended', function() {  this.play();}, false);
+				audioElement11.addEventListener('ended', function() {  this.play();}, false);		
+				audioElement12.addEventListener('ended', function() {  this.play();}, false);
+    
+    audioElement3.addEventListener("canplay",function(){
+	  
+    });
+    
+    $( ".door" ).click(function() {
+			
+			if ($(this).attr("play") == "0") {
+				$(this).prepend('<img id="'+$(this).attr("id")+'_glow" src="img/glow.gif" style="z-index: 9999; position: absolute; opacity: 0.6;    filter: alpha(opacity=60);" />');
+				$(this).attr("play", "1");
+				if ($(this).attr("id").substring(1) == "1") audioElement1.play();
+				else if ($(this).attr("id").substring(1) == "2") audioElement2.play();
+				else if ($(this).attr("id").substring(1) == "3") audioElement3.play();
+				else if ($(this).attr("id").substring(1) == "4") audioElement4.play();
+				else if ($(this).attr("id").substring(1) == "5") audioElement5.play();
+				else if ($(this).attr("id").substring(1) == "6") audioElement6.play();
+				else if ($(this).attr("id").substring(1) == "7") audioElement7.play();
+				else if ($(this).attr("id").substring(1) == "8") audioElement8.play();
+				else if ($(this).attr("id").substring(1) == "9") audioElement9.play();
+				else if ($(this).attr("id").substring(1) == "10") audioElement10.play();
+				else if ($(this).attr("id").substring(1) == "11") audioElement11.play();
+				else if ($(this).attr("id").substring(1) == "12") audioElement12.play();
+				}
+			else {
+				$(this).attr("play", "0");
+				if ($(this).attr("id").substring(1) == "1") audioElement1.pause();
+				else if ($(this).attr("id").substring(1) == "2") audioElement2.pause();
+				else if ($(this).attr("id").substring(1) == "3") audioElement3.pause();
+				else if ($(this).attr("id").substring(1) == "4") audioElement4.pause();
+				else if ($(this).attr("id").substring(1) == "5") audioElement5.pause();
+				else if ($(this).attr("id").substring(1) == "6") audioElement6.pause();
+				else if ($(this).attr("id").substring(1) == "7") audioElement7.pause();
+				else if ($(this).attr("id").substring(1) == "8") audioElement8.pause();
+				else if ($(this).attr("id").substring(1) == "9") audioElement9.pause();
+				else if ($(this).attr("id").substring(1) == "10") audioElement10.pause();
+				else if ($(this).attr("id").substring(1) == "11") audioElement11.pause();
+				else if ($(this).attr("id").substring(1) == "12") audioElement12.pause();
+
+				$("#"+$(this).attr("id")+"_glow").remove();
+			}
+    });
+    			
+});
+
+	</script>
+ <body>
+<div  style="margin: auto; max-width: 920px;">
+	<div id="wrapper" style="height: 300px">
+	    <div id="logo"><img src="map_pattern.png" alt="Soshenko 33 map pattern" 	height="300" /></div>
+	    <div id="mainContent">На Сошенко 33 у майстернях творили: 
+		    <br/>
+		    <div style="font-size: 10pt;"><br/>Дубовик Олександр Михайлович (1962-65), Вайнштейн Михайло Ісакович (1965-67), Гурін Василь Іванович (1967-69), Лерман-Луцкевич Зоя Наумовна (1969-71), Лопата Василь Іванович (1970-72), Одайник Сергій Вадимович (1973-78), Сотник Леонід Іванович (1972-75), Гордійчук Валентин Олександрович (1974-77), Якутович Сергій Георгійович (1977-81), Гордієць Євген Якович (1978-81), Штанко Екатерина Владимировна (1979-83), Губський Ігор Іванович (1981-84), Гейко Марія Дмитрівна (1982-85), Іванов-Ахметов Володимир Михайлович (1983-85), Радько Владимир Андреевич (1984-87), Твердий Анатолій Миколайович (1985-88), Сидоренко Віктор Дмитрович (1985-88), Михайлов Борис Александрович (1987-90), Полтавець-Гуйда Оксана Вікторівна (1989-92), Ходаківська Ксенія Володимирівна (1992-95), Левицький А.Є., Майстренко Ю.В., Михайлов І.Б., Наконечна Л.В., Сабакарь С.Є., Александрович Ф.А., Сова С.С., Жулінський О.М., Ковач Т.О., Озаринська І.О. та багато інших… <br/><br/></div>
+	    
+	    Натисніть, щоб почути: </div>
+	</div>	 
+
+	<div id="wrapper">
+	    <div id="d1" class="door"><img src="img/d1.gif" /></div>
+	    <div id="d2" class="door"><img src="img/d2.gif" /></div>
+	    <div id="d3" class="door"><img src="img/d3.gif" /></div>
+	    <div id="d4" class="door"><img src="img/d4.gif" /></div>
+	    <div id="d5" class="door"><img src="img/d5.gif" /></div>
+	    <div id="d6" class="door"><img src="img/d6.gif" /></div>
+	    <div id="d7" class="door"><img src="img/d7.gif" /></div>
+	    <div id="d8" class="door"><img src="img/d8.gif" /></div>
+	    <div id="d9" class="door"><img src="img/d9.gif" /></div>
+	    <div id="d10" class="door"><img src="img/d10.gif" /></div>
+	    <div id="d11" class="door"><img src="img/d11.gif" /></div>
+	    <div id="d12" class="door"><img src="img/d12.gif" /></div>        
+	</div>
+	 
+	   <div id="copy" style="clear: both; font-size: 8pt; text-align: center; padding-top: 35px;">(c) <a href="http://dan.kiev.ua/">Дан Воронов</a>, 2018 для <a href="http://soshenko33.tumblr.com/summer_school" target="_blank">Літня архітектурна школа</a>.</div> 
+
+		
+</div> 	
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-5293921-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body></html>
+
