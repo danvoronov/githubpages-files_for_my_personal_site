@@ -1,0 +1,63 @@
+<manifest alg="2" build="2017.0.2.363" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="FTP" domain="87.dan.kiev.ua" resolutions="1x" timestamp="1492385358783" ftp_hostname="ftp://dan.ftp.ukraine.com.ua" ftp_rootfolder="/">
+  <folder name="css">
+    <file name="site_global.css" crc="4167257299"/>
+    <file name="index.css" crc="123262860" ref="index"/>
+    <file name="master_a-master.css" crc="4092953473" ref="index"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index"/>
+    <file name="museutils.js" crc="4232573551" ref="index"/>
+    <file name="whatinput.js" crc="86476730" ref="index"/>
+    <file name="museconfig.js" crc="4152223963" ref="index"/>
+    <file name="jquery.watch.js" crc="3844535323" ref="index"/>
+    <file name="require.js" crc="4234670167" ref="index"/>
+  </folder>
+  <folder name="images">
+    <file name="coner.jpg" crc="139554892" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="u149-4.png" crc="508338618" ref="index"/>
+    <file name="block_sm.jpg" crc="196315000" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="block_big.jpg" crc="322063263" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="universe-wallpaper-131-crop-u5444.jpg" crc="517670593" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="осознанность есть добродетель.jpg" crc="3978321355" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="universe-wallpaper-131.jpg" crc="4070932671" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="gornoe-ozero-oboiorig-crop-u5541.jpg" crc="3940163448" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="img_4867-crop-u5521.jpg" crc="4215862115" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+  </folder>
+  <file name="index.html" crc="3837070545" seo="true" mt="1492385333129" redirect="true"/>
+  <site>
+    <paragraphStyle className="normal_text" uid="U49"/>
+    <textLinkStyle className="ts" uid="U5590"/>
+    <nestedListStyle className="nls-None" uid="U52"/>
+  </site>
+  <renditions>
+    <rendition device="desktop">
+      <page name="87 online" filename="index.html" muse_href="page:U93" master="U72">
+        <breakpoint uid="U83" maxwidth="1150" minwidth="0" squishy="false"/>
+      </page>
+      <masterPage name="A-Master" master="U62" uid="U72">
+        <breakpoint uid="U73" maxwidth="960" minwidth="0" squishy="true"/>
+      </masterPage>
+      <masterPage name="None" master="null" uid="U62">
+        <breakpoint uid="U63" maxwidth="960" minwidth="0" squishy="true"/>
+      </masterPage>
+    </rendition>
+  </renditions>
+</manifest>
