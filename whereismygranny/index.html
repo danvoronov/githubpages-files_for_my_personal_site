@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>#WHEREISMYGRANNY / #ГДЕМОЯБАБУЛЯ – Dan Voronov</title>
+  <meta name="description" content="#WHEREISMYGRANNY perfomance by Dan Voronov. Перфоманс #ГДЕМОЯБАБУЛЯ, Дан Воронов. 18 марта 2018.">
+  <meta name="author" content="Dan Voronov">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>  
+  <style>
+	  body {background-color: black; padding: 10px; margin: 0; font-family: sans-serif; color: black } 
+	  a { color: black}
+	  .overbox-eng a  { 	  color: green;  }
+	  p { margin: 10px;}
+	  .mapouter{overflow:hidden;height:670px;width:99%; margin: 0 auto;}
+	  .gmap_canvas {background:none!important;height:670px;width:100%;}
+	  .overbox-eng { text-align: right; background-color: rgba(255, 255, 255, 0.58); height: 36px; position: absolute; left: 414px; top: 37px;  padding: 10px; width: 45px; z-index: 10; font-size: 80%}
+	  
+	  .overbox {background-color: white; height: 170px; position: absolute; left: 25px; top: 17px;  padding: 0 5px; width: 405px; z-index: 20;}
+	  .overbox2 {background-color: white; height: 237px; position: absolute; left: 25px; top: 194px;  padding: 0 5px; width: 300px; z-index: 20}	  
+	  .overbox3 {background-color: rgba(57, 81, 255, 0.74); height: 40px; position: absolute; left: 25px; top: 440px;  padding: 5px; width: 135px; z-index: 20}
+	  	  	  
+	  	  .overboxtxt {position: absolute; left: 25px; top: 520px;  padding: 5px 10px; width: 360px; font-size: 60px; color: white; text-shadow: 0 0  2px rgba(0,0,0,0.22); z-index: 20}
+	  	  
+	  	  .sha {-webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.3);
+-moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.3);
+box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.3); 
+color: rgba(140, 18, 100, 1); }
+      #map {
+        height: 100%;
+      }
+  </style>	  
+</head>
+
+<body>
+<div class="overboxtxt">#WHEREISMYGRANNY</div>
+<div class="overbox-eng">&nbsp;&nbsp; <a href="#" onclick="changelang()">рус яз</a></div>
+<div class="overbox sha"> 
+	
+<p>Мy grandmother Lena is dead for several years. I still thinking about her.</p>
+
+<p>On March 31, 2018, I, <a href="https://dan.kiev.ua/">Dan Voronov</a>, will go to the Lesnoe Cemetery with intention to find her grave.</p>
+
+<p style="font-size: 75%">Because my parents don't telling me where she was buried. Because I loved her and for me, comparing with other relatives, grandma was a vivid expression of creativity and entrepreneurship. Because I want to say goodbye.</p>
+
+</div>
+
+<div class="overbox2 sha"> 
+<p>The main question of performance are the limits of intuition and self-trust. Granny was buried in the grave with my grandfather. I was taken to his grave in my childhood. That is, my body was there and subconscious mind knows exactly where this place is. But of course I don't remember.</p>
+
+<p>Will I be able to come where I want?</p>
+
+<p>I do not know.</p>
+</div>
+<div class="overbox3 sha"> 	
+	<p><a href="https://www.facebook.com/events/349015648915371/" target="_blank">facebook event</a> </p>
+</div>
+	<div class="mapouter"><div class="gmap_canvas">	
+   <div id="map"></div></div></div>
+    <script>
+
+      var map;
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: {lat: 50.499869, lng: 30.632933}
+        });
+
+ 		new google.maps.KmlLayer({
+	 		url: 'http://dan.kiev.ua/whereismygranny/lesn31.kmz', 
+	 		preserveViewport: true,
+	 		suppressInfoWindows: true,
+	 		map: map
+	 	});
+      }
+
+    </script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA33-_N7A0WgbkCACA83IeqtcOK3iyXkEY&callback=initMap" async defer></script>	
+
+<script>	  
+	function changelang() {  $(".overbox-eng").hide();
+		  $(".overbox").html('<p>Уже несколько лет как моя бабушка Лена мертва. Я вспоминаю о ней.</p><p>31 марта 2018 я, <a href="https://dan.kiev.ua/">Дан Воронов</a>, буду ходить по Лесному кладбищу и искать её могилу. </p><p style="font-size: 75%">Потому что мои родители не говорят мне где её похоронили. Потому что я её любил и для меня, сравнивая с остальными родствиничками, бабуля была ярким показателем креативности и предпринимательства. Потому что я хочу попрощаться.</p>');
+		  $(".overbox2").html('<p>Вопрос перфоманса в границах интуиции и доверия себе. Бабуля похоронена в могилу вместе с дедушкой, который умер когда мне было пару лет. На эту могилу меня возили в детстве. То есть там мое тело было и подсознание точно знает где это место. Но я конечно же не помню. </p><p>Смогу ли я прийти куда хочу? </p><p>Не знаю.</p>');		
+		  $(".overbox3").html('<p><a href="https://www.facebook.com/events/349015648915371/" target="_blank">facebook ивент</a> </p>');		  
+		  	  $(".overboxtxt").html('#ГДЕМОЯБАБУЛЯ');		  	 
+	  }	  
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-5293921-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
