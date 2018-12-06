@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Комментарии: Пропаганда и массовое влияние</title>
+	<atom:link href="http://dan.kiev.ua/blog/2012/04/16/propaganda-i-massovoe-vliyanie/feed/" rel="self" type="application/rss+xml" />
+	<link>http://dan.kiev.ua/blog/2012/04/16/propaganda-i-massovoe-vliyanie/</link>
+	<description>персональный сайт</description>
+	<lastBuildDate>Tue, 17 May 2016 12:53:00 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	
+	<item>
+		<title>Автор: DanVoronov</title>
+		<link>http://dan.kiev.ua/blog/2012/04/16/propaganda-i-massovoe-vliyanie/#comment-53</link>
+		<dc:creator><![CDATA[DanVoronov]]></dc:creator>
+		<pubDate>Tue, 17 Apr 2012 22:21:00 +0000</pubDate>
+		<guid isPermaLink="false">http://www.dan.kiev.ua/?p=4237#comment-53</guid>
+		<description><![CDATA[раньше мы бегали за людьми и просили &quot;купите у нас пианино&quot;, теперь они приходть в очередь и умоляют нас &quot;продайте пианино&quot;]]></description>
+		<content:encoded><![CDATA[<p>раньше мы бегали за людьми и просили &#171;купите у нас пианино&#187;, теперь они приходть в очередь и умоляют нас &#171;продайте пианино&#187;</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

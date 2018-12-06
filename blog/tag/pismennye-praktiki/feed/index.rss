@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>письменные практики &#8212; Дан Воронов</title>
+	<atom:link href="http://dan.kiev.ua/blog/tag/pismennye-praktiki/feed/" rel="self" type="application/rss+xml" />
+	<link>http://dan.kiev.ua/blog</link>
+	<description>персональный сайт</description>
+	<lastBuildDate>Sun, 30 Sep 2018 19:36:59 +0000</lastBuildDate>
+	<language>ru-RU</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	
+	<item>
+		<title>Текст как инструмент личностного роста</title>
+		<link>http://dan.kiev.ua/blog/2016/10/01/tekst-kak-instrument-lichnostnogo-rosta/</link>
+		<pubDate>Sat, 01 Oct 2016 08:31:14 +0000</pubDate>
+		<dc:creator><![CDATA[Дан Воронов]]></dc:creator>
+				<category><![CDATA[Мышление]]></category>
+		<category><![CDATA[Пси-ТВ]]></category>
+		<category><![CDATA[Сделал]]></category>
+		<category><![CDATA[видео]]></category>
+		<category><![CDATA[личность]]></category>
+		<category><![CDATA[письменные практики]]></category>
+		<category><![CDATA[презентация]]></category>
+		<category><![CDATA[упражнения+паттерны]]></category>
+
+		<guid isPermaLink="false">http://www.dan.kiev.ua/?p=5675</guid>
+		<description><![CDATA[Моя видеолекция о письменных практиках слайды отдельно можно посмотреть на speakerdeck.com. созданная по мотивам курса из 4 встреч, который я проводил летом 2016 года.]]></description>
+				<content:encoded><![CDATA[<p>Моя видеолекция о письменных практиках</p>
+<p><iframe width="440" height="248" src="https://www.youtube-nocookie.com/embed/Eiyj10Bsh7w?rel=0" frameborder="0" allowfullscreen></iframe></p>
+<p>слайды отдельно можно посмотреть на <a href="https://speakerdeck.com/dankievua/tiekst-kak-instrumient-lichnostnogho-rosta" target="_blank">speakerdeck.com</a>.</p>
+<p></p>
+<p>созданная по мотивам курса из 4 встреч, который я проводил летом 2016 года.</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

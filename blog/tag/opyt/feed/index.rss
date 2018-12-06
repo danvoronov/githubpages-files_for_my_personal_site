@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>опыт &#8212; Дан Воронов</title>
+	<atom:link href="http://dan.kiev.ua/blog/tag/opyt/feed/" rel="self" type="application/rss+xml" />
+	<link>http://dan.kiev.ua/blog</link>
+	<description>персональный сайт</description>
+	<lastBuildDate>Sun, 30 Sep 2018 19:36:59 +0000</lastBuildDate>
+	<language>ru-RU</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	
+	<item>
+		<title>Видеосъемка   фотоаппаратом</title>
+		<link>http://dan.kiev.ua/blog/2015/05/30/videosemka-fotoapparatom/</link>
+		<pubDate>Sat, 30 May 2015 20:26:46 +0000</pubDate>
+		<dc:creator><![CDATA[Дан Воронов]]></dc:creator>
+				<category><![CDATA[Сделал]]></category>
+		<category><![CDATA[Творчество]]></category>
+		<category><![CDATA[видео]]></category>
+		<category><![CDATA[опыт]]></category>
+		<category><![CDATA[презентация]]></category>
+		<category><![CDATA[съемка]]></category>
+
+		<guid isPermaLink="false">http://www.dan.kiev.ua/?p=5455</guid>
+		<description><![CDATA[26 апреля 2015 прошла моя лекция в фотостудии КраЩе. Как фотографу начать снимать видео (слайды). Линки: Фестивали artdocfest.ru / docudays.org.ua Школа документального кино Марины Разбежкиной razbeg.org 31 рейс &#8212; кусок милана &#8212; фрагмент пример роллинг шатера синхронизирует звук программа профиль под цветокор и статья о нем.]]></description>
+				<content:encoded><![CDATA[<p>26 апреля 2015 прошла моя лекция в фотостудии КраЩе.</p>
+<p>Как фотографу начать снимать видео (<a href="https://speakerdeck.com/dankievua/vidieosiemka-fotoapparatom" target="_blank">слайды</a>).</p>
+<p><script class="speakerdeck-embed" src="//speakerdeck.com/assets/embed.js" async="" data-id="7b1630580c9c44168cc09dcf5070f9d1" data-ratio="1.77777777777778"></script></p>
+<p>Линки:</p>
+<ul>
+<li>Фестивали <a href="http://artdocfest.ru" target="_blank">artdocfest.ru</a> / <a href="http://docudays.org.ua" target="_blank">docudays.org.ua</a></li>
+<li>Школа документального кино Марины Разбежкиной <a href="http://razbeg.org" target="_blank">razbeg.org</a></li>
+<li>31 рейс &#8212; <a href="https://vimeo.com/33721791" target="_blank">кусок</a></li>
+<li>милана &#8212; <a href="https://www.youtube.com/watch?v=dJe-0tPbrDk" target="_blank">фрагмент</a></li>
+<li><a href="https://www.youtube.com/watch?v=Ji8zEKwsQ8w" target="_blank">пример</a> роллинг шатера</li>
+<li>синхронизирует звук <a href="http://www.redgiant.com/products/pluraleyes/" target="_blank">программа</a></li>
+<li><a href="http://www.technicolor.com/en/solutions-services/cinestyle" target="_blank">профиль</a> под цветокор и <a href="http://vistavideo.ru/blog/hard-and-soft/40-technicolor-cinestyle-i-drugie-stili-izobrazheniya-dlya-canon-eos.html" target="_blank">статья о нем</a>.</li>
+</ul>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

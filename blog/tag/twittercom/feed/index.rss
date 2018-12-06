@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>twitter.com &#8212; Дан Воронов</title>
+	<atom:link href="http://dan.kiev.ua/blog/tag/twittercom/feed/" rel="self" type="application/rss+xml" />
+	<link>http://dan.kiev.ua/blog</link>
+	<description>персональный сайт</description>
+	<lastBuildDate>Sun, 30 Sep 2018 19:36:59 +0000</lastBuildDate>
+	<language>ru-RU</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	
+	<item>
+		<title>Моя подборка MAC софта</title>
+		<link>http://dan.kiev.ua/blog/2009/06/29/moya-podborka-mac-softa/</link>
+		<pubDate>Mon, 29 Jun 2009 06:50:31 +0000</pubDate>
+		<dc:creator><![CDATA[Дан Воронов]]></dc:creator>
+				<category><![CDATA[Компьютерное]]></category>
+		<category><![CDATA[twitter.com]]></category>
+		<category><![CDATA[программы (Win+Mac)]]></category>
+		<category><![CDATA[ссылка]]></category>
+
+		<guid isPermaLink="false">http://www.dan.kiev.ua/2009/06/29/moya-podborka-mac-softa/</guid>
+		<description><![CDATA[Уже восемь месяцев живу в Леопарде и за это время поменял много разного софта. Кроме очевидного опишу что у меня установлено. В первую очередь закинул в фон Slife – монитор того сколько я сижу в какой программе. Местами статистика глючная, но в общих чертах похожа и полезна. Чтобы это програмулина не мозолила глаза в доке [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Уже восемь месяцев живу в <strong>Леопарде</strong> и за это время поменял много разного софта. Кроме очевидного опишу что у меня установлено.</p>
+<p>В первую очередь закинул в фон <a href="http://www.slifelabs.com/" target="_blank">Slife</a> – <strong>монитор</strong> того сколько я сижу в какой программе. Местами статистика глючная, но в общих чертах похожа и полезна.</p>
+<p>Чтобы это програмулина не мозолила глаза в доке убрал её с помощью <a href="http://homepage.mac.com/fahrenba/programs/dockless/dockless.html" target="_blank">Dockless</a>.</p>
+<p>Долго искал общее <strong>прокси</strong> (Skype не хотел брать настройки системы) – помог <a href="http://www.proxifier.com/mac/" target="_blank">Proxifier</a>, которого тоже обезиконил.</p>
+<p>Много полезного делает повешенная на ctrl+пробел <strong>консоль</strong> <a href="http://www.blacktree.com/" target="_blank">Quıcĸsıɩⅴεʀ</a>. Пробовал подобную разработку от гугл, но она не плагино-модульная и тормозила у меня прилично.</p>
+<p>Лидеры убийства моего времени – FireFox (c 1password+cooliris) и Adium. В <strong>живой журнал</strong> стал писать удобным <a href="http://www.macupdate.com/info.php/id/12482" target="_blank">Xjournal</a>. А вот для блога не могу ничего хороше найти &#8212; ни ecto, ни Blogo меня не радуют.</p>
+<p>Слава разработчика <a href="http://www.atebits.com/tweetie-mac/" target="_blank">Tweetie</a> за удобство работы с <a href="https://twitter.com/dan_kiev_ua" target="_blank">твиттером</a>. Почти такая же слава разработчикам <a href="http://culturedcode.com/things/" target="_blank">Things</a> за совместимый с моей головой планировщик дел.</p>
+<p>Из работы с <strong>вебдев</strong> &#8212; <a href="http://www.panic.com/transmit/" target="_blank">Transmit</a> (ftp) и <a href="http://www.panic.com/coda/" target="_blank">Coda</a> (кодинг). Кстати у последней программы один из лучших сайтов, что я встречал в сети.</p>
+<p><strong>Читаю</strong> я Stanza (txt+) и <a href="http://skim-app.sourceforge.net/" target="_blank">Skim</a> (pdf). Tofu удалил. Никак не сравнимо с виндовс где есть Mobipocket eBook Reader.</p>
+<p><strong>Заметки</strong> хранятся в системе тегового процессора <a href="http://reinventedsoftware.com/together/" target="_blank">Together</a>. Туда же кидаю все нужные информационные <strong>файлы</strong>. Пока больше похоже на помойку. <img src="https://s.w.org/images/core/emoji/11/72x72/1f609.png" alt="😉" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>Обложки <strong>музыки</strong> грузит в iTunes <a href="http://www.eternalstorms.at/gimmesometune/" target="_blank">GimmeSomeTune</a>, оно же скроблит в <a href="http://www.lastfm.ru/user/dan-kiev-ua">last.fm</a> и позволяет менять песни глобальными хоткеями.</p>
+<p>Мучения и тестирования десятка программ <strong>работы с финансами</strong> привели меня к бесплатной <a href="http://www.lyricapps.com/iCompta/" target="_blank">iCompta</a>. Конечно, она тоже не идеальна – особенно злит невозможность отключить лишние функции.</p>
+<p>Обновляется весь этот зоопарк через <a href="http://metaquark.de/appfresh/" target="_blank">AppFresh</a>.</p>
+<p>С автопереключающейся русской клавиатурой пока глухо. <a href="http://pihto.com/kirgudu" target="_blank">Киргуду</a> я настроить не смог. <img src="https://s.w.org/images/core/emoji/11/72x72/1f641.png" alt="🙁" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>Интересно в комментариях прочитать что ещё есть интересного.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Моё с Twitter.com за неделю</title>
+		<link>http://dan.kiev.ua/blog/2008/09/04/moyo-s-twittercom-za-nedelyu-2/</link>
+		<pubDate>Thu, 04 Sep 2008 20:59:59 +0000</pubDate>
+		<dc:creator><![CDATA[Дан Воронов]]></dc:creator>
+				<category><![CDATA[Мой дневник]]></category>
+		<category><![CDATA[twitter.com]]></category>
+
+		<guid isPermaLink="false">http://www.dan.kiev.ua/2008/09/04/moyo-s-twittercom-za-nedelyu-2/</guid>
+		<description><![CDATA[Эх как красиво звучит надписть в рус версии Висты: «план электропитания» #]]></description>
+				<content:encoded><![CDATA[<ul class="aktt_tweet_digest">
+<li>Эх как красиво звучит надписть в рус версии Висты: «план электропитания» <a href="http://twitter.com/dan_kiev_ua/statuses/902163302">#</a></li>
+</ul>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Моё с Твиттера за неделю</title>
+		<link>http://dan.kiev.ua/blog/2008/08/28/moyo-s-tvittera-za-nedelyu/</link>
+		<pubDate>Thu, 28 Aug 2008 20:59:59 +0000</pubDate>
+		<dc:creator><![CDATA[Дан Воронов]]></dc:creator>
+				<category><![CDATA[Мой дневник]]></category>
+		<category><![CDATA[twitter.com]]></category>
+
+		<guid isPermaLink="false">http://www.dan.kiev.ua/2008/08/28/moyo-s-tvittera-za-2008-08-28-2/</guid>
+		<description><![CDATA[опять и опять я иду на трасовый # Как то очень странно действует на меня транс: то после встречи мне радостнее, то наоборот грустно и задумчиво # В sex-отношения САМООЦЕНКА каждого влияет очень на многое. Вне её только: текущее количество наличности и физическая возможность к сексу # Сохранение черновиков в wordpress ЗЛО: пост которыя я [&#8230;]]]></description>
+				<content:encoded><![CDATA[<ul class="aktt_tweet_digest">
+<li>опять и опять я иду на трасовый <a href="http://twitter.com/dan_kiev_ua/statuses/894453820">#</a></li>
+<li>Как то очень странно действует на меня транс: то после встречи мне радостнее, то наоборот грустно и задумчиво <a href="http://twitter.com/dan_kiev_ua/statuses/894795351">#</a></li>
+<li>В sex-отношения САМООЦЕНКА каждого влияет очень на многое. Вне её только: текущее количество наличности и физическая возможность к сексу <a href="http://twitter.com/dan_kiev_ua/statuses/895304318">#</a></li>
+<li>Сохранение черновиков в wordpress ЗЛО: пост которыя я писал 56 минут оно сохранило только первые три абзаца ((( <a href="http://twitter.com/dan_kiev_ua/statuses/895874751">#</a></li>
+<li>В большом при большом городе чел страдает в первую очердь от двух г: одиночества и анонимности <a href="http://twitter.com/dan_kiev_ua/statuses/895967046">#</a></li>
+<li>Ух. Мы теперь и подкастеры — <a rel="nofollow" href="http://life-management-club.podfm.ru/">http://life-management-club.podfm.ru/</a> <a href="http://twitter.com/dan_kiev_ua/statuses/896760538">#</a></li>
+<li>Нашел такой инструмент визуализировать облаком слова из RSS или куска текста <a rel="nofollow" href="http://wordle.net/create">http://wordle.net/create</a> <a href="http://twitter.com/dan_kiev_ua/statuses/897216251">#</a></li>
+<li>есть предположение, что многое сводиться к убежедениям «возможно ЭТО (для меня) или нет». Обучение — просто изменение этих убеждений <a href="http://twitter.com/dan_kiev_ua/statuses/898112220">#</a></li>
+<li>Всё к той же теме: «Если вы считаете, что вы проиграете, вы уже проиграли» <a href="http://twitter.com/dan_kiev_ua/statuses/898691472">#</a></li>
+<li>Currently Browsing: <a rel="nofollow" href="http://tinyurl.com/5wule8">http://tinyurl.com/5wule8</a> #</li>
+<li>Currently Browsing: <a rel="nofollow" href="http://www.spotters.net.ua/">http://www.spotters.net.ua/</a> <a href="http://twitter.com/dan_kiev_ua/statuses/899672871">#</a></li>
+<li>готовлю статейку о том, как разворачивать стартап &#8212; на днях будет. А сегодня в нашем клубе: планирование и спонтанность. 18:15 мУниверситет <a href="http://twitter.com/dan_kiev_ua/statuses/900482198">#</a></li>
+<li>Знаете так грустно &#8212; после того как исчезли смс акрутальность Твитера упала в разы <a href="http://twitter.com/dan_kiev_ua/statuses/900482800">#</a></li>
+<li>Currently Browsing: <a rel="nofollow" href="http://russianworld.wikia.com/wiki/Pleasure">http://russianworld.wikia.com/wiki/Pleasure</a> <a href="http://twitter.com/dan_kiev_ua/statuses/900937061">#</a></li>
+</ul>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Моё с Твиттера за неделю</title>
+		<link>http://dan.kiev.ua/blog/2008/08/21/moyo-s-tvittera-za-mesyats/</link>
+		<pubDate>Thu, 21 Aug 2008 20:59:59 +0000</pubDate>
+		<dc:creator><![CDATA[Дан Воронов]]></dc:creator>
+				<category><![CDATA[Мой дневник]]></category>
+		<category><![CDATA[twitter.com]]></category>
+
+		<guid isPermaLink="false">http://www.dan.kiev.ua/2008/08/21/moyo-s-tvittera-za-2008-08-21/</guid>
+		<description><![CDATA[Настроил как вы заметили по прошлому сообщению уведомление о новых постах у меня в блоге (www.dan.kiev.ua) # По поводу вчерашней темы транс лаборатории: &#8212; Ну ты и дятел! &#8212; Это я дятел?! &#8212; Да ты и на дятла-то не похож!!! &#8212; Это я не похож?!!! # Привел в кое-какой порядок все свои почтовые аккаунты, слинковал [&#8230;]]]></description>
+				<content:encoded><![CDATA[<ul class="aktt_tweet_digest">
+<li>Настроил как вы заметили по прошлому сообщению уведомление о новых постах у меня в блоге (www.dan.kiev.ua) <a href="http://twitter.com/dan_kiev_ua/statuses/887254347">#</a></li>
+<li>По поводу вчерашней темы транс лаборатории:  &#8212; Ну ты и дятел! &#8212; Это я дятел?! &#8212; Да ты и на дятла-то не похож!!! &#8212; Это я не похож?!!! <a href="http://twitter.com/dan_kiev_ua/statuses/888376598">#</a></li>
+<li>Привел в кое-какой порядок все свои почтовые аккаунты, слинковал в одно место. Теперь хочу также с IM сделать. Скорее всего в Миранду ) <a href="http://twitter.com/dan_kiev_ua/statuses/890857798">#</a></li>
+<li>Впервые когда ищу что-то новое в гугле (то есть не по своим ключевым словам) столкнулся в выводе с линком на свой www.dan.kiev.ua/ — приятно ) <a href="http://twitter.com/dan_kiev_ua/statuses/891532851">#</a></li>
+<li>Теперья я яесть и на <a rel="nofollow" href="http://dan-voronov.moikrug.ru/">http://dan-voronov.moikrug.ru/</a> <a href="http://twitter.com/dan_kiev_ua/statuses/891982755">#</a></li>
+</ul>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

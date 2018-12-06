@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Комментарии: Анархия отношений // Relationship Anarchy</title>
+	<atom:link href="http://dan.kiev.ua/blog/2016/05/08/anarhiya-otnoshenij-relationship-anarchy/feed/" rel="self" type="application/rss+xml" />
+	<link>http://dan.kiev.ua/blog/2016/05/08/anarhiya-otnoshenij-relationship-anarchy/</link>
+	<description>персональный сайт</description>
+	<lastBuildDate>Tue, 17 May 2016 12:53:00 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	
+	<item>
+		<title>Автор: Полиамурность в Украине</title>
+		<link>http://dan.kiev.ua/blog/2016/05/08/anarhiya-otnoshenij-relationship-anarchy/#comment-68</link>
+		<dc:creator><![CDATA[Полиамурность в Украине]]></dc:creator>
+		<pubDate>Tue, 17 May 2016 12:53:00 +0000</pubDate>
+		<guid isPermaLink="false">http://www.dan.kiev.ua/?p=5575#comment-68</guid>
+		<description><![CDATA[слайды https://speakerdeck.com/dankievua/relationship-anarchy]]></description>
+		<content:encoded><![CDATA[<p>слайды <a href="https://speakerdeck.com/dankievua/relationship-anarchy" rel="nofollow">https://speakerdeck.com/dankievua/relationship-anarchy</a></p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

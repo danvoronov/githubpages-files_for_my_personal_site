@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Комментарии: Итоги по Жозефу Нюттену</title>
+	<atom:link href="http://dan.kiev.ua/blog/2010/12/26/itogi-po-zhozefu-nyuttenu/feed/" rel="self" type="application/rss+xml" />
+	<link>http://dan.kiev.ua/blog/2010/12/26/itogi-po-zhozefu-nyuttenu/</link>
+	<description>персональный сайт</description>
+	<lastBuildDate>Tue, 17 May 2016 12:53:00 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	
+	<item>
+		<title>Автор: Дан Воронов — Мотивация и время</title>
+		<link>http://dan.kiev.ua/blog/2010/12/26/itogi-po-zhozefu-nyuttenu/#comment-18</link>
+		<dc:creator><![CDATA[Дан Воронов — Мотивация и время]]></dc:creator>
+		<pubDate>Tue, 09 Aug 2011 07:09:38 +0000</pubDate>
+		<guid isPermaLink="false">http://www.dan.kiev.ua/?p=2374#comment-18</guid>
+		<description><![CDATA[[...] и время  09. Авг, 2011  В своем посте Итоги по Жозефу Нюттену я писал о том, что заинтересовало из первой книги [...]]]></description>
+		<content:encoded><![CDATA[<p>[&#8230;] и время  09. Авг, 2011  В своем посте Итоги по Жозефу Нюттену я писал о том, что заинтересовало из первой книги [&#8230;]</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>
