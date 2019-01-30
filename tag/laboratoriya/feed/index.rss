@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>лаборатория &#8212; Дан Воронов</title>
+	<atom:link href="http://dan.kiev.ua/blog/tag/laboratoriya/feed/" rel="self" type="application/rss+xml" />
+	<link>http://dan.kiev.ua/blog</link>
+	<description>персональный сайт</description>
+	<lastBuildDate>Sun, 30 Sep 2018 19:36:59 +0000</lastBuildDate>
+	<language>ru-RU</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	
+	<item>
+		<title>Лаборатория «Как написать сценарий кинофильма»</title>
+		<link>http://dan.kiev.ua/blog/2013/10/09/laboratoriya-kak-napisat-stsenariy-kinofilma/</link>
+		<pubDate>Wed, 09 Oct 2013 15:15:44 +0000</pubDate>
+		<dc:creator><![CDATA[Дан Воронов]]></dc:creator>
+				<category><![CDATA[Кино]]></category>
+		<category><![CDATA[Сделал]]></category>
+		<category><![CDATA[Творчество]]></category>
+		<category><![CDATA[драматургия]]></category>
+		<category><![CDATA[импровизация]]></category>
+		<category><![CDATA[креатив]]></category>
+		<category><![CDATA[лаборатория]]></category>
+		<category><![CDATA[сценарий]]></category>
+
+		<guid isPermaLink="false">http://www.dan.kiev.ua/?p=5015</guid>
+		<description><![CDATA[Как и в прошлом 2012 в этом году я проводил встречи о драматургии и её законах. В этот раз формат выбрал &#171;лаборатория&#187; &#8212; исследования. Все желающие могли вступить в дискуссию и поделиться своим находками и мыслями в написании сценариев кино. Нас любезно и комфортно приютил на ВДНХ проект АРТ-ПИКНИК Славы Фроловой за что ему большое [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Как и в прошлом 2012 в этом году я проводил встречи о драматургии и её законах. В этот раз формат выбрал &#171;лаборатория&#187; &#8212; исследования. Все желающие могли вступить в дискуссию и поделиться своим находками и мыслями в написании сценариев кино.</p>
+<p>Нас любезно и комфортно приютил на ВДНХ проект АРТ-ПИКНИК Славы Фроловой за что ему большое спасибо.</p>
+<p>Событие <a href="https://vk.com/dan4artpicnik" target="_blank">вконтакте</a>, <a href="https://www.facebook.com/events/571561512906107/" target="_blank">фейсбуке</a>.</p>
+<p>Все что происходило можно послушать <a href="https://vk.com/audios-57307460" target="_blank">в аудиозаписях события</a> вконтакте.</p>
+<p>Встречи имели логическую последовательность развития: 1 &#8212; мотивация писателя, 2 &#8212; герой, 3 &#8212; задумка, 4 &#8212; сюжет, 5 &#8212; конфликт, 6 &#8212; другие вопросы.</p>
+<p>Материал есть на стене в соц сетях и <a href="http://www.dan.kiev.ua/2012/10/02/materialyi-stsenarnoy-masterskoy-gogolfest-2012/">с прошлого года</a>.</p>
+<p>Как это было на видео <a href="http://www.youtube.com/playlist?list=PLDCtcGu_t8_28TuSdgwH5bp-1kaTUkhfu" target="_blank">http://www.youtube.com/playlist?list=PLDCtcGu_t8_28TuSdgwH5bp-1kaTUkhfu</a>:</p>
+<p><iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/videoseries?list=PLDCtcGu_t8_28TuSdgwH5bp-1kaTUkhfu" frameborder="0" allowfullscreen></iframe></p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>
