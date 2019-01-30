@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Комментарии: Конфликты в конфликтологии</title>
+	<atom:link href="http://dan.kiev.ua/blog/2012/02/03/konfliktyi-v-konfliktologii/feed/" rel="self" type="application/rss+xml" />
+	<link>http://dan.kiev.ua/blog/2012/02/03/konfliktyi-v-konfliktologii/</link>
+	<description>персональный сайт</description>
+	<lastBuildDate>Tue, 17 May 2016 12:53:00 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	
+	<item>
+		<title>Автор: Igor Gayovych</title>
+		<link>http://dan.kiev.ua/blog/2012/02/03/konfliktyi-v-konfliktologii/#comment-52</link>
+		<dc:creator><![CDATA[Igor Gayovych]]></dc:creator>
+		<pubDate>Tue, 23 Apr 2013 09:40:00 +0000</pubDate>
+		<guid isPermaLink="false">http://www.dan.kiev.ua/?p=3984#comment-52</guid>
+		<description><![CDATA[сведено системно, интересно. Но - 1) визуализация &quot;хромает&quot;, 2) примеров что-то маловато я заметил...]]></description>
+		<content:encoded><![CDATA[<p>сведено системно, интересно. Но &#8212; 1) визуализация &#171;хромает&#187;, 2) примеров что-то маловато я заметил&#8230;</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Автор: DanVoronov</title>
+		<link>http://dan.kiev.ua/blog/2012/02/03/konfliktyi-v-konfliktologii/#comment-51</link>
+		<dc:creator><![CDATA[DanVoronov]]></dc:creator>
+		<pubDate>Wed, 07 Mar 2012 09:49:00 +0000</pubDate>
+		<guid isPermaLink="false">http://www.dan.kiev.ua/?p=3984#comment-51</guid>
+		<description><![CDATA[а никто не коментит )]]></description>
+		<content:encoded><![CDATA[<p>а никто не коментит )</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

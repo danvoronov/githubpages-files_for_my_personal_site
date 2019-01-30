@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Комментарии: Работа как внутренняя игра (по Голви)</title>
+	<atom:link href="http://dan.kiev.ua/blog/2011/01/31/rabota-kak-vnutrennya-igra-po-golvi/feed/" rel="self" type="application/rss+xml" />
+	<link>http://dan.kiev.ua/blog/2011/01/31/rabota-kak-vnutrennya-igra-po-golvi/</link>
+	<description>персональный сайт</description>
+	<lastBuildDate>Tue, 17 May 2016 12:53:00 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	
+	<item>
+		<title>Автор: Дан Воронов — Виды коучинга</title>
+		<link>http://dan.kiev.ua/blog/2011/01/31/rabota-kak-vnutrennya-igra-po-golvi/#comment-22</link>
+		<dc:creator><![CDATA[Дан Воронов — Виды коучинга]]></dc:creator>
+		<pubDate>Fri, 08 Jul 2011 07:25:57 +0000</pubDate>
+		<guid isPermaLink="false">http://www.dan.kiev.ua/?p=2464#comment-22</guid>
+		<description><![CDATA[[...] Самый распространенный. Это то, что называется обучением взрослых.  Про это Внутреняя Игра Голви. [...]]]></description>
+		<content:encoded><![CDATA[<p>[&#8230;] Самый распространенный. Это то, что называется обучением взрослых.  Про это Внутреняя Игра Голви. [&#8230;]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Автор: Дан Воронов — Модель GROW в коучинге</title>
+		<link>http://dan.kiev.ua/blog/2011/01/31/rabota-kak-vnutrennya-igra-po-golvi/#comment-21</link>
+		<dc:creator><![CDATA[Дан Воронов — Модель GROW в коучинге]]></dc:creator>
+		<pubDate>Fri, 04 Feb 2011 09:55:19 +0000</pubDate>
+		<guid isPermaLink="false">http://www.dan.kiev.ua/?p=2464#comment-21</guid>
+		<description><![CDATA[[...] Работа как внутренняя игра (по Голви) [...]]]></description>
+		<content:encoded><![CDATA[<p>[&#8230;] Работа как внутренняя игра (по Голви) [&#8230;]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Автор: Дан Воронов — Коучинг по Тимоти Голви</title>
+		<link>http://dan.kiev.ua/blog/2011/01/31/rabota-kak-vnutrennya-igra-po-golvi/#comment-20</link>
+		<dc:creator><![CDATA[Дан Воронов — Коучинг по Тимоти Голви]]></dc:creator>
+		<pubDate>Tue, 01 Feb 2011 19:13:40 +0000</pubDate>
+		<guid isPermaLink="false">http://www.dan.kiev.ua/?p=2464#comment-20</guid>
+		<description><![CDATA[[...] Работа как внутренняя игра (по Голви) [...]]]></description>
+		<content:encoded><![CDATA[<p>[&#8230;] Работа как внутренняя игра (по Голви) [&#8230;]</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>
