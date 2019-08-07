@@ -71,14 +71,14 @@ box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.3);
           if (parseFloat(kmlEvent.featureData.description) >= 0) {
           	var km = kmlEvent.featureData.description;
           
-          if (km == 0) {date_toshow.setTime(date_start.getTime() - (10*60*1000));    prefix = "Сбор до ";    }   
+          if (km == 0) {date_toshow.setTime(date_start.getTime() - (5*60*1000));    prefix = "Сбор до ";    }   
           	else if (km > 1) {
 	          	prefix = 'Прогноз в ';	          	
 	          	if (km<19) minut = km*15;
 	          		else if (km<29) minut = km*16.5;
 	          			else minut = km*17;
 	          	if (km>10) minut = minut + 15;
-	          	if (km>17) minut = minut + 25;	          	
+	          	if (km>20) minut = minut + 25;	          	
 	          	if (km>27) minut = minut + 15;	          	
 	          	date_toshow.setTime(date_start.getTime() + (minut*60*1000));   
 	         }                   
