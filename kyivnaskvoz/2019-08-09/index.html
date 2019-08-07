@@ -65,8 +65,31 @@ box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.3);
 	 		preserveViewport: true,
 	 		map: map
 	 	});
-	 	
 
+	 	kmlLayerMap.addListener('click', function(kmlEvent) {
+		  var km = '', prefix = '';
+          if (parseFloat(kmlEvent.featureData.description) >= 0) {
+          	var km = kmlEvent.featureData.description;
+          
+          if (km == 0) {date_toshow.setTime(date_start.getTime() - (10*60*1000));    prefix = "Старт в ";    }   
+          	else if (km > 0) {
+	          	prefix = 'Прогноз в ';	          	
+	          	if (km<19) minut = km*15;
+	          		else if (km<29) minut = km*16.5;
+	          			else minut = km*17;
+	          	if (km>10) minut = minut + 15;
+	          	if (km>17) minut = minut + 25;	          	
+	          	if (km>27) minut = minut + 15;	          	
+	          	date_toshow.setTime(date_start.getTime() + (minut*60*1000));   
+	         }                   
+          
+          var minutes = (date_toshow.getMinutes() < 10? '0' : '') + date_toshow.getMinutes();
+          kmlEvent.featureData.infoWindowHtml = '<div style="font-family: Roboto,Arial,sans-serif; font-size: small"><h3>'+kmlEvent.featureData.name+'</h3><p>'+prefix+date_toshow.getHours()+':'+minutes+'.</p></div>';
+          }
+          
+        });
+	 	
+	 	
       }
 
     </script>
