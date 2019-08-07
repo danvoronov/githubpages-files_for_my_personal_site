@@ -61,7 +61,7 @@ box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.3);
         });
 
  		kmlLayerMap = new google.maps.KmlLayer({
-	 		url: 'http://dan.kiev.ua/kyivnaskvoz/kml/noch2019.kmz', 
+	 		url: 'http://dan.kiev.ua/kyivnaskvoz/kml/kyivn2019.kmz', 
 	 		preserveViewport: true,
 	 		map: map
 	 	});
@@ -71,8 +71,8 @@ box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.3);
           if (parseFloat(kmlEvent.featureData.description) >= 0) {
           	var km = kmlEvent.featureData.description;
           
-          if (km == 0) {date_toshow.setTime(date_start.getTime() - (10*60*1000));    prefix = "Старт в ";    }   
-          	else if (km > 0) {
+          if (km == 0) {date_toshow.setTime(date_start.getTime() - (10*60*1000));    prefix = "Сбор до ";    }   
+          	else if (km > 1) {
 	          	prefix = 'Прогноз в ';	          	
 	          	if (km<19) minut = km*15;
 	          		else if (km<29) minut = km*16.5;
