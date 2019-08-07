@@ -51,13 +51,13 @@ box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.3);
     <script>
 
       var map;
-      var date_start = new Date('August 09 2019 21:10:00 GMT+0300');
+      var date_start = new Date('August 09 2019 21:00:00 GMT+0300');
       var date_toshow  = new Date();
 
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 11,
-          center: {lat: 50.47558, lng:  30.56921} // lng это лево право
+          center: {lat: 50.47558, lng:  30.570} // lng это лево право
         });
 
  		kmlLayerMap = new google.maps.KmlLayer({
@@ -66,30 +66,7 @@ box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.3);
 	 		map: map
 	 	});
 	 	
-	 	kmlLayerMap.addListener('click', function(kmlEvent) {
-		  var km = '', prefix = '';
-          if (parseFloat(kmlEvent.featureData.description) >= 0) {
-          	var km = kmlEvent.featureData.description;
-          	
-          	console.log(km);
-          
-          if (km == 0) {date_toshow.setTime(date_start.getTime() - (10*60*1000));    prefix = "Старт в ";    }   
-          	else if (km > 0) {
-	          	prefix = km+' км. Прогноз в ';	          	
-	          	if (km<19) minut = km*15;
-	          		else if (km<29) minut = km*16.5;
-	          			else minut = km*17;
-	          	if (km>10) minut = minut + 15;
-	          	if (km>17) minut = minut + 25;	          	
-	          	if (km>27) minut = minut + 15;	          	
-	          	date_toshow.setTime(date_start.getTime() + (minut*60*1000));   
-	         }                   
-          
-          var minutes = (date_toshow.getMinutes() < 10? '0' : '') + date_toshow.getMinutes();
-          kmlEvent.featureData.infoWindowHtml = '<div style="font-family: Roboto,Arial,sans-serif; font-size: small"><h3>'+kmlEvent.featureData.name+'</h3><p>'+prefix+date_toshow.getHours()+':'+minutes+'.</p></div>';
-          }
-          
-        });
+
       }
 
     </script>
