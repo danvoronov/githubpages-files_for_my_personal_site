@@ -74,7 +74,14 @@
       <span style="font-size: 80%"></span> <br>
     </div>
     <script>
-    	console.log( "ref= "+document.referrer );
+      
+      var idi = document.referrer;
+      var ono = idi.indexOf('dan.kiev.ua/blog');
+
+      if ( ono>0 ) idi = idi.replace('dan.kiev.ua/blog', 'danvoronov.com/ru') 
+        else idi = idi.replace('dan.kiev.ua', 'danvoronov.com') 
+      console.log('ref: 'idi);
+      
 
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
