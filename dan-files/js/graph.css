@@ -1,0 +1,42 @@
+body {
+    margin:0;
+    padding:0;
+    background:url("../Milky_Way_Galaxy.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/*****/
+
+.links line {
+  stroke: #c76eeb;
+  stroke-opacity: .3;
+}
+
+.nodes circle {
+  fill-opacity: .4;
+}
+.nodes circle:not(#el0) {
+    cursor: pointer;
+    fill-opacity: .7;
+}
+.nodes circle:not(#el0):hover  {
+  stroke: #9620c7;
+  stroke-opacity: .6;
+  stroke-width: 4px;
+}
+
+.texts text {
+  font: 18px tahoma;
+  fill: #fdf9e7;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+svg {
+	z-index: 9;
+	margin-top:40px;
+	background-color: rgba(255, 255, 255, 0.0);
+}
