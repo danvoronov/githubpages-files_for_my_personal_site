@@ -1,6 +1,6 @@
 var clickedOnce = false
 var timer;
-var width = $(window).width() -40,  height = 640;
+var width = $(window).width() -40,  height = 720;
 
 var graph = new Object;									
 graph.links = new Array;
@@ -17,13 +17,13 @@ const colorMap = {
 }
 						
 graph.nodes.push(
-	{id: 0, txt: 'Dan Vóronov', group: 'm', radius: 310},
-	{id: 1, txt: '⚙️ Startups', group: 'na', radius: 100, url: 'startups/'},
-	{id: 2, txt: '🗣 Speaker', group: 'na', radius: 90, url: 'speaker/'},
-	{id: 3, txt: '⏳ Now', group: 'n', radius: 50, url: 'now/'},
-	{id: 4, txt: '🎭 ART', group: 'a', radius: 80, url: 'art/'},
-	{id: 5, txt: '📝 Blog', group: 'b', radius: 60, url: 'ru/'},
-	{id: 10, txt: '📚 Reading list', group: 'r', radius: 75, url: 'ru/prochital/'},
+	{id: 0, txt: 'Dan Vóronov', group: 'm', radius: 340},
+	{id: 2, txt: '⚙️ Startups & Projects', group: 'na', radius: 120, url: 'startups/'},
+	{id: 1, txt: '🗣 Speaker & Tutor', group: 'na', radius: 110, url: 'educator/'},
+	{id: 3, txt: '⏳ Now', group: 'n', radius: 45, url: 'now/'},
+	{id: 4, txt: '🎭 ART', group: 'a', radius: 65, url: 'art/'},
+	{id: 5, txt: '[ru] 📝 Articles', group: 'b', radius: 60, url: 'ru/'},
+	{id: 10, txt: '[ru] 📚 Reading list', group: 'r', radius: 75, url: 'ru/prochital/'},
 	{id: 21, txt: '🔗 YouTube', group: 'c', radius: 15, url: 'https://www.youtube.com/user/DanVoronov/videos'},
 	{id: 22, txt: '🔗 Telegram', group: 'c', radius: 15, url: 'https://t.me/dv_prj'},
 	// {id: 6, txt: 'old', group: 'b', radius: 35},
@@ -41,7 +41,7 @@ graph.links.push( { source:  0, target: 22, value: 10 } );
 	var svg = d3.select("#graph").append("svg").attr("width", width).attr("height", height);	
 	var simulation = d3.forceSimulation()
 	    .force("link", d3.forceLink().id(function(d) { return d.id; }))
-	    .force("charge", d3.forceManyBody().distanceMax(2000).theta(1).strength(-6000) )
+	    .force("charge", d3.forceManyBody().distanceMax(400).theta(1).strength(-7000) )
 	    .force("center", d3.forceCenter(width / 2, height / 2))										    																					
 	  var link = svg.append("g")
 	      .attr("class", "links")
