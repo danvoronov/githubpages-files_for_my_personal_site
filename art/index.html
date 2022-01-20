@@ -4,6 +4,34 @@
   <meta name="description" content="Personal site of Dan Voronov">
   <meta name="author" content="Dan Voronov">
   <style type="text/css">
+  h2 { color: #fbeeaa}
+      #mn a { font-size: 1.3em;
+
+ background: -webkit-linear-gradient( left, #00ffff 0%, #97fba0 25%, #97b1fb 50%, #00ffff 100%) repeat;
+  -webkit-background-clip: text;
+  -ms-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent;
+  -webkit-animation-name: masked-animation;
+  -webkit-animation-duration: 50s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+
+      }
+
+@-webkit-keyframes masked-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -8000px -3000px;
+  }
+}
+
       @-webkit-keyframes Green {
         0%{background-position:0% 50%}
         50%{background-position:100% 50%}
@@ -20,14 +48,14 @@
         100%{background-position:0% 50%}
     }
 </style>
-</head><body style="   background: linear-gradient(224deg, #22c76e, #53a9b1); background-size: 400% 400%; -webkit-animation: Green 30s ease infinite; -moz-animation: Green 30s ease infinite; animation: Green 30s ease infinite;">
+</head><body style="   background: linear-gradient(224deg, #22c76e, #1d676e); background-size: 400% 400%; -webkit-animation: Green 30s ease infinite; -moz-animation: Green 30s ease infinite; animation: Green 30s ease infinite;">
     
-    <div style="margin: auto; width: 600px;  background-color: white; border: 10px solid #22c76e; left: 0; top: -60px; right: 0; bottom: 0; padding: 30px;">
+    <div style="margin: auto; width: 600px;  background-color: black; color: white; border: 10px solid #22c76e; left: 0; top: -60px; right: 0; bottom: 0; padding: 30px;">
       
       <a href="../" style="color: #DD4723"><b>&lt; back</b></a> | <a href="https://danvoronov.medium.com/%D0%B4%D0%B0%D0%BD-%D0%B2%D0%BE%D1%80%D0%BE%D0%BD%D0%BE%D0%B2-%D0%B0%D1%80%D1%82-2008-18-268ff6376777" target="black">все сразу на русском</a>
 
         <br><br><br>
-        <h2>ARTWORKS</h2>
+        <h2>ARTWORKS</h2><div id="mn">
         <span style="font-size: 16pt;">Now I use my various skills to create <a
             href="hybridart/">hybrid
             and interdisciplinary art</a> projects.</span>
@@ -49,6 +77,7 @@
             the "Zenit" camera. Then it became the basis for <a href="early/">early
               artworks</a>.</em><br>
         </p>
+      </div>
 
 </div>
 <script src='../dan-files/js/ga.js'></script></body></html>

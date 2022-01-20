@@ -21,6 +21,8 @@ h3 {margin: 0}
 	color: #5b183b;
 }
 
+.large {width: 600px}
+
 .item:hover {
 	border-color: #f579f7; 
 	background-color: #fcfcf4;
@@ -33,8 +35,8 @@ h3 {margin: 0}
 	font-size: 0.8em;
 }
 .item {
-	font-size: 1.4em;
-  /* margin: auto; min-height: 520px; width: 600px;   */
+	font-size: 1.4em;  
+  /* margin: auto; width: 600px;  min-height: 520px; */
   background-color: #e0f8fb; border: 7px solid #00f4cc; 
   padding: 30px;
 }
@@ -42,6 +44,8 @@ h3 {margin: 0}
 .item img {
   padding: 20px 0;
 }
+
+
 
 
 /* ===================================== */

@@ -23,7 +23,7 @@ graph.nodes.push(
 	{id: 3, txt: '⏳ Now', group: 'n', radius: 45, url: 'now/'},
 	{id: 4, txt: '🎭 ART', group: 'a', radius: 65, url: 'art/'},
 	{id: 5, txt: '[ru] 📝 Articles', group: 'b', radius: 60, url: 'ru/'},
-	{id: 10, txt: '[ru] 📚 Reading list', group: 'r', radius: 75, url: 'ru/prochital/'},
+	{id: 10, txt: '[ru] 📚 Reading list', group: 'r', radius: 75, url: 'prj/prochital/'},
 	{id: 21, txt: '🔗 YouTube', group: 'c', radius: 15, url: 'https://www.youtube.com/user/DanVoronov/videos'},
 	{id: 22, txt: '🔗 Telegram', group: 'c', radius: 15, url: 'https://t.me/dv_prj'},
 	// {id: 6, txt: 'old', group: 'b', radius: 35},
