@@ -1,6 +1,6 @@
 var clickedOnce = false
 var timer;
-var width = $(window).width() -40,  height = 720;
+var rad = 720;
 
 var graph = new Object;									
 graph.links = new Array;
@@ -38,16 +38,18 @@ graph.links.push( { source:  0, target: 10, value: 20 } );
 graph.links.push( { source:  0, target: 21, value: 10 } );	
 graph.links.push( { source:  0, target: 22, value: 10 } );	
 
-let pol = $(window).height()-height
+let pol = $(window).height()-rad
+let pol2 = $(window).width()-rad
 
 
-$("#graph").css("width", width+20).css("height", height+20).css("margin-top", pol/2)
+$("#graph").css("width", rad+20).css("height", rad+20)
+		.css("margin-top", pol/2).css("margin-left", pol2/2)
 	var svg = d3.select("#graph").append("svg")
-		.attr("width", width).attr("height", height)	
+		.attr("width", rad).attr("height", rad)	
 	var simulation = d3.forceSimulation()
 	    .force("link", d3.forceLink().id(function(d) { return d.id; }))
 	    .force("charge", d3.forceManyBody().distanceMax(400).theta(1).strength(-7000) )
-	    .force("center", d3.forceCenter(width / 2, height / 2))										    																					
+	    .force("center", d3.forceCenter(rad / 2, rad / 2))										    																					
 	  var link = svg.append("g")
 	      .attr("class", "links")
 	    .selectAll("line")
