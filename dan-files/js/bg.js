@@ -1,5 +1,5 @@
 var canvas = document.getElementById("starfield")
-canvas.height = window.innerHeight+400
+canvas.height = window.innerHeight+100
 
 var context = canvas.getContext("2d"),
 stars = 1500,

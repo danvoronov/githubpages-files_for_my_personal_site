@@ -1,4 +1,4 @@
-body { margin: 0; padding: 0; background-color: #481147; font-family: Verdana;}
+body { margin: 0; padding: 0; font-family: Verdana;}
 
 a {color: black}
 h2 {color: #ddf8a5}
@@ -21,17 +21,15 @@ h3 {margin: 0}
 	color: #5b183b;
 }
 
-.large {width: 600px}
-
 .item:hover {
 	border-color: #f579f7; 
 	background-color: #fcfcf4;
 }
 .item:hover span {
-	color: #f579f7; 
+	color: #2d7447; 
 }
 .item span {
-	color: #8cc28e;
+	color: #f89b73;
 	font-size: 0.8em;
 }
 .item {
