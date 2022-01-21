@@ -1,5 +1,5 @@
 var canvas = document.getElementById("starfield")
-canvas.height = window.innerHeight+100
+canvas.height = window.innerHeight+400
 
 var context = canvas.getContext("2d"),
 stars = 1500,
@@ -31,11 +31,9 @@ function fly() {
     var WinHeight = window.innerHeight, WinWidth = window.innerWidth;
     var hscrll = window.pageYOffset;
 
-    console.log(hscrll)
-
     for (i = 0; i < stars; i++) {
       LargeYpos[i] += Largespeed[i];
-      if (LargeYpos[i] > WinHeight+200) {
+      if (LargeYpos[i] > WinHeight+500) {
         LargeYpos[i] = Math.random() * WinHeight;
         LargeXpos[i] = Math.random() * WinWidth;
       }
