@@ -26,17 +26,24 @@ h3 {margin: 0}
 	background-color: #fcfcf4;
 }
 .item:hover span {
-	color: #2d7447; 
+	color: #f17845; 
 }
 .item span {
-	color: #f89b73;
-	font-size: 0.8em;
+  color: #2214ac;
+  background-color: rgba(255, 255, 255, .4); padding:2px 7px;
+  font-size: 0.8em;
+  border-radius: 2px;
 }
 .item {
 	font-size: 1.4em;  
   /* margin: auto; width: 600px;  min-height: 520px; */
   background-color: #e0f8fb; border: 7px solid #00f4cc; 
   padding: 30px;
+}
+
+.covid{
+  color: rgba(173, 21, 21, .5);
+  font-size: 0.9em;
 }
 
 .item img {
@@ -48,7 +55,7 @@ h3 {margin: 0}
 
 /* ===================================== */
 #starfield {
-  position: absolute;
+  position: fixed;
   z-index: -2;
   width: 100%;
 }
