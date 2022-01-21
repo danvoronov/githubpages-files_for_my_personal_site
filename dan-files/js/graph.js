@@ -23,7 +23,7 @@ graph.nodes.push(
 	{id: 3, txt: '⏳ Now', group: 'n', radius: 45, url: 'now/'},
 	{id: 4, txt: '🎭 ART', group: 'a', radius: 65, url: 'art/'},
 	{id: 5, txt: '[ru] 📝 Articles', group: 'b', radius: 60, url: 'ru/'},
-	{id: 10, txt: '[ru] 📚 Reading list', group: 'r', radius: 75, url: 'prj/prochital/'},
+	{id: 10, txt: '[ru] 📚 Reading list', group: 'r', radius: 75, url: 'ru/prochital/'},
 	{id: 21, txt: '🔗 YouTube', group: 'c', radius: 15, url: 'https://www.youtube.com/user/DanVoronov/videos'},
 	{id: 22, txt: '🔗 Telegram', group: 'c', radius: 15, url: 'https://t.me/dv_prj'},
 	// {id: 6, txt: 'old', group: 'b', radius: 35},
@@ -38,7 +38,12 @@ graph.links.push( { source:  0, target: 10, value: 20 } );
 graph.links.push( { source:  0, target: 21, value: 10 } );	
 graph.links.push( { source:  0, target: 22, value: 10 } );	
 
-	var svg = d3.select("#graph").append("svg").attr("width", width).attr("height", height);	
+let pol = $(window).height()-height
+
+
+$("#graph").css("width", width+20).css("height", height+20).css("margin-top", pol/2)
+	var svg = d3.select("#graph").append("svg")
+		.attr("width", width).attr("height", height)	
 	var simulation = d3.forceSimulation()
 	    .force("link", d3.forceLink().id(function(d) { return d.id; }))
 	    .force("charge", d3.forceManyBody().distanceMax(400).theta(1).strength(-7000) )

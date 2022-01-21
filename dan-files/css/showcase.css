@@ -64,10 +64,16 @@ h3 {margin: 0}
   padding: 5px;
   padding-top: 7px;
   padding-left: 11px;
-  font-size: 10px;
+  font-size: 12px;
   color: white;
-  min-height: 16px;
+  min-height: 18px;
   border-bottom: 2px solid #00f4cc;
+}
+
+@media only screen and (min-device-width : 568px) and (orientation : portrait) {
+  #toppanel{
+    font-size: 32px;
+  }
 }
 
 #toppanel a{
