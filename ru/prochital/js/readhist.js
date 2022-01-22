@@ -25,7 +25,7 @@ const el_template = (n, { name, author, sezons, roles, type, cat, ids, all, cove
 
 ${cover_url ? `<div style="margin:3px; padding-top: 7px; text-align: center;"><img id="img_${ids.art}" src="${loadImage(ids.art)}" width="130" alt="${bkName(name)}${author?'  —  '+author:''}" title="${bkName(name)}${author?'  —  '+author:''}"></div>
 
-    <div class='podCover'><a target="_blank" href='${'https://search.brave.com/search?q='+encodeURIComponent('книга '+bkName(name))}'>${bkName(name).slice(0,80)}</a></div>`
+    <div class='podCover'><a target="_blank" href='${'https://search.brave.com/search?q='+encodeURIComponent('книга '+bkName(name)+(author?' '+author:''))}'>${bkName(name).slice(0,80)}</a></div>`
 
             : `<div class='insteadCover'>${bkName(name)}</div> 
                 ${(author) ? '<div style="color:green; font-size:0.75em; margin:5px">'+author+'</div>'

@@ -61,10 +61,12 @@ $(document).ready(async ()=>{   thisurl = new URL(location.toString());
     }); 
 
     document.onkeydown = (event) => {
-        event.preventDefault();
+        
         let keyCode = event.keyCode ? event.keyCode : event.which
-        if(keyCode == '27')
-          window.location.href = '../../'; //two level up
+        if(keyCode == '27') {
+            event.preventDefault();
+            window.location.href = '../../'; //two level up
+        }
         
         // if(e.key === "ArrowLeft") $("#prev").click()
         // if(e.key === "ArrowRight") $("#next").click()    
