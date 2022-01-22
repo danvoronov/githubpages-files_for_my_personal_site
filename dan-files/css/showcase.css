@@ -75,7 +75,7 @@ h3 {margin: 0}
   border-bottom: 2px solid #00f4cc;
 }
 
-@media only screen and (min-device-width : 568px) and (orientation : portrait) {
+@media only screen and (min-device-width : 1024px) and (orientation : portrait) {
   #toppanel{
     font-size: 32px;
   }
