@@ -172,6 +172,10 @@ button {cursor: pointer; }
 		display: flex;
 		flex-wrap: wrap;
 }
+.el:hover{
+	border-color: #04bad3;
+	color: #04bad3;
+}
 .el{
 	padding: 5px;
 	margin:  5px;
