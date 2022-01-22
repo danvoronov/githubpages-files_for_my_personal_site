@@ -60,10 +60,15 @@ $(document).ready(async ()=>{   thisurl = new URL(location.toString());
         redraw() 
     }); 
 
-    $(document).keyup(function(e){            
+    document.onkeydown = (event) => {
+        event.preventDefault();
+        let keyCode = event.keyCode ? event.keyCode : event.which
+        if(keyCode == '27')
+          window.location.href = '../../'; //two level up
+        
         // if(e.key === "ArrowLeft") $("#prev").click()
         // if(e.key === "ArrowRight") $("#next").click()    
-    });
+    };
 
     $('#flt_txt').keyup(function(e){    
         var code = (e.keyCode ? e.keyCode : e.which);

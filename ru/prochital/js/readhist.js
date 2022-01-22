@@ -9,17 +9,30 @@ const loadImage = function(iname){
     return '';
  }
 
-
 const apBook= (book,i)=>$("#grid").append(el_template(i, book))
+
+const bkName= (name)=>(name.ru)?name.ru:(name.en)?name.en:name.ua
+const bkYr= (sz)=>sz.map(yt=>parseInt(yt)).filter((v, i, a)=>a.indexOf(v)===i).map(y=>y>30?y+1900:y+2000).sort().reverse().join(', ');
  
 // ${rate&&rate["my%"]?`<span class="mingr">${rate["my%"]}%</span>  `:''}
-const el_template = (n, { name, author, sezons, roles, type, cat, ids, all, cover_url, rate })=>`<div class='el${(!all)?' gray':''}'><div class="nn">${n+1}. ${(cat && $('.cur_cat').attr('cat')==='all' && cat!='худла')?'<span class="cattag">'+cat.slice(0,10)+'</span> ':''}${cat=="худла"?'<span class="hud_mark">худ</span> ':''}${type!=="книга"?'<span style="background-color:yellow;">'+type+'</span>':''}</div>
-${cover_url?`<div style="margin:3px; padding-top: 7px; text-align: center;"><img id="img_${ids.art}" src="${loadImage(ids.art)}" width="130" alt="${(name.ru)?name.ru:(name.en)?name.en:name.ua}${author?'  —  '+author:''}" title="${(name.ru)?name.ru:(name.en)?name.en:name.ua}${author?'  —  '+author:''}"></div>`:`<div style="margin:0 3px">${(name.ru)?name.ru:(name.en)?name.en:name.ua}</div>
-${(author)?'<div style="color:green; font-size:0.65em; margin:3px">'+author+'</div>':''}`}
+// $('.cur_year').attr('value')!='0'?
+// МОЯ ЗАМЕТКА ?? линки на поиск в библиоткеке
+const el_template = (n, { name, author, sezons, roles, type, cat, ids, all, cover_url, rate })=>`<div class='el${(!all)?' gray':''}'>
 
-${$('.cur_year').attr('value')==='0'?'<div class="mingr">'+JSON.stringify(sezons).slice(1,-1)+'</div>':''}
+<div class="nn">${n+1}. <span class="mingr">${bkYr(sezons)}</span>
+                ${(cat && $('.cur_cat').attr('cat')==='all' && cat!='худла')?'<span class="cattag">'+cat.slice(0,10)+'</span> ':''}${cat=="худла"?'<span class="hud_mark">худ</span> ':''}${type!=="книга"?'<span style="background-color:yellow;">'+type+'</span>':''}
+</div>
 
-${rate&&rate["my%"]?`<div style="text-align:center; margin:3px"><progress title="${rate["my%"]}%" style="width:100px;" value="${rate["my%"]}" max="105"></progress>`:''}
+${cover_url ? `<div style="margin:3px; padding-top: 7px; text-align: center;"><img id="img_${ids.art}" src="${loadImage(ids.art)}" width="130" alt="${bkName(name)}${author?'  —  '+author:''}" title="${bkName(name)}${author?'  —  '+author:''}"></div>
+
+    <div class='podCover'><a target="_blank" href='${'https://search.brave.com/search?q='+encodeURIComponent('книга '+bkName(name))}'>${bkName(name).slice(0,80)}</a></div>`
+
+            : `<div class='insteadCover'>${bkName(name)}</div> 
+                ${(author) ? '<div style="color:green; font-size:0.75em; margin:5px">'+author+'</div>'
+                            :''}
+            `}
+
+${rate&&rate["my%"]?`<div class='bkrate'><progress title="${rate["my%"]}%" style="width:100px;" value="${rate["my%"]}" max="105"></progress>`:''}
 </div>`
 
 //=======================================================
