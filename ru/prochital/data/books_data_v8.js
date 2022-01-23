@@ -11305,7 +11305,6 @@ var booksDB = [
         ]
     },
     {
-        "book": "Путь Художника",
         "cat": "жинеуправл",
         "type": "книга",
         "name": {
@@ -11334,7 +11333,7 @@ var booksDB = [
             "15л"
         ],
         "author": "Джулия Кэмерон",
-        "coauthor": "Джулія Кемерон",
+        "cover_url": "https://s3-goods.ozstatic.by/2000/44/567/10/10567044_0.jpg",
         "info": {
             "pages": 352,
             "year": 1992
@@ -14953,6 +14952,7 @@ var booksDB = [
             "0"
         ],
         "tags": "фантастика",
+        "cover_url": "https://images.ua.prom.st/2084696911_w640_h640_hroniki-ambera-rodzher.jpg",
         "author": "Роджер Желязны",
         "roles": [
             "s_crt",
