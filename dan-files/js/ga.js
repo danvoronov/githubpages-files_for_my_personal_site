@@ -6,7 +6,8 @@ ga('create', 'UA-5293921-1', 'auto');
 ga('send', 'pageview');
 
 document.onkeydown = (event) => {
-    event.preventDefault();
-    if((event.keyCode ? event.keyCode : event.which) == '27')
+    if((event.keyCode ? event.keyCode : event.which) == '27'){
+      event.preventDefault();
       window.location.href = '../'; //one level up
+    }
 };
