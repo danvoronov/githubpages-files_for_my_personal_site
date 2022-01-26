@@ -19,7 +19,7 @@ const bkYr= (sz)=>sz.map(yt=>parseInt(yt)).filter((v, i, a)=>a.indexOf(v)===i).m
 // МОЯ ЗАМЕТКА ?? линки на поиск в библиоткеке
 const el_template = (n, { name, author, sezons, roles, type, cat, ids, all, cover_url, rate })=>`<div class='el${(!all)?' gray':''}'>
 
-${(ids&&ids.gr)?`<div class='gric'><a target='_blank' href='https://www.goodreads.com/book/show/${ids.gr}'><img src='data/gr.png' width="16" alt="at Goodreads"/></a></div>`:''}
+${(ids&&ids.gr)?`<div class='gric'><a target='_blank' title="Goodreads card" href='https://www.goodreads.com/book/show/${ids.gr}'><img src='data/gr.png' width="16" alt="at Goodreads"/></a></div>`:''}
 
 <div class="nn">${n+1}.<span class="mingr">${bkYr(sezons)}</span>
                 ${(cat && $('.cur_cat').attr('cat')==='all' && cat!='худла')?'<span class="cattag">'+cat.slice(0,10)+'</span> ':''}${cat=="худла"?'<span class="hud_mark">худ</span> ':''}${type!=="книга"?'<span style="background-color:yellow;">'+type+'</span>':''}
@@ -27,7 +27,7 @@ ${(ids&&ids.gr)?`<div class='gric'><a target='_blank' href='https://www.goodread
 
 ${cover_url ? `<div style="margin:3px; padding-top: 7px; text-align: center;"><img id="img_${ids.art}" src="${loadImage(ids.art)}" width="130" alt="${bkName(name)}${author?'  —  '+author:''}" title="${bkName(name)}${author?'  —  '+author:''}"></div>
 
-    <div class='podCover'><a target="_blank" href='${'https://search.brave.com/search?q='+encodeURIComponent('книга '+bkName(name)+(author?' '+author:''))}'>${bkName(name).slice(0,80)}</a></div>`
+    <div class='podCover'><a title="Brave search"  target="_blank" href='${'https://search.brave.com/search?q='+encodeURIComponent('книга '+bkName(name)+(author?' '+author:''))}'>${bkName(name).slice(0,80)}</a></div>`
 
             : `<div class='insteadCover' onClick='console.log("${ids.art}")'>${bkName(name)}</div> 
                 ${(author) ? '<div style="color:green; font-size:0.75em; margin:5px">'+author+'</div>'
