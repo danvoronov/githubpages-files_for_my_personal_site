@@ -175,6 +175,9 @@ button {cursor: pointer; }
 .el:hover{
 	border-color: #04bad3;
 	color: #04bad3;
+	box-shadow:
+    -2px 0 12px #f0f,        /* outer left magenta */
+    2px 0 12px #0ff;         /* outer right cyan */
 }
 .el{
 	padding: 5px;
@@ -205,6 +208,17 @@ button {cursor: pointer; }
 	text-align:center; 
 	margin: 3px;
 	margin-bottom: -4px
+}
+
+.gric img {
+	filter: opacity(60%);
+}
+.gric{
+	background-color: #a82;
+	text-align: right;
+	height: 0;
+	margin-right: 2px;
+	z-index: 10;
 }
 
 .gray{

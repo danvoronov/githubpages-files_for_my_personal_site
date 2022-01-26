@@ -19,7 +19,9 @@ const bkYr= (sz)=>sz.map(yt=>parseInt(yt)).filter((v, i, a)=>a.indexOf(v)===i).m
 // МОЯ ЗАМЕТКА ?? линки на поиск в библиоткеке
 const el_template = (n, { name, author, sezons, roles, type, cat, ids, all, cover_url, rate })=>`<div class='el${(!all)?' gray':''}'>
 
-<div class="nn">${n+1}. <span class="mingr">${bkYr(sezons)}</span>
+${(ids&&ids.gr)?`<div class='gric'><a target='_blank' href='https://www.goodreads.com/book/show/${ids.gr}'><img src='data/gr.png' width="16" alt="at Goodreads"/></a></div>`:''}
+
+<div class="nn">${n+1}.<span class="mingr">${bkYr(sezons)}</span>
                 ${(cat && $('.cur_cat').attr('cat')==='all' && cat!='худла')?'<span class="cattag">'+cat.slice(0,10)+'</span> ':''}${cat=="худла"?'<span class="hud_mark">худ</span> ':''}${type!=="книга"?'<span style="background-color:yellow;">'+type+'</span>':''}
 </div>
 
@@ -27,12 +29,12 @@ ${cover_url ? `<div style="margin:3px; padding-top: 7px; text-align: center;"><i
 
     <div class='podCover'><a target="_blank" href='${'https://search.brave.com/search?q='+encodeURIComponent('книга '+bkName(name)+(author?' '+author:''))}'>${bkName(name).slice(0,80)}</a></div>`
 
-            : `<div class='insteadCover'>${bkName(name)}</div> 
+            : `<div class='insteadCover' onClick='console.log("${ids.art}")'>${bkName(name)}</div> 
                 ${(author) ? '<div style="color:green; font-size:0.75em; margin:5px">'+author+'</div>'
                             :''}
             `}
 
-${`<div class='bkrate'>`+(rate&&rate["my%"]?` <progress title="${rate["my%"]}%" style="width:100px;" value="${rate["my%"]}" max="105"></progress>`:'')+'</div>'}
+${rate&&rate["my%"]?`<div class='bkrate'><progress title="${rate["my%"]}%" style="width:100px;" value="${rate["my%"]}" max="105"></progress>`:''}
 </div>`
 
 //=======================================================
