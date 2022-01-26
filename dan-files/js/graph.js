@@ -38,14 +38,14 @@ graph.links.push( { source:  0, target: 10, value: 20 } );
 graph.links.push( { source:  0, target: 21, value: 10 } );	
 graph.links.push( { source:  0, target: 22, value: 10 } );	
 
-let pol = $(window).height()-rad
-let pol2 = $(window).width()-rad
+let pol = $(window).height()-rad-20
+let pol2 = $(window).width()-rad-60
 
 
-$("#graph").css("width", rad+20).css("height", rad+20)
+$("#graph").css("width", rad+80).css("height", rad+40)
 		.css("margin-top", pol/2).css("margin-left", pol2/2)
 	var svg = d3.select("#graph").append("svg")
-		.attr("width", rad).attr("height", rad)	
+		.attr("width", rad+60).attr("height", rad+20)	
 	var simulation = d3.forceSimulation()
 	    .force("link", d3.forceLink().id(function(d) { return d.id; }))
 	    .force("charge", d3.forceManyBody().distanceMax(400).theta(1).strength(-7000) )

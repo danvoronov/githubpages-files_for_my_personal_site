@@ -27,12 +27,12 @@ ${cover_url ? `<div style="margin:3px; padding-top: 7px; text-align: center;"><i
 
     <div class='podCover'><a target="_blank" href='${'https://search.brave.com/search?q='+encodeURIComponent('книга '+bkName(name)+(author?' '+author:''))}'>${bkName(name).slice(0,80)}</a></div>`
 
-            : `<div class='insteadCover' onClick='alert("${ids.art}")'>${bkName(name)}</div> 
+            : `<div class='insteadCover'>${bkName(name)}</div> 
                 ${(author) ? '<div style="color:green; font-size:0.75em; margin:5px">'+author+'</div>'
                             :''}
             `}
 
-${rate&&rate["my%"]?`<div class='bkrate'><progress title="${rate["my%"]}%" style="width:100px;" value="${rate["my%"]}" max="105"></progress>`:''}
+${`<div class='bkrate'>`+(rate&&rate["my%"]?` <progress title="${rate["my%"]}%" style="width:100px;" value="${rate["my%"]}" max="105"></progress>`:'')+'</div>'}
 </div>`
 
 //=======================================================
