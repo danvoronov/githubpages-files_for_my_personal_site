@@ -106,8 +106,7 @@ button {cursor: pointer; }
 .cur_year {color: #8cd2ff; font-weight: bold; }
 
 .wrapper{
-	padding: 40px;
-	padding-top: 30px;
+	padding: 30px;
 	background-color: white;
 	border: 3px solid #00f4cc;
 	border-top: 3px;
@@ -172,6 +171,8 @@ button {cursor: pointer; }
 		display: flex;
 		flex-wrap: wrap;
 }
+
+
 .el:hover{
 	border-color: #04bad3;
 	color: #04bad3;
@@ -193,7 +194,7 @@ button {cursor: pointer; }
 }
 
 .podCover{
-	margin:5px 8px 0;
+	margin:5px 8px 2px;
 	font-size: 0.5em;
 }
 .podCover a {
@@ -206,9 +207,12 @@ button {cursor: pointer; }
 }
 .bkrate {
 	text-align:center; 
-	margin: 3px;
-	margin-bottom: -4px
+	margin: -3px 3px -4px;
 }
+.mythts{
+	text-align:center; 	
+}
+
 
 .gric img {
 	filter: opacity(60%);

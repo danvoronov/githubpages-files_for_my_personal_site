@@ -17,11 +17,11 @@ const bkYr= (sz)=>sz.map(yt=>parseInt(yt)).filter((v, i, a)=>a.indexOf(v)===i).m
 // ${rate&&rate["my%"]?`<span class="mingr">${rate["my%"]}%</span>  `:''}
 // $('.cur_year').attr('value')!='0'?
 // МОЯ ЗАМЕТКА ?? линки на поиск в библиоткеке
-const el_template = (n, { name, author, sezons, roles, type, cat, ids, all, cover_url, rate })=>`<div class='el${(!all)?' gray':''}'>
+const el_template = (n, { name, author, sezons, roles, notes, type, cat, ids, all, cover_url, rate })=>`<div class='el${(!all)?' gray':''}'>
 
 ${(ids&&ids.gr)?`<div class='gric'><a target='_blank' title="Goodreads card" href='https://www.goodreads.com/book/show/${ids.gr}'><img src='data/gr.png' width="16" alt="at Goodreads"/></a></div>`:''}
 
-<div class="nn">${n+1}.<span class="mingr">${bkYr(sezons)}</span>
+<div class="nn">${n+1}. <span class="mingr">${bkYr(sezons)}</span>
                 ${(cat && $('.cur_cat').attr('cat')==='all' && cat!='худла')?'<span class="cattag">'+cat.slice(0,10)+'</span> ':''}${cat=="худла"?'<span class="hud_mark">худ</span> ':''}${type!=="книга"?'<span style="background-color:yellow;">'+type+'</span>':''}
 </div>
 
@@ -34,8 +34,12 @@ ${cover_url ? `<div style="margin:3px; padding-top: 7px; text-align: center;"><i
                             :''}
             `}
 
-${rate&&rate["my%"]?`<div class='bkrate'><progress title="${rate["my%"]}%" style="width:100px;" value="${rate["my%"]}" max="105"></progress>`:''}
+${notes&&notes.url?`<div class='mythts'><button>МОИ МЫСЛИ</button></div>`:''}
+
+${rate&&rate["my%"]?`<div class='bkrate'><progress title="${rate["my%"]}%" style="width:100px;" value="${rate["my%"]}" max="105"></progress></div>`:''}
 </div>`
+
+// notes.url
 
 //=======================================================
 
