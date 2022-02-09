@@ -15,10 +15,11 @@ var booksDB = [
             "art": "recBeVRFKwKjhwvMM",
             "gr": 21800391
         },
+        "cover":true,
         "roles": [
             "s_crt"
         ]
-    },    
+    },
     {
         "cat": "практическая пси",
         "author": "Tal Ben-Shahar",
@@ -259,7 +260,7 @@ var booksDB = [
             "2"
         ],
         "tags": "программирование",
-        "cover_url": "https://dl.airtable.com/PsyW2NOHRjOyeZxH4bF0_1011053958.jpg",
+        "cover": true,
         "author": "Зубков Сергей",
         "roles": [
             "d_pol"
@@ -282,7 +283,7 @@ var booksDB = [
             "4"
         ],
         "tags": "компьютеры графика",
-        "cover_url": "https://dl.airtable.com/ev1fvMdPRNowKJ5E1GIQ_im-book-1143.jpg",
+        "cover": true,
         "author": "Романычева",
         "roles": [
             "s_flw",
@@ -368,7 +369,7 @@ var booksDB = [
             "2"
         ],
         "tags": "делфи паскаль программирование компьютеры",
-        "cover_url": "https://dl.airtable.com/RmpnEriMQTW65sGz13qA_1474076999_e81a3212352d14e8587909032473c909.jpg",
+        "cover": true,
         "author": "Краснов М.",
         "roles": [
             "s_flw",
@@ -503,7 +504,7 @@ var booksDB = [
             "2"
         ],
         "tags": "программирование",
-        "cover_url": "https://dl.airtable.com/1228RfPEQ5WoyJrvxnNt_1004496274.jpg",
+        "cover": true,
         "author": "Гилмор",
         "roles": [
             "d_pol"
@@ -593,7 +594,7 @@ var booksDB = [
             "18л3"
         ],
         "tags": "предприятия предпринимательство стартап работа !перечитал !просмотел",
-        "cover_url": "https://dl.airtable.com/R6aqf4SlSnGPgeA6J9Qc_Image%2019%20June%202018%2010%3A31%20am.jpg",
+        "cover": true,
         "roles": [
             "d_org",
             "t_emp",
@@ -628,7 +629,7 @@ var booksDB = [
             "16о"
         ],
         "tags": "стереотипы порнография секс любимая работа документальная",
-        "cover_url": "https://dl.airtable.com/9IXOzcCQjiwzBqJm9tXm_38091_57242_k.jpg",
+        "cover": true,
         "author": "Богдан Логвиненко",
         "roles": [
             "l_rzb",
@@ -667,7 +668,7 @@ var booksDB = [
             "17л"
         ],
         "tags": "стартап культура",
-        "cover_url": "https://dl.airtable.com/jUA3hZUoQoKq7klScxS3_Scrum.-Revolyutsionnyj-metod-upravleniya-proektami-Dzheff-Sazerlend.png",
+        "cover": true,
         "author": "Джефф Сазерленд",
         "info": {
             "pages": 237,
@@ -814,7 +815,7 @@ var booksDB = [
             "18л"
         ],
         "tags": "религия идеи",
-        "cover_url": "https://dl.airtable.com/tNE8O6JS9CWqTxs00MfA_613ViYu7%2BxL._SX260_.jpg",
+        "cover": true,
         "author": "DK Publishing",
         "roles": [
             "l_rzb",
@@ -844,7 +845,7 @@ var booksDB = [
             "00"
         ],
         "tags": "программирование компьютеры паскаль алгоритмы",
-        "cover_url": "https://dl.airtable.com/uMSYFxpNSf2F5WYFdZfC_1004469656.jpg",
+        "cover": true,
         "roles": [
             "d_pol"
         ]
@@ -1304,7 +1305,7 @@ var booksDB = [
         "sezons": [
             "91"
         ],
-        "cover_url": "https://dl.airtable.com/Wkj7HycVTmydr4TWJJi4_0311862.jpg",
+        "cover": true,
         "author": "Ткач Д.И.",
         "coauthor": "Русскевич Н.Л., Ниринберг П.Р",
         "roles": [
@@ -1545,7 +1546,8 @@ var booksDB = [
         },
         "all": true,
         "sezons": [
-            "15","16"
+            "15",
+            "16"
         ],
         "ids": {
             "ai": 67
@@ -1715,7 +1717,7 @@ var booksDB = [
             "18о"
         ],
         "tags": "блокчейн технологии деньги доверие",
-        "cover_url": "https://dl.airtable.com/xPtVqrRMSwuDRuT5zOpI_publicitates-foto-49824617.jpg",
+        "cover": true,
         "author": "Лоран Лелу",
         "weeks": [
             "18л10",
@@ -1789,7 +1791,7 @@ var booksDB = [
             "19з"
         ],
         "tags": "художественная фантастика рассказ будущее",
-        "cover_url": "https://dl.airtable.com/8ar2567TDaGEMsn9tXzb_cover.jpg",
+        "cover": true,
         "roles": [
             "k_flw"
         ]
@@ -1834,7 +1836,7 @@ var booksDB = [
         ],
         "author_": "Сьюзен Джефферс",
         "tags": "мотивация психология",
-        "cover_url": "https://dl.airtable.com/If5SRlECSOmIITDQsII8_Unknown.jpeg",
+        "cover": true,
         "roles": [
             "s_crt",
             "d_pol",
@@ -1923,7 +1925,7 @@ var booksDB = [
         ],
         "author_": "Йонге Мингьюр Ринпоче",
         "tags": "медитация мозг здоровье будизм радость",
-        "cover_url": "https://dl.airtable.com/fkxsu0DpSyaiRLocWqzD_ionge-mingiur-rinpoche-budda-mozg-i-neirofiziologiia-schastia-kak-izmenit-zhizn-k-luchshemu.jpg",
+        "cover": true,
         "author": "Йонге Мингьюр",
         "info": {
             "pages": 368,
@@ -1992,7 +1994,7 @@ var booksDB = [
         ],
         "author_": "Азис Ансари",
         "tags": "сеть знакомства отношения",
-        "cover_url": "https://dl.airtable.com/eqaqlzBQqmsDuGRdlI5N_1015223118.jpg",
+        "cover": true,
         "author": "Азиз Ансари",
         "coauthor": "Эрик Клиненберг, Азиз Ансари",
         "info": {
@@ -2149,7 +2151,7 @@ var booksDB = [
             "17в"
         ],
         "tags": "знакомства люди",
-        "cover_url": "https://dl.airtable.com/Yi49X7DXSueEjpv9Mw3m_Screen%20Shot%202018-03-12%20at%2013.36.23.png",
+        "cover": true,
         "roles": [
             "t_crt",
             "t_chs"
@@ -2696,7 +2698,7 @@ var booksDB = [
             "19з",
             "21з"
         ],
-        "cover_url": "https://dl.airtable.com/.attachments/6bb82946b5fe4b56596b0c24eba44f0e/cbe74a62/51ltNXhyRUL.jpg"
+        "cover": true
     },
     {
         "cat": "худла",
@@ -2896,7 +2898,7 @@ var booksDB = [
             "16з"
         ],
         "tags": "мышление рост",
-        "cover_url": "https://dl.airtable.com/6U0fQGG3QvyQDX0g3ylo_Kerol_Duek__Gibkoe_soznanie._Novyj_vzglyad_na_psihologiyu_razvitiya_vzroslyh_i_d.jpg",
+        "cover": true,
         "author": "Кэрол Дуэк",
         "coauthor": "Кэрол Дуэк",
         "info": {
@@ -2992,7 +2994,7 @@ var booksDB = [
             "18з"
         ],
         "tags": "город урбанизм еда",
-        "cover_url": "https://dl.airtable.com/OVSkGrZnRUi5pHQvDhim_7lwd8B-JCOClDe1dHG4jrQ-article.png",
+        "cover": true,
         "author": "Кэролин Стил",
         "coauthor": "Кэролин Стил",
         "info": {
@@ -3437,7 +3439,7 @@ var booksDB = [
             "18л"
         ],
         "tags": "ideo дизайн мышление дизайн мышление впечатления прототипирование",
-        "cover_url": "https://dl.airtable.com/4IA87dxDSMOrCK8wRE4T_mv7noXMWNcKl7yZUEueKIA.jpg",
+        "cover": true,
         "author": "Тим Браун",
         "coauthor": "Тим Браун",
         "info": {
@@ -3511,7 +3513,7 @@ var booksDB = [
             "18о"
         ],
         "tags": "геи кинк романтика поэтика художественная",
-        "cover_url": "https://dl.airtable.com/qmNmJmAjStuA9cGXRVOD_Zhan_Zhene__Dnevnik_vora.jpg",
+        "cover": true,
         "author": "Жан Жене",
         "mradd": 1602747125071,
         "weeks": [
@@ -3598,7 +3600,7 @@ var booksDB = [
         ],
         "author_": "Tony Hsieh",
         "tags": "стартап культура поток работа смыслы счастье",
-        "cover_url": "https://dl.airtable.com/Fd2XKrRTmU9DR2bTpmSQ_Unknown.jpeg",
+        "cover": true,
         "roles": [
             "s_lif",
             "s_crt",
@@ -3638,7 +3640,7 @@ var booksDB = [
             "21з"
         ],
         "tags": "будда медитация история притчи",
-        "cover_url": "https://dl.airtable.com/.attachments/1fc94f1da6a63d49582eb4744fedc7d7/b62b04f6/unnamed.jpg",
+        "cover": true,
         "author": "Тик Нат Хан",
         "coauthor": "Nguyen Thi Hop, Mobi Ho",
         "info": {
@@ -3873,7 +3875,7 @@ var booksDB = [
             "16в"
         ],
         "tags": "ненасильственное общение нно",
-        "cover_url": "https://dl.airtable.com/nSI0fcIQhKUXGj8gh4IQ_47799.jpg",
+        "cover": true,
         "author": "Руст С.",
         "roles": [
             "l_vzp",
@@ -3958,7 +3960,7 @@ var booksDB = [
             "16о"
         ],
         "tags": "креативный класс социум индивидуализм урбанизм город",
-        "cover_url": "https://dl.airtable.com/R8p45eVsRj2rzxrrKGX1_10356333_0.jpg",
+        "cover": true,
         "author": "Эрик Кляйненберг",
         "coauthor": "Эрик Кляйненберг",
         "info": {
@@ -4177,7 +4179,7 @@ var booksDB = [
             "99"
         ],
         "tags": "англия детектив шерлок холмс детектив",
-        "cover_url": "https://dl.airtable.com/MESL0JsQ9ySuUDXWaI3t_1445948869.45_s3bXmtG.jpg",
+        "cover": true,
         "author": "Артур Конан Дойл",
         "roles": [
             "k_flw"
@@ -4288,7 +4290,7 @@ var booksDB = [
         ],
         "author_": "Стюарт Браун, Кристофер Воган",
         "tags": "игра состояния счастье поток взрослые зависимости",
-        "cover_url": "https://dl.airtable.com/rJTGtJyGTKyvxtuCtuG4_Image%2010%20December%202018%2010%3A05%20pm.jpg",
+        "cover": true,
         "author": "Стюарт Браун",
         "coauthor": "Christopher Vaughan",
         "info": {
@@ -4342,7 +4344,7 @@ var booksDB = [
         ],
         "author_": "Орсон Скотт Кард",
         "tags": "война космическая фантастика развитие эндер",
-        "cover_url": "https://dl.airtable.com/.attachments/e4d0fee4462e9f8f9306a1090a378f79/ac8a0f88/Unknown.jpeg",
+        "cover": true,
         "author": "Orson Scott Card",
         "coauthor": "Орсон Скотт Кард, Елена Михайлик",
         "info": {
@@ -4373,7 +4375,7 @@ var booksDB = [
             "91"
         ],
         "tags": "игры развлечения программирование компьютеры правила",
-        "cover_url": "https://dl.airtable.com/lqAWYJdNQSUVwhvVukUd_1461725.jpg",
+        "cover": true,
         "author": "Фирсова Л.М",
         "roles": [
             "s_lif",
@@ -4604,7 +4606,7 @@ var booksDB = [
             "16в"
         ],
         "tags": "простота осознанность япония",
-        "cover_url": "https://dl.airtable.com/3r5P94QDQv2m0G9H1i8T_Dominik_Loro__Iskusstvo_zhit_prosto._Kak_izbavitsya_ot_lishnego_i_obogatit_svoyu.jpg",
+        "cover": true,
         "roles": [
             "t_chs"
         ]
@@ -4885,7 +4887,7 @@ var booksDB = [
         ],
         "author_": "Жордж Батай",
         "tags": "эротизм секс пограничное философия метафора художественная",
-        "cover_url": "https://dl.airtable.com/9gVuBaGPRHKUtUm08SmO_51XGCmAFF4L._SX341_BO1%2C204%2C203%2C200_.jpg",
+        "cover": true,
         "author": "Жорж Батай",
         "info": {
             "pages": 41,
@@ -5243,7 +5245,7 @@ var booksDB = [
             "20л"
         ],
         "author_": "Frank Sesno",
-        "cover_url": "https://dl.airtable.com/.attachments/73595d9de2deaa5c4c79e6de431eef4f/d9fca025/9a82d5b6-67cd-f76d-f039-e017b98f007b.png",
+        "cover": true,
         "roles": [
             "t_alz",
             "t_qst"
@@ -5360,7 +5362,7 @@ var booksDB = [
             "19в4",
             "19в5"
         ],
-        "cover_url": "https://dl.airtable.com/.attachments/550a50829a6776765dfefe874284ea93/63192b44/Emily_Nagoski__Come_as_You_Are_The_Surprising_New_Science_That_Will_Transform_Yo.jpg",
+        "cover": true,
         "sezons": [
             "19"
         ],
@@ -5427,7 +5429,7 @@ var booksDB = [
             "19з"
         ],
         "tags": "советы теория чтение",
-        "cover_url": "https://dl.airtable.com/0hJd0lTCSLW3DCuwwo4D_1009642966.jpg",
+        "cover": true,
         "roles": [
             "t_alz",
             "t_crt",
@@ -5567,7 +5569,7 @@ var booksDB = [
         ],
         "author_": "Майкл Уайт, Дэвид Эпстон",
         "tags": "психология учебник нарративка истории",
-        "cover_url": "https://dl.airtable.com/xYlMtJRJCJXwiCLZDohA_a9d4d64162fd45bbb520e6d992daac0b--book-jacket.jpg",
+        "cover": true,
         "roles": [
             "l_vzp",
             "l_rzb",
@@ -5601,8 +5603,8 @@ var booksDB = [
         "book": "Квадрант денежного потока",
         "tags": "бизнес богатство квадранты классификации мышление начало",
         "cat": "бизнес",
-        "author": "Роберт Т. Кийосаки", 
-        "coauthor":"Шэрон Л. Лектер",
+        "author": "Роберт Т. Кийосаки",
+        "coauthor": "Шэрон Л. Лектер",
         "type": "книга",
         "name": {
             "ru": "Квадрант денежного потока"
@@ -5737,7 +5739,7 @@ var booksDB = [
             "k_flw"
         ]
     },
-        {
+    {
         "cat": "эзотерика",
         "type": "книга",
         "name": {
@@ -6010,7 +6012,7 @@ var booksDB = [
         ],
         "author_": "Микаэль Крогерус, Роман Чеппелер",
         "tags": "стратегия",
-        "cover_url": "https://dl.airtable.com/H8aImfT8RcOsIhFLoKEn_Mikael_Krogerus_Roman_Cheppeler__Kniga_reshenij._50_modelej_strategicheskogo_mys.jpg",
+        "cover": true,
         "author": "Mikael Krogerus",
         "coauthor": "Roman Tschäppeler",
         "info": {
@@ -6205,7 +6207,7 @@ var booksDB = [
         "sezons": [
             "6"
         ],
-        "cover_url": "https://dl.airtable.com/yQAihiZSZ6jxsXEnduiA_923849.jpg",
+        "cover": true,
         "author": "Шапиро Стокман",
         "roles": [
             "s_flw",
@@ -6371,7 +6373,7 @@ var booksDB = [
             "21в"
         ],
         "author_": "Уоррен Бергер",
-        "cover_url": "https://dl.airtable.com/.attachments/32f3b53dcc3cd992c00d982134092233/db5ed57f/510Mfsi0yBL.jpg",
+        "cover": true,
         "roles": [
             "t_qst"
         ]
@@ -6428,7 +6430,7 @@ var booksDB = [
         ],
         "author_": "Чарльз Лэндри",
         "tags": "знакомства город",
-        "cover_url": "https://dl.airtable.com/ji0J4d5CQumlsEKHRKja_Charlz_Lendri__Kreativnyj_gorod.jpg",
+        "cover": true,
         "author": "Лэндри",
         "info": {
             "pages": 300,
@@ -6490,7 +6492,7 @@ var booksDB = [
         ],
         "author_": "Ричард Флорида",
         "tags": "качественное место / платформа креативный бизнес классовость общества креативный класс люди",
-        "cover_url": "https://dl.airtable.com/nSUruZ84T6yEriCs2YiO_6746164_images_1429774304.jpg",
+        "cover": true,
         "author": "Florida, Richard L.",
         "coauthor": "Ричард Флорида",
         "info": {
@@ -6651,7 +6653,7 @@ var booksDB = [
         ],
         "author_": "Ричард Флорида",
         "tags": "креативный класс урбанизм город люди",
-        "cover_url": "https://dl.airtable.com/VI6f2E2KQk6c1UOoGdmn_Richard_Florida__Kto_tvoj_gorod_Kreativnaya_ekonomika_i_vybor_mesta_zhitelstva.jpeg",
+        "cover": true,
         "author": "Richard Florida",
         "coauthor": "Ричард Флорида",
         "info": {
@@ -6849,7 +6851,7 @@ var booksDB = [
             "17л"
         ],
         "tags": "стартап деньги",
-        "cover_url": "https://dl.airtable.com/jsQb4DyNRXqA0erbhqCo_6669789_images_1426185429.png",
+        "cover": true,
         "author": "Бен Хоровиц",
         "mradd": 1602747154519,
         "weeks": [
@@ -6997,7 +6999,7 @@ var booksDB = [
             "19з"
         ],
         "tags": "художественная фантастика будущее мозг иллюзии",
-        "cover_url": "https://dl.airtable.com/5n4iLVtlShi981n8FLzp_1073620_0_Lozhnaya_slepota_Piter_Uotts.jpg",
+        "cover": true,
         "author": "Питер Уоттс",
         "coauthor": "Питер Уоттс, Илья Руднев, Даниэль Смушкович",
         "info": {
@@ -7344,7 +7346,7 @@ var booksDB = [
         ],
         "tags": "рассказ отношения прикол союз художественная",
         "cat": "худла",
-        "cover_url": "https://dl.airtable.com/6YXJqFNKSRC6bTmWND1p_images.jpeg",
+        "cover": true,
         "author": "Веллер",
         "type": "рассказ",
         "roles": [
@@ -7384,7 +7386,7 @@ var booksDB = [
             "17в"
         ],
         "tags": "музыка хиты люди",
-        "cover_url": "https://dl.airtable.com/kBTtvF01TPCIGoeFIAx4_10560293_0.jpg",
+        "cover": true,
         "author": "Джон Сибрук",
         "coauthor": "Джон Сибрук",
         "info": {
@@ -7647,7 +7649,9 @@ var booksDB = [
         },
         "all": true,
         "sezons": [
-            "08", "09", "10"
+            "08",
+            "09",
+            "10"
         ],
         "ids": {
             "ai": 295
@@ -7675,7 +7679,7 @@ var booksDB = [
             "3"
         ],
         "tags": "компьютеры графика",
-        "cover_url": "https://dl.airtable.com/KQDUWBJxSxqTIrGtpVGB_04525385.cover_330.jpg",
+        "cover": true,
         "author": "Алексей Поляков, Виталий Брусенцев",
         "roles": [
             "s_flw"
@@ -7706,7 +7710,7 @@ var booksDB = [
             "18л"
         ],
         "tags": "коучинг эффективность достижения самопомощь !просмотел",
-        "cover_url": "https://dl.airtable.com/VyHCBeLZTK6kBqgIVEpb_Mechtat-ne-vredno.png",
+        "cover": true,
         "author": "Барбара Шер",
         "mradd": 1602747157330,
         "weeks": [
@@ -7865,7 +7869,7 @@ var booksDB = [
         "all": true,
         "ids": {
             "gr": 32612908,
-            "art":"recsO7JBXNHPItKJq",
+            "art": "recsO7JBXNHPItKJq",
             "n": 136,
             "mr": [
                 949
@@ -7886,7 +7890,7 @@ var booksDB = [
             "18в"
         ],
         "tags": "мозг тело медитация здоровье наука",
-        "cover_url": "https://dl.airtable.com/36g4ItDGQkWomd9qZN6Q_BC2_1442820542.jpg",
+        "cover": true,
         "roles": [
             "s_lif",
             "t_alz"
@@ -8087,7 +8091,7 @@ var booksDB = [
         "sezons": [
             "6з"
         ],
-        "cover_url": "https://dl.airtable.com/U2o5mhniRx2mgUXnAU5v_big.jpg",
+        "cover": true,
         "author": "Шейнов",
         "roles": [
             "l_lov",
@@ -8309,7 +8313,8 @@ var booksDB = [
             "03",
             "21л"
         ],
-        "author": "Sergei Lukyanenko",
+                "cover":true,
+        "author": "Sergei Lukyanenko, Сергей Лукяненко",
         "coauthor": "Nick Perumov, Ник Перумов",
         "info": {
             "pages": 413,
@@ -8534,7 +8539,7 @@ var booksDB = [
             "21з"
         ],
         "tags": "2_good happiness thinking working",
-        "cover_url": "https://dl.airtable.com/.attachments/48701a98a62707b2cfa85fad0781a6e4/30431fa2/cover_522885_big.jpg",
+        "cover": true,
         "author": "Елена Резанова",
         "info": {
             "pages": 208
@@ -8714,7 +8719,7 @@ var booksDB = [
             "18з"
         ],
         "tags": "утопия антиутопия фантастика художественная общество",
-        "cover_url": "https://dl.airtable.com/1SOCTAyKR82MbktSItOJ_0_8019034d9372f05ce7b0875410e61b16_1400785072.jpg",
+        "cover": true,
         "roles": [
             "k_flw"
         ]
@@ -8851,7 +8856,7 @@ var booksDB = [
             "97"
         ],
         "tags": "информатика программирование компьютеры",
-        "cover_url": "https://dl.airtable.com/tyq6J9LTGC1aeyd0x89R_1007170810.jpg",
+        "cover": true,
         "author": "Михаил Коляда",
         "roles": [
             "s_crt",
@@ -8979,7 +8984,7 @@ var booksDB = [
             "2"
         ],
         "tags": "программирование",
-        "cover_url": "https://dl.airtable.com/ugMJ2mbARDann6YgbhST_1004485573.jpg",
+        "cover": true,
         "author": "Холмогоров",
         "roles": [
             "d_pol"
@@ -9202,7 +9207,7 @@ var booksDB = [
         ],
         "author_": "Peter Thiel, Blake Masters",
         "tags": "стартап деньги нелинейность",
-        "cover_url": "https://dl.airtable.com/.attachments/49338b289f28b833daa1b5f2dc7eaad0/43a45801/1.jpg",
+        "cover": true,
         "author": "Peter Thiel",
         "coauthor": "Blake  Masters",
         "info": {
@@ -9320,7 +9325,7 @@ var booksDB = [
         ],
         "author_": "Барбара Шер",
         "tags": "multipotentialite multipotentialite",
-        "cover_url": "https://dl.airtable.com/iyVB7yzRD6kkAcsqPX3w_02590640.jpg",
+        "cover": true,
         "author": "Barbara Sher",
         "mradd": 1616269119363,
         "weeks": [
@@ -9395,7 +9400,7 @@ var booksDB = [
             "21в"
         ],
         "author_": "Федерик Лалу",
-        "cover_url": "https://dl.airtable.com/.attachments/aa971618d43ecbef9a9b760c133470af/26136799/Otkryvaya-organizatsii-budushhego-Fridrik-Lalu.jpg",
+        "cover": true,
         "roles": [
             "l_vzp",
             "s_lif",
@@ -9765,7 +9770,7 @@ var booksDB = [
             "20о"
         ],
         "tags": "ясность текст мышление дизайн ux !перечитал текст контекст смысл польза копирайтинг",
-        "cover_url": "https://dl.airtable.com/5paO8UZ1Qb6vmYwggzcK_major-half-white.jpg",
+        "cover": true,
         "roles": [
             "l_vzp",
             "s_flw",
@@ -9829,7 +9834,7 @@ var booksDB = [
             "18з"
         ],
         "tags": "деньги мозгоеб пунктами сектообразование сублимация нейросеть ясность",
-        "cover_url": "https://dl.airtable.com/Q57fFrGETvmU88se3eQA_1018972319.jpg",
+        "cover": true,
         "author": "Норман Дойдж",
         "info": {
             "pages": 544,
@@ -10037,7 +10042,7 @@ var booksDB = [
             "18з"
         ],
         "tags": "фантастика память космос художественная",
-        "cover_url": "https://dl.airtable.com/iuwjpGgNTDufYdPKJqYz_zhXdi8soay9a1feltHsNg.jpeg",
+        "cover": true,
         "roles": [
             "k_flw"
         ]
@@ -10249,10 +10254,11 @@ var booksDB = [
         "start": "2019/02/07",
         "add_art": "2018-01-14",
         "sezons": [
-            "12", "16з"
+            "12",
+            "16з"
         ],
         "tags": "поток работа смыслы счастье !перечитал",
-        "cover_url": "https://dl.airtable.com/m6fDi64FTMWAF2lmnEaA_Mihaj_Chiksentmihaji__Potok._Psihologiya_optimalnogo_perezhivaniya.jpg",
+        "cover": true,
         "roles": [
             "l_lov",
             "s_lif",
@@ -10370,7 +10376,7 @@ var booksDB = [
         ],
         "author_": "Джеймс Элкинс",
         "tags": "искусство обучение история крит",
-        "cover_url": "https://dl.airtable.com/iNqzmuPSL2AZpp8ha22B_1014082648.jpg",
+        "cover": true,
         "author": "James Elkins",
         "coauthor": "Джеймс Элкинс, Нина Усова",
         "info": {
@@ -10430,7 +10436,7 @@ var booksDB = [
         "sezons": [
             "19в"
         ],
-        "cover_url": "https://dl.airtable.com/.attachments/82bbf99be73210a2eb407504030dee6e/2913849c/10742103_0.jpg",
+        "cover": true,
         "roles": [
             "l_rzb",
             "l_lov"
@@ -10526,7 +10532,7 @@ var booksDB = [
         ],
         "author_": "Бернард Росс",
         "tags": "дизайн мышление как жить",
-        "cover_url": "https://dl.airtable.com/tgd0a1OeS9eBffDsOrhq_1017329038.jpg",
+        "cover": true,
         "roles": [
             "s_crt",
             "d_pol",
@@ -10580,7 +10586,7 @@ var booksDB = [
             "17з"
         ],
         "tags": "работа смысл жизнь новое образовние ошибки школа",
-        "cover_url": "https://dl.airtable.com/.attachments/a6737e9fab155c7c87a6eae9ae286900/98d290bd/dcf451118413a309dd89243e7568ba32.jpg",
+        "cover": true,
         "author": "Кен Робинсон",
         "roles": [
             "d_pol"
@@ -10762,7 +10768,7 @@ var booksDB = [
             "18л"
         ],
         "tags": "фантастика оборотни россия художественная",
-        "cover_url": "https://dl.airtable.com/bqFzTtTRuuVoOmRO5N6w_280.jpg",
+        "cover": true,
         "author": "Виктор Пелевин",
         "roles": [
             "k_flw"
@@ -10812,7 +10818,7 @@ var booksDB = [
             "d_pol"
         ],
         "tags": "делфи паскаль программирование компьютеры хакинг",
-        "cover_url": "https://dl.airtable.com/rMm3wQWTiynGMmaHBxdI_1004855468.jpg",
+        "cover": true,
         "author": "Михаил Фленов"
     },
     {
@@ -11157,7 +11163,7 @@ var booksDB = [
             "18л"
         ],
         "tags": "религия психология",
-        "cover_url": "https://dl.airtable.com/21NETcm5RzSQ87F5gJz8_0419339.jpg",
+        "cover": true,
         "author": "А.Г. Сафронов",
         "roles": [
             "l_vzp",
@@ -11215,7 +11221,7 @@ var booksDB = [
         ],
         "author_": "Соня  Любомирски",
         "tags": "happiness",
-        "cover_url": "https://dl.airtable.com/.attachments/d5fc9353312650b3bb8b82822840961c/4e0e1540",
+        "cover": true,
         "author": "Соня Любомирски",
         "info": {
             "pages": 384,
@@ -11354,7 +11360,7 @@ var booksDB = [
             "15л"
         ],
         "author": "Джулия Кэмерон",
-        "cover_url": "https://s3-goods.ozstatic.by/2000/44/567/10/10567044_0.jpg",
+        "cover": true,
         "info": {
             "pages": 352,
             "year": 1992
@@ -11428,7 +11434,7 @@ var booksDB = [
             "97"
         ],
         "tags": "детектив дети приключения собака",
-        "cover_url": "https://dl.airtable.com/LeNXahqkTeap4UrqGp6L_iu.jpeg",
+        "cover": true,
         "author": "Энид Блайтон",
         "roles": [
             "k_flw"
@@ -11489,7 +11495,7 @@ var booksDB = [
         ],
         "author": "Ласло Бок",
         "tags": "работа гугл счастье удовольствие",
-        "cover_url": "https://dl.airtable.com/MepdpFb5Ra90xe20q1YB_1.00x-thumb.png",
+        "cover": true,
         "coauthor": "Laszlo Bock",
         "mradd": 1616269118912,
         "weeks": [
@@ -11615,7 +11621,7 @@ var booksDB = [
             "k_flw"
         ]
     },
-        {
+    {
         "name": {
             "ru": "Реальность фантастики"
         },
@@ -11829,7 +11835,7 @@ var booksDB = [
         ],
         "author_": "Фил Богачев",
         "tags": "нлп пикап соблазнение",
-        "cover_url": "https://dl.airtable.com/XqpKG8qxTSSVOCGJhxjJ_f031c89f77faeabfe2ba907e00bf9711.jpg",
+        "cover": true,
         "author": "Филипп Олегович Богачев",
         "mradd": 1602747130177,
         "weeks": [
@@ -11956,7 +11962,7 @@ var booksDB = [
             "0"
         ],
         "tags": "программирование",
-        "cover_url": "https://dl.airtable.com/pwAGltbR9ynt8V2RmLEp_1495646580_p0001.jpg",
+        "cover": true,
         "author": "Секунов",
         "roles": [
             "d_pol"
@@ -12210,7 +12216,7 @@ var booksDB = [
             "18о"
         ],
         "tags": "перемены привычки рост социальная психология креативный бизнес перемены !перечитал",
-        "cover_url": "https://dl.airtable.com/.attachments/56a1d0df9ddd35d7cf235967ab7c0135/96db220e/serdze-peremen-big.png",
+        "cover": true,
         "roles": [
             "s_lif",
             "s_crt",
@@ -12325,7 +12331,7 @@ var booksDB = [
             "18о",
             "19з"
         ],
-        "cover_url": "https://dl.airtable.com/ralQBjPSIKxCDZxBSt0w_10421501_0_Signal_i_Shum_Silver_Neyt.jpg",
+        "cover": true,
         "roles": [
             "l_rzb",
             "d_org",
@@ -12376,7 +12382,7 @@ var booksDB = [
             "20з"
         ],
         "author_": "Келли Макгонигал",
-        "cover_url": "https://dl.airtable.com/.attachments/57d206dbe2c16e173c028c0afb0e211f/e794a0c5/1_00x-thumb.png",
+        "cover": true,
         "weeks": [
             "20о7"
         ],
@@ -12407,7 +12413,7 @@ var booksDB = [
             "20з"
         ],
         "tags": "!просмотел присутствие время гуру психология травмы отношения",
-        "cover_url": "https://dl.airtable.com/.attachments/6c8caf87ccec3bb29ab82dff6594cb43/1cad9f68/212071_23204400.jfif",
+        "cover": true,
         "author": "Экхард Толе",
         "roles": [
             "k_int"
@@ -12446,7 +12452,7 @@ var booksDB = [
             "20з"
         ],
         "tags": "emotions social thinking",
-        "cover_url": "https://dl.airtable.com/.attachments/2c058bf5d959686acdbc5656ef3d8924/b1907398/12609433__SY475_.jfif",
+        "cover": true,
         "author": "Charles Duhigg",
         "info": {
             "pages": 375,
@@ -12525,7 +12531,7 @@ var booksDB = [
             "5"
         ],
         "tags": "соционика теория систем",
-        "cover_url": "https://dl.airtable.com/8xkCa5IWRiiKM6RJodnk_Yermak_old.jpg",
+        "cover": true,
         "author": "Ермак",
         "roles": [
             "l_vzp",
@@ -12608,7 +12614,7 @@ var booksDB = [
         ],
         "author_": "Сэм Карпентер",
         "tags": "системное дизайн мышление бизнес управление",
-        "cover_url": "https://dl.airtable.com/73kCAu3RRTW23rno8T7g_1415276_original.jpg",
+        "cover": true,
         "roles": [
             "s_crt",
             "d_org",
@@ -12650,7 +12656,7 @@ var booksDB = [
             "18в"
         ],
         "tags": "метафора диктатура власть эволюция художественная",
-        "cover_url": "https://dl.airtable.com/DlGYqycSqq58ek5jkWIK_%D1%81%D0%BA%D0%BE%D1%82%D0%BD%D1%8B%D0%B8%CC%86-%D0%B4%D0%B2%D0%BE%D1%80-%D1%8D%D1%81%D1%81%D0%B5.jpg",
+        "cover": true,
         "author": "Джордж Оруэлл",
         "info": {
             "pages": 256,
@@ -13007,7 +13013,7 @@ var booksDB = [
             "19з"
         ],
         "author_": "Дэниел Гилберт",
-        "cover_url": "https://dl.airtable.com/.attachments/f8bb1f8ca21ad89896e082d2de0c548b/b2ff2d6d/1043975_0_Spotikayas_o_schaste_Deniel_Rilbert.jpg",
+        "cover": true,
         "roles": [
             "l_lov",
             "s_lif",
@@ -13071,7 +13077,7 @@ var booksDB = [
         ],
         "author_": "Chris Guillebeau",
         "tags": "3_maybe",
-        "cover_url": "https://dl.airtable.com/.attachments/b6f11beb0507a746a8395cb641b4ea17/f6c72a1b/100.jpg",
+        "cover": true,
         "author": "Guillebeau, Chris",
         "info": {
             "pages": 268,
@@ -13170,7 +13176,7 @@ var booksDB = [
         ],
         "author_": "Габриэль Гарсиа Маркес",
         "tags": "художественная магический реализм поколения",
-        "cover_url": "https://dl.airtable.com/.attachments/dda6dc3f70b9903d974938d06dacd6cf/d3acc896/boocover.jpg",
+        "cover": true,
         "author": "Gabriel García Márquez",
         "coauthor": "Габриэль Гарсиа Маркес",
         "info": {
@@ -13604,7 +13610,7 @@ var booksDB = [
             "ai": 525
         },
         "add_art": "2018-09-07",
-        "cover_url": "https://dl.airtable.com/oBEPM2A7R1W2bMD63YdB_56887.jpg",
+        "cover": true,
         "sezons": [
             "05",
             "7з"
@@ -13675,7 +13681,7 @@ var booksDB = [
             "19о",
             "20о"
         ],
-        "cover_url": "https://dl.airtable.com/.attachments/86611606c78da243a9119376501a7295/07025593/ScreenShot2019-10-29at13_35_57.png",
+        "cover": true,
         "weeks": [
             "20о7"
         ],
@@ -13757,7 +13763,6 @@ var booksDB = [
         ]
     },
     {
-
         "cat": "мышление",
         "type": "книга",
         "name": {
@@ -13774,7 +13779,8 @@ var booksDB = [
         },
         "add_art": "2018-09-07",
         "sezons": [
-            "4", "7в"
+            "4",
+            "7в"
         ],
         "roles": [
             "l_rzb",
@@ -13945,7 +13951,7 @@ var booksDB = [
         ],
         "tags": "фантастика космос время художественная",
         "cat": "худла",
-        "cover_url": "https://dl.airtable.com/x8S8EypBSrqvBBHwzcqk_30211451.cover_185.jpg",
+        "cover": true,
         "type": "рассказ",
         "roles": [
             "k_flw"
@@ -14037,7 +14043,7 @@ var booksDB = [
         },
         "roles": [],
         "tags": "коучинг вопросы привычки",
-        "cover_url": "https://dl.airtable.com/.attachments/b541aae085801171cdef6a6cf2cea441/3cfdbf3e/cover.png",
+        "cover": true,
         "author": "Рейтер Марк",
         "type": "книга",
         "cat": "практическая пси"
@@ -14092,7 +14098,7 @@ var booksDB = [
             "18в"
         ],
         "tags": "фантастика общество выживание художественная",
-        "cover_url": "https://dl.airtable.com/mv1hHUW4SZycGEyLXJ02_Robert_Hajnlajn__Tunnel_v_nebe.jpg",
+        "cover": true,
         "author": "Роберт Хайнлайн",
         "info": {
             "pages": 384,
@@ -14287,7 +14293,7 @@ var booksDB = [
         "name": {
             "ru": "Усовершенствуйте свою память"
         },
-        "author":"Тони Бьюзен",
+        "author": "Тони Бьюзен",
         "all": true,
         "ids": {
             "art": "recwlQeEkxy5p7KLW",
@@ -14659,7 +14665,7 @@ var booksDB = [
         ],
         "author_": "Том Д'Ансембур",
         "tags": "нно ненасильственное общение выбор психология",
-        "cover_url": "https://dl.airtable.com/ZiLarCJRRR2oC7EH3o7P_cover1__w600.jpg",
+        "cover": true,
         "roles": [
             "l_vzp",
             "t_alz",
@@ -14722,7 +14728,7 @@ var booksDB = [
             "21з"
         ],
         "author_": "Cal Newport",
-        "cover_url": "https://dl.airtable.com/.attachments/42a14ceaa44c0b5dffc4437d202a74d8/3ff57028/Unknown-1.jpeg",
+        "cover": true,
         "roles": [
             "d_pol",
             "t_chs"
@@ -14825,7 +14831,7 @@ var booksDB = [
             "21в"
         ],
         "author_": "Брайан Робертсон",
-        "cover_url": "https://dl.airtable.com/.attachments/2135d37f96c62b0baffb12828a5a0eff/25b9ee98.jpg",
+        "cover": true,
         "roles": [
             "l_vzp",
             "l_rzb",
@@ -14904,7 +14910,7 @@ var booksDB = [
             "15з"
         ],
         "tags": "стратегия ясность",
-        "cover_url": "https://dl.airtable.com/.attachments/21e04ff9e75e3d6d8ca1754c8ec7bff8/7e1c3941/strategia_big.png",
+        "cover": true,
         "roles": [
             "d_org",
             "d_suc",
@@ -14974,7 +14980,7 @@ var booksDB = [
             "0"
         ],
         "tags": "фантастика",
-        "cover_url": "https://images.ua.prom.st/2084696911_w640_h640_hroniki-ambera-rodzher.jpg",
+        "cover": true,
         "author": "Роджер Желязны",
         "roles": [
             "s_crt",
@@ -15098,7 +15104,7 @@ var booksDB = [
         "sezons": [
             "16в"
         ],
-        "cover_url": "https://dl.airtable.com/0CHYMWCmTTOXySJpPbdL_Mark_Viktor_Hansen_Dzhek_Kenfild_Les_Hyuitt_Mark_Viktor_Hansen_i_Les_Hyuitt_Kenf.jpg",
+        "cover": true,
         "roles": [
             "d_pol",
             "t_chs"
@@ -15316,7 +15322,7 @@ var booksDB = [
         "roles": [
             "t_chs"
         ]
-    },    
+    },
     {
         "cat": "практическая пси",
         "author": "Михай Чиксентмихайи",
@@ -15479,7 +15485,7 @@ var booksDB = [
         ],
         "author_": "Роберт Хайнлайн",
         "tags": "фантастика антиутопия бизнес капитализм любовь мотивация художественная полиамория",
-        "cover_url": "https://dl.airtable.com/s5UrmbHfQC2w6LrD9doh_stranger.jpg",
+        "cover": true,
         "author": "Роберт Энсон Хайнлайн",
         "coauthor": "Роберт Э. Хайнлайн, Владимир Ковалевский, Нина Штуцер",
         "info": {
@@ -15674,7 +15680,7 @@ var booksDB = [
         ],
         "author_": "Михай Чиксентмихайи",
         "tags": "поток поток работа смыслы счастье",
-        "cover_url": "https://dl.airtable.com/L711boMFRlmR9xnGrT1w_Mihaj_Chiksentmihaji__Evolyutsiya_lichnosti.jpg",
+        "cover": true,
         "author": "Михайи Чиксентмихайи",
         "coauthor": "Михай Чиксентмихайи",
         "info": {
@@ -15765,7 +15771,7 @@ var booksDB = [
         ],
         "author_": "Б. Джозеф Пайн II, Джеймс Х. Гилмор",
         "tags": "бизнес театр !перечитал экономика впечатления",
-        "cover_url": "https://dl.airtable.com/.attachments/eaede0343ec9bc874cf03af761d29dcd/cfb9d4a5.jpg",
+        "cover": true,
         "author": "B. Joseph Pine II",
         "coauthor": "James H. Gilmore, Джозеф Пайн, Джеймс Гилмор",
         "info": {
@@ -15889,7 +15895,7 @@ var booksDB = [
             "20л"
         ],
         "tags": "favorites org фокус цель выбор нелинейность практика",
-        "cover_url": "https://dl.airtable.com/2zC8FaxtTjO7jBUy4ufE_40092368_images_5857155144.jpg",
+        "cover": true,
         "author": "Mckeown, Greg",
         "coauthor": "Грег МакКеон",
         "info": {
@@ -15970,7 +15976,7 @@ var booksDB = [
             "20з"
         ],
         "tags": "!перечитал переживание игры реальность создатель психология тренинг",
-        "cover_url": "https://dl.airtable.com/1u6sWJVTFyqTabStrhoa_Lyuk_Rejnhard__Transformatsiya._Put_k_polnotsennoj_zhizni.jpg",
+        "cover": true,
         "roles": [
             "l_rzb",
             "s_lif",
@@ -16063,7 +16069,7 @@ var booksDB = [
             "21в"
         ],
         "tags": "1_yea happiness working",
-        "cover_url": "https://dl.airtable.com/.attachments/83985e22db4cebd78ae63da78b2de5ff/c1770245/eto-norm-big.png",
+        "cover": true,
         "author": "Елена Резанова",
         "info": {
             "pages": 336
@@ -16168,7 +16174,7 @@ var booksDB = [
             "19з"
         ],
         "tags": "художественная фантастика будущее",
-        "cover_url": "https://dl.airtable.com/.attachments/9b04b33032cf6d765f74e1e2b4d41fd5/d3b8a3b4/watts.jpg",
+        "cover": true,
         "author": "Питер Уоттс",
         "coauthor": "Питер Уоттс, Николай Кудрявцев",
         "info": {
@@ -16232,7 +16238,7 @@ var booksDB = [
         ],
         "author_": "Маршал Розенберг",
         "tags": "нно ненасильственное общение медиация переговоры конфликты нно ненасильственное общение медиация переговоры конфликты !перечитал нно ненасильственное общение медиация переговоры конфликты !перечитал нно ненасильственное общение медиация переговоры конфликты !перечитал",
-        "cover_url": "https://dl.airtable.com/a8v6Y2ZYTPmkcNgWt0lU_10733346_0_Nenasilstvennoe_obschenie_Yazik_Zhizni_m_Marshall_Rozenberg.jpg",
+        "cover": true,
         "author": "Marshall B. Rosenberg",
         "info": {
             "year": 1999
@@ -16298,7 +16304,7 @@ var booksDB = [
             "18л"
         ],
         "tags": "блокчейн будущее",
-        "cover_url": "https://dl.airtable.com/eSJNtHTT3akMTB8kzNvq_9781101980149.jpeg",
+        "cover": true,
         "author": "Don Tapscott",
         "coauthor": "Alex Tapscott",
         "info": {
@@ -16352,7 +16358,7 @@ var booksDB = [
             "17в"
         ],
         "tags": "бизнес гибкость простота ограничения делай меньше",
-        "cover_url": "https://dl.airtable.com/GQI6C1PgRNWYJawuJ5Tf_getting-real-cover-56d90c4d62fc6aa1e8a333b339cc7272a18afbda0089bebdb1c0bbc54f887a39.png",
+        "cover": true,
         "author": "Джейсон Фрайд",
         "roles": [
             "d_org",
@@ -16387,7 +16393,7 @@ var booksDB = [
             "18в"
         ],
         "tags": "маркетинг внимание личный бренд блог социальняа сеть",
-        "cover_url": "https://dl.airtable.com/7xILbWTTkwqVBweOL4GQ_Screen%20Shot%202018-04-10%20at%2022.47.20.png",
+        "cover": true,
         "roles": [
             "l_vzp",
             "s_lif",
@@ -16429,7 +16435,7 @@ var booksDB = [
         ],
         "author_": "Franklin Veaux, Eve Rickert",
         "tags": "полиамория отношения любовь практика",
-        "cover_url": "https://dl.airtable.com/.attachments/be4300137dcab87c7dcb8704081328eb/51715218/More-Than-Two-cover.jpg",
+        "cover": true,
         "author": "Franklin Veaux",
         "coauthor": "Eve Rickert, Tatiana Gill, Janet W. Hardy",
         "info": {
@@ -16573,7 +16579,7 @@ var booksDB = [
             "20о"
         ],
         "tags": "работа организация счастье смысл",
-        "cover_url": "https://dl.airtable.com/.attachments/d2460d370de7c75fdb9ff76f8a75a2d4/9c412d8d/23280225._SX318_.jpg",
+        "cover": true,
         "author": "Barry Schwartz",
         "coauthor": "ทีปกร วุฒิพิทยามงคล",
         "info": {
@@ -16787,7 +16793,7 @@ var booksDB = [
         "author_": "Виктор Пелевин",
         "tags": "fiction",
         "cat": "худла",
-        "cover_url": "https://dl.airtable.com/.attachments/1fd1f001e2c4e0d3940f844a5024f93e/cb85e0dd/Viktor_Pelevin__S_N_U_F_F_.jfif",
+        "cover": true,
         "author": "Виктор Олегович Пелевин",
         "mradd": 1602747127552,
         "info": {
@@ -16836,7 +16842,7 @@ var booksDB = [
             "20о"
         ],
         "tags": "полиамория отношения дети практика",
-        "cover_url": "https://dl.airtable.com/.attachments/6940f4d0717b73235dcf5f583557816d/809f60d1/41skJUubnRL__SX331_BO1204203200_.jpg",
+        "cover": true,
         "type": "книга",
         "cat": "отношения и люди",
         "roles": [
@@ -16874,7 +16880,7 @@ var booksDB = [
             "20о"
         ],
         "tags": "креативность процесс творчества",
-        "cover_url": "https://dl.airtable.com/.attachments/9bebab2c4eb48056d4ce40656b4264fb/7bba09ce/55511572__SX318_.jpg",
+        "cover": true,
         "author": "Дорон Маєр",
         "type": "книга",
         "cat": "мышление",
@@ -16934,7 +16940,7 @@ var booksDB = [
         ],
         "tags": "гармония иррациональность наслаждение гомеопатия художественная",
         "cat": "худла",
-        "cover_url": "https://dl.airtable.com/.attachments/c0201eebd6ab83eb4ff5253ec61f7b58/1ba6cdc3/apofeniya.jpg",
+        "cover": true,
         "author": "Александр Панчин",
         "info": {
             "pages": 200,
@@ -16979,7 +16985,7 @@ var booksDB = [
         ],
         "author_": "Джозеф Стивен",
         "tags": "emotions social",
-        "cover_url": "https://dl.airtable.com/.attachments/f504a360dba63bcc19c4e1fec41a0cb6/f28c174a/Screenshot_2.jpg",
+        "cover": true,
         "author": "Стивен Джозеф",
         "info": {
             "pages": 272
@@ -17024,7 +17030,7 @@ var booksDB = [
             "20з"
         ],
         "tags": "social",
-        "cover_url": "https://dl.airtable.com/.attachments/001b6a2721d8248616554e5aee009cfd/7d5fe06b/CwCkWgCYMwigXdlJczpxS86oskfJdb9e-WsujORy1TCWUQr5ln8YK4RjN6CLgclc_wYQMukkOC9yPRX3SsvXhHlh-6AVAZ6JJhMeOw.jfif",
+        "cover": true,
         "author": "Анатолий Васильевич Кузнецов",
         "coauthor": "Анатолий Кузнецов",
         "info": {
@@ -17156,7 +17162,7 @@ var booksDB = [
             "17л"
         ],
         "tags": "стартап новый менеджмент стимулирование роста pivot lean",
-        "cover_url": "https://dl.airtable.com/l9TdcrppRz2PjBMIzDoT_lean-startup.jpg",
+        "cover": true,
         "roles": [
             "l_vzp",
             "s_crt",
@@ -17217,7 +17223,7 @@ var booksDB = [
         ],
         "author_": "Адам Грант",
         "tags": "психология",
-        "cover_url": "https://dl.airtable.com/As8t91abReyvTaVFDIJV_Adam_Grant__Brat_ili_otdavat_Novyj_vzglyad_na_psihologiyu_otnoshenij.jpg",
+        "cover": true,
         "author": "Grant Adam M.",
         "coauthor": "Адам Грант",
         "info": {
@@ -17635,7 +17641,7 @@ var booksDB = [
             "21з"
         ],
         "tags": "игры русские игры ретро история геймдев",
-        "cover_url": "https://dl.airtable.com/.attachments/9d6601c2c0985f342089109b3a16a13c/6d41cc4f/48836779__SX318_.jpg",
+        "cover": true,
         "author": "Андрей Подшибякин",
         "mradd": 1616269120370,
         "weeks": [
@@ -17774,7 +17780,7 @@ var booksDB = [
         "author_": "Александр Панчин",
         "tags": "fiction",
         "cat": "худла",
-        "cover_url": "https://dl.airtable.com/.attachments/6a5c7964c75ca8eec86ee8940735d5d5/1387b100/Aleksandr_Panchin__Garvardskij_Nekromant.jpeg",
+        "cover": true,
         "author": "Александр Юрьевич Панчин",
         "info": {},
         "start": "2021/01/02",
@@ -17863,7 +17869,7 @@ var booksDB = [
             "17л"
         ],
         "tags": "производство эффективность lean",
-        "cover_url": "https://dl.airtable.com/jKEd7PQKTOcepkI0qOtd_Dzheffri_Lajker__Dao_Toyota._14_printsipov_menedzhmenta_veduschej_kompanii_mira.jpeg",
+        "cover": true,
         "name": {
             "ru": "Дао Toyota. 14 принципов менеджмента ведущей компании мира",
             "file": "Layker_Dao-Toyota.TFx2Tw.420282.fb2"
@@ -18082,7 +18088,7 @@ var booksDB = [
         ],
         "author_": "Владимир Богров",
         "tags": "social",
-        "cover_url": "https://dl.airtable.com/.attachments/d99198bdaf6f513026f632dd74d6ce2c/c86a552c/boocover.jpg",
+        "cover": true,
         "author": "Владимир Григорьевич Богров",
         "info": {},
         "start": "2021/02/15",
@@ -18390,7 +18396,7 @@ var booksDB = [
             "20з"
         ],
         "tags": "буддизм медитация зависимости мозг любовь технологии emotions happiness meditation thinking",
-        "cover_url": "https://dl.airtable.com/.attachments/1036cc1e0a22cd5662ebea9cd0c16d36/97b2d3a9/1_00x-thumb.png",
+        "cover": true,
         "author": "Брюер Жадсон",
         "coauthor": "Jon Kabat-Zinn",
         "type": "книга",
@@ -18500,7 +18506,7 @@ var booksDB = [
         ],
         "author_": "Стивен Сломан и Филип Фернбах",
         "tags": "org social thinking",
-        "cover_url": "https://dl.airtable.com/.attachments/b0f6ed548b01ff04863bfe9e5672461c/c69d122f/Unknown.jpeg",
+        "cover": true,
         "author": "Steven Sloman",
         "coauthor": "Philip Fernbach",
         "info": {
@@ -18532,7 +18538,7 @@ var booksDB = [
             "20з"
         ],
         "tags": "meditation music thinking time мозг время восприятие искажение прошлое будущее мышление",
-        "cover_url": "https://dl.airtable.com/.attachments/e33396cbf44f918012566166f7f56eba/1a5c367d/16248212.jfif",
+        "cover": true,
         "author": "Клоди Хэммонд",
         "type": "книга",
         "name": {
@@ -18617,7 +18623,7 @@ var booksDB = [
         ],
         "author_": "Виктор Пелевин",
         "cat": "худла",
-        "cover_url": "https://dl.airtable.com/.attachments/9283651398a153143bdf1d8288798b8b/8873f7b6/1566427515146030445.jfif",
+        "cover": true,
         "type": "книга",
         "roles": [
             "k_flw",
@@ -18806,7 +18812,7 @@ var booksDB = [
         ],
         "author_": "Шугерман",
         "tags": "3_maybe emotions social working",
-        "cover_url": "https://dl.airtable.com/.attachments/c431086b119525f2d75ef0e1929fa22c/f5a9d249/517292E51kL.jpg",
+        "cover": true,
         "author": "Джозеф Шугерман",
         "info": {
             "pages": 437
@@ -18851,7 +18857,7 @@ var booksDB = [
         ],
         "author_": "Алекс Хатчинсон",
         "tags": "1_yea food-sport-health happiness",
-        "cover_url": "https://dl.airtable.com/.attachments/b3ef79de299e48f485b084ff7c23f1b7/5b48b5c7/Screenshot_1.png",
+        "cover": true,
         "author": "Alex  Hutchinson",
         "info": {
             "pages": 350,
@@ -19006,7 +19012,7 @@ var booksDB = [
         ],
         "tags": "фантастика рассказ художественная",
         "cat": "худла",
-        "cover_url": "https://dl.airtable.com/.attachments/7383dfa423c40d45d11036c447d98e46/c15d6648/77228.jpg",
+        "cover": true,
         "author": "Дик Филип Киндред",
         "weeks": [
             "21в13"
@@ -19066,7 +19072,7 @@ var booksDB = [
             "20л"
         ],
         "author_": "Брайан Клегг",
-        "cover_url": "https://dl.airtable.com/.attachments/5090ba3f94b5ce2b9b35a0b58b5697c0/33fe1a3d/26400057_images_5092336824.jpg",
+        "cover": true,
         "type": "книга",
         "cat": "мышление",
         "roles": [
@@ -19109,7 +19115,7 @@ var booksDB = [
         "sezons": [
             "21з"
         ],
-        "cover_url": "https://dl.airtable.com/.attachments/e5b91da3156ad4e0e76f76b5eb7cb1f3/7e8c6009/Sven_Brinkman__Konets_epohi_selfhelp__Kak_perestat_sebya_sovershenstvovat.jpeg",
+        "cover": true,
         "type": "книга",
         "cat": "мышление",
         "weeks": [
@@ -19163,7 +19169,7 @@ var booksDB = [
             "20о"
         ],
         "tags": "копирайтинг продажи продающие тексты цена маркетинг",
-        "cover_url": "https://dl.airtable.com/.attachments/375855f9ff8ba751467e304c7fc6a65f/b9c5bde0/18278482.jpg",
+        "cover": true,
         "type": "книга",
         "cat": "бизнес",
         "roles": [
@@ -19172,7 +19178,6 @@ var booksDB = [
             "t_chs"
         ]
     },
-
     {
         "name": {
             "ru": "Коучинг высокой эффективности. Новый стиль менеджмента, Развитие людей, Высокая эффективность",
@@ -19254,7 +19259,7 @@ var booksDB = [
         "sezons": [
             "20в"
         ],
-        "cover_url": "https://dl.airtable.com/.attachments/c6b257108c555840548d145988b89c4f/40fc9264/1_00x-thumb.png",
+        "cover": true,
         "type": "книга",
         "cat": "жинеуправл",
         "roles": [
@@ -19274,6 +19279,7 @@ var booksDB = [
             "mygr": 5
         },
         "all": true,
+                "cover":true,
         "ids": {
             "art": "recou0eI6eh9hWVvi",
             "gr": 29148017,
@@ -19338,7 +19344,7 @@ var booksDB = [
             "18л"
         ],
         "tags": "дизайн мышление уверенность идеи креативный класс креативность самоэффективность",
-        "cover_url": "https://dl.airtable.com/BfF8uLWJRLaNiVBxbVzV_book2084.jpg",
+        "cover": true,
         "author": "Том Келли",
         "coauthor": "Дэвид Келли, David Kelley",
         "roles": [
@@ -19441,7 +19447,7 @@ var booksDB = [
         "author_": "Роберт Хайнлайн",
         "tags": "fiction social",
         "cat": "худла",
-        "cover_url": "https://dl.airtable.com/.attachments/c8956112a2d51db357c790e16ca96d5b/2e067aa8/16690.jfif",
+        "cover": true,
         "author": "Robert A. Heinlein",
         "info": {
             "pages": 288,
@@ -19721,7 +19727,7 @@ var booksDB = [
         ],
         "author_": "Emilie Wapnick",
         "tags": "3_maybe multipotentialite working",
-        "cover_url": "https://dl.airtable.com/.attachments/45122ecd4c390ad0b85b40591c216d02/31b07106/31307672__SY475_.jfif",
+        "cover": true,
         "author": "Wapnick, Emilie",
         "info": {
             "pages": 240,
@@ -19800,7 +19806,7 @@ var booksDB = [
             "18"
         ],
         "tags": "стартап израиль",
-        "cover_url": "https://dl.airtable.com/82gJHJG6Q1eF5fBCP7ba_Screen%20Shot%202018-03-13%20at%2019.35.09.png",
+        "cover": true,
         "roles": [
             "l_rzb",
             "s_crt",
@@ -19813,7 +19819,7 @@ var booksDB = [
             "02"
         ],
         "tags": "киберпанк киборги будущее фантастика взлом художественная роман",
-        "cover_url": "https://dl.airtable.com/DcRIxNo2S9OjFZzBMsrq_017.jpg",
+        "cover": true,
         "name": {
             "ru": "Нейромантик",
             "file": "uilyam_ford_gibson-nejromant-1489098654.fb2.zip"
@@ -19885,7 +19891,7 @@ var booksDB = [
         "author_": "Виктор Пелевин",
         "tags": "пелевин метамодернизм история рим камень мистика эзотерика феминизм художественная",
         "cat": "худла",
-        "cover_url": "https://dl.airtable.com/.attachments/7b2122b5f7bd87c6f5ccd5010fd1f2e7/dbfe9cb3/s-l300.jpg",
+        "cover": true,
         "author": "Виктор Олегович Пелевин",
         "coauthor": "Виктор Пелевин",
         "info": {
@@ -19931,7 +19937,7 @@ var booksDB = [
         ],
         "author_": "Лаврентьева, Ольга",
         "tags": "комикс государства",
-        "cover_url": "https://dl.airtable.com/.attachments/c81b75478034bd94671a2cce3d271e96/1297a9d4/42437980__SX318_.jpg",
+        "cover": true,
         "author": "Olga Lavrentieva",
         "coauthor": "Ольга Лаврентьева",
         "info": {
@@ -20075,7 +20081,7 @@ var booksDB = [
         ],
         "author_": "Адам Грант",
         "tags": "social thinking",
-        "cover_url": "https://dl.airtable.com/.attachments/093e5b80277ce5fee843ec0fbb2ffa6f/4f5e8e2c/1019612734.jfif",
+        "cover": true,
         "author": "Adam Grant",
         "info": {
             "pages": 326,
@@ -20097,8 +20103,8 @@ var booksDB = [
         "name": {
             "ru": "Оружие - слово. Оборона и нападение с помощью..."
         },
-        "author": "А. Котлячков", 
-        "coauthor": "С. Горин", 
+        "author": "А. Котлячков",
+        "coauthor": "С. Горин",
         "all": true,
         "ids": {
             "art": "recZzzKBLpneydrMX",
@@ -20250,7 +20256,7 @@ var booksDB = [
         ],
         "author_": "Джош Кауфман",
         "tags": "thinking working",
-        "cover_url": "https://dl.airtable.com/.attachments/3c45f87c4493996e7005d7f6f12e4255/04e47a94/51VFPhkIBOL__SX324_BO1204203200_.jfif",
+        "cover": true,
         "author": "Josh Kaufman",
         "mradd": 1602747149920,
         "weeks": [
@@ -20313,7 +20319,7 @@ var booksDB = [
         "sezons": [
             "20о"
         ],
-        "cover_url": "https://dl.airtable.com/.attachments/deb927b81e9be89cb9e5c46fd0f2556b/87a73489/Screenshot_1.png",
+        "cover": true,
         "type": "книга",
         "cat": "бизнес",
         "roles": [
@@ -20400,7 +20406,7 @@ var booksDB = [
         ],
         "author_": "Дуглас Коупленд",
         "cat": "худла",
-        "cover_url": "https://dl.airtable.com/.attachments/cef725c1d9b946d09c277941c07f9493/d22d882f/3384.jpg",
+        "cover": true,
         "type": "книга",
         "roles": [
             "k_flw",
@@ -20434,7 +20440,7 @@ var booksDB = [
             "year": 2013
         },
         "tags": "social технологии зависимости продажи",
-        "cover_url": "https://dl.airtable.com/.attachments/c75764bd264ce4e18ad4638ea5c43b80/0ebf600f/__Pokupatel_na_kryuchke__Rukovodstvo_po_sozdaniyu_produktov_formiruyuschih_privy.jfif",
+        "cover": true,
         "author": "Эяль Нир",
         "type": "книга",
         "cat": "бизнес",
@@ -20668,13 +20674,13 @@ var booksDB = [
         ],
         "roles": []
     },
-        {
+    {
         "name": {
             "ru": "Как привести дела в порядок. Искусство продуктивности без стресса",
             "en": "Getting Things Done: The Art of Stress-Free Productivity"
         },
         "author": "David Allen",
-        "coauthor":"Дэвид Аллен",
+        "coauthor": "Дэвид Аллен",
         "rate": {
             "gr": 3.98,
             "mygr": 5,
@@ -20697,7 +20703,8 @@ var booksDB = [
         "type": "книга",
         "cat": "жинеуправл",
         "sezons": [
-            "07л", "13"
+            "07л",
+            "13"
         ],
         "roles": [
             "t_chs"
@@ -20742,7 +20749,7 @@ var booksDB = [
         "sezons": [
             "19л"
         ],
-        "cover_url": "https://dl.airtable.com/.attachments/b6f89259398acade01b5352007f5d3d2/945dce35/Unknown-1.jpeg",
+        "cover": true,
         "type": "книга",
         "cat": "жинеуправл",
         "roles": [
@@ -20756,7 +20763,7 @@ var booksDB = [
             "ru": "Психодинамика колдовства или введение в паралогию"
         },
         "author": "Вадим Шлахтер",
-        "coauthor": "Сергей Хольнов", 
+        "coauthor": "Сергей Хольнов",
         "rate": {
             "my%": 77
         },
@@ -20900,7 +20907,7 @@ var booksDB = [
             "21в"
         ],
         "tags": "аналитика большие данные анализ бизнес",
-        "cover_url": "https://dl.airtable.com/.attachments/bac60a2bb86b6b297854160e0e592ff1/6e6d69b7/index.jpg",
+        "cover": true,
         "roles": [
             "d_pol"
         ]
@@ -21008,7 +21015,7 @@ var booksDB = [
         ],
         "tags": "художественная рассказ",
         "cat": "худла",
-        "cover_url": "https://dl.airtable.com/.attachments/f2c77a8cbc41ce9587cdc91c28b8bca8/bb084ed8/Screenshot_2.jpg",
+        "cover": true,
         "author": "Балакин Вася",
         "type": "книга",
         "roles": []
@@ -21153,7 +21160,7 @@ var booksDB = [
         "end": "2019/09/09",
         "mradd": 1602747124837,
         "tags": "пики опыт переживание выдающиеся emotions social thinking",
-        "cover_url": "https://dl.airtable.com/.attachments/24927ef1964abbf1885b106ed3d059b8/8f6c2f17/Unknown.jpeg",
+        "cover": true,
         "roles": [
             "l_lov",
             "s_lif",
@@ -21234,7 +21241,7 @@ var booksDB = [
             "20о"
         ],
         "tags": "3_maybe emotions working",
-        "cover_url": "https://dl.airtable.com/.attachments/b2b9674ac31b1702b2a7eec84c2544ac/ce070829/---.jpg",
+        "cover": true,
         "author": "Нора Галь",
         "mradd": 1602747147937,
         "weeks": [
@@ -21577,7 +21584,7 @@ var booksDB = [
             "19з"
         ],
         "author_": "Victor Frankl",
-        "cover_url": "https://dl.airtable.com/.attachments/d127b285df3475c0e331cd8081dd1598/58a2732b/080701429x.jpg",
+        "cover": true,
         "type": "книга",
         "cat": "мировозрение",
         "roles": [
@@ -21726,7 +21733,7 @@ var booksDB = [
         },
         "start": "2020/02/08",
         "tags": "история нлп нлп новый код",
-        "cover_url": "https://dl.airtable.com/OcMXdGTSiKvHQsLpdFTc_Unknown.jpeg",
+        "cover": true,
         "type": "книга",
         "cat": "практическая пси",
         "roles": [
@@ -21803,7 +21810,7 @@ var booksDB = [
         "name": {
             "ru": "Энциклопедия гипнотических техник"
         },
-        "author":"Евтушенко",
+        "author": "Евтушенко",
         "all": true,
         "ids": {
             "art": "recVBwCi2jU9J5XFB",
@@ -21876,7 +21883,7 @@ var booksDB = [
         ],
         "author_": "Джейм Клеар",
         "tags": "emotions happiness meditation social working",
-        "cover_url": "https://dl.airtable.com/.attachments/0b49ba37fb931883866d8aec45145019/8ce9ffaf/AH-Preferred-Badge-e1568647575112.png",
+        "cover": true,
         "author": "James Clear",
         "info": {
             "pages": 319,
@@ -21956,7 +21963,7 @@ var booksDB = [
             "20з"
         ],
         "tags": "1_yea emotions happiness org social thinking time working",
-        "cover_url": "https://dl.airtable.com/.attachments/f5580fee87ae3e2b2106ed86443116e3/cc18aa88/27036528.jfif",
+        "cover": true,
         "author": "Ryan Holiday",
         "info": {
             "pages": 226,
@@ -21999,7 +22006,7 @@ var booksDB = [
             "19л"
         ],
         "tags": "emotions games org thinking",
-        "cover_url": "https://dl.airtable.com/.attachments/09bd6882d6d2ff89e4358cc7b920126a/5ea7da62/VI0bi89GbXl12RHJSjKiIcQH7PuiMA5H.jpg",
+        "cover": true,
         "author": "Tracy Fullerton",
         "info": {
             "pages": 470,
@@ -22072,7 +22079,7 @@ var booksDB = [
         ],
         "author_": "Michael Greger",
         "tags": "2_good",
-        "cover_url": "https://dl.airtable.com/.attachments/326e5a759abe7d707fe91ccc206790f7/84fec90c/how-not-to-die_b7206730.jpg",
+        "cover": true,
         "author": "Greger, Michael",
         "coauthor": "Stone, Gene",
         "info": {
@@ -22207,7 +22214,7 @@ var booksDB = [
             "20в"
         ],
         "cat": "худла",
-        "cover_url": "https://dl.airtable.com/.attachments/5b0fff548dfa88833482b5ce55dd00e1/e175c3d4/71eGeGsHkwL.jpg",
+        "cover": true,
         "type": "книга",
         "roles": [
             "s_crt",
@@ -22373,7 +22380,7 @@ var booksDB = [
         ],
         "author_": "Scott H. Young",
         "tags": "thinking time",
-        "cover_url": "https://dl.airtable.com/.attachments/776a17bdb203c4f11c59bafe100f426e/9e4655ce/42778720__UY200_.jpg",
+        "cover": true,
         "author": "Scott Young",
         "info": {
             "pages": 304,
@@ -22423,7 +22430,7 @@ var booksDB = [
             "21з"
         ],
         "tags": "секс минет удовольствие радость практика секс минет удовольствие радость практика",
-        "cover_url": "https://dl.airtable.com/.attachments/b2e49a868744004e54cf8bfb3570cd09/106a2d73/51TiDZ9V4uL__SX361_BO1204203200_.jpg",
+        "cover": true,
         "author": "Lisa Sussman",
         "info": {
             "pages": 96,
@@ -22434,7 +22441,8 @@ var booksDB = [
         "type": "книга",
         "cat": "отношения и люди",
         "roles": [
-            "l_lov", "k_int"
+            "l_lov",
+            "k_int"
         ]
     }
 ]

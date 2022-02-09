@@ -41,7 +41,7 @@ function filter_books_by_role(el) {
     redraw({ch_rl:true}) 
 }
 
-$(document).ready(async ()=>{   thisurl = new URL(location.toString());    
+$(document).ready(async ()=>{   thisurl = new URL(location.toString()); 
 
     for (root in roles_names){
         let txt=`<div id="raw${root}" style="background-color: ${roles_colors[root]}; padding: 6px 12px; text-align: right">`

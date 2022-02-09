@@ -1,13 +1,11 @@
-const loadImage = function(iname){    
-    var jpeg_image = './covers/' + iname + '.jpeg';
-    var png_image = './covers/' + iname + '.png';  
-    var imageP = new Image(), imageJ = new Image();
-    imageJ.onload = ()=> { if (imageJ.width>0) $("#img_"+iname).attr('src', jpeg_image) };
-    imageJ.src = jpeg_image;
-    imageP.onload = ()=>{ if (imageP.width>0) $("#img_"+iname).attr('src', png_image) };
-    imageP.src = png_image;
+const loadImage = iname =>{  
+    ['jpeg','png', 'jpg'].forEach(ext=>{
+        const imageC = new Image(), imgfl = `./covers/${iname}.${ext}`,
+        l = ()=> { if (imageC.width>0) $("#img_"+iname).attr('src', imgfl) };
+        imageC.onload = l; imageC.src = imgfl;
+    })
     return '';
- }
+}
 
 const apBook= (book,i)=>$("#grid").append(el_template(i, book))
 
@@ -17,15 +15,15 @@ const bkYr= (sz)=>sz.map(yt=>parseInt(yt)).filter((v, i, a)=>a.indexOf(v)===i).m
 // ${rate&&rate["my%"]?`<span class="mingr">${rate["my%"]}%</span>  `:''}
 // $('.cur_year').attr('value')!='0'?
 // МОЯ ЗАМЕТКА ?? линки на поиск в библиоткеке
-const el_template = (n, { name, author, sezons, roles, notes, type, cat, ids, all, cover_url, rate })=>`<div class='el${(!all)?' gray':''}'>
+const el_template = (n, { name, author, sezons, roles, notes, type, cat, ids, all, cover, rate })=>`<div class='el${(!all)?' gray':''}'>
 
-${(ids&&ids.gr)?`<div class='gric'><a target='_blank' title="Goodreads card" href='https://www.goodreads.com/book/show/${ids.gr}'><img src='data/gr.png' width="16" alt="at Goodreads"/></a></div>`:''}
+${(ids&&ids.gr)?`<div class='gric'><a target='_blank' title="Goodreads card" href='https://www.goodreads.com/book/show/${ids.gr}'><img src='gr.png' width="16" alt="at Goodreads"/></a></div>`:''}
 
 <div class="nn">${n+1}. <span class="mingr">${bkYr(sezons)}</span>
                 ${(cat && $('.cur_cat').attr('cat')==='all' && cat!='худла')?'<span class="cattag">'+cat.slice(0,10)+'</span> ':''}${cat=="худла"?'<span class="hud_mark">худ</span> ':''}${type!=="книга"?'<span style="background-color:yellow;">'+type+'</span>':''}
 </div>
 
-${cover_url ? `<div style="margin:3px; padding-top: 7px; text-align: center;"><img id="img_${ids.art}" src="${loadImage(ids.art)}" width="130" alt="${bkName(name)}${author?'  —  '+author:''}" title="${bkName(name)}${author?'  —  '+author:''}"></div>
+${cover ? `<div style="margin:3px; padding-top: 7px; text-align: center;"><img id="img_${ids.art}" src="${loadImage(ids.art)}" width="130" alt="${bkName(name)}${author?'  —  '+author:''}" title="${bkName(name)}${author?'  —  '+author:''}"></div>
 
     <div class='podCover'><a title="Brave search"  target="_blank" href='${'https://search.brave.com/search?q='+encodeURIComponent('книга '+bkName(name)+(author?' '+author:''))}'>${bkName(name).slice(0,80)}</a></div>`
 
