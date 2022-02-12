@@ -32,12 +32,10 @@ ${cover ? `<div style="margin:3px; padding-top: 7px; text-align: center;"><img i
                             :''}
             `}
 
-${notes&&notes.url?`<div class='mythts'><button>МОИ МЫСЛИ</button></div>`:''}
-
-${rate&&rate["my%"]?`<div class='bkrate'><progress title="${rate["my%"]}%" style="width:100px;" value="${rate["my%"]}" max="105"></progress></div>`:''}
+${rate&&rate["my%"]?`<div class='bkrate'><progress title="${rate["my%"]}%" style="width:100px;" value="${rate["my%"]}" max="100"></progress></div>`:''}
 </div>`
 
-// notes.url
+// ${notes&&notes.url?`<div class='mythts'><button>МОИ МЫСЛИ</button></div>`:''}
 
 //=======================================================
 

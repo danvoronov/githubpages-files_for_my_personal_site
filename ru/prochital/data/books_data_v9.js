@@ -15,10 +15,13 @@ var booksDB = [
             "art": "recBeVRFKwKjhwvMM",
             "gr": 21800391
         },
-        "cover":true,
+        "cover": true,
         "roles": [
             "s_crt"
-        ]
+        ],
+        "rate": {
+            "my%": 49
+        }
     },
     {
         "cat": "практическая пси",
@@ -61,7 +64,10 @@ var booksDB = [
         "author": "Сергей Петрушин",
         "roles": [
             "l_lov"
-        ]
+        ],
+        "rate": {
+            "my%": 43
+        }
     },
     {
         "cat": "худла",
@@ -89,7 +95,7 @@ var booksDB = [
             "ru": "111 баек для тренеров"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -189,7 +195,7 @@ var booksDB = [
             "ru": "99 популярных профессий. Психологический анализ и профессиограммы Е. С. Романова"
         },
         "rate": {
-            "my%": 44
+            "my%": 20
         },
         "all": true,
         "ids": {
@@ -578,7 +584,7 @@ var booksDB = [
         "rate": {
             "gr": 3.96,
             "mygr": 3,
-            "my%": 70
+            "my%": 46
         },
         "info": {
             "pages": 279,
@@ -613,7 +619,7 @@ var booksDB = [
             "ua": "Saint porno. Історія про кіно і тіло"
         },
         "rate": {
-            "my%": 85,
+            "my%": 61,
             "gr": 3.49,
             "mygr": 5
         },
@@ -647,7 +653,7 @@ var booksDB = [
             "file": "Scrum. Революционный метод управления проектами.epub"
         },
         "rate": {
-            "my%": 95,
+            "my%": 87,
             "gr": 4.17,
             "mygr": 5
         },
@@ -734,7 +740,10 @@ var booksDB = [
         ],
         "roles": [
             "s_flw"
-        ]
+        ],
+        "rate": {
+            "my%": 55
+        }
     },
     {
         "book": "The Book of Five Rings",
@@ -744,7 +753,7 @@ var booksDB = [
             "ru": "The Book of Five Rings"
         },
         "rate": {
-            "my%": 39
+            "my%": 15
         },
         "all": true,
         "ids": {
@@ -803,7 +812,7 @@ var booksDB = [
             "ru": "The Religions Book. Big Ideas Simply Explained"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -984,7 +993,7 @@ var booksDB = [
             "ru": "Авария на NY шахте"
         },
         "rate": {
-            "my%": 39
+            "my%": 15
         },
         "all": true,
         "ids": {
@@ -1027,7 +1036,7 @@ var booksDB = [
             "ru": "Азбука владения голосом (для болельщика)"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -1051,7 +1060,7 @@ var booksDB = [
             "ru": "АкаДемонГородок"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -1075,7 +1084,7 @@ var booksDB = [
             "ru": "Алиса в зазеркалье"
         },
         "rate": {
-            "my%": 82
+            "my%": 58
         },
         "all": true,
         "ids": {
@@ -1101,7 +1110,7 @@ var booksDB = [
             "ru": "Алиса в стране чудес"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -1177,7 +1186,7 @@ var booksDB = [
             "ru": "Алхимик"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -1217,7 +1226,7 @@ var booksDB = [
             "ru": "Ангелы страшатся"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -1264,9 +1273,11 @@ var booksDB = [
         "coauthor": "Нассим Николас Талеб",
         "rate": {
             "gr": 4.07,
-            "mygr": 5
+            "mygr": 5,
+            "my%": 88
         },
         "all": true,
+        "cover": true,
         "ids": {
             "gr": 25721460,
             "ISBN13": "9785389052871",
@@ -1325,9 +1336,11 @@ var booksDB = [
         "coauthor": "Айн Рэнд",
         "rate": {
             "gr": 3.69,
-            "mygr": 5
+            "mygr": 5,
+            "my%": 94
         },
         "all": true,
+        "cover": true,
         "ids": {
             "gr": 20577645,
             "art": "recgCCnTgw0NnSiAA",
@@ -1359,7 +1372,7 @@ var booksDB = [
             "ru": "Атомный сон"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -1424,7 +1437,7 @@ var booksDB = [
             "ru": "Без пощады"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -1468,7 +1481,7 @@ var booksDB = [
             "ru": "Белым по чёрному"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -1612,7 +1625,7 @@ var booksDB = [
             "ru": "Бизнес есть бизнес: 60 правдивых историй о том, как простые люди начали свое дело и преуспели Игорь Гансвинд"
         },
         "rate": {
-            "my%": 55
+            "my%": 31
         },
         "all": true,
         "ids": {
@@ -1655,7 +1668,7 @@ var booksDB = [
             "ru": "Бизнес со скоростью мысли Билл Гейтс"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -1680,7 +1693,7 @@ var booksDB = [
             "ru": "Близится утро (Искатели неба 2)"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -1705,7 +1718,7 @@ var booksDB = [
             "file": ".MoonReader/cache/loran_lelu-blokchejn_ot_a_do_ya_vse_o_tehnologii_desyatilet-.zipLelu_Blokcheyn-ot-A-do-Ya-Vse-o-tehnologii-desyatiletiya.7brY_w.510737.fb2"
         },
         "rate": {
-            "my%": 58
+            "my%": 24
         },
         "all": true,
         "ids": {
@@ -1742,7 +1755,7 @@ var booksDB = [
             "ru": "Богатый папа, бедный папа Роберт Т. Кийосаки, Шэрон Л. Лектер"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -1784,7 +1797,7 @@ var booksDB = [
             "19з4"
         ],
         "rate": {
-            "my%": 82
+            "my%": 58
         },
         "add_art": "2018-12-29",
         "sezons": [
@@ -1823,7 +1836,7 @@ var booksDB = [
         "rate": {
             "gr": 4.01,
             "mygr": 5,
-            "my%": 91
+            "my%": 72
         },
         "info": {
             "pages": 211,
@@ -1856,7 +1869,7 @@ var booksDB = [
         },
         "author": "Чак Паланик",
         "rate": {
-            "my%": 90
+            "my%": 70
         },
         "all": true,
         "ids": {
@@ -1903,7 +1916,7 @@ var booksDB = [
             "file": "Mingyur_Budda-mozg-i-neyrofiziologiya-schastya-Kak-izmenit-zhizn-k-luchshemu-Prakticheskoe-rukovodstvo-.ymP6jg.145810.fb2"
         },
         "rate": {
-            "my%": 92,
+            "my%": 78,
             "gr": 4.36,
             "mygr": 5
         },
@@ -1974,7 +1987,7 @@ var booksDB = [
             "file": "aziz_ansari-v_aktivnom_poiske-1489353361.fb2.zip"
         },
         "rate": {
-            "my%": 65,
+            "my%": 41,
             "gr": 3.8,
             "mygr": 3
         },
@@ -2026,7 +2039,7 @@ var booksDB = [
         "rate": {
             "gr": 4.32,
             "mygr": 4,
-            "my%": 85
+            "my%": 61
         },
         "all": true,
         "ids": {
@@ -2120,7 +2133,7 @@ var booksDB = [
         "rate": {
             "gr": 4.11,
             "mygr": 2,
-            "my%": 56
+            "my%": 32
         },
         "all": true,
         "ids": {
@@ -2174,7 +2187,8 @@ var booksDB = [
         "author": "Дмитрий Кирсанов",
         "tags": "дизайн",
         "ids": {
-            "ai": 89
+            "ai": 89,
+            "art": "recFIL92tc8eTiily"
         },
         "roles": [
             "s_flw",
@@ -2208,7 +2222,7 @@ var booksDB = [
             "ru": "Ведьма с Портебело"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -2257,7 +2271,7 @@ var booksDB = [
             "ru": "Вероника решает умереть"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -2283,7 +2297,7 @@ var booksDB = [
             "ru": "Вершитель"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -2423,7 +2437,7 @@ var booksDB = [
             "ru": "Властелин колец (три книги)"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -2449,7 +2463,7 @@ var booksDB = [
             "en": "Onward: How Starbucks Fought for Its Life without Losing Its Soul"
         },
         "rate": {
-            "my%": 80,
+            "my%": 56,
             "gr": 3.85,
             "mygr": 4
         },
@@ -2580,7 +2594,7 @@ var booksDB = [
             "ru": "Войны реальности"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -2625,7 +2639,7 @@ var booksDB = [
             "ru": "Время - московское!"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -2660,7 +2674,7 @@ var booksDB = [
         },
         "author": "Дерек Сиверс, Derek Sivers",
         "rate": {
-            "my%": 94,
+            "my%": 69,
             "gr": 4.09,
             "mygr": 5
         },
@@ -2707,7 +2721,7 @@ var booksDB = [
             "ru": "Выбраковка"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -2732,7 +2746,7 @@ var booksDB = [
             "ru": "Выходные с пьяным лепреоном"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -2755,7 +2769,7 @@ var booksDB = [
             "ru": "Гаджет: сборник рассказов"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -2780,7 +2794,7 @@ var booksDB = [
             "ru": "Гармония в жизни: Соционика"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -2827,7 +2841,7 @@ var booksDB = [
             "ru": "Геном"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -2878,7 +2892,7 @@ var booksDB = [
             "file": "Гибкое сознание. Новый взгляд на психологию развития взрослых и детей - Дуэк Кэрол.fb2.zip"
         },
         "rate": {
-            "my%": 98,
+            "my%": 89,
             "gr": 4.05,
             "mygr": 5
         },
@@ -2974,7 +2988,7 @@ var booksDB = [
             "file": "kerolin_stil-golodnij_gorod-1492782811.fb2.zip"
         },
         "rate": {
-            "my%": 70,
+            "my%": 46,
             "gr": 4.09,
             "mygr": 4
         },
@@ -3031,7 +3045,7 @@ var booksDB = [
             "ru": "Группа крови и человек"
         },
         "rate": {
-            "my%": 39
+            "my%": 15
         },
         "all": true,
         "ids": {
@@ -3074,11 +3088,14 @@ var booksDB = [
             "k_int",
             "t_alz",
             "t_chs"
-        ]
+        ],
+        "rate": {
+            "my%": 66
+        }
     },
     {
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "ids": {
             "art": "recg8lJDTohrAsF7e",
@@ -3103,7 +3120,7 @@ var booksDB = [
     },
     {
         "rate": {
-            "my%": 51,
+            "my%": 27,
             "gr": 3.93
         },
         "ids": {
@@ -3229,7 +3246,7 @@ var booksDB = [
             "ru": "Денс, денс, денс"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -3273,7 +3290,7 @@ var booksDB = [
             "ru": "Дети Индиго. Новые дети уже пришли Ли Кэрролл, Джен Тоубер"
         },
         "rate": {
-            "my%": 26
+            "my%": 2
         },
         "all": true,
         "ids": {
@@ -3297,7 +3314,7 @@ var booksDB = [
             "ru": "Джонни Мнемоник"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -3322,7 +3339,7 @@ var booksDB = [
             "ru": "Диалектика переходного периода из ниоткуда в никуда"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -3367,6 +3384,7 @@ var booksDB = [
             "ru": "Дизайн для недизайнеров"
         },
         "all": true,
+        "cover": true,
         "ids": {
             "art": "recaR5gPmyL6xaCOr",
             "ai": 136
@@ -3383,7 +3401,10 @@ var booksDB = [
             "s_crt",
             "d_pol",
             "t_emp"
-        ]
+        ],
+        "rate": {
+            "my%": 72
+        }
     },
     {
         "cat": "компьютер и дизайн",
@@ -3415,7 +3436,7 @@ var booksDB = [
             "file": "tim_braun-dizajn-mishlenie_v_biznese-1532361960.fb2.zip"
         },
         "rate": {
-            "my%": 84,
+            "my%": 60,
             "gr": 3.91,
             "mygr": 4
         },
@@ -3497,7 +3518,7 @@ var booksDB = [
             "file": "Zhene_Dnevnik-vora.N6ZTLw.192304.fb2"
         },
         "rate": {
-            "my%": 28
+            "my%": 4
         },
         "all": true,
         "ids": {
@@ -3535,7 +3556,7 @@ var booksDB = [
             "ru": "Дозоры (Дневной, Ночной)"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -3566,7 +3587,7 @@ var booksDB = [
         "rate": {
             "gr": 4.02,
             "mygr": 4,
-            "my%": 85
+            "my%": 61
         },
         "all": true,
         "ids": {
@@ -3619,7 +3640,7 @@ var booksDB = [
             "file": "tik_nat_han-drevnij_put_belie_oblaka-1499440820.fb2.zip"
         },
         "rate": {
-            "my%": 93,
+            "my%": 80,
             "gr": 4.25,
             "mygr": 5
         },
@@ -3683,7 +3704,7 @@ var booksDB = [
             "ru": "Дредноуты"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -3728,7 +3749,7 @@ var booksDB = [
             "ru": "Думай и богатей"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -3750,7 +3771,8 @@ var booksDB = [
         "coauthor": "Daniel Kahneman",
         "rate": {
             "gr": 4.16,
-            "mygr": 5
+            "mygr": 5,
+            "my%": 69
         },
         "type": "книга",
         "name": {
@@ -3819,7 +3841,7 @@ var booksDB = [
             "ru": "Духless"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -3863,7 +3885,7 @@ var booksDB = [
             "ru": "Если жираф танцует с волком"
         },
         "rate": {
-            "my%": 70
+            "my%": 46
         },
         "all": true,
         "ids": {
@@ -3915,7 +3937,7 @@ var booksDB = [
             "ru": "Желтая стрела"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -3940,7 +3962,7 @@ var booksDB = [
             "file": "Эрик Кляйненберг - Жизнь соло. Новая социальная реальность.fb2"
         },
         "rate": {
-            "my%": 89,
+            "my%": 65,
             "gr": 3.4,
             "mygr": 5
         },
@@ -4052,7 +4074,7 @@ var booksDB = [
             "ru": "Завтра война"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -4076,7 +4098,7 @@ var booksDB = [
             "ru": "Задорнов и Ко"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -4098,7 +4120,7 @@ var booksDB = [
             "ru": "Закон фронтира"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -4122,7 +4144,7 @@ var booksDB = [
             "ru": "Законы Паркинсона"
         },
         "rate": {
-            "my%": 39
+            "my%": 15
         },
         "all": true,
         "ids": {
@@ -4216,7 +4238,7 @@ var booksDB = [
             "ru": "Зверский pickUP"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -4265,7 +4287,7 @@ var booksDB = [
             "file": "Braun_Igra.8A1jfA.403402.fb2"
         },
         "rate": {
-            "my%": 93,
+            "my%": 77,
             "gr": 3.87,
             "mygr": 4
         },
@@ -4326,7 +4348,7 @@ var booksDB = [
             "ru": "Игра Эндера (Эндер Виггин #1)"
         },
         "rate": {
-            "my%": 99,
+            "my%": 93,
             "gr": 4.3,
             "mygr": 5
         },
@@ -4395,7 +4417,7 @@ var booksDB = [
             "ai": 171
         },
         "rate": {
-            "my%": 64
+            "my%": 50
         },
         "add_art": "2018-01-14",
         "sezons": [
@@ -4434,7 +4456,7 @@ var booksDB = [
             "ru": "Идеальный роман"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -4542,7 +4564,7 @@ var booksDB = [
             "file": "Uilber_K_-_Integralnaja_meditatsija.570245.fb2"
         },
         "rate": {
-            "my%": 81,
+            "my%": 57,
             "gr": 4.02,
             "mygr": 3
         },
@@ -4589,7 +4611,7 @@ var booksDB = [
         "rate": {
             "gr": 3.5,
             "mygr": 4,
-            "my%": 80
+            "my%": 52
         },
         "all": true,
         "ids": {
@@ -4711,7 +4733,7 @@ var booksDB = [
             "ru": "Искусство подбора персонала. Как оценить человека за час Светлана Иванова"
         },
         "rate": {
-            "my%": 44
+            "my%": 20
         },
         "all": true,
         "ids": {
@@ -4818,7 +4840,10 @@ var booksDB = [
         "roles": [
             "s_lif",
             "s_flw"
-        ]
+        ],
+        "rate": {
+            "my%": 56
+        }
     },
     {
         "cat": "бизнес",
@@ -4867,7 +4892,7 @@ var booksDB = [
             "file": "2_5199667410616975788.fb2"
         },
         "rate": {
-            "my%": 84,
+            "my%": 60,
             "gr": 3.65,
             "mygr": 4
         },
@@ -5018,7 +5043,7 @@ var booksDB = [
             "ru": "Как выбирать своих людей"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -5061,7 +5086,7 @@ var booksDB = [
             "ru": "Как затащить в постель женщину своей мечты"
         },
         "rate": {
-            "my%": 39
+            "my%": 15
         },
         "all": true,
         "ids": {
@@ -5147,7 +5172,7 @@ var booksDB = [
             "ru": "Как решать задачу?"
         },
         "rate": {
-            "my%": 39
+            "my%": 15
         },
         "all": true,
         "ids": {
@@ -5174,7 +5199,7 @@ var booksDB = [
             "ru": "Как составить личный финансовый план. Путь к финансовой независимости В. Савенок"
         },
         "rate": {
-            "my%": 44
+            "my%": 20
         },
         "all": true,
         "ids": {
@@ -5203,7 +5228,7 @@ var booksDB = [
         "rate": {
             "gr": 3.64,
             "mygr": 3,
-            "my%": 73
+            "my%": 49
         },
         "all": true,
         "ids": {
@@ -5331,7 +5356,7 @@ var booksDB = [
         "rate": {
             "gr": 4.26,
             "mygr": 5,
-            "my%": 96
+            "my%": 86
         },
         "all": true,
         "ids": {
@@ -5384,7 +5409,7 @@ var booksDB = [
             "ai": 209
         },
         "rate": {
-            "my%": 77
+            "my%": 66
         },
         "all": true,
         "sezons": [
@@ -5407,7 +5432,7 @@ var booksDB = [
         },
         "author": "Мортимер Адлер",
         "rate": {
-            "my%": 80
+            "my%": 56
         },
         "all": true,
         "ids": {
@@ -5487,7 +5512,7 @@ var booksDB = [
             "ru": "Карлос Кастанеда за 90 минут"
         },
         "rate": {
-            "my%": 64
+            "my%": 54
         },
         "all": true,
         "ids": {
@@ -5538,7 +5563,7 @@ var booksDB = [
         "rate": {
             "gr": 4.34,
             "mygr": 5,
-            "my%": 99
+            "my%": 91
         },
         "all": true,
         "ids": {
@@ -5610,7 +5635,7 @@ var booksDB = [
             "ru": "Квадрант денежного потока"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -5681,9 +5706,6 @@ var booksDB = [
             "11"
         ],
         "author": "Александр Митта",
-        "rate": {
-            "my%": 90
-        },
         "tags": "гениальность драматургия кино режисура секреты",
         "roles": [
             "s_flw",
@@ -5723,7 +5745,7 @@ var booksDB = [
             "ru": "Активная сторона беcкoнечнocти  (Кастанеда, книга 10)"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -5774,7 +5796,7 @@ var booksDB = [
             "ru": "Сказка о силе (Кастанеда, книга 4)"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -5797,7 +5819,7 @@ var booksDB = [
             "ru": "Второе кольцо силы (Кастанеда, книга 5)"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -5820,7 +5842,7 @@ var booksDB = [
             "ru": "Дар орла. Шесть Объясняющих Предположений (Кастанеда, книга 6)"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -5843,7 +5865,7 @@ var booksDB = [
             "ru": "Внутренний огонь (Кастанеда, книга 7)"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -5866,7 +5888,7 @@ var booksDB = [
             "ru": "Сила безмолвия  (Кастанеда, книга 8)"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -5890,7 +5912,7 @@ var booksDB = [
             "ru": "Искусство сновидения (Кастанеда, книга 9)"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -5914,7 +5936,7 @@ var booksDB = [
             "ru": "Книга дракона. Зубастик"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -5958,7 +5980,7 @@ var booksDB = [
             "ru": "Книга одиночеств"
         },
         "rate": {
-            "my%": 90,
+            "my%": 68,
             "gr": 4,
             "mygr": 5
         },
@@ -5994,7 +6016,7 @@ var booksDB = [
             "ru": "Книга решений. 50 моделей стратегического мышления"
         },
         "rate": {
-            "my%": 95,
+            "my%": 83,
             "gr": 3.65,
             "mygr": 5
         },
@@ -6093,7 +6115,7 @@ var booksDB = [
             "ru": "Код ДаВинчи"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -6118,7 +6140,7 @@ var booksDB = [
             "ru": "Колесо времени (итоги по 10 книгам)"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -6175,7 +6197,7 @@ var booksDB = [
             "ru": "Кольцо Тьмы"
         },
         "rate": {
-            "my%": 39
+            "my%": 15
         },
         "all": true,
         "ids": {
@@ -6339,7 +6361,7 @@ var booksDB = [
         "rate": {
             "gr": 3.99,
             "mygr": 4,
-            "my%": 75
+            "my%": 51
         },
         "all": true,
         "ids": {
@@ -6408,7 +6430,7 @@ var booksDB = [
             "file": "2_landry_city.fb2"
         },
         "rate": {
-            "my%": 84,
+            "my%": 60,
             "gr": 3.77,
             "mygr": 4
         },
@@ -6466,7 +6488,7 @@ var booksDB = [
             "file": "The Rise of The Creative Class by Richard Florida.pdf"
         },
         "rate": {
-            "my%": 92,
+            "my%": 79,
             "gr": 3.69,
             "mygr": 5
         },
@@ -6594,7 +6616,7 @@ var booksDB = [
             "file": "sdcard1/Kazantseva_A_Kto_by_mog_podumat_33_Kak_mozg_zastavlyaet_nas_delat_gluposti_2014.doc"
         },
         "rate": {
-            "my%": 85,
+            "my%": 61,
             "gr": 4.18,
             "mygr": 4
         },
@@ -6636,7 +6658,7 @@ var booksDB = [
             "ru": "Кто твой город? Креативная экономика и выбор места жительства"
         },
         "rate": {
-            "my%": 80,
+            "my%": 56,
             "gr": 3.46,
             "mygr": 4
         },
@@ -6761,7 +6783,7 @@ var booksDB = [
             "ru": "Лабиринт отражений (ДАЙВЕР 1)"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -6787,7 +6809,7 @@ var booksDB = [
             "ru": "Лбиринты Эхо"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -6835,7 +6857,7 @@ var booksDB = [
             "file": "Horovic_Legko-ne-budet.NHQ8kg.423620.fb2.zip"
         },
         "rate": {
-            "my%": 55
+            "my%": 30
         },
         "all": false,
         "ids": {
@@ -6868,7 +6890,7 @@ var booksDB = [
             "ru": "Лик черной Пальмиры"
         },
         "rate": {
-            "my%": 39
+            "my%": 15
         },
         "all": true,
         "ids": {
@@ -6949,7 +6971,7 @@ var booksDB = [
             "ru": "Логопедия. Учебное пособие для студентов дефектолог"
         },
         "rate": {
-            "my%": 39
+            "my%": 15
         },
         "all": true,
         "ids": {
@@ -6975,7 +6997,7 @@ var booksDB = [
             "file": "Uotts_Lozhnaya-slepota_1_Lozhnaya-slepota.3--_LQ.315739.fb2"
         },
         "rate": {
-            "my%": 84,
+            "my%": 60,
             "gr": 4.01,
             "mygr": 4
         },
@@ -7091,7 +7113,7 @@ var booksDB = [
             "ru": "любовь или влюбленность"
         },
         "rate": {
-            "my%": 39
+            "my%": 15
         },
         "all": true,
         "ids": {
@@ -7116,7 +7138,7 @@ var booksDB = [
             "ru": "Любовь. Мегаполис. Одиночество"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -7141,7 +7163,7 @@ var booksDB = [
             "ru": "Маленький принц"
         },
         "rate": {
-            "my%": 77
+            "my%": 43
         },
         "all": true,
         "ids": {
@@ -7167,7 +7189,7 @@ var booksDB = [
             "ru": "Мальчик и тьма"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -7221,7 +7243,7 @@ var booksDB = [
             "ru": "Мастер и Маргарита"
         },
         "rate": {
-            "my%": 90
+            "my%": 66
         },
         "all": true,
         "ids": {
@@ -7267,7 +7289,7 @@ var booksDB = [
             "ru": "Мастерство коммуникации (тренинг Синтона)"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -7314,7 +7336,7 @@ var booksDB = [
             "ru": "Матрица: сценарий"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -7333,7 +7355,7 @@ var booksDB = [
     },
     {
         "rate": {
-            "my%": 80
+            "my%": 56
         },
         "all": true,
         "ids": {
@@ -7366,7 +7388,7 @@ var booksDB = [
             "file": "Сибрук Дж. - Машина песен. Внутри фабрики хитов - 2016.fb2"
         },
         "rate": {
-            "my%": 90,
+            "my%": 71,
             "gr": 3.94,
             "mygr": 5
         },
@@ -7426,7 +7448,7 @@ var booksDB = [
             "8з"
         ],
         "rate": {
-            "my%": 64
+            "my%": 48
         },
         "tags": "медиавирус мемы мозговые вирусы",
         "roles": [
@@ -7455,7 +7477,10 @@ var booksDB = [
             "d_pol",
             "t_emp",
             "t_qst"
-        ]
+        ],
+        "rate": {
+            "my%": 30
+        }
     },
     {
         "book": "Ментальные ловушки. Глупости, которые делают разумные люди, чтобы испортить себе жизнь",
@@ -7470,7 +7495,7 @@ var booksDB = [
         "rate": {
             "gr": 3.47,
             "mygr": 3,
-            "my%": 66
+            "my%": 42
         },
         "all": true,
         "ids": {
@@ -7561,7 +7586,7 @@ var booksDB = [
         "author": "Хозе Сильва",
         "coauthor": "Филип Миэле",
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -7585,7 +7610,7 @@ var booksDB = [
             "ru": "Управление разумом по методу Сильва. Книга 2 (паттерны)"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -7612,7 +7637,7 @@ var booksDB = [
             "07в"
         ],
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "ids": {
             "art": "recZDpl5GnggtY14n",
@@ -7694,7 +7719,7 @@ var booksDB = [
             "file": "Sher_Mechtat-ne-vredno.378827.fb2"
         },
         "rate": {
-            "my%": 70
+            "my%": 46
         },
         "all": true,
         "ids": {
@@ -7794,7 +7819,8 @@ var booksDB = [
         "coauthor": "Юстейн Гордер",
         "rate": {
             "gr": 3.94,
-            "mygr": 4
+            "mygr": 4,
+            "my%": 58
         },
         "info": {
             "pages": 560,
@@ -7813,7 +7839,7 @@ var booksDB = [
         "cat": "мышление",
         "type": "книга",
         "rate": {
-            "my%": 64
+            "my%": 51
         },
         "name": {
             "ru": "Могущество духовного интеллекта"
@@ -7864,7 +7890,7 @@ var booksDB = [
         "rate": {
             "gr": 3.61,
             "mygr": 1,
-            "my%": 39
+            "my%": 15
         },
         "all": true,
         "ids": {
@@ -7953,7 +7979,7 @@ var booksDB = [
             "ru": "Мой рангарек"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -8022,7 +8048,7 @@ var booksDB = [
             "ru": "Мост через вечность"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -8080,7 +8106,7 @@ var booksDB = [
             "ru": "Мужчина и Женщина - познать и покорить"
         },
         "rate": {
-            "my%": 26
+            "my%": 2
         },
         "all": true,
         "ids": {
@@ -8183,7 +8209,7 @@ var booksDB = [
             "ru": "Наваждения"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -8208,7 +8234,7 @@ var booksDB = [
             "ru": "Над кукушкиным гнездом"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -8233,7 +8259,7 @@ var booksDB = [
             "ru": "Над пропастью во ржи Джером Д. Сэлинджер"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -8263,7 +8289,7 @@ var booksDB = [
         "rate": {
             "gr": 4.08,
             "mygr": 4,
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -8296,7 +8322,7 @@ var booksDB = [
             "file": "MoonReader/Не время для драконов litres - Лукьяненко СергейПерумов Ник.fb2.zip"
         },
         "rate": {
-            "my%": 89,
+            "my%": 65,
             "gr": 3.7,
             "mygr": 5
         },
@@ -8313,7 +8339,7 @@ var booksDB = [
             "03",
             "21л"
         ],
-                "cover":true,
+        "cover": true,
         "author": "Sergei Lukyanenko, Сергей Лукяненко",
         "coauthor": "Nick Perumov, Ник Перумов",
         "info": {
@@ -8447,7 +8473,10 @@ var booksDB = [
         "roles": [
             "l_vzp",
             "k_int"
-        ]
+        ],
+        "rate": {
+            "my%": 46
+        }
     },
     {
         "book": "Непроторенная дорога. Новая психология любви и духовного роста",
@@ -8519,7 +8548,7 @@ var booksDB = [
             "file": "Никогда-нибудь. Как выйти из тупика и найти себя - Резанова Елена.fb2.zip"
         },
         "rate": {
-            "my%": 80,
+            "my%": 56,
             "gr": 4.01,
             "mygr": 4
         },
@@ -8567,7 +8596,7 @@ var booksDB = [
             "ru": "НЛП и личные отношения"
         },
         "rate": {
-            "my%": 39
+            "my%": 15
         },
         "all": true,
         "ids": {
@@ -8591,7 +8620,7 @@ var booksDB = [
             "ru": "НЛП Упражнения. Здраствуйте"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -8616,7 +8645,7 @@ var booksDB = [
             "ru": "НЛП-графика. Мышление в рисунках и образах Гарри Алдер"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -8640,7 +8669,7 @@ var booksDB = [
             "ru": "НЛП. Полное практическое руководство"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -8691,7 +8720,7 @@ var booksDB = [
         "rate": {
             "gr": 3.99,
             "mygr": 5,
-            "my%": 89
+            "my%": 59
         },
         "all": true,
         "ids": {
@@ -8761,7 +8790,7 @@ var booksDB = [
             "ru": "Обитаемый остров"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -8837,7 +8866,10 @@ var booksDB = [
             "d_org",
             "t_crt",
             "t_chs"
-        ]
+        ],
+        "rate": {
+            "my%": 62
+        }
     },
     {
         "book": "Окно в удивительный мир информатики",
@@ -8932,7 +8964,7 @@ var booksDB = [
             "ru": "Осенние визиты"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -9132,7 +9164,7 @@ var booksDB = [
             "ru": "Осознаные сновидения"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -9181,7 +9213,7 @@ var booksDB = [
             "file": "Zero to One_ Notes on Startups .. by Peter Thiel.epub"
         },
         "rate": {
-            "my%": 102,
+            "my%": 95,
             "gr": 4.17,
             "mygr": 5
         },
@@ -9254,7 +9286,8 @@ var booksDB = [
         "coauthor": "Джим Коллинз",
         "rate": {
             "gr": 4.12,
-            "mygr": 4
+            "mygr": 4,
+            "my%": 55
         },
         "info": {
             "year": 2001
@@ -9274,7 +9307,7 @@ var booksDB = [
             "ru": "Отель «У погибшего альпениста»"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -9300,7 +9333,7 @@ var booksDB = [
             "file": "2007 Barbara Sher - Refuse to Choose - Use All of Your Interests Passions and Hobbies to Create the Life and Career of Your Dream_Rsvl.epub"
         },
         "rate": {
-            "my%": 97,
+            "my%": 88,
             "gr": 3.91,
             "mygr": 5
         },
@@ -9358,7 +9391,7 @@ var booksDB = [
         "author": "Фредерик Лалу",
         "coauthor": "Фредерик Лалу",
         "rate": {
-            "my%": 96,
+            "my%": 93,
             "gr": 4.23,
             "mygr": 5
         },
@@ -9440,7 +9473,7 @@ var booksDB = [
             "ru": "Охота на Овцу"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -9476,7 +9509,10 @@ var booksDB = [
             "d_pol",
             "t_crt",
             "t_qst"
-        ]
+        ],
+        "rate": {
+            "my%": 56
+        }
     },
     {
         "book": "Ошибки, которые были допущены но не мной",
@@ -9517,7 +9553,7 @@ var booksDB = [
             "ru": "Палата №6"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -9560,7 +9596,7 @@ var booksDB = [
             "ru": "Пандем"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -9578,21 +9614,19 @@ var booksDB = [
         ]
     },
     {
-        "book": "Парадигмы мышления. Как увидеть новое и преуспеть в меняющемся мире",
         "cat": "мышление",
-        "from": "Джоэл Баркер",
         "type": "книга",
         "name": {
-            "ru": "Парадигмы мышления. Как увидеть новое и преуспеть в меняющемся мире Джоэл Баркер"
+            "ru": "Парадигмы мышления. Как увидеть новое и преуспеть в меняющемся мире"
         },
-        "author": "Joel A. Barker",
-        "coauthor": "Джоэл Баркер",
+        "author": "Джоэл Баркер / Joel A. Barker",
         "rate": {
             "gr": 5,
             "mygr": 5,
-            "my%": 94
+            "my%": 81
         },
         "all": true,
+        "cover": true,
         "ids": {
             "gr": 16042282,
             "art": "recjljaE55j1wgXHy",
@@ -9624,7 +9658,7 @@ var booksDB = [
             "ru": "Паразиты мозга"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -9708,7 +9742,7 @@ var booksDB = [
             "ru": "Пинбол 1973"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -9736,7 +9770,7 @@ var booksDB = [
         "author": "Максим Ильяхов",
         "coauthor": "Lyudmila Sarycheva, Максим Ильяхов, Людмила Сарычева",
         "rate": {
-            "my%": 98,
+            "my%": 90,
             "gr": 4.43,
             "mygr": 5
         },
@@ -9811,7 +9845,7 @@ var booksDB = [
             "file": "Doydzh_Plastichnost-mozga.aiwEgg.276492.fb2"
         },
         "rate": {
-            "my%": 45,
+            "my%": 21,
             "gr": 4.17,
             "mygr": 2
         },
@@ -9882,7 +9916,7 @@ var booksDB = [
             "ru": "Подземный художник"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -9959,7 +9993,7 @@ var booksDB = [
             "ru": "Пойди туда, незнаю куда"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -9985,7 +10019,7 @@ var booksDB = [
             "ru": "Поколение П"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -10016,7 +10050,7 @@ var booksDB = [
         "rate": {
             "gr": 3.98,
             "mygr": 4,
-            "my%": 72
+            "my%": 48
         },
         "all": true,
         "ids": {
@@ -10079,7 +10113,7 @@ var booksDB = [
             "file": "Shejn_E_-_Pomosch_Kak_ee_predlagat_okazyvat_i_prinima.561504.fb2"
         },
         "rate": {
-            "my%": 79,
+            "my%": 55,
             "gr": 3.94,
             "mygr": 4
         },
@@ -10124,7 +10158,7 @@ var booksDB = [
             "ru": "Понедельник начинаеться в субботу"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -10149,7 +10183,7 @@ var booksDB = [
             "ru": "Портрет Дориана Грея"
         },
         "rate": {
-            "my%": 50
+            "my%": 26
         },
         "all": true,
         "ids": {
@@ -10173,7 +10207,7 @@ var booksDB = [
             "ru": "Посланник"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -10198,7 +10232,7 @@ var booksDB = [
             "ru": "Посторонний"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -10245,7 +10279,7 @@ var booksDB = [
         "rate": {
             "gr": 4.08,
             "mygr": 5,
-            "my%": 99
+            "my%": 91
         },
         "info": {
             "pages": 461,
@@ -10317,7 +10351,7 @@ var booksDB = [
             "file": "Почему_мы_ошибаемся._Ловушки_мышления_в_действии.fb2.zip"
         },
         "rate": {
-            "my%": 87,
+            "my%": 63,
             "gr": 3.91,
             "mygr": 4
         },
@@ -10359,7 +10393,7 @@ var booksDB = [
             "ru": "Почему нельзя научить искусству"
         },
         "rate": {
-            "my%": 90,
+            "my%": 76,
             "gr": 3.98,
             "mygr": 5
         },
@@ -10403,7 +10437,7 @@ var booksDB = [
         "rate": {
             "gr": 4.37,
             "mygr": 4,
-            "my%": 78
+            "my%": 54
         },
         "all": true,
         "ids": {
@@ -10491,7 +10525,7 @@ var booksDB = [
         "rate": {
             "gr": 3.65,
             "mygr": 5,
-            "my%": 89
+            "my%": 67
         },
         "all": true,
         "ids": {
@@ -10550,7 +10584,7 @@ var booksDB = [
             "ru": "Привычки на миллионы долларов"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -10573,7 +10607,7 @@ var booksDB = [
             "ru": "Призвание. Как найти то, для чего вы созданы, и жить в своей стихии"
         },
         "rate": {
-            "my%": 67
+            "my%": 43
         },
         "all": true,
         "ids": {
@@ -10644,7 +10678,7 @@ var booksDB = [
             "ru": "Принц Госплана"
         },
         "rate": {
-            "my%": 26
+            "my%": 2
         },
         "all": true,
         "ids": {
@@ -10734,7 +10768,7 @@ var booksDB = [
             "ru": "Про тигрёнка"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -10756,7 +10790,7 @@ var booksDB = [
             "ru": "Проблема верволка в средней полосе (рассказ)"
         },
         "rate": {
-            "my%": 80
+            "my%": 56
         },
         "all": true,
         "ids": {
@@ -10782,7 +10816,7 @@ var booksDB = [
             "ru": "Провакационная терапия"
         },
         "rate": {
-            "my%": 39
+            "my%": 15
         },
         "all": true,
         "ids": {
@@ -10847,7 +10881,7 @@ var booksDB = [
         },
         "all": true,
         "rate": {
-            "my%": 26
+            "my%": 6
         },
         "ids": {
             "art": "recOfXu6ui99xwvx9",
@@ -10965,7 +10999,7 @@ var booksDB = [
             "ru": "Психология для чайников"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -11151,7 +11185,7 @@ var booksDB = [
             "ru": "Психология религии"
         },
         "rate": {
-            "my%": 92
+            "my%": 73
         },
         "all": true,
         "ids": {
@@ -11199,7 +11233,7 @@ var booksDB = [
             "file": "Lyubomirski_Psihologiya-schastya-Novyy-podhod.D4_c5A.418439.fb2"
         },
         "rate": {
-            "my%": 65,
+            "my%": 41,
             "gr": 3.89,
             "mygr": 3
         },
@@ -11280,7 +11314,10 @@ var booksDB = [
             "l_vzp",
             "d_pol",
             "t_alz"
-        ]
+        ],
+        "rate": {
+            "my%": 59
+        }
     },
     {
         "book": "Путь к финансовой независимости Бодо Шефер",
@@ -11314,7 +11351,7 @@ var booksDB = [
             "ru": "Путь самца"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -11340,7 +11377,7 @@ var booksDB = [
             "file": "Путь_художника.fb2.zip"
         },
         "rate": {
-            "my%": 95,
+            "my%": 83,
             "gr": 3.91,
             "mygr": 5
         },
@@ -11472,7 +11509,7 @@ var booksDB = [
             "file": "Work Rules! by Laszlo Bock.epub"
         },
         "rate": {
-            "my%": 96,
+            "my%": 87,
             "gr": 4.15,
             "mygr": 5
         },
@@ -11625,9 +11662,6 @@ var booksDB = [
         "name": {
             "ru": "Реальность фантастики"
         },
-        "rate": {
-            "my%": 51
-        },
         "all": true,
         "ids": {
             "art": "recAv4FEh63OEF6n3",
@@ -11652,7 +11686,7 @@ var booksDB = [
             "ru": "Реки"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -11741,7 +11775,7 @@ var booksDB = [
             "ru": "ру.Ководство online"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -11766,7 +11800,7 @@ var booksDB = [
             "ru": "Рубашка"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -11791,7 +11825,7 @@ var booksDB = [
             "ru": "Рубеж"
         },
         "rate": {
-            "my%": 39
+            "my%": 4
         },
         "all": true,
         "ids": {
@@ -11818,7 +11852,7 @@ var booksDB = [
             "file": "Bogachev_Russkaya-model-effektivnogo-soblazneniya.dgiWEA.66312.fb2"
         },
         "rate": {
-            "my%": 92
+            "my%": 74
         },
         "all": true,
         "ids": {
@@ -11859,7 +11893,7 @@ var booksDB = [
             "ru": "Рыцари Сорока Островов"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -11884,7 +11918,7 @@ var booksDB = [
             "ru": "С чего начинается НЛП"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -11929,7 +11963,7 @@ var booksDB = [
             "ru": "Самая постыдная тайна"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -11998,7 +12032,7 @@ var booksDB = [
             "ru": "Самый великий торговец в мире"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -12042,7 +12076,7 @@ var booksDB = [
         },
         "author": "Джидду Кришнамурти",
         "rate": {
-            "my%": 77
+            "my%": 67
         },
         "all": true,
         "ids": {
@@ -12076,7 +12110,7 @@ var booksDB = [
         "rate": {
             "gr": 3.97,
             "mygr": 5,
-            "my%": 89
+            "my%": 69
         },
         "all": true,
         "ids": {
@@ -12164,7 +12198,10 @@ var booksDB = [
             "d_pol",
             "k_int",
             "t_chs"
-        ]
+        ],
+        "rate": {
+            "my%": 16
+        }
     },
     {
         "book": "Сердце перемен",
@@ -12202,7 +12239,7 @@ var booksDB = [
         "rate": {
             "gr": 4.01,
             "mygr": 5,
-            "my%": 101
+            "my%": 94
         },
         "info": {
             "pages": 320,
@@ -12238,7 +12275,7 @@ var booksDB = [
             "ru": "Серый мир"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -12290,7 +12327,7 @@ var booksDB = [
         "rate": {
             "gr": 5,
             "mygr": 5,
-            "my%": 105
+            "my%": 100
         },
         "all": true,
         "ids": {
@@ -12353,7 +12390,7 @@ var booksDB = [
         },
         "author": "Макгонигал Келли",
         "rate": {
-            "my%": 74,
+            "my%": 50,
             "gr": 4.12
         },
         "all": true,
@@ -12400,7 +12437,7 @@ var booksDB = [
             "en": "The power of Now"
         },
         "rate": {
-            "my%": 68
+            "my%": 34
         },
         "all": true,
         "ids": {
@@ -12428,7 +12465,7 @@ var booksDB = [
             "file": "The Power of Habit - Why We Do What We Do in Life and Business.epub"
         },
         "rate": {
-            "my%": 93,
+            "my%": 79,
             "gr": 4.11,
             "mygr": 4
         },
@@ -12477,7 +12514,7 @@ var booksDB = [
             "ru": "Система Тотального Подчинения Женщины"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -12549,7 +12586,7 @@ var booksDB = [
             "ru": "Системное мышление.  Как управлять хаосом и сложными процессами"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -12583,7 +12620,7 @@ var booksDB = [
         "rate": {
             "gr": 3.9,
             "mygr": 5,
-            "my%": 98
+            "my%": 89
         },
         "all": true,
         "ids": {
@@ -12634,7 +12671,7 @@ var booksDB = [
             "file": "Oruell_Skotnyy-dvor.nqYatA.178020.fb2"
         },
         "rate": {
-            "my%": 71,
+            "my%": 47,
             "gr": 4.5,
             "mygr": 3
         },
@@ -12683,7 +12720,7 @@ var booksDB = [
             "ru": "Слимп трилогия"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -12727,7 +12764,7 @@ var booksDB = [
             "ru": "Слушай песню ветра"
         },
         "rate": {
-            "my%": 39
+            "my%": 14
         },
         "all": true,
         "ids": {
@@ -12787,7 +12824,7 @@ var booksDB = [
             "ru": "Создай себе имидж"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -12824,7 +12861,10 @@ var booksDB = [
             "s_lif",
             "s_flw",
             "s_crt"
-        ]
+        ],
+        "rate": {
+            "my%": 53
+        }
     },
     {
         "book": "Солярис",
@@ -12835,7 +12875,7 @@ var booksDB = [
             "ru": "Солярис"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -12881,7 +12921,7 @@ var booksDB = [
             "ru": "Социальная психология"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -12910,7 +12950,7 @@ var booksDB = [
             "ru": "Спектр"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -12982,7 +13022,7 @@ var booksDB = [
         "rate": {
             "gr": 3.81,
             "mygr": 5,
-            "my%": 103
+            "my%": 96
         },
         "all": true,
         "ids": {
@@ -13054,7 +13094,7 @@ var booksDB = [
             "file": "the $100 startup reinvent the way you make a livin.epub"
         },
         "rate": {
-            "my%": 85,
+            "my%": 61,
             "gr": 3.86,
             "mygr": 5
         },
@@ -13135,7 +13175,7 @@ var booksDB = [
             "ru": "Степной волк"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -13160,7 +13200,7 @@ var booksDB = [
             "ru": "Сто лет одиночества. Полковнику никто не пишет"
         },
         "rate": {
-            "my%": 70,
+            "my%": 46,
             "gr": 4.24,
             "mygr": 3
         },
@@ -13219,7 +13259,7 @@ var booksDB = [
             "ru": "Студийный журнал (+Тетар жестокости)"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -13243,7 +13283,7 @@ var booksDB = [
             "ru": "Сумеречный дозор"
         },
         "rate": {
-            "my%": 39
+            "my%": 15
         },
         "all": true,
         "ids": {
@@ -13270,11 +13310,12 @@ var booksDB = [
             "file": "Byuzen_Supermyshlenie.SoCjoQ.95122.fb2"
         },
         "rate": {
-            "my%": 90,
+            "my%": 75,
             "gr": 3.82,
             "mygr": 5
         },
         "all": true,
+        "cover": true,
         "ids": {
             "art": "reck7cSg5xJmTO9Jb",
             "gr": 11792829,
@@ -13317,7 +13358,7 @@ var booksDB = [
             "ru": "Тайм-драйв. Как успевать жить и работать Глеб Архангельский"
         },
         "rate": {
-            "my%": 51
+            "my%": 29
         },
         "all": true,
         "ids": {
@@ -13375,7 +13416,7 @@ var booksDB = [
         "tags": "роман роман",
         "author": "Сергей Лукяненко",
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "roles": [
             "k_flw"
@@ -13390,7 +13431,7 @@ var booksDB = [
         },
         "all": true,
         "rate": {
-            "my%": 51
+            "my%": 36
         },
         "ids": {
             "art": "reczvDFgns6QCgRhE",
@@ -13475,7 +13516,7 @@ var booksDB = [
             "ru": "Темная сторона"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -13602,7 +13643,7 @@ var booksDB = [
             "ru": "Теория вероятности и математическая статистика"
         },
         "rate": {
-            "my%": 26
+            "my%": 2
         },
         "all": true,
         "ids": {
@@ -13654,7 +13695,7 @@ var booksDB = [
         "rate": {
             "gr": 3.99,
             "mygr": 5,
-            "my%": 100
+            "my%": 93
         },
         "all": true,
         "ids": {
@@ -13702,7 +13743,7 @@ var booksDB = [
             "ru": "Теория психологического тренинга"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -13746,7 +13787,7 @@ var booksDB = [
             "ru": "Теория систем и системный анализ"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -13770,7 +13811,7 @@ var booksDB = [
         },
         "author": "Сурмин Туленков",
         "rate": {
-            "my%": 39
+            "my%": 15
         },
         "all": true,
         "ids": {
@@ -13795,11 +13836,12 @@ var booksDB = [
             "ru": "Территория заблуждений. Какие ошибки совершают умные люди"
         },
         "rate": {
-            "my%": 92,
+            "my%": 74,
             "gr": 3.84,
             "mygr": 5
         },
         "all": true,
+        "cover": true,
         "ids": {
             "art": "recn0jpKBl0r46Kra",
             "gr": 22586464,
@@ -13810,9 +13852,8 @@ var booksDB = [
         "sezons": [
             "16в"
         ],
-        "author_": "Рольф Добелли",
         "tags": "ошибки",
-        "author": "Rolf Dobelli",
+        "author": "Рольф Добелли / Rolf Dobelli",
         "info": {
             "pages": 256,
             "year": 2011
@@ -13838,7 +13879,7 @@ var booksDB = [
         ],
         "coauthor": "Richard Branson",
         "rate": {
-            "my%": 64,
+            "my%": 52,
             "gr": 3.97
         },
         "ids": {
@@ -13943,7 +13984,7 @@ var booksDB = [
             "18в7"
         ],
         "rate": {
-            "my%": 85
+            "my%": 61
         },
         "add_art": "2018-05-30",
         "sezons": [
@@ -13965,7 +14006,7 @@ var booksDB = [
             "ru": "Трактат о любви, как ее понимает жуткий зануда"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -13992,7 +14033,7 @@ var booksDB = [
             "ru": "Трангуманизм (сайт)"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -14034,9 +14075,6 @@ var booksDB = [
             "16",
             "20з"
         ],
-        "rate": {
-            "my%": 20
-        },
         "ids": {
             "art": "rec4cDGVvT7ywDar6",
             "ai": 808
@@ -14078,7 +14116,7 @@ var booksDB = [
             "file": "robert_hajnlajn-tunnel_v_nebe_-1490897524.fb2.zip"
         },
         "rate": {
-            "my%": 72,
+            "my%": 48,
             "gr": 3.94,
             "mygr": 4
         },
@@ -14162,7 +14200,7 @@ var booksDB = [
             "ru": "Удушье"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -14239,7 +14277,7 @@ var booksDB = [
             "ru": "Упражнения Синтона. Дистанция"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -14263,7 +14301,7 @@ var booksDB = [
             "ru": "Уроки соционики"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -14283,7 +14321,7 @@ var booksDB = [
     },
     {
         "rate": {
-            "my%": 51
+            "my%": 35
         },
         "sezons": [
             "7л"
@@ -14332,7 +14370,7 @@ var booksDB = [
             "ru": "Учение дона Карлоса"
         },
         "rate": {
-            "my%": 90
+            "my%": 66
         },
         "all": true,
         "ids": {
@@ -14360,7 +14398,7 @@ var booksDB = [
             "ru": "Фальшивые зеркала (ДАЙВЕР 2)"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -14385,7 +14423,7 @@ var booksDB = [
             "ru": "Фантастика 2003"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -14429,7 +14467,7 @@ var booksDB = [
             "ru": "Фокусы языка. Изменение убеждений с помощью НЛП"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -14490,7 +14528,7 @@ var booksDB = [
             "ru": "Форум сновидений"
         },
         "rate": {
-            "my%": 39
+            "my%": 15
         },
         "all": true,
         "ids": {
@@ -14585,7 +14623,7 @@ var booksDB = [
         },
         "author": "А. Реутов",
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -14611,7 +14649,7 @@ var booksDB = [
             "ru": "Харизма"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -14657,7 +14695,7 @@ var booksDB = [
             "18о8"
         ],
         "rate": {
-            "my%": 94
+            "my%": 81
         },
         "add_art": "2018-10-25",
         "sezons": [
@@ -14683,7 +14721,7 @@ var booksDB = [
         },
         "author": "Newport, Cal",
         "rate": {
-            "my%": 92,
+            "my%": 76,
             "gr": 4.08,
             "mygr": 4
         },
@@ -14743,7 +14781,7 @@ var booksDB = [
             "ru": "Хоббит: туда и обратно"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -14794,7 +14832,7 @@ var booksDB = [
         "rate": {
             "gr": 3.69,
             "mygr": 5,
-            "my%": 92
+            "my%": 78
         },
         "all": true,
         "ids": {
@@ -14851,7 +14889,7 @@ var booksDB = [
             "ru": "Холодные берега (Искатели неба 1)"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -14883,7 +14921,7 @@ var booksDB = [
         "rate": {
             "gr": 4.14,
             "mygr": 5,
-            "my%": 96
+            "my%": 87
         },
         "all": true,
         "ids": {
@@ -14968,7 +15006,7 @@ var booksDB = [
             "ru": "Хронки Амбера"
         },
         "rate": {
-            "my%": 100
+            "my%": 93
         },
         "all": true,
         "ids": {
@@ -14995,7 +15033,7 @@ var booksDB = [
             "ru": "Цвет и психика"
         },
         "rate": {
-            "my%": 39
+            "my%": 15
         },
         "all": true,
         "ids": {
@@ -15087,7 +15125,7 @@ var booksDB = [
         "rate": {
             "gr": 4.16,
             "mygr": 3,
-            "my%": 72
+            "my%": 48
         },
         "all": true,
         "ids": {
@@ -15119,7 +15157,7 @@ var booksDB = [
             "ru": "Чайка по имени Джонатан Ливингстон"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -15144,7 +15182,7 @@ var booksDB = [
             "ru": "Чапаев и Пустота"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -15170,7 +15208,7 @@ var booksDB = [
             "ru": "Человек как товар и покупатель на сексуально-брачном рынке"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -15213,7 +15251,7 @@ var booksDB = [
             "ru": "Черная автоматика. PR стратегии"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -15239,7 +15277,7 @@ var booksDB = [
             "ru": "Черновик"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -15264,7 +15302,7 @@ var booksDB = [
             "ru": "Черный лебедь. Под знаком непредсказуемости"
         },
         "rate": {
-            "my%": 95,
+            "my%": 58,
             "gr": 3.94,
             "mygr": 5
         },
@@ -15305,7 +15343,7 @@ var booksDB = [
             "ru": "Четыре соглашения"
         },
         "rate": {
-            "my%": 39
+            "my%": 15
         },
         "all": true,
         "ids": {
@@ -15331,7 +15369,7 @@ var booksDB = [
             "ru": "В поисках потока"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "sezons": [
@@ -15387,7 +15425,7 @@ var booksDB = [
             "ru": "Чистовик"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -15463,7 +15501,7 @@ var booksDB = [
             "file": "Хайнлайн Роберт. Чужак в чужой стране - royallib.com.fb2.zip"
         },
         "rate": {
-            "my%": 85,
+            "my%": 84,
             "gr": 3.92,
             "mygr": 5
         },
@@ -15520,7 +15558,7 @@ var booksDB = [
             "ru": "Шаман в большом городе"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -15555,7 +15593,7 @@ var booksDB = [
     },
     {
         "rate": {
-            "my%": 77
+            "my%": 66
         },
         "sezons": [
             "8в"
@@ -15586,7 +15624,7 @@ var booksDB = [
             "ru": "Шок будущего"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -15659,7 +15697,7 @@ var booksDB = [
             "file": "Chiksentmihayi_Evolyutsiya_lichnosti.269481.fb2"
         },
         "rate": {
-            "my%": 94,
+            "my%": 82,
             "gr": 4.06,
             "mygr": 5
         },
@@ -15678,7 +15716,6 @@ var booksDB = [
         "sezons": [
             "16з"
         ],
-        "author_": "Михай Чиксентмихайи",
         "tags": "поток поток работа смыслы счастье",
         "cover": true,
         "author": "Михайи Чиксентмихайи",
@@ -15754,7 +15791,7 @@ var booksDB = [
             "ru": "Экономика впечатлений. Работа - это театр, а каждый бизнес - сцена"
         },
         "rate": {
-            "my%": 100,
+            "my%": 92,
             "gr": 3.81,
             "mygr": 5
         },
@@ -15802,7 +15839,7 @@ var booksDB = [
             "ru": "Элементарный психоанализ"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -15839,7 +15876,10 @@ var booksDB = [
         "roles": [
             "s_lif",
             "t_alz"
-        ]
+        ],
+        "rate": {
+            "my%": 36
+        }
     },
     {
         "book": "Эниология",
@@ -15872,7 +15912,7 @@ var booksDB = [
             "file": "Essentialism_ The Disciplined Pursuit of Less - Mckeown, Greg.mobi"
         },
         "rate": {
-            "my%": 100,
+            "my%": 92,
             "gr": 4.03,
             "mygr": 5
         },
@@ -15939,7 +15979,7 @@ var booksDB = [
         "author": "Люк Рейнхард",
         "coauthor": "Werner Erhard",
         "rate": {
-            "my%": 100,
+            "my%": 96,
             "gr": 4.03,
             "mygr": 5
         },
@@ -16002,9 +16042,10 @@ var booksDB = [
         "rate": {
             "gr": 3.87,
             "mygr": 5,
-            "my%": 92
+            "my%": 80
         },
         "all": true,
+        "cover": true,
         "ids": {
             "gr": 17207589,
             "n": 88,
@@ -16049,7 +16090,7 @@ var booksDB = [
             "file": "2_5294116266896789791.epub"
         },
         "rate": {
-            "my%": 90,
+            "my%": 70,
             "gr": 4.47,
             "mygr": 5
         },
@@ -16102,7 +16143,7 @@ var booksDB = [
             "ru": "Этологические экскурсии по запретным садам гуманитариев"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -16128,7 +16169,7 @@ var booksDB = [
             "ru": "Эффективаня призентация"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -16154,7 +16195,7 @@ var booksDB = [
             "file": "Uotts_Lozhnaya-slepota_2_Ehopraksiya.6AOY0w.435800.fb2"
         },
         "rate": {
-            "my%": 74,
+            "my%": 50,
             "gr": 3.86,
             "mygr": 3
         },
@@ -16222,7 +16263,8 @@ var booksDB = [
         },
         "rate": {
             "gr": 4.32,
-            "mygr": 5
+            "mygr": 5,
+            "my%": 98
         },
         "all": true,
         "ids": {
@@ -16261,7 +16303,7 @@ var booksDB = [
             "ua": "Сім днів"
         },
         "rate": {
-            "my%": 39
+            "my%": 15
         },
         "all": true,
         "sezons": [
@@ -16283,7 +16325,7 @@ var booksDB = [
             "file": "Blockchain Revolution by Don Tapscott, Alex Tapscott.epub"
         },
         "rate": {
-            "my%": 55,
+            "my%": 31,
             "gr": 3.37,
             "mygr": 1
         },
@@ -16338,7 +16380,7 @@ var booksDB = [
         },
         "all": true,
         "rate": {
-            "my%": 71
+            "my%": 54
         },
         "ids": {
             "n": 98,
@@ -16376,7 +16418,7 @@ var booksDB = [
         "rate": {
             "gr": 4.11,
             "mygr": 5,
-            "my%": 91
+            "my%": 71
         },
         "info": {
             "pages": 256,
@@ -16410,7 +16452,7 @@ var booksDB = [
             "file": "Franklin Veaux - More Than Two A Practical Guide to Ethical Polyamory 2014.epub"
         },
         "rate": {
-            "my%": 89,
+            "my%": 62,
             "gr": 4.32
         },
         "all": true,
@@ -16555,7 +16597,7 @@ var booksDB = [
             "file": "Why We Work by Barry Schwartz.epub"
         },
         "rate": {
-            "my%": 77,
+            "my%": 53,
             "gr": 3.68,
             "mygr": 3
         },
@@ -16669,7 +16711,10 @@ var booksDB = [
             "l_lov",
             "s_lif",
             "t_chs"
-        ]
+        ],
+        "rate": {
+            "my%": 35
+        }
     },
     {
         "name": {
@@ -16720,7 +16765,7 @@ var booksDB = [
             "ru": "dFOTO (11 2006)"
         },
         "rate": {
-            "my%": 39
+            "my%": 15
         },
         "all": true,
         "ids": {
@@ -16740,9 +16785,6 @@ var booksDB = [
     {
         "name": {
             "ru": "Журнал Photographer 1-2,3,5,7,8,12 2006"
-        },
-        "rate": {
-            "my%": 64
         },
         "all": true,
         "ids": {
@@ -16767,7 +16809,7 @@ var booksDB = [
             "file": "Pelevin_S-N-U-F-F-.EVEVZg.257257.fb2"
         },
         "rate": {
-            "my%": 82,
+            "my%": 58,
             "gr": 3.98,
             "mygr": 4
         },
@@ -16832,7 +16874,7 @@ var booksDB = [
             "20л8"
         ],
         "rate": {
-            "my%": 78
+            "my%": 54
         },
         "add_art": "2020-09-05",
         "notes": {
@@ -16858,7 +16900,7 @@ var booksDB = [
         },
         "coauthor": "Doron Mayer",
         "rate": {
-            "my%": 80,
+            "my%": 54,
             "gr": 4,
             "mygr": 4
         },
@@ -16916,7 +16958,7 @@ var booksDB = [
             "file": "Panchin_Apofeniya.fT_7tQ.375676.fb2"
         },
         "rate": {
-            "my%": 89,
+            "my%": 65,
             "gr": 3.91,
             "mygr": 4
         },
@@ -16966,7 +17008,7 @@ var booksDB = [
             "file": "Dzhozef_Autentichnost-Kak-byt-soboy.Ac5ggA.537123.fb2"
         },
         "rate": {
-            "my%": 50,
+            "my%": 26,
             "gr": 3.83
         },
         "all": true,
@@ -17010,7 +17052,7 @@ var booksDB = [
             "file": "Kuznecov_Babiy-Yar.qqKTxA.31099.fb2"
         },
         "rate": {
-            "my%": 95,
+            "my%": 84,
             "gr": 4.27,
             "mygr": 5
         },
@@ -17127,7 +17169,7 @@ var booksDB = [
         "rate": {
             "gr": 4.1,
             "mygr": 5,
-            "my%": 102
+            "my%": 95
         },
         "all": true,
         "ids": {
@@ -17201,7 +17243,7 @@ var booksDB = [
             "file": "Give and Take by Adam Grant.epub"
         },
         "rate": {
-            "my%": 98,
+            "my%": 89,
             "gr": 4.07,
             "mygr": 5
         },
@@ -17423,13 +17465,10 @@ var booksDB = [
             "file": "Анджей Сапковский/Ведьмак/4. Час презрения.fb2"
         },
         "author": "Анджей Сапковский",
-        "weeks": [
-            "12в12",
-            "12в13"
-        ],
         "all": true,
+        "cover": true,
         "rate": {
-            "my%": 97
+            "my%": 86
         },
         "ids": {
             "art": "recIfDbd1280gcTVq",
@@ -17451,7 +17490,7 @@ var booksDB = [
             "ru": "Великий канслер желает познакомиться"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -17503,7 +17542,7 @@ var booksDB = [
             "ru": "Ветка сакуры: про Японию"
         },
         "rate": {
-            "my%": 39
+            "my%": 15
         },
         "all": true,
         "ids": {
@@ -17621,7 +17660,7 @@ var booksDB = [
             "file": "Podshibjakin_A_M_-_Vremja_igr.fb2"
         },
         "rate": {
-            "my%": 52,
+            "my%": 29,
             "gr": 3.69,
             "mygr": 3
         },
@@ -17758,7 +17797,7 @@ var booksDB = [
             "file": "Гарвардский Некромант litres - Панчин Александр Юрьевич.fb2.zip"
         },
         "rate": {
-            "my%": 52,
+            "my%": 28,
             "gr": 4.41,
             "mygr": 3
         },
@@ -17800,7 +17839,7 @@ var booksDB = [
             "ru": "Герой. Принципы жизни"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -17822,7 +17861,7 @@ var booksDB = [
             "ru": "Гештальт подход и Сведетели терапии"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -17846,7 +17885,7 @@ var booksDB = [
             "ru": "Главное — главным вещам"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -17878,7 +17917,7 @@ var booksDB = [
         "rate": {
             "gr": 4.07,
             "mygr": 5,
-            "my%": 93
+            "my%": 78
         },
         "all": true,
         "ids": {
@@ -17921,7 +17960,7 @@ var booksDB = [
             "ru": "Десять секретов Богатства"
         },
         "rate": {
-            "my%": 77
+            "my%": 52
         },
         "all": true,
         "ids": {
@@ -17944,7 +17983,7 @@ var booksDB = [
             "ru": "Десять секретов Здоровья"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -17970,7 +18009,7 @@ var booksDB = [
             "ru": "Десять секретов Любви"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -17991,7 +18030,7 @@ var booksDB = [
             "ru": "Десять секретов Счастья. Современная притча о мудрости и счастье, которая изменит вашу жизнь"
         },
         "rate": {
-            "my%": 77
+            "my%": 52
         },
         "all": true,
         "ids": {
@@ -18068,7 +18107,7 @@ var booksDB = [
             "file": "Bogrov_Dm-Bogrov-i-ubiystvo-Stolypina.fb2"
         },
         "rate": {
-            "my%": 70,
+            "my%": 46,
             "gr": 4,
             "mygr": 4
         },
@@ -18116,7 +18155,7 @@ var booksDB = [
             "ru": "Дневник (из сети)"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -18280,7 +18319,7 @@ var booksDB = [
             "ru": "Если хочешь стать богатым и счастливым, не ходи в школу"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -18347,9 +18386,6 @@ var booksDB = [
         "name": {
             "ru": "Хакер ][akep"
         },
-        "rate": {
-            "my%": 77
-        },
         "all": true,
         "ids": {
             "art": "recxRe0mrk8LgWqvU",
@@ -18375,7 +18411,7 @@ var booksDB = [
             "en": "The Craving Mind: From Cigarettes to Smartphones to Love – Why We Get Hooked and How We Can Break Bad Habits"
         },
         "rate": {
-            "my%": 42,
+            "my%": 18,
             "gr": 3.75,
             "mygr": 3
         },
@@ -18480,7 +18516,7 @@ var booksDB = [
             "file": "The Knowledge Illusion Why We Never Think Alone by Steven Sloman, Philip Fernbach.epub"
         },
         "rate": {
-            "my%": 89,
+            "my%": 74,
             "gr": 3.86,
             "mygr": 4
         },
@@ -18549,7 +18585,7 @@ var booksDB = [
         "coauthor": "Claudia Hammond",
         "rate": {
             "gr": 3.53,
-            "my%": 65,
+            "my%": 41,
             "mygr": 4
         },
         "all": true,
@@ -18590,7 +18626,7 @@ var booksDB = [
         "rate": {
             "gr": 3.67,
             "mygr": 5,
-            "my%": 80
+            "my%": 56
         },
         "all": true,
         "ids": {
@@ -18660,7 +18696,7 @@ var booksDB = [
             "ru": "К черут все! Берись и делай"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -18712,7 +18748,7 @@ var booksDB = [
             "ru": "Кавнтовая психология"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -18789,7 +18825,7 @@ var booksDB = [
             "file": "Как создать крутой рекламный текст - Шугерман Джозеф.fb2.zip"
         },
         "rate": {
-            "my%": 86,
+            "my%": 62,
             "gr": 4,
             "mygr": 4
         },
@@ -18840,7 +18876,7 @@ var booksDB = [
             "file": "Download/Hatchinson_A_-_Kardio_ili_silovaja_Kakie_nagruzki_po.616657.epub"
         },
         "rate": {
-            "my%": 98,
+            "my%": 90,
             "gr": 4.01,
             "mygr": 5
         },
@@ -18902,7 +18938,7 @@ var booksDB = [
             "ru": "Кастанеда - книги 1 и 2"
         },
         "rate": {
-            "my%": 39
+            "my%": 15
         },
         "all": true,
         "ids": {
@@ -18928,7 +18964,7 @@ var booksDB = [
             "ru": "Книга о тактике"
         },
         "rate": {
-            "my%": 90
+            "my%": 70
         },
         "all": true,
         "ids": {
@@ -18940,6 +18976,7 @@ var booksDB = [
             "8з"
         ],
         "type": "книга",
+        "author": "Алексей Каптерев",
         "cat": "практическая пси",
         "roles": [
             "s_crt"
@@ -18999,7 +19036,7 @@ var booksDB = [
             "file": "MoonReader/Колония Colony - ru - Дик Филип Киндред.fb2.zip"
         },
         "rate": {
-            "my%": 70
+            "my%": 46
         },
         "all": true,
         "ids": {
@@ -19055,7 +19092,7 @@ var booksDB = [
         "rate": {
             "gr": 3.44,
             "mygr": 3,
-            "my%": 56
+            "my%": 32
         },
         "info": {
             "pages": 427,
@@ -19089,7 +19126,7 @@ var booksDB = [
         "coauthor": "Свен Бринкман",
         "rate": {
             "gr": 3.64,
-            "my%": 60
+            "my%": 36
         },
         "all": true,
         "ids": {
@@ -19154,7 +19191,7 @@ var booksDB = [
         "rate": {
             "gr": 4.04,
             "mygr": 4,
-            "my%": 85
+            "my%": 61
         },
         "info": {
             "year": 2013
@@ -19227,7 +19264,7 @@ var booksDB = [
         "rate": {
             "gr": 4.01,
             "mygr": 5,
-            "my%": 103
+            "my%": 97
         },
         "all": true,
         "ids": {
@@ -19274,12 +19311,12 @@ var booksDB = [
             "file": "Obrist_H_U_-_Kratkaja_istorija_novoj_muzyki.553034.fb2"
         },
         "rate": {
-            "my%": 92,
+            "my%": 76,
             "gr": 3.94,
             "mygr": 5
         },
         "all": true,
-                "cover":true,
+        "cover": true,
         "ids": {
             "art": "recou0eI6eh9hWVvi",
             "gr": 29148017,
@@ -19321,7 +19358,7 @@ var booksDB = [
             "file": "tom_kelli-kreativnaya_uverennost-1489554148.fb2.zip"
         },
         "rate": {
-            "my%": 79,
+            "my%": 55,
             "gr": 4.02,
             "mygr": 3
         },
@@ -19421,7 +19458,7 @@ var booksDB = [
             "file": "Haynlayn_The-Moon-Is-a-Harsh-Mistress.106283.fb2"
         },
         "rate": {
-            "my%": 81,
+            "my%": 57,
             "gr": 4.14,
             "mygr": 4
         },
@@ -19647,7 +19684,7 @@ var booksDB = [
         "rate": {
             "gr": 4.03,
             "mygr": 3,
-            "my%": 68
+            "my%": 37
         },
         "all": true,
         "ids": {
@@ -19700,7 +19737,7 @@ var booksDB = [
             "file": "How to Be Everything_ A Guide for Those Wh - Emilie Wapnick.azw3"
         },
         "rate": {
-            "my%": 28,
+            "my%": 1,
             "gr": 3.85,
             "mygr": 2
         },
@@ -19791,7 +19828,7 @@ var booksDB = [
             "18з9"
         ],
         "rate": {
-            "my%": 55,
+            "my%": 31,
             "gr": 4.12,
             "mygr": 3
         },
@@ -19826,7 +19863,7 @@ var booksDB = [
         },
         "author": "Уильям Форд Гибсон",
         "rate": {
-            "my%": 84,
+            "my%": 60,
             "gr": 3.9,
             "mygr": 4
         },
@@ -19866,7 +19903,7 @@ var booksDB = [
             "file": "Непобедимое солнце.fb2"
         },
         "rate": {
-            "my%": 83,
+            "my%": 59,
             "gr": 3.67,
             "mygr": 4
         },
@@ -19917,7 +19954,7 @@ var booksDB = [
             "ru": "Непризнанные государства. Одиннадцать историй о сепаратизме"
         },
         "rate": {
-            "my%": 72,
+            "my%": 44,
             "gr": 4.42,
             "mygr": 4
         },
@@ -20034,7 +20071,7 @@ var booksDB = [
             "ru": "Общая психология (2 тома)"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -20058,7 +20095,7 @@ var booksDB = [
             "file": "Adam Grant, Sheryl Sandberg-Originals_ How Non-Conformists Move the World-Viking (2016).mobi"
         },
         "rate": {
-            "my%": 76,
+            "my%": 47,
             "gr": 3.94,
             "mygr": 3
         },
@@ -20115,7 +20152,7 @@ var booksDB = [
             "7л"
         ],
         "rate": {
-            "my%": 77
+            "my%": 65
         },
         "tags": "нлп псих война транс",
         "type": "книга",
@@ -20206,7 +20243,7 @@ var booksDB = [
             "ru": "Паутина"
         },
         "rate": {
-            "my%": 26
+            "my%": 2
         },
         "all": true,
         "ids": {
@@ -20231,7 +20268,7 @@ var booksDB = [
             "file": "5_6332302985820897326.epub"
         },
         "rate": {
-            "my%": 95,
+            "my%": 85,
             "gr": 3.47,
             "mygr": 5
         },
@@ -20293,7 +20330,7 @@ var booksDB = [
         "rate": {
             "gr": 4.33,
             "mygr": 4,
-            "my%": 70
+            "my%": 46
         },
         "all": true,
         "ids": {
@@ -20361,7 +20398,7 @@ var booksDB = [
         "rate": {
             "gr": 3.62,
             "mygr": 5,
-            "my%": 88
+            "my%": 64
         },
         "all": true,
         "ids": {
@@ -20419,7 +20456,7 @@ var booksDB = [
             "en": "Hooked: How to Build Habit-Forming Products"
         },
         "rate": {
-            "my%": 64,
+            "my%": 40,
             "gr": 4.09
         },
         "all": true,
@@ -20454,7 +20491,7 @@ var booksDB = [
             "ru": "Полдень, XXII век"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -20585,7 +20622,7 @@ var booksDB = [
             "ru": "Принцип LOL2A"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -20607,7 +20644,7 @@ var booksDB = [
             "ru": "Принцип LOL2A: формула богатства"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -20684,7 +20721,7 @@ var booksDB = [
         "rate": {
             "gr": 3.98,
             "mygr": 5,
-            "my%": 90
+            "my%": 71
         },
         "all": true,
         "ids": {
@@ -20720,7 +20757,7 @@ var booksDB = [
         "rate": {
             "gr": 4.22,
             "mygr": 5,
-            "my%": 88
+            "my%": 64
         },
         "all": true,
         "ids": {
@@ -20765,7 +20802,7 @@ var booksDB = [
         "author": "Вадим Шлахтер",
         "coauthor": "Сергей Хольнов",
         "rate": {
-            "my%": 77
+            "my%": 65
         },
         "all": true,
         "ids": {
@@ -20810,7 +20847,7 @@ var booksDB = [
             "ru": "Путь к финансовой независимости"
         },
         "rate": {
-            "my%": 51
+            "my%": 27
         },
         "all": true,
         "ids": {
@@ -20833,7 +20870,7 @@ var booksDB = [
             "ru": "Работа актера над собой"
         },
         "rate": {
-            "my%": 77
+            "my%": 53
         },
         "all": true,
         "ids": {
@@ -20860,7 +20897,7 @@ var booksDB = [
         "rate": {
             "gr": 3.56,
             "mygr": 4,
-            "my%": 68
+            "my%": 45
         },
         "all": true,
         "ids": {
@@ -20917,7 +20954,7 @@ var booksDB = [
             "ru": "Ромашка (англ+рус)"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -21002,7 +21039,7 @@ var booksDB = [
             "21л1"
         ],
         "rate": {
-            "my%": 66
+            "my%": 28
         },
         "all": true,
         "ids": {
@@ -21025,7 +21062,7 @@ var booksDB = [
             "ru": "Сверхчеловек"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -21073,7 +21110,7 @@ var booksDB = [
             "ru": "Семинар Гриндера в Москве"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -21136,7 +21173,7 @@ var booksDB = [
         "coauthor": "Den Heath",
         "rate": {
             "gr": 4.12,
-            "my%": 95,
+            "my%": 85,
             "mygr": 5
         },
         "all": true,
@@ -21217,7 +21254,7 @@ var booksDB = [
             "file": "2_5449596745891711057.fb2"
         },
         "rate": {
-            "my%": 70,
+            "my%": 46,
             "gr": 4.17,
             "mygr": 3
         },
@@ -21550,7 +21587,7 @@ var booksDB = [
         "rate": {
             "gr": 4.35,
             "mygr": 4,
-            "my%": 82
+            "my%": 58
         },
         "all": true,
         "ids": {
@@ -21598,7 +21635,7 @@ var booksDB = [
             "file": "Grinder_Cherepahi-do-samogo-niza.pRvCaQ.327386.fb2"
         },
         "rate": {
-            "my%": 90
+            "my%": 70
         },
         "all": true,
         "ids": {
@@ -21636,7 +21673,7 @@ var booksDB = [
             "ru": "Чиствовик"
         },
         "rate": {
-            "my%": 64
+            "my%": 40
         },
         "all": true,
         "ids": {
@@ -21660,7 +21697,7 @@ var booksDB = [
             "ru": "Что такое психология. В 2 томах. Том 1"
         },
         "rate": {
-            "my%": 82
+            "my%": 58
         },
         "all": true,
         "ids": {
@@ -21685,7 +21722,7 @@ var booksDB = [
             "ru": "Что такое психология. В 2 томах. Том 2"
         },
         "rate": {
-            "my%": 82
+            "my%": 58
         },
         "all": true,
         "ids": {
@@ -21711,7 +21748,7 @@ var booksDB = [
             "en": "Whispering In The Wind"
         },
         "rate": {
-            "my%": 64,
+            "my%": 52,
             "gr": 4.28
         },
         "all": true,
@@ -21802,7 +21839,7 @@ var booksDB = [
     },
     {
         "rate": {
-            "my%": 39
+            "my%": 19
         },
         "sezons": [
             "7в"
@@ -21864,7 +21901,7 @@ var booksDB = [
             "en": "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones"
         },
         "rate": {
-            "my%": 103,
+            "my%": 99,
             "gr": 4.36,
             "mygr": 5
         },
@@ -21908,6 +21945,7 @@ var booksDB = [
         "author": "Christopher Steiner",
         "all": true,
         "ids": {
+            "art": "recxVaaj8GXINRfMU",
             "n": 281,
             "mr": [
                 764
@@ -21931,7 +21969,10 @@ var booksDB = [
         ],
         "roles": [
             "k_int"
-        ]
+        ],
+        "rate": {
+            "my%": 44
+        }
     },
     {
         "name": {
@@ -21939,7 +21980,7 @@ var booksDB = [
             "file": "Ego Is the Enemy by Ryan Holiday.epub"
         },
         "rate": {
-            "my%": 87,
+            "my%": 63,
             "gr": 4.13,
             "mygr": 5
         },
@@ -21989,7 +22030,7 @@ var booksDB = [
             "en": "Game Design Workshop: A Playcentric Approach to Creating Innovative Games"
         },
         "rate": {
-            "my%": 95,
+            "my%": 82,
             "gr": 4.07,
             "mygr": 5
         },
@@ -22053,7 +22094,7 @@ var booksDB = [
             "file": "How Not to Die _ Discover the Foods Scie - Greger, Michael; Stone, Gene.pdf"
         },
         "rate": {
-            "my%": 75,
+            "my%": 51,
             "gr": 4.45,
             "mygr": 5
         },
@@ -22190,7 +22231,7 @@ var booksDB = [
         "author": "David Eagleman",
         "rate": {
             "gr": 4.13,
-            "my%": 82
+            "my%": 55
         },
         "all": true,
         "ids": {
@@ -22357,7 +22398,7 @@ var booksDB = [
             "file": "Ultralearning by Scott Young.epub"
         },
         "rate": {
-            "my%": 78,
+            "my%": 54,
             "gr": 3.92,
             "mygr": 4
         },
@@ -22412,7 +22453,7 @@ var booksDB = [
             "en": "How To Give A Mind Blowing Bj"
         },
         "rate": {
-            "my%": 92,
+            "my%": 75,
             "gr": 4.11,
             "mygr": 5
         },
