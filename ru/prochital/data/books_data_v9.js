@@ -1,5 +1,24 @@
 var booksDB = [
     {
+        "cat": "жинеуправл",
+        "author": "А.Н Рощин",
+        "type": "книга",
+        "name": {
+            "ru": "Сам себе синоптик"
+        },
+        "all": true,
+        "cover": true,
+        "ids": {
+            "art": "recpVk9EQ6XBoPTNw"
+        },        
+        "sezons": [
+            "94л"
+        ],
+        "roles": [
+            "k_flw"
+        ]
+    },    
+    {
         "cat": "мышление",
         "author": "Randall Munroe",
         "type": "книга",
@@ -7929,6 +7948,7 @@ var booksDB = [
             "ru": "Мой компьютер до №370"
         },
         "all": true,
+        "cover": true,
         "ids": {
             "art": "recEOBMOqq83h2gvb",
             "ai": 306
@@ -10186,6 +10206,7 @@ var booksDB = [
             "my%": 26
         },
         "all": true,
+        "cover": true,
         "ids": {
             "art": "rec1CQItbfGvI3gsd",
             "ai": 394
@@ -12292,13 +12313,13 @@ var booksDB = [
         ]
     },
     {
-        "book": "Сибирские сказки",
         "cat": "худла",
         "type": "книга",
         "name": {
-            "ru": "Сибирские сказки"
+            "ru": "Сказки народов Сибири"
         },
         "all": true,
+        "cover": true,
         "ids": {
             "art": "recGYbengTv5rLyOa",
             "ai": 477
@@ -12307,7 +12328,7 @@ var booksDB = [
         "sezons": [
             "89"
         ],
-        "tags": "сказки",
+        "tags": "сказки сибирь",
         "roles": [
             "k_flw"
         ]
@@ -14999,14 +15020,13 @@ var booksDB = [
         ]
     },
     {
-        "book": "Хронки Амбера",
         "cat": "худла",
         "type": "книга",
         "name": {
-            "ru": "Хронки Амбера"
+            "ru": "Хроники Амбера"
         },
         "rate": {
-            "my%": 93
+            "my%": 94
         },
         "all": true,
         "ids": {
@@ -16933,9 +16953,10 @@ var booksDB = [
     },
     {
         "name": {
-            "ru": "Англо-русский словарь"
+            "ru": "Англо-русский словарь, 1979 г."
         },
         "all": true,
+        "cover": true,
         "ids": {
             "art": "recr8dXwitvMrd9Yz",
             "ai": 641
@@ -17291,9 +17312,28 @@ var booksDB = [
     },
     {
         "name": {
-            "ru": "БСЭ, 24 тома"
+            "ru": "Ядовитые животные и растения СССР. Справочное пособие"
         },
         "all": true,
+        "cover": true,
+        "ids": {
+            "art": "recBQnGDu5t4cTLc0",
+        },
+        "sezons": [
+            "94"
+        ],
+        "tags": "энциклопедия ядовитые",
+        "type": "книга",
+        "cat": "остальное",
+        "roles": [
+            "k_int"
+        ]
+    },    {
+        "name": {
+            "ru": "БСЭ, 30-ов томов"
+        },
+        "all": true,
+        "cover": true,
         "ids": {
             "art": "recx4kr9CIFGkBXjU",
             "ai": 650
@@ -21455,9 +21495,10 @@ var booksDB = [
     },
     {
         "name": {
-            "ru": "Учебный справочник школьника"
+            "ru": "Учебный справочник школьника, 1999. 1664 стр "
         },
         "all": true,
+        "cover": true,
         "ids": {
             "art": "recOr59YB9cWYuryL",
             "ai": 810
