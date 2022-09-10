@@ -127,7 +127,8 @@ function redraw({ch_cat, ch_yr, ch_rl, ch_txt}={}) {
     $("#infos").html(`${$('.cur_cat').text()} &nbsp;<span class="mininf">за</span>&nbsp;  ${$('.cur_year').text()} &nbsp;<span class="mininf">год.</span>&nbsp;  ${rnm}`)
     $("#main").html(`<div id="srez" style="padding-bottom:20px"><div style="font-size:1.3em; padding-bottom:12px; font-weight: bold">Всего <span style="color: #007272; font-size:1.3em">${fbooks.length}</span> книг:</div><div id="grid"></div></div>`)
 
-    const sez_nm =  ['з','в','л','о'] // b.score-a.score || b.fresh-a.fresh 
+    const sez_nm =  ['з','в','л','о'] // b.score-a.score || b.fresh-a.fresh
+    const BOOK_CUT = 115 
 
     if (fbooks.length===0)
         $("#grid").append('<h1 style="color: red">Ничего не найдено!</h1>')
@@ -140,10 +141,10 @@ function redraw({ch_cat, ch_yr, ch_rl, ch_txt}={}) {
         else if (a.rate && a.rate["my%"])
             f = -1
         return b.all-a.all || f  
-    }).slice(0,100).forEach(apBook)
+    }).slice(0,BOOK_CUT).forEach(apBook)
 
-    if (fbooks.length>100) 
-        $("#srez").append(`<div id="netknig"><h2 style="color: gray">ОБРЕЗАЛИ ${fbooks.length-100} книг</h2></div>`)
+    if (fbooks.length>BOOK_CUT) 
+        $("#srez").append(`<div id="netknig"><h2 style="color: gray">ОБРЕЗАЛИ ${fbooks.length-BOOK_CUT} книг</h2></div>`)
 
     DOCheight = Math.max( body.scrollHeight, body.offsetHeight, 
                        html.clientHeight, html.scrollHeight, html.offsetHeight );
