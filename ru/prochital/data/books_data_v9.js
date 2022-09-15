@@ -1,5 +1,47 @@
 var booksDB = [
     {
+        "cat": "мышление",
+        "author": "Hari, Johann",
+        "type": "книга",
+        "name": {
+            "en": "Stolen Focus: Why You Can't Pay Attention- and How to Think Deeply Again",
+            "ru": "Украденный фокус: как вернуть внимание и глубокое мышление"
+        },
+        "all": true,
+        "sezons": [
+            "22л"
+        ],
+        "ids": {
+            "art": "recqxoPWMUFHs9aRJ",
+            "gr": 57933306
+        },
+        "cover": true,
+        "rate": {
+            "my%": 89
+        }
+    },    
+    {
+        "cat": "мышление",
+        "author": "Adam Grant",
+        "type": "книга",
+        "name": {
+            "en": "Think Again: The Power of Knowing What You Don't Know",
+            "ru": "Подумайте еще раз. Сила знания о незнании"
+        },
+        "all": true,
+        "sezons": [
+            "22л"
+        ],
+        "ids": {
+            "art": "recQlR9P354HMV3Ec",
+            "gr": 55539565
+        },
+        "cover": true,
+        "rate": {
+            "my%": 94
+        }
+    },
+    {
         "cat": "жинеуправл",
         "author": "А.Н Рощин",
         "type": "книга",
@@ -2333,31 +2375,6 @@ var booksDB = [
         ]
     },
     {
-        "book": "Ветка сакуры",
-        "cat": "мировозрение",
-        "from": "Всеволод Овчинников",
-        "type": "книга",
-        "name": {
-            "ru": "Ветка сакуры Всеволод Овчинников"
-        },
-        "all": true,
-        "ids": {
-            "art": "recvzyhPJG9ngVIPj",
-            "ai": 95
-        },
-        "add_art": "2018-01-14",
-        "sezons": [
-            "8"
-        ],
-        "tags": "япония",
-        "roles": [
-            "s_flw",
-            "s_crt",
-            "k_flw",
-            "k_int"
-        ]
-    },
-    {
         "cat": "практическая пси",
         "type": "книга",
         "name": {
@@ -2878,28 +2895,33 @@ var booksDB = [
         ]
     },
     {
-        "book": "Гештальт-подход. Свидетель терапии",
-        "cat": "психология",
-        "type": "книга",
         "name": {
-            "ru": "Гештальт-подход. Свидетель терапии Ф. Перлз"
+            "ru": "Гештальт подход и Сведетели терапии"
+        },
+        "rate": {
+            "my%": 27
         },
         "all": true,
         "ids": {
-            "art": "recm0JoO6fFfGROmx",
-            "ai": 116
+            "art": "rec28Tdb9jKreEND0",
+            "ai": 672
         },
-        "add_art": "2018-01-14",
+        "add_art": "2018-09-07",
         "sezons": [
-            "7"
+            "7з"
         ],
-        "tags": "гештальт психология",
+        "type": "книга",
+        "cat": "психология",
         "roles": [
+            "l_vzp",
+            "s_lif",
+            "t_alz",
             "l_rzb",
             "l_lov",
             "k_int",
-            "t_qst"
-        ]
+            "t_qst"            
+        ],
+        "tags": "гештальт психология"
     },
     {
         "book": "Гибкое сознание. Новый взгляд на психологию развития взрослых и детей",
@@ -6566,23 +6588,27 @@ var booksDB = [
             "t_qst",
             "t_chs"
         ]
-    },
+    },  
     {
         "cat": "психология",
         "author": "Ромашка",
         "type": "книга",
+        "rate": {
+            "my%": 40
+        },        
         "name": {
             "ru": "Кризис современной психологии"
         },
         "all": true,
         "sezons": [
-            "08"
+            "8з"
         ],
         "ids": {
             "ai": 252
         },
         "roles": [
             "l_vzp",
+            "t_alz",
             "k_int"
         ]
     },
@@ -17527,8 +17553,10 @@ var booksDB = [
     },
     {
         "name": {
-            "ru": "Великий канслер желает познакомиться"
+            "ru": "Новый код НЛП, или Великий канцлер желает познакомиться"
         },
+        "tags": "всё подряд нлп новый код обобщения",
+        "author": "Гагин, Уколов",
         "rate": {
             "my%": 53
         },
@@ -17546,6 +17574,7 @@ var booksDB = [
         "roles": [
             "s_crt",
             "t_alz",
+            "d_pol",
             "t_chs"
         ]
     },
@@ -17578,6 +17607,7 @@ var booksDB = [
         "roles": []
     },
     {
+        "tags": "япония",
         "name": {
             "ru": "Ветка сакуры: про Японию"
         },
@@ -17598,7 +17628,9 @@ var booksDB = [
         "roles": [
             "l_rzb",
             "k_flw",
-            "k_int"
+            "k_int",
+            "s_flw",
+            "s_crt"
         ]
     },
     {
@@ -17894,30 +17926,6 @@ var booksDB = [
         "cat": "мировозрение",
         "roles": [
             "t_chs"
-        ]
-    },
-    {
-        "name": {
-            "ru": "Гештальт подход и Сведетели терапии"
-        },
-        "rate": {
-            "my%": 27
-        },
-        "all": true,
-        "ids": {
-            "art": "rec28Tdb9jKreEND0",
-            "ai": 672
-        },
-        "add_art": "2018-09-07",
-        "sezons": [
-            "7з"
-        ],
-        "type": "книга",
-        "cat": "психология",
-        "roles": [
-            "l_vzp",
-            "s_lif",
-            "t_alz"
         ]
     },
     {
@@ -20060,29 +20068,6 @@ var booksDB = [
     },
     {
         "name": {
-            "ru": "Новый код НЛП, или Великий канцлер желает познакомиться"
-        },
-        "all": true,
-        "ids": {
-            "art": "recgy6foEHOT2pUpw",
-            "ai": 747
-        },
-        "add_art": "2018-01-14",
-        "sezons": [
-            "7"
-        ],
-        "tags": "всё подряд нлп новый код обобщения",
-        "type": "книга",
-        "author": "Гагин Уколов",
-        "cat": "практическая пси",
-        "roles": [
-            "s_crt",
-            "d_pol",
-            "t_chs"
-        ]
-    },
-    {
-        "name": {
             "ru": "О русском акционизме",
             "file": "Pavlenskiy_O-russkom-akcionizme.tW7TPg.556654.fb2"
         },
@@ -20987,29 +20972,6 @@ var booksDB = [
         "cover": true,
         "roles": [
             "d_pol"
-        ]
-    },
-    {
-        "name": {
-            "ru": "Ромашка (англ+рус)"
-        },
-        "rate": {
-            "my%": 40
-        },
-        "all": true,
-        "ids": {
-            "art": "rect6R0t70DdI4qrD",
-            "ai": 784
-        },
-        "add_art": "2018-09-07",
-        "sezons": [
-            "8з"
-        ],
-        "tags": "сказка",
-        "type": "книга",
-        "cat": "психология",
-        "roles": [
-            "t_alz"
         ]
     },
     {
