@@ -17,7 +17,7 @@ const colorMap = {
 }
 						
 graph.nodes.push(
-	{id: 0, txt: 'Dan Vóronov / Дан Вóронов', group: 'm', radius: 340},
+	{id: 0, txt: 'Dan Vóronov 🇺🇦 Дан Вóронов', group: 'm', radius: 340},
 	{id: 2, txt: '⚙️ Startups & Projects', group: 'na', radius: 120, url: 'startups/'},
 	{id: 1, txt: '🗣 Speaker & Tutor', group: 'na', radius: 110, url: 'educator/'},
 	{id: 3, txt: '⏳ Now', group: 'n', radius: 45, url: 'now/'},
