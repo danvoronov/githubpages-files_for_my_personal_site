@@ -3,40 +3,17 @@ var timer;
 var rad = 720;
 
 var graph = new Object;									
-graph.links = new Array;
-graph.nodes = new Array;
-
-const colorMap = {
-	'm':'000',
-	'na':'fa8031',
-	'n':'61c282',
-	'a':'9158ad',
-	'b':'5f58ad',
-	'r':'cf02ba',
-	'c':'657475'
-}
-						
-graph.nodes.push(
-	{id: 0, txt: 'Dan Vóronov 🇺🇦 Дан Вóронов', group: 'm', radius: 340},
-	{id: 2, txt: '⚙️ Startups & Projects', group: 'na', radius: 120, url: 'startups/'},
-	{id: 1, txt: '🗣 Speaker & Tutor', group: 'na', radius: 110, url: 'educator/'},
-	{id: 3, txt: '⏳ Now', group: 'n', radius: 45, url: 'now/'},
-	{id: 4, txt: '🎭 ART', group: 'a', radius: 65, url: 'art/'},
-	{id: 5, txt:  '📝 Articles', group: 'b', radius: 60, url: 'ru/'},
-	{id: 10, txt: '📚 Readed', group: 'r', radius: 75, url: 'readed/'},
-	{id: 21, txt: '🔗 YouTube', group: 'c', radius: 15, url: 'https://www.youtube.com/user/DanVoronov/videos'},
-	{id: 22, txt: '🔗 Telegram', group: 'c', radius: 15, url: 'https://t.me/dv_prj'},
-	// {id: 6, txt: 'old', group: 'b', radius: 35},
-	// {id: 7, txt: 'new', group: 'b', radius: 35},
-);									
-graph.links.push( { source:  0, target: 1, value: 20 } );	
-graph.links.push( { source:  0, target: 2, value: 20 } );	
+graph.links = new Array;				
+graph.nodes = mainMenu									
+graph.links.push( { source:  0, target: 1, value: 50 } );	
+graph.links.push( { source:  0, target: 2, value: 50 } );	
 graph.links.push( { source:  0, target: 3, value: 20 } );	
 graph.links.push( { source:  0, target: 4, value: 20 } );	
 graph.links.push( { source:  0, target: 5, value: 20 } );	
 graph.links.push( { source:  0, target: 10, value: 20 } );	
 graph.links.push( { source:  0, target: 21, value: 10 } );	
 graph.links.push( { source:  0, target: 22, value: 10 } );	
+graph.links.push( { source:  21, target: 22, value: 1 } );	
 
 let pol = $(window).height()-rad-20
 let pol2 = $(window).width()-rad-60
