@@ -1,0 +1,26 @@
+<!doctype html>
+<html><head><title>РОЛИ</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script src="../jslib/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="editor.css">
+<script src="data.js"></script>
+<script src="../data/roles.js"></script>
+<script src="../data/books_data_v9.js"></script>
+</head>         
+<body><div id="panel">
+    <span id="toend"></span>  
+    <div style="align-self: center; margin: 5px;"><button id="save" >SAVE</button></div>
+</div>
+<div id="allroles"></div>
+<div style="display: flex; justify-content: space-between;">
+    <div class="bbtn"><button id="prev_book">⏪</button></div>
+    <div style="flex-grow: 10;">
+        <div id="curcat"></div>
+        <div id="current"></div>   
+    </div>
+    <div class="bbtn"><button id="next_book">ДАЛЬШЕ<br/>⏩</button></div>
+</div>
+<div id="here"></div>       
+<script src="editor.js"></script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+body{ margin: 0; padding: 0; background-color: #2f1b34; font-family: Verdana;}
+button {cursor: pointer; }
+
+#toppanel{
+	background-color: #251529;
+	padding: 5px;
+	padding-left: 11px;
+	font-size: 10px;
+	color: white;
+	min-height: 16px;
+	border-bottom: 2px solid #00f4cc;
+}
+#toppanel a{
+	text-decoration: none;
+	color: #00f4cc;
+}
+#toppanel a:hover{
+	color: #f5ecc1;
+}
+
+#infos{
+	width: 100%;
+	font-size: 0.7em;
+	text-align: left;
+	padding-left: 10px;
+	padding-top: 7px;
+}
+.mininf{
+	color: darkgray;
+}
+.bkg{
+	background-color: #4e0f6b;
+	text-align: center;
+	padding: 12px;
+	margin-top: -16px;
+}
+
+#years{
+	padding-top: 20px;
+}
+#cats{
+	padding-top: 20px;
+}
+
+#panel input {
+	font-size: 1.3em;
+	width: 540px;
+}
+#panel {
+	background-color: #ff4381;
+	color: white;
+	display: flex;
+	text-align: center;
+	padding: 5px 0 7px;
+	box-shadow: inset 1px -3px 20px -12px #4e0f6b;
+}
+
+#content {
+  display: flex;
+  flex-direction: row;
+  padding: 0; margin: 0;
+}
+
+#netknig{
+	text-align:center;
+	padding-top: 100px;
+}
+
+#centerflex{
+	flex: 10;
+	flex-basis: 58%;
+}
+
+.hl{
+	background-color: #571071;
+}
+.leftfilter{
+	color: gray;
+	flex: 1;
+	width: 200px;
+	padding: 16px 20px;
+	text-align: right;
+	font-size: 0.9em;
+	min-width: 130px;
+}
+.rightfilter{
+	font-size: 0.8em;
+	color: gray;
+	flex: 1;
+	min-width: 45px;
+	padding: 16px 20px;
+	text-align: left;
+}
+
+.lfftr:hover{ color: white;}
+.lfftr{
+	cursor: pointer;
+	padding-top: 10px;
+}
+.rtftr:hover{ color: white;}
+.rtftr{
+	cursor: pointer;
+	padding-top: 10px;
+}
+.cur_cat {color: #edc06f; font-weight: bold; }
+.cur_year {color: #8cd2ff; font-weight: bold; }
+
+.wrapper{
+	padding: 30px;
+	background-color: white;
+	border: 3px solid #00f4cc;
+	border-top: 3px;
+	min-height: 666px;
+	margin-bottom: 100px;
+	background-color: whitesmoke;
+}
+
+#filter{
+	border-left: 3px solid #00f4cc;
+	border-right: 3px solid #00f4cc;
+}
+
+#roles_wrp{
+	padding: 0;
+}
+.roles {
+    color: rgb(0, 0, 0,1);
+    border: none;
+    cursor: pointer;
+    padding: 2px 6px;
+    margin: 0 2px;
+    font-weight: bold;
+    font-size: 0.9em;
+    border: solid 2px rgb(255, 255, 255,0.3);
+}
+
+.rl_btn{
+	width: 170px;
+}
+.rl_active{
+	color: #8e1bf3;
+	border: solid 2px #00c1f5;
+	background-color: rgb(232, 232, 232, 0.8);
+}
+
+#reset_btn{
+	color: #ff4381;
+	box-shadow: 0px 0px 20px -10px #4e0f6b;
+}
+
+.act_btn{
+	font-weight: bold;
+	color:#590bbd;
+}
+
+.flt {
+	padding: 8px 20px;
+	background-color: lightsalmon;	
+}
+
+.cattag{
+	font-size:0.8em;
+	border: darkviolet 1px solid;
+	 border-radius: 5px;
+	 padding: 1px 5px;
+	color: white;
+	background-color: #034a33;
+}
+
+#grid{
+		display: flex;
+		flex-wrap: wrap;
+}
+
+
+.el:hover{
+	border-color: #04bad3;
+	color: #04bad3;
+	box-shadow:
+    -2px 0 12px #f0f,        /* outer left magenta */
+    2px 0 12px #0ff;         /* outer right cyan */
+}
+.el{
+	padding: 5px;
+	margin:  5px;
+	width:  178px;
+	border: 1px solid lightsalmon;
+	background-color: white;
+	border-radius: 6px;
+	font-size: 1.2em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.podCover{
+	margin:5px 8px 2px;
+	font-size: 0.5em;
+}
+.podCover a {
+	color: black;
+	text-decoration: none;
+}
+
+.insteadCover{
+	margin:5px 8px 0;
+}
+.insteadCover a{
+	text-decoration: none;
+	color: black;
+}
+.bkrate {
+	text-align:center; 
+	margin: -3px 3px -2px;
+}
+.mythts{
+	text-align:center; 	
+}
+
+
+.gric img {
+	filter: opacity(60%);
+}
+.gric{
+	background-color: #a82;
+	text-align: right;
+	height: 0;
+	margin-right: 2px;
+	z-index: 10;
+}
+
+.gray{
+	opacity: 0.3;
+}
+
+.mingr{ color: gray; font-size:0.8em }
+.nn{ margin-left: 4px; color: #aa2d56; font-size:0.6em  }
+
+#linktobase{
+	font-size:0.8em;
+}
+
+.hud_mark{ 
+	background-color:#f0e6f9; 
+	padding: 0 5px 3px;
+	 border-radius: 4px;
+	 color:  gray;
+
+}
+
+#scrllbtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #ff4381; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}

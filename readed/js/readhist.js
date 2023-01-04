@@ -9,33 +9,28 @@ const loadImage = iname =>{
 
 const apBook= (book,i)=>$("#grid").append(el_template(i, book))
 
-const bkName= (name)=>(name.ru)?name.ru:(name.en)?name.en:name.ua
+const bkName= (name)=>(name.en)?name.en:(name.ru)?name.ru:name.ua
 const bkYr= (sz)=>sz.map(yt=>parseInt(yt)).filter((v, i, a)=>a.indexOf(v)===i).map(y=>y>30?y+1900:y+2000).sort().reverse().join(', ');
  
-// ${rate&&rate["my%"]?`<span class="mingr">${rate["my%"]}%</span>  `:''}
-// $('.cur_year').attr('value')!='0'?
-// МОЯ ЗАМЕТКА ?? линки на поиск в библиоткеке
 const el_template = (n, { name, author, sezons, roles, notes, type, cat, ids, all, cover, rate })=>`<div class='el${(!all)?' gray':''}'>
 
 ${(ids&&ids.gr)?`<div class='gric'><a target='_blank' title="Goodreads card" href='https://www.goodreads.com/book/show/${ids.gr}'><img src='gr.png' width="16" alt="at Goodreads"/></a></div>`:''}
 
 <div class="nn">${n+1}. <span class="mingr">${bkYr(sezons)}</span>
-                ${(cat && $('.cur_cat').attr('cat')==='all' && cat!='худла')?'<span class="cattag">'+cat.slice(0,10)+'</span> ':''}${cat=="худла"?'<span class="hud_mark">худ</span> ':''}${type!=="книга"?'<span style="background-color:yellow;">'+type+'</span>':''}
+                ${(cat && $('.cur_cat').attr('cat')==='all' && cat!='hu')?'<span class="cattag">'+cat.slice(0,10)+'</span> ':''}${cat=="hu"?'<span class="hud_mark">fic</span> ':''}${type!=="книга"?'<span style="background-color:yellow;">'+type+'</span>':''}
 </div>
 
 ${cover ? `<div style="margin:3px; padding-top: 7px; text-align: center;"><img id="img_${ids.art}" src="${loadImage(ids.art)}" width="130" alt="${bkName(name)}${author?'  —  '+author:''}" title="${bkName(name)}${author?'  —  '+author:''}"></div>
 
-    <div class='podCover'><a title="Brave search"  target="_blank" href='${'https://search.brave.com/search?q='+encodeURIComponent('книга '+bkName(name)+(author?' '+author:''))}'>${bkName(name).slice(0,80)}</a></div>`
+    <div class='podCover'><a title="Brave search"  target="_blank" href='${'https://search.brave.com/search?q='+encodeURIComponent('book '+bkName(name)+(author?' '+author:''))}'>${bkName(name).slice(0,80)}</a></div>`
 
-            : `<div class='insteadCover' onClick='console.log("${ids.art}")'>${bkName(name)}</div> 
+            : `<div class='insteadCover'><a title="Brave search"  target="_blank" href='${'https://search.brave.com/search?q='+encodeURIComponent('book '+bkName(name)+(author?' '+author:''))}'>${bkName(name)}</a></div> 
                 ${(author) ? '<div style="color:green; font-size:0.75em; margin:5px">'+author+'</div>'
                             :''}
             `}
 
 ${rate&&rate["my%"]?`<div class='bkrate'><progress title="${rate["my%"]}%" style="width:100px;" value="${rate["my%"]}" max="100"></progress></div>`:''}
 </div>`
-
-// ${notes&&notes.url?`<div class='mythts'><button>МОИ МЫСЛИ</button></div>`:''}
 
 //=======================================================
 
@@ -51,11 +46,12 @@ const getMeta = db => db.reduce((acc,e)=>{
     },{c:{}, y:{}, r:{}})
 
 
-
 // ==============================================================
 //        ГЛАВНАЯ РИСОВАШКА ДАНННЫХ
 // ==============================================================
 function redraw({ch_cat, ch_yr, ch_rl, ch_txt}={}) { 
+
+    // $("#main").html('loading...') почему это не работает???
 
     $(".disa").prop("disabled",true).css('color', 'lightgray');
     $(".disa").removeClass('hl')
@@ -92,13 +88,13 @@ function redraw({ch_cat, ch_yr, ch_rl, ch_txt}={}) {
         Object.keys(base_meta.r).forEach(r=>$(`.roles[value='${r}']`).css("color",""))    
     }
 
-    const ap_cat = m => $("#cats").html(Object.keys(m.c).sort((a,b)=>m.c[b]-m.c[a]).reduce((h,k)=> (k=='остальное')?h:h+`<div class="lfftr" ${ch_cat?'':`title="${m.c[k]} шт"`} onClick='cat_click("${k}")' value="${cats_data[k].val}">${cats_data[k].name}</div>`+(s.fix=='c'?'':`<div style='font-size:0.7em; color: #595959;'>${Math.round(m.c[k]/fbooks.length*100)} %</div>`),''))    
+    const ap_cat = m => $("#cats").html(Object.keys(m.c).sort((a,b)=>m.c[b]-m.c[a]).reduce((h,k)=> (!k)?h:h+`<div class="lfftr" ${ch_cat?'':`title="${m.c[k]} bk"`} onClick='cat_click("${k}")' value="${k}">${cats_data[k]}</div>`+(s.fix=='c'?'':`<div style='font-size:0.7em; color: #595959;'>${Math.round(m.c[k]/fbooks.length*100)} %</div>`),''))  
     
     const ap_yr = m => {
         let ks = Object.keys(m.y).sort((a,b)=>b-a),
         vl = ks.map(i=>m.y[i]),
         mx = Math.max( ...vl), mn = Math.min( ...vl)
-        $("#years").html(ks.reduce((h,y)=> h+`<div class="rtftr" style='font-size:${85+(m.y[y]-mn)/(mx-mn)*50}%'  onClick='yr_click("${y.slice(2)}")' value="${y.slice(2)}">${y}</div><div style='font-size:0.8em; color: #595959;'>${m.y[y]} шт</div>`,''))  
+        $("#years").html(ks.reduce((h,y)=> h+`<div class="rtftr" style='font-size:${85+(m.y[y]-mn)/(mx-mn)*50}%'  onClick='yr_click("${y.slice(2)}")' value="${y.slice(2)}">${y}</div><div style='font-size:0.8em; color: #595959;'>${m.y[y]} bk</div>`,''))  
     }
     
     switch (s.fix) {
@@ -120,18 +116,18 @@ function redraw({ch_cat, ch_yr, ch_rl, ch_txt}={}) {
  
     setURL();
     
-    $('div.lfftr[value="'+(s.cat&&cats_data[s.cat]?cats_data[s.cat].val:'')+'"]').addClass("cur_cat"); $('div.rtftr[value="'+(s.yr?s.yr:'')+'"]').addClass("cur_year");
+    $('div.lfftr[value="'+(s.cat&&cats_data[s.cat]?cats_data[s.cat]:'')+'"]').addClass("cur_cat"); $('div.rtftr[value="'+(s.yr?s.yr:'')+'"]').addClass("cur_year");
 
 
-    let rnm = s.rl.length==0?'':(s.rl.length>1?'<span class="mininf">Круг:</span> '+Object.keys(roles_names).reduce((a,k)=>{ a[k[0]] = roles_names[k]; return a },{})[s.rl[0][0]]:'<span class="mininf">Роль:</span> '+Object.values(roles).reduce((a,e)=>({...e,...a}),{})[s.rl[0]][0])+'.'
-    $("#infos").html(`${$('.cur_cat').text()} &nbsp;<span class="mininf">за</span>&nbsp;  ${$('.cur_year').text()} &nbsp;<span class="mininf">год.</span>&nbsp;  ${rnm}`)
-    $("#main").html(`<div id="srez" style="padding-bottom:20px"><div style="font-size:1.3em; padding-bottom:12px; font-weight: bold">Всего <span style="color: #007272; font-size:1.3em">${fbooks.length}</span> книг:</div><div id="grid"></div></div>`)
+    let rnm = s.rl.length==0?'':(s.rl.length>1?'<span class="mininf">Crcl:</span> '+Object.keys(roles_names).reduce((a,k)=>{ a[k[0]] = roles_names[k]; return a },{})[s.rl[0][0]]:'<span class="mininf">Role:</span> '+Object.values(roles).reduce((a,e)=>({...e,...a}),{})[s.rl[0]][0])+'.'
+    $("#infos").html(`${$('.cur_cat').text()} &nbsp;<span class="mininf">for</span>&nbsp;  ${$('.cur_year').text()} &nbsp;<span class="mininf">year.</span>&nbsp;  ${rnm}`)
+    $("#main").html(`<div id="srez" style="padding-bottom:20px"><div style="font-size:1.3em; padding-bottom:12px; font-weight: bold">Find <span style="color: #007272; font-size:1.3em">${fbooks.length}</span> books:</div><div id="grid"></div></div>`)
 
     const sez_nm =  ['з','в','л','о'] // b.score-a.score || b.fresh-a.fresh
     const BOOK_CUT = 115 
 
     if (fbooks.length===0)
-        $("#grid").append('<h1 style="color: red">Ничего не найдено!</h1>')
+        $("#grid").append('<h1 style="color: red">Nothing found!</h1>')
     else fbooks.sort((a, b) =>{
         let f = 0
         if (b.rate && a.rate && b.rate["my%"] && a.rate["my%"])
@@ -144,7 +140,7 @@ function redraw({ch_cat, ch_yr, ch_rl, ch_txt}={}) {
     }).slice(0,BOOK_CUT).forEach(apBook)
 
     if (fbooks.length>BOOK_CUT) 
-        $("#srez").append(`<div id="netknig"><h2 style="color: gray">ОБРЕЗАЛИ ${fbooks.length-BOOK_CUT} книг</h2></div>`)
+        $("#srez").append(`<div id="netknig"><h2 style="color: gray">TRIM ${fbooks.length-BOOK_CUT} books</h2></div>`)
 
     DOCheight = Math.max( body.scrollHeight, body.offsetHeight, 
                        html.clientHeight, html.scrollHeight, html.offsetHeight );

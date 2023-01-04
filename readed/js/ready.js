@@ -13,7 +13,7 @@ const yr_click = ch_yr => redraw({ch_yr})
 
 function init(url_yr, url_cat, url_q, url_fix) {
 
-    let c = Object.keys(cats_data).filter(k=>cats_data[k].val===url_cat); 
+    let c = Object.keys(cats_data).filter(k=>cats_data[k]===url_cat); 
     s.cat = c[0]?c[0]:''
     s.yr = url_yr?url_yr:''
     s.q = url_q?url_q:''
@@ -96,7 +96,7 @@ function setURL() {
     if($("#flt_txt").val()!='') search_params.set('q', $("#flt_txt").val());
     if(s.yr) search_params.set('yr', +s.yr);
     if(s.fix) search_params.set('a', s.fix);
-    if(s.cat && cats_data[s.cat]) search_params.set('cat', cats_data[s.cat].val );
+    if(s.cat && cats_data[s.cat]) search_params.set('cat', s.cat );
 
     thisurl.search = search_params.toString();
     window.history.pushState('s','DanBooks', thisurl.toString());
