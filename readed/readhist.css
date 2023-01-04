@@ -1,6 +1,8 @@
 body{ margin: 0; padding: 0; background-color: #2f1b34; font-family: Verdana;}
 button {cursor: pointer; }
 
+progress {opacity: 0.4;}
+
 #toppanel{
 	background-color: #251529;
 	padding: 5px;
@@ -51,7 +53,7 @@ button {cursor: pointer; }
 	color: white;
 	display: flex;
 	text-align: center;
-	padding: 5px 0 7px;
+	padding: 7px 0 12px;
 	box-shadow: inset 1px -3px 20px -12px #4e0f6b;
 }
 

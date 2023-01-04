@@ -1,10 +1,8 @@
 const loadImage = iname =>{  
-    ['jpeg','png', 'jpg'].forEach(ext=>{
-        const imageC = new Image(), imgfl = `./covers/${iname}.${ext}`,
-        l = ()=> { if (imageC.width>0) $("#img_"+iname).attr('src', imgfl) };
-        imageC.onload = l; imageC.src = imgfl;
-    })
-    return '';
+    const imageC = new Image(), imgfl = `./covers/${iname}.jpeg`,
+    l = ()=> { if (imageC.width>0) $("#img_"+iname).attr('src', imgfl) };
+    imageC.onload = l; 
+    imageC.src = imgfl;
 }
 
 const apBook= (book,i)=>$("#grid").append(el_template(i, book))
@@ -12,19 +10,19 @@ const apBook= (book,i)=>$("#grid").append(el_template(i, book))
 const bkName= (name)=>(name.en)?name.en:(name.ru)?name.ru:name.ua
 const bkYr= (sz)=>sz.map(yt=>parseInt(yt)).filter((v, i, a)=>a.indexOf(v)===i).map(y=>y>30?y+1900:y+2000).sort().reverse().join(', ');
  
-const el_template = (n, { name, author, sezons, roles, notes, type, cat, ids, all, cover, rate })=>`<div class='el${(!all)?' gray':''}'>
+const el_template = (n, { name, author, sezons, roles, notes, type, cat, id, ids, all, cover, rate })=>`<div class='el${(!all)?' gray':''}'>
 
 ${(ids&&ids.gr)?`<div class='gric'><a target='_blank' title="Goodreads card" href='https://www.goodreads.com/book/show/${ids.gr}'><img src='gr.png' width="16" alt="at Goodreads"/></a></div>`:''}
 
 <div class="nn">${n+1}. <span class="mingr">${bkYr(sezons)}</span>
-                ${(cat && $('.cur_cat').attr('cat')==='all' && cat!='hu')?'<span class="cattag">'+cat.slice(0,10)+'</span> ':''}${cat=="hu"?'<span class="hud_mark">fic</span> ':''}${type!=="книга"?'<span style="background-color:yellow;">'+type+'</span>':''}
+                ${(cat && $('.cur_cat').attr('cat')==='all' && cat!='hu')?'<span class="cattag">'+cat.slice(0,10)+'</span> ':''}${cat=="hu"?'<span class="hud_mark">fic</span> ':''}${type!=="book"?'<span style="background-color:yellow;">'+type+'</span>':''}
 </div>
 
-${cover ? `<div style="margin:3px; padding-top: 7px; text-align: center;"><img id="img_${ids.art}" src="${loadImage(ids.art)}" width="130" alt="${bkName(name)}${author?'  —  '+author:''}" title="${bkName(name)}${author?'  —  '+author:''}"></div>
+${cover ? `<div style="margin:3px; padding-top: 7px; text-align: center;"><img id="img_${id}" src="${loadImage(id)}" width="130" alt="${bkName(name)}${author?'  —  '+author:''}" title="${bkName(name)}${author?'  —  '+author:''}"></div>
 
     <div class='podCover'><a title="Brave search"  target="_blank" href='${'https://search.brave.com/search?q='+encodeURIComponent('book '+bkName(name)+(author?' '+author:''))}'>${bkName(name).slice(0,80)}</a></div>`
 
-            : `<div class='insteadCover'><a title="Brave search"  target="_blank" href='${'https://search.brave.com/search?q='+encodeURIComponent('book '+bkName(name)+(author?' '+author:''))}'>${bkName(name)}</a></div> 
+        : `<div class='insteadCover'><a title="Brave search"  target="_blank" href='${'https://search.brave.com/search?q='+encodeURIComponent('book '+bkName(name)+(author?' '+author:''))}'>${bkName(name)}</a></div> 
                 ${(author) ? '<div style="color:green; font-size:0.75em; margin:5px">'+author+'</div>'
                             :''}
             `}
@@ -116,7 +114,8 @@ function redraw({ch_cat, ch_yr, ch_rl, ch_txt}={}) {
  
     setURL();
     
-    $('div.lfftr[value="'+(s.cat&&cats_data[s.cat]?cats_data[s.cat]:'')+'"]').addClass("cur_cat"); $('div.rtftr[value="'+(s.yr?s.yr:'')+'"]').addClass("cur_year");
+    $(`div.lfftr[value="${s.cat?s.cat:''}"]`).addClass("cur_cat"); 
+    $('div.rtftr[value="'+(s.yr?s.yr:'')+'"]').addClass("cur_year");
 
 
     let rnm = s.rl.length==0?'':(s.rl.length>1?'<span class="mininf">Crcl:</span> '+Object.keys(roles_names).reduce((a,k)=>{ a[k[0]] = roles_names[k]; return a },{})[s.rl[0][0]]:'<span class="mininf">Role:</span> '+Object.values(roles).reduce((a,e)=>({...e,...a}),{})[s.rl[0]][0])+'.'
