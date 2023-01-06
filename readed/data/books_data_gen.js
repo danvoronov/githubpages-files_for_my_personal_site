@@ -36,7 +36,8 @@ var booksDB = [
       "20"
     ],
     "cat": "ar",
-    "author": "David Byrne"
+    "author": "David Byrne",
+    "cover": true
   },
   {
     "id": "6391590fed1b43b49be3b394f93f3a11",
@@ -623,6 +624,9 @@ var booksDB = [
       "22о"
     ],
     "cat": "rl",
+    "ids": {
+      "gr": "25030993"
+    },
     "rate": {
       "my%": "78"
     }
@@ -1387,6 +1391,9 @@ var booksDB = [
       "21о"
     ],
     "cat": "bz",
+    "ids": {
+      "gr": "42935456"
+    },
     "rate": {
       "my%": "59"
     }
@@ -1457,7 +1464,8 @@ var booksDB = [
       "18"
     ],
     "cat": "bz",
-    "author": "Michael Lewis"
+    "author": "Michael Lewis",
+    "cover": true
   },
   {
     "id": "79e23d47ed5c49bdbaa5c391b78c7983",
@@ -1742,7 +1750,8 @@ var booksDB = [
     "rate": {
       "mygr": "4",
       "gr": "3.9"
-    }
+    },
+    "cover": true
   },
   {
     "id": "49be66ede51042e69bc653b52889d379",
@@ -3386,6 +3395,9 @@ var booksDB = [
       "22о"
     ],
     "cat": "pp",
+    "ids": {
+      "gr": "50209348"
+    },
     "rate": {
       "my%": "85"
     }
@@ -3401,6 +3413,9 @@ var booksDB = [
       "22в"
     ],
     "cat": "pp",
+    "ids": {
+      "gr": "26312997"
+    },
     "rate": {
       "my%": "88"
     },
@@ -3638,7 +3653,8 @@ var booksDB = [
       "d_org",
       "t_qst",
       "t_chs"
-    ]
+    ],
+    "cover": true
   },
   {
     "id": "e4145bc73cef495ab612dc741566508b",
@@ -3930,7 +3946,8 @@ var booksDB = [
       "l_rzb",
       "d_pol",
       "t_alz"
-    ]
+    ],
+    "cover": true
   },
   {
     "id": "f08efc81db524d3ca10a35eccb6f8511",
@@ -4903,6 +4920,9 @@ var booksDB = [
       "22в"
     ],
     "cat": "mz",
+    "ids": {
+      "gr": "41795733"
+    },
     "rate": {
       "my%": "48"
     }
@@ -4911,6 +4931,7 @@ var booksDB = [
     "id": "95785fa6c4084e02972b6d609a1ee5ca",
     "type": "book",
     "name": {
+      "en": "Utopia for Realists: How We Can Build the Ideal World",
       "ru": "Утопия для реалиста"
     },
     "all": true,
@@ -4918,6 +4939,9 @@ var booksDB = [
       "21о"
     ],
     "cat": "mz",
+    "ids": {
+      "gr": "40876575"
+    },
     "rate": {
       "my%": "50"
     }
@@ -5213,7 +5237,8 @@ var booksDB = [
     },
     "rate": {
       "gr": "4.14"
-    }
+    },
+    "cover": true
   },
   {
     "id": "0c19cff99e1c4e01b68fd192be0d6c29",
@@ -5630,7 +5655,11 @@ var booksDB = [
       "21"
     ],
     "cat": "lm",
-    "author": "Timothy Ferriss"
+    "author": "Timothy Ferriss",
+    "ids": {
+      "gr": "36200111"
+    },
+    "cover": true
   },
   {
     "id": "e14526c387634809b9de5df58d210171",
@@ -5770,7 +5799,8 @@ var booksDB = [
       "my%": "71",
       "mygr": "5",
       "gr": "3.98"
-    }
+    },
+    "cover": true
   },
   {
     "id": "2a4e7ff927cd4fb99b3d63b7e3cf29a8",
@@ -5841,7 +5871,8 @@ var booksDB = [
       "my%": "37",
       "mygr": "3",
       "gr": "4.03"
-    }
+    },
+    "cover": true
   },
   {
     "id": "4c23ea46175d4c3081ad40e8b411fd64",
@@ -5985,7 +6016,8 @@ var booksDB = [
       "14"
     ],
     "cat": "lm",
-    "author": "David McRaney"
+    "author": "David McRaney",
+    "cover": true
   },
   {
     "id": "3eed1a2362404f4cb67b3d50859bc88c",
@@ -7068,7 +7100,8 @@ var booksDB = [
     "rate": {
       "mygr": "4",
       "gr": "4.22"
-    }
+    },
+    "cover": true
   },
   {
     "id": "ffe3fbc7aa0d458093d1e6d8945f2935",
@@ -8238,7 +8271,8 @@ var booksDB = [
       "20"
     ],
     "cat": "ez",
-    "author": "Swami Satchidananda"
+    "author": "Swami Satchidananda",
+    "cover": true
   },
   {
     "id": "686bd7a04b2547b382b1691983cca612",
@@ -9397,13 +9431,16 @@ var booksDB = [
     "id": "875fbcf4024b48c9b78aaff1b32c7136",
     "type": "book",
     "name": {
-      "en": "Clean Code"
+      "en": "Clean Code: A Handbook of Agile Software Craftsmanship"
     },
     "all": true,
     "sezons": [
       "22о"
     ],
     "cat": "cd",
+    "ids": {
+      "gr": "3735293"
+    },
     "rate": {
       "my%": "87"
     }
@@ -10257,6 +10294,9 @@ var booksDB = [
     ],
     "cat": "hu",
     "author": "Виктор Пелевин",
+    "ids": {
+      "gr": "58751026"
+    },
     "rate": {
       "my%": "47"
     }
@@ -10272,6 +10312,9 @@ var booksDB = [
       "22л"
     ],
     "cat": "hu",
+    "ids": {
+      "gr": "12910018"
+    },
     "rate": {
       "my%": "45"
     }
@@ -10288,6 +10331,9 @@ var booksDB = [
       "22о"
     ],
     "cat": "hu",
+    "ids": {
+      "gr": "62596245"
+    },
     "rate": {
       "my%": "53"
     }
@@ -10302,7 +10348,10 @@ var booksDB = [
     "sezons": [
       "22л"
     ],
-    "cat": "hu"
+    "cat": "hu",
+    "ids": {
+      "gr": "22381418"
+    }
   },
   {
     "id": "f700a5b43eae414b95e8ef5e3c66b48f",
@@ -10315,6 +10364,9 @@ var booksDB = [
       "22в"
     ],
     "cat": "hu",
+    "ids": {
+      "gr": "2490874"
+    },
     "rate": {
       "my%": "55"
     }
@@ -10435,7 +10487,8 @@ var booksDB = [
       "21"
     ],
     "cat": "hu",
-    "author": "Neal Stephenson"
+    "author": "Neal Stephenson",
+    "cover": true
   },
   {
     "id": "6020ea5c4b2648c1b2e817bfb8eca078",
@@ -10451,7 +10504,8 @@ var booksDB = [
     "author": "Alissa Nutting",
     "roles": [
       "k_int"
-    ]
+    ],
+    "cover": true
   },
   {
     "id": "cd5ce8597c2e45ed8b498288bc5c786c",
@@ -14142,7 +14196,10 @@ var booksDB = [
       "22о"
     ],
     "cat": "th",
-    "author": "Майкл Рей"
+    "author": "Майкл Рей",
+    "ids": {
+      "gr": "25030993"
+    }
   },
   {
     "id": "4a1748d817554c51a09bc0fe749f5cf9",
@@ -14155,6 +14212,9 @@ var booksDB = [
       "22о"
     ],
     "cat": "th",
+    "ids": {
+      "gr": "34507927"
+    },
     "rate": {
       "my%": "87"
     }
@@ -14170,6 +14230,9 @@ var booksDB = [
       "22в"
     ],
     "cat": "th",
+    "ids": {
+      "gr": "54860365"
+    },
     "rate": {
       "my%": "84"
     }
@@ -14186,6 +14249,9 @@ var booksDB = [
       "22л"
     ],
     "cat": "th",
+    "ids": {
+      "gr": "46064083"
+    },
     "rate": {
       "my%": "86"
     }
@@ -14204,6 +14270,9 @@ var booksDB = [
     ],
     "cat": "th",
     "author": "Brown, Peter C.",
+    "ids": {
+      "gr": "18770267"
+    },
     "rate": {
       "my%": "98",
       "mygr": "5"
@@ -14249,7 +14318,8 @@ var booksDB = [
       "16"
     ],
     "cat": "th",
-    "author": "liz wiseman"
+    "author": "liz wiseman",
+    "cover": true
   },
   {
     "id": "1671cb5d77f44e73ba384139738ec377",
@@ -14325,7 +14395,7 @@ var booksDB = [
     "id": "a57ff6f00f42421b967cdcd28c09d5d8",
     "type": "book",
     "name": {
-      "en": "Automate This"
+      "en": "Automate This: How Algorithms Came to Rule Our World"
     },
     "all": true,
     "sezons": [
@@ -14337,9 +14407,13 @@ var booksDB = [
     "roles": [
       "k_int"
     ],
+    "ids": {
+      "gr": "13542772"
+    },
     "rate": {
       "my%": "44"
-    }
+    },
+    "cover": true
   },
   {
     "id": "e378472d7171482f80fe6a13fa577f5c",
@@ -14353,7 +14427,8 @@ var booksDB = [
       "21"
     ],
     "cat": "th",
-    "author": "Tim Harford"
+    "author": "Tim Harford",
+    "cover": true
   },
   {
     "id": "7789f6bf21f14bc88167e5866b96894a",
