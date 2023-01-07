@@ -34,7 +34,7 @@ ${rate&&rate["my%"]?`<div class='bkrate'><progress title="${rate["my%"]}%" style
 
 const getMeta = db => db.reduce((acc,e)=>{
         if (!e.all) return acc 
-        acc.c[e.cat] = acc.c[e.cat]?acc.c[e.cat]+1:1
+        if (e.cat) acc.c[e.cat] = acc.c[e.cat]?acc.c[e.cat]+1:1
         let yrs = e.sezons.map(yt=>parseInt(yt)).filter((v, i, a)=>a.indexOf(v)===i).map(y=>y>30?y+1900:y+2000);
         for (i in yrs)
             acc.y[yrs[i]] = acc.y[yrs[i]]?acc.y[yrs[i]]+1:1        
@@ -94,7 +94,7 @@ function redraw({ch_cat, ch_yr, ch_rl, ch_txt}={}) {
         mx = Math.max( ...vl), mn = Math.min( ...vl)
         $("#years").html(ks.reduce((h,y)=> h+`<div class="rtftr" style='font-size:${85+(m.y[y]-mn)/(mx-mn)*50}%'  onClick='yr_click("${y.slice(2)}")' value="${y.slice(2)}">${y}</div><div style='font-size:0.8em; color: #595959;'>${m.y[y]} bk</div>`,''))  
     }
-    
+
     switch (s.fix) {
       case '':
         ap_cat(base_meta)
