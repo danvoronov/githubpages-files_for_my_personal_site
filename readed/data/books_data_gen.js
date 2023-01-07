@@ -1079,7 +1079,8 @@ var booksDB = [
     "rate": {
       "mygr": "4",
       "gr": "4.05"
-    }
+    },
+    "cover": true
   },
   {
     "id": "02fbf24f361c45a4a1762dd6915fc550",
@@ -1397,7 +1398,8 @@ var booksDB = [
     },
     "rate": {
       "my%": "59"
-    }
+    },
+    "cover": true
   },
   {
     "id": "9cb214cc9ab1480991722ed3a57492b2",
@@ -2056,7 +2058,8 @@ var booksDB = [
     "rate": {
       "mygr": "4",
       "gr": "3.99"
-    }
+    },
+    "cover": true
   },
   {
     "id": "a468cadbad3c4f6a979e9ad4c445fc03",
@@ -2100,7 +2103,8 @@ var booksDB = [
     "rate": {
       "my%": "52",
       "gr": "3.97"
-    }
+    },
+    "cover": true
   },
   {
     "id": "b46a601e78264c80931e23ac4aa196d3",
@@ -2467,7 +2471,8 @@ var booksDB = [
       "my%": "55",
       "mygr": "4",
       "gr": "4.12"
-    }
+    },
+    "cover": true
   },
   {
     "id": "6e60d8f271d241a4955c0b0500a2867a",
@@ -3105,7 +3110,8 @@ var booksDB = [
       "my%": "56",
       "mygr": "4",
       "gr": "3.85"
-    }
+    },
+    "cover": true
   },
   {
     "id": "11a1d3ee4baa4bf88c541ddd550bfad4",
@@ -3487,7 +3493,8 @@ var booksDB = [
     "rate": {
       "mygr": "4",
       "gr": "4.06"
-    }
+    },
+    "cover": true
   },
   {
     "id": "eae88194ff8348739b24de92e0c1e67c",
@@ -3752,7 +3759,8 @@ var booksDB = [
     "rate": {
       "mygr": "5",
       "gr": "3.92"
-    }
+    },
+    "cover": true
   },
   {
     "id": "862c38c7aa244ff691378284d9863edb",
@@ -3818,7 +3826,8 @@ var booksDB = [
     "rate": {
       "mygr": "4",
       "gr": "4.09"
-    }
+    },
+    "cover": true
   },
   {
     "id": "ef51b8b131ed4d528a6f096c691555fb",
@@ -4348,7 +4357,8 @@ var booksDB = [
     "rate": {
       "mygr": "3",
       "gr": "4.18"
-    }
+    },
+    "cover": true
   },
   {
     "id": "9cdc8f8c7d844fedb013158b62c76c01",
@@ -4376,7 +4386,8 @@ var booksDB = [
       "my%": "55",
       "mygr": "4",
       "gr": "3.94"
-    }
+    },
+    "cover": true
   },
   {
     "id": "aac2218ed4004c8f81475c4752834dde",
@@ -4476,7 +4487,8 @@ var booksDB = [
     "rate": {
       "mygr": "4",
       "gr": "4.26"
-    }
+    },
+    "cover": true
   },
   {
     "id": "cbb4d758199d4e4eb685f2687e039572",
@@ -4947,7 +4959,8 @@ var booksDB = [
     },
     "rate": {
       "my%": "50"
-    }
+    },
+    "cover": true
   },
   {
     "id": "d03c3d2e7d234359a5d30b60c7bc3e08",
@@ -5492,7 +5505,8 @@ var booksDB = [
       "my%": "57",
       "mygr": "3",
       "gr": "4.02"
-    }
+    },
+    "cover": true
   },
   {
     "id": "867c5c2dc08e4e5692e5e73cb29b7e2d",
@@ -5566,7 +5580,8 @@ var booksDB = [
     "rate": {
       "my%": "27",
       "gr": "3.93"
-    }
+    },
+    "cover": true
   },
   {
     "id": "5f9aab14ebcd4b16acbb7e39c291382a",
@@ -5988,7 +6003,8 @@ var booksDB = [
     },
     "rate": {
       "gr": "3.72"
-    }
+    },
+    "cover": true
   },
   {
     "id": "e2edef2f7bb244e4b2bdf9d3df38684a",
@@ -6504,7 +6520,8 @@ var booksDB = [
       "my%": "53",
       "mygr": "4",
       "gr": "4.08"
-    }
+    },
+    "cover": true
   },
   {
     "id": "7f19ebd670ed4f6997eeaf863ad85344",
@@ -6610,7 +6627,8 @@ var booksDB = [
     "rate": {
       "mygr": "4",
       "gr": "4.05"
-    }
+    },
+    "cover": true
   },
   {
     "id": "2ac746a773d548e78218411396bda52c",
@@ -8120,7 +8138,8 @@ var booksDB = [
     },
     "rate": {
       "gr": "4.05"
-    }
+    },
+    "cover": true
   },
   {
     "id": "c6cb6838d55943b3899052ee4e38253d",
@@ -9570,7 +9589,8 @@ var booksDB = [
     },
     "rate": {
       "gr": "4.25"
-    }
+    },
+    "cover": true
   },
   {
     "id": "a03c4be05a57486185a8c861e50a3344",
@@ -10304,7 +10324,8 @@ var booksDB = [
     },
     "rate": {
       "my%": "47"
-    }
+    },
+    "cover": true
   },
   {
     "id": "f5aa604062f744d5afc54b772a1fe59b",
@@ -12819,7 +12840,8 @@ var booksDB = [
       "my%": "58",
       "mygr": "4",
       "gr": "3.94"
-    }
+    },
+    "cover": true
   },
   {
     "id": "da895abdf18b413890eb4546727bdcea",
@@ -13103,7 +13125,8 @@ var booksDB = [
     },
     "rate": {
       "gr": "4.16"
-    }
+    },
+    "cover": true
   },
   {
     "id": "6f18728f00a54412a5a6d70ab734f514",
@@ -13848,7 +13871,8 @@ var booksDB = [
     "rate": {
       "mygr": "5",
       "gr": "3.83"
-    }
+    },
+    "cover": true
   },
   {
     "id": "f36ea159e92541a68e4c221b28b13c66",
@@ -14725,7 +14749,8 @@ var booksDB = [
     },
     "rate": {
       "gr": "4.07"
-    }
+    },
+    "cover": true
   },
   {
     "id": "1662bce17c7f4487bfaa8d9d24e2cd78",
@@ -15330,7 +15355,8 @@ var booksDB = [
       "my%": "63",
       "mygr": "4",
       "gr": "3.91"
-    }
+    },
+    "cover": true
   },
   {
     "id": "c822fc46738845c6b60819169d8b3261",
@@ -15511,7 +15537,8 @@ var booksDB = [
     "rate": {
       "mygr": "3",
       "gr": "3.91"
-    }
+    },
+    "cover": true
   },
   {
     "id": "e695f65f1a514f61806c61462f5cb7c6",
@@ -15584,7 +15611,8 @@ var booksDB = [
     },
     "rate": {
       "gr": "3.88"
-    }
+    },
+    "cover": true
   },
   {
     "id": "2a5ce41447e34532acc893ecedc43f8f",
@@ -15629,7 +15657,8 @@ var booksDB = [
       "my%": "42",
       "mygr": "3",
       "gr": "3.47"
-    }
+    },
+    "cover": true
   },
   {
     "id": "279d6b50e9834153b8c600c8f730db75",
@@ -15655,7 +15684,8 @@ var booksDB = [
     "rate": {
       "mygr": "4",
       "gr": "3.95"
-    }
+    },
+    "cover": true
   },
   {
     "id": "e898ee2480c54731b4876f50125c66a1",
@@ -16139,7 +16169,8 @@ var booksDB = [
     "rate": {
       "mygr": "5",
       "gr": "4.5"
-    }
+    },
+    "cover": true
   },
   {
     "id": "a1bc547ba90b4d9e8f4d045c7c233efc",
@@ -16165,7 +16196,8 @@ var booksDB = [
       "my%": "61",
       "mygr": "4",
       "gr": "4.32"
-    }
+    },
+    "cover": true
   },
   {
     "id": "fa02d40912da40029453698731a8dc25",
