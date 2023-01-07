@@ -625,11 +625,12 @@ var booksDB = [
     ],
     "cat": "rl",
     "ids": {
-      "gr": "25030993"
+      "gr": "53330230"
     },
     "rate": {
       "my%": "78"
-    }
+    },
+    "cover": true
   },
   {
     "id": "4db42a73412743e0b6f93a3300e94d36",
@@ -3400,7 +3401,8 @@ var booksDB = [
     },
     "rate": {
       "my%": "85"
-    }
+    },
+    "cover": true
   },
   {
     "id": "28b7496ab1574521949f1a717a6f9a63",
@@ -4925,7 +4927,8 @@ var booksDB = [
     },
     "rate": {
       "my%": "48"
-    }
+    },
+    "cover": true
   },
   {
     "id": "95785fa6c4084e02972b6d609a1ee5ca",
@@ -5883,7 +5886,8 @@ var booksDB = [
     },
     "all": true,
     "sezons": [
-      "20в"
+      "20в",
+      "23з"
     ],
     "cat": "lm",
     "author": "Вики Робин",
@@ -9443,7 +9447,8 @@ var booksDB = [
     },
     "rate": {
       "my%": "87"
-    }
+    },
+    "cover": true
   },
   {
     "id": "a04f736ba4af42658cf817c7abb02b07",
@@ -10317,7 +10322,8 @@ var booksDB = [
     },
     "rate": {
       "my%": "45"
-    }
+    },
+    "cover": true
   },
   {
     "id": "b48df79e5f76480598e3162a7f684463",
@@ -10336,7 +10342,8 @@ var booksDB = [
     },
     "rate": {
       "my%": "53"
-    }
+    },
+    "cover": true
   },
   {
     "id": "3b4ac36fbb8f47d088a4a85618bd51c6",
@@ -10351,7 +10358,8 @@ var booksDB = [
     "cat": "hu",
     "ids": {
       "gr": "22381418"
-    }
+    },
+    "cover": true
   },
   {
     "id": "f700a5b43eae414b95e8ef5e3c66b48f",
@@ -10369,7 +10377,8 @@ var booksDB = [
     },
     "rate": {
       "my%": "55"
-    }
+    },
+    "cover": true
   },
   {
     "id": "a18fa194194c476a939691092a2290bc",
@@ -13139,7 +13148,8 @@ var booksDB = [
       "my%": "68",
       "mygr": "5",
       "gr": "4"
-    }
+    },
+    "cover": true
   },
   {
     "id": "d3ec8a683fdc42f587ebfee289281cb1",
@@ -14199,7 +14209,8 @@ var booksDB = [
     "author": "Майкл Рей",
     "ids": {
       "gr": "25030993"
-    }
+    },
+    "cover": true
   },
   {
     "id": "4a1748d817554c51a09bc0fe749f5cf9",
@@ -14217,7 +14228,8 @@ var booksDB = [
     },
     "rate": {
       "my%": "87"
-    }
+    },
+    "cover": true
   },
   {
     "id": "206ea254ebf14544bf6a068c18789f81",
@@ -14235,7 +14247,8 @@ var booksDB = [
     },
     "rate": {
       "my%": "84"
-    }
+    },
+    "cover": true
   },
   {
     "id": "e6fd451b730f4cabace5582dc83fed88",
@@ -14254,7 +14267,8 @@ var booksDB = [
     },
     "rate": {
       "my%": "86"
-    }
+    },
+    "cover": true
   },
   {
     "id": "cdcc2b6799f740c7b3c88244da0d94c0",
@@ -14424,7 +14438,8 @@ var booksDB = [
     },
     "all": false,
     "sezons": [
-      "21"
+      "21",
+      "23з"
     ],
     "cat": "th",
     "author": "Tim Harford",
