@@ -15,7 +15,7 @@ const el_template = (n, { name, author, sezons, roles, notes, type, cat, id, ids
 ${(ids&&ids.gr)?`<div class='gric'><a target='_blank' title="Goodreads card" href='https://www.goodreads.com/book/show/${ids.gr}'><img src='gr.png' width="16" alt="at Goodreads"/></a></div>`:''}
 
 <div class="nn">${n+1}. <span class="mingr">${bkYr(sezons)}</span>
-                ${(cat && $('.cur_cat').attr('cat')==='all' && cat!='hu')?'<span class="cattag">'+cat.slice(0,10)+'</span> ':''}${cat=="hu"?'<span class="hud_mark">fic</span> ':''}${type!=="book"?'<span style="background-color:yellow;">'+type+'</span>':''}
+                ${(cat && $('.cur_cat').attr('cat')==='all' && cat!='hu')?'<span class="cattag">'+cat.slice(0,10)+'</span> ':''}${cat=="hu"?'<span class="hud_mark">fic</span> ':''}${type&&type!=="book"?'<span style="background-color:yellow;">'+type+'</span>':''}
 </div>
 
 ${cover ? `<div style="margin:3px; padding-top: 7px; text-align: center;"><img id="img_${id}" src="${loadImage(id)}" width="130" alt="${bkName(name)}${author?'  —  '+author:''}" title="${bkName(name)}${author?'  —  '+author:''}"></div>
