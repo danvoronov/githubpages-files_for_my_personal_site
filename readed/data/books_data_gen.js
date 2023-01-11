@@ -628,7 +628,8 @@ var booksDB = [
       "gr": "53330230"
     },
     "rate": {
-      "my%": "78"
+      "my%": "76",
+      "gr": "4.35"
     },
     "cover": true
   },
@@ -10380,6 +10381,9 @@ var booksDB = [
     "ids": {
       "gr": "22381418"
     },
+    "rate": {
+      "my%": "40"
+    },
     "cover": true
   },
   {
@@ -11383,7 +11387,8 @@ var booksDB = [
     ],
     "rate": {
       "my%": "53"
-    }
+    },
+    "cover": true
   },
   {
     "id": "b83f6304cc6b494b9c0926b1407d7ce0",
@@ -14458,15 +14463,29 @@ var booksDB = [
     "type": "book",
     "name": {
       "en": "Messy: The Power of Disorder to Transform Our Lives",
+      "ua": "Шкереберть. Як творчий безлад може змінити життя на краще",
       "ru": "Хаос. Как беспорядок меняет нашу жизнь к лучшему"
     },
-    "all": false,
+    "all": true,
     "sezons": [
-      "21",
+      "21в",
       "23з"
     ],
     "cat": "th",
     "author": "Tim Harford",
+    "tags": "хаос креативность незаскриптованость знакомства дела",
+    "roles": [
+      "l_lov",
+      "s_crt"
+    ],
+    "ids": {
+      "gr": "28815513"
+    },
+    "rate": {
+      "my%": "77",
+      "mygr": "5",
+      "gr": "3.93"
+    },
     "cover": true
   },
   {
