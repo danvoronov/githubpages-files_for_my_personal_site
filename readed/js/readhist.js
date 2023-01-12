@@ -20,7 +20,7 @@ ${(ids&&ids.gr)?`<div class='gric'><a target='_blank' title="Goodreads card" hre
 
 ${cover ? `<div style="margin:3px; padding-top: 7px; text-align: center;"><img id="img_${id}" src="${loadImage(id)}" width="130" alt="${bkName(name)}${author?'  —  '+author:''}" title="${bkName(name)}${author?'  —  '+author:''}"></div>
 
-    <div class='podCover'><a title="Brave search"  target="_blank" href='${'https://search.brave.com/search?q='+encodeURIComponent('book '+bkName(name)+(author?' '+author:''))}'>${bkName(name).slice(0,80)}</a></div>`
+    <div class='podCover'><a title="Brave search"  target="_blank" href='${'https://search.brave.com/search?q='+encodeURIComponent((type?type+' ':'')+bkName(name)+(author?' '+author:''))}'>${bkName(name).slice(0,80)}</a></div>`
 
         : `<div class='insteadCover'><a title="Brave search"  target="_blank" href='${'https://search.brave.com/search?q='+encodeURIComponent('book '+bkName(name)+(author?' '+author:''))}'>${bkName(name)}</a></div> 
                 ${(author) ? '<div style="color:green; font-size:0.75em; margin:5px">'+author+'</div>'
