@@ -23,6 +23,7 @@ const cats_data = {
          "ar":"Literature about art",
          "pp": "Practical psychology",
          "ps":"Psychology",
+         "sp":"Thesaurus",
          "ez": "Esoteric and controversial",
          "hu":"Litfiction"
 }

@@ -1,5 +1,70 @@
 var booksDB = [
   {
+    "id": "c31a0746e0c649f1bf5ef06b1fe1cf0e",
+    "type": "book",
+    "name": {
+      "ru": "Англо-русский словарь, 1979 г."
+    },
+    "all": true,
+    "sezons": [
+      "94"
+    ],
+    "cat": "sp",
+    "author": "Мюллер",
+    "tags": "английский словарь",
+    "roles": [
+      "k_eng"
+    ],
+    "cover": true
+  },
+  {
+    "id": "386886b71a0e43af868056a94ab3dc3a",
+    "type": "book",
+    "name": {
+      "ru": "Учебный справочник школьника, 1999. 1664 стр "
+    },
+    "all": true,
+    "sezons": [
+      "99"
+    ],
+    "cat": "sp",
+    "cover": true
+  },
+  {
+    "id": "3bba3616f00b42ca8fbe71ec359c0878",
+    "type": "book",
+    "name": {
+      "ru": "БСЭ, 30-ов томов"
+    },
+    "all": true,
+    "sezons": [
+      "94"
+    ],
+    "cat": "sp",
+    "tags": "энциклопедия",
+    "roles": [
+      "k_int"
+    ],
+    "cover": true
+  },
+  {
+    "id": "d71b5ddec5f846f99f1dd02aced65f66",
+    "type": "book",
+    "name": {
+      "ru": "Ядовитые животные и растения СССР. Справочное пособие"
+    },
+    "all": true,
+    "sezons": [
+      "94"
+    ],
+    "cat": "sp",
+    "tags": "энциклопедия ядовитые",
+    "roles": [
+      "k_int"
+    ],
+    "cover": true
+  },
+  {
     "id": "72823cb9b6ec41d69e537548d5caa802",
     "type": "book",
     "name": {
@@ -83,7 +148,10 @@ var booksDB = [
       "s_lif",
       "s_flw",
       "s_crt"
-    ]
+    ],
+    "rate": {
+      "my%": "58"
+    }
   },
   {
     "id": "b4f0701d115a4ff1a91dc73512f4e2d3",
@@ -190,7 +258,10 @@ var booksDB = [
     "author": "Ольга Смирнова",
     "roles": [
       "s_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "33"
+    }
   },
   {
     "id": "910a847be17e4c478c5614b0fd3019e2",
@@ -206,7 +277,10 @@ var booksDB = [
     "roles": [
       "s_flw",
       "t_crt"
-    ]
+    ],
+    "rate": {
+      "my%": "45"
+    }
   },
   {
     "id": "cc185e7d37494544b8e75fbf88492a8b",
@@ -223,7 +297,10 @@ var booksDB = [
       "s_flw",
       "s_crt",
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "56"
+    }
   },
   {
     "id": "04e1b181603a4c2c86cd4b06a7f40ff9",
@@ -241,7 +318,10 @@ var booksDB = [
     "roles": [
       "s_flw",
       "s_crt"
-    ]
+    ],
+    "rate": {
+      "my%": "49"
+    }
   },
   {
     "id": "9036d16bb3dc42d5999c9f5742fc0760",
@@ -259,7 +339,10 @@ var booksDB = [
       "s_lif",
       "s_flw",
       "s_crt"
-    ]
+    ],
+    "rate": {
+      "my%": "60"
+    }
   },
   {
     "id": "b2f3c0544c4447da8391f8949bac3656",
@@ -275,7 +358,10 @@ var booksDB = [
     "author": "Черков",
     "roles": [
       "s_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "60"
+    }
   },
   {
     "id": "6057bbef03ba4e008d8bcc480c54b25e",
@@ -312,7 +398,10 @@ var booksDB = [
       "s_flw",
       "s_crt",
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "52"
+    }
   },
   {
     "id": "2920903511d044d8bf400e52fa767499",
@@ -329,7 +418,10 @@ var booksDB = [
     "roles": [
       "s_lif",
       "s_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "66"
+    }
   },
   {
     "id": "0145223d894049a491a7e6938c566cd0",
@@ -344,7 +436,10 @@ var booksDB = [
     "cat": "ar",
     "roles": [
       "s_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "38"
+    }
   },
   {
     "id": "abd655fa1ea0409abb870536f5d02204",
@@ -390,7 +485,10 @@ var booksDB = [
     "roles": [
       "s_lif",
       "s_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "60"
+    }
   },
   {
     "id": "ba5f79d9f1574ee894c5f61de204f267",
@@ -407,7 +505,10 @@ var booksDB = [
     "tags": "драматургия кино",
     "roles": [
       "s_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "30"
+    }
   },
   {
     "id": "4877bf1d32e543e58f1e5df9dd39a303",
@@ -458,7 +559,10 @@ var booksDB = [
       "s_flw",
       "s_crt",
       "d_pol"
-    ]
+    ],
+    "rate": {
+      "my%": "52"
+    }
   },
   {
     "id": "44fad50cca1a4398ad832baab2775270",
@@ -474,7 +578,10 @@ var booksDB = [
     "roles": [
       "s_flw",
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "35"
+    }
   },
   {
     "id": "4f4491a6e49e489da0918adb08196b24",
@@ -491,7 +598,10 @@ var booksDB = [
     "roles": [
       "s_lif",
       "s_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "35"
+    }
   },
   {
     "id": "b4c330cadeef4e16aeb8cdd686678412",
@@ -507,7 +617,10 @@ var booksDB = [
     "tags": "бизнес ораторское мастерство саморазвитие",
     "roles": [
       "d_pol"
-    ]
+    ],
+    "rate": {
+      "my%": "65"
+    }
   },
   {
     "id": "320958ec251942d88da439b557de56e3",
@@ -525,7 +638,10 @@ var booksDB = [
     "roles": [
       "s_flw",
       "d_pol"
-    ]
+    ],
+    "rate": {
+      "my%": "55"
+    }
   },
   {
     "id": "93c3b41e883f4ee9b96d34d879c79eab",
@@ -538,11 +654,13 @@ var booksDB = [
       "5"
     ],
     "cat": "ar",
-    "author": "журнал",
     "tags": "фотография",
     "roles": [
       "s_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "62"
+    }
   },
   {
     "id": "d6b4294910924116998389a0238b9495",
@@ -558,7 +676,10 @@ var booksDB = [
     "roles": [
       "s_lif",
       "s_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "55"
+    }
   },
   {
     "id": "0291fe15c91e47ab9bbff752972a19b7",
@@ -574,7 +695,10 @@ var booksDB = [
     "roles": [
       "s_lif",
       "s_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "60"
+    }
   },
   {
     "id": "c09fdd06cbce462d9d82ea81c87fb269",
@@ -592,6 +716,9 @@ var booksDB = [
     "roles": [
       "s_flw"
     ],
+    "rate": {
+      "my%": "70"
+    },
     "cover": true
   },
   {
@@ -612,6 +739,15 @@ var booksDB = [
     "rate": {
       "my%": "40"
     }
+  },
+  {
+    "id": "6d86b7af0b6441a5a6a1cef77d8a1ac1",
+    "name": {},
+    "all": true,
+    "sezons": [
+      ""
+    ],
+    "cat": "rl"
   },
   {
     "id": "9191ab8d44fd470bb3ca2d3fb82e7462",
@@ -648,7 +784,10 @@ var booksDB = [
     "roles": [
       "l_lov",
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "40"
+    }
   },
   {
     "id": "45ccdcfd16594342a93bc9ce84f37349",
@@ -879,7 +1018,10 @@ var booksDB = [
       "l_lov",
       "k_int",
       "t_crt"
-    ]
+    ],
+    "rate": {
+      "my%": "80"
+    }
   },
   {
     "id": "a97c5982e9d548c985e50dd6d21d9e98",
@@ -896,7 +1038,10 @@ var booksDB = [
     "roles": [
       "l_lov",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "32"
+    }
   },
   {
     "id": "485f9deadc25464ab454009bb50a1dac",
@@ -940,7 +1085,10 @@ var booksDB = [
     "author": "Рейчел С. Вриман",
     "roles": [
       "l_lov"
-    ]
+    ],
+    "rate": {
+      "my%": "38"
+    }
   },
   {
     "id": "8619c525f85d4f308f32483471d44325",
@@ -957,7 +1105,10 @@ var booksDB = [
     "roles": [
       "l_lov",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "28"
+    }
   },
   {
     "id": "c62d895e9310426cb23360cb7e09e3c8",
@@ -974,7 +1125,10 @@ var booksDB = [
     "roles": [
       "l_lov",
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "28"
+    }
   },
   {
     "id": "7593b05a4db744d6a3cc18868a0536aa",
@@ -1018,13 +1172,17 @@ var booksDB = [
     "author": "Зебровский",
     "roles": [
       "l_lov"
-    ]
+    ],
+    "rate": {
+      "my%": "36"
+    }
   },
   {
     "id": "ead59c59fe6e48b487a48360fb46c77f",
     "type": "book",
     "name": {
-      "ru": "Полиамория"
+      "en": "Polyamory (internet)",
+      "ru": "Полиамория (интернет)"
     },
     "all": true,
     "sezons": [
@@ -1038,7 +1196,10 @@ var booksDB = [
       "l_lov",
       "k_flw",
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "74"
+    }
   },
   {
     "id": "d753c388b81240beaabca2527659376d",
@@ -1055,7 +1216,10 @@ var booksDB = [
     "roles": [
       "l_lov",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "42"
+    }
   },
   {
     "id": "b56842c5d28140299936a9568d75c38e",
@@ -1134,7 +1298,10 @@ var booksDB = [
     "roles": [
       "l_lov",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "30"
+    }
   },
   {
     "id": "565c736de59d44068734b09bf911c16c",
@@ -1151,7 +1318,10 @@ var booksDB = [
       "l_vzp",
       "s_lif",
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "70"
+    }
   },
   {
     "id": "9e771f86aaca42a79233ab12a8289a94",
@@ -1298,25 +1468,36 @@ var booksDB = [
       "l_lov",
       "s_lif",
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "27"
+    }
   },
   {
     "id": "28c6df9bee8d4288a11e594f40eb0ef0",
     "type": "book",
     "name": {
-      "ru": "Who am I"
+      "en": "Who am I?: 16 Basic Desires that Motivate Our Actions Define Our Personalities"
     },
     "all": true,
     "sezons": [
       "15"
     ],
     "cat": "rl",
-    "author": "Reiss",
+    "author": "Steven Reiss",
     "roles": [
       "s_lif",
       "t_alz",
       "t_chs"
-    ]
+    ],
+    "ids": {
+      "gr": "632537"
+    },
+    "rate": {
+      "my%": "78",
+      "mygr": "5",
+      "gr": "3.69"
+    }
   },
   {
     "id": "c607e1f56a9044dabbae52e0fca8b1db",
@@ -1362,7 +1543,10 @@ var booksDB = [
     "roles": [
       "l_vzp",
       "l_lov"
-    ]
+    ],
+    "rate": {
+      "my%": "39"
+    }
   },
   {
     "id": "3902f384f63e4e468cc73e60f36ffc2e",
@@ -1752,6 +1936,7 @@ var booksDB = [
       "gr": "28512671"
     },
     "rate": {
+      "my%": "52",
       "mygr": "4",
       "gr": "3.9"
     },
@@ -1859,7 +2044,10 @@ var booksDB = [
     "author": "Тиньков",
     "roles": [
       "d_suc"
-    ]
+    ],
+    "rate": {
+      "my%": "50"
+    }
   },
   {
     "id": "775f5061f2494a90a0ca18f64d798496",
@@ -1951,7 +2139,10 @@ var booksDB = [
       "d_pol",
       "t_alz",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "83"
+    }
   },
   {
     "id": "47315fa7b8b146af8eeecba94c8f0660",
@@ -2057,6 +2248,7 @@ var booksDB = [
       "gr": "11430645"
     },
     "rate": {
+      "my%": "67",
       "mygr": "4",
       "gr": "3.99"
     },
@@ -2078,7 +2270,10 @@ var booksDB = [
       "d_suc",
       "d_pol",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "62"
+    }
   },
   {
     "id": "0fd9d05a8c564502ae29bb85a19a8c06",
@@ -2189,7 +2384,10 @@ var booksDB = [
     "tags": "бизнес десятина притчи управление деньгами финансы",
     "roles": [
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "48"
+    }
   },
   {
     "id": "58718f40846a41e585e5bd5d2cb99e88",
@@ -2243,7 +2441,10 @@ var booksDB = [
       "d_suc",
       "d_pol",
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "30"
+    }
   },
   {
     "id": "64cc236412944b659905cd5f9f5cd9de",
@@ -2355,7 +2556,10 @@ var booksDB = [
       "d_suc",
       "d_pol",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "78"
+    }
   },
   {
     "id": "c47dda8d86d74e298919695812aee9d9",
@@ -2373,7 +2577,10 @@ var booksDB = [
       "d_suc",
       "d_pol",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "62"
+    }
   },
   {
     "id": "493360349e95450b98e794cac8d47642",
@@ -2411,7 +2618,10 @@ var booksDB = [
       "d_suc",
       "d_pol",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "73"
+    }
   },
   {
     "id": "69ec9b55c8624ee39733f343070c5af9",
@@ -2524,7 +2734,10 @@ var booksDB = [
     "roles": [
       "s_crt",
       "d_suc"
-    ]
+    ],
+    "rate": {
+      "my%": "47"
+    }
   },
   {
     "id": "51045ceadee443b090bcbf4506f63434",
@@ -2568,7 +2781,10 @@ var booksDB = [
     "cat": "bz",
     "roles": [
       "d_pol"
-    ]
+    ],
+    "rate": {
+      "my%": "29"
+    }
   },
   {
     "id": "7484fed3fac74c80b720c09be102d4cf",
@@ -2585,7 +2801,10 @@ var booksDB = [
     "roles": [
       "d_suc",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "82"
+    }
   },
   {
     "id": "889ee090715f4f32a5dd9c588a534113",
@@ -2622,7 +2841,10 @@ var booksDB = [
       "d_pol",
       "t_alz",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "70"
+    }
   },
   {
     "id": "6af932f3f7cf4e8ab51b9f67fa055891",
@@ -2641,7 +2863,10 @@ var booksDB = [
       "s_crt",
       "d_pol",
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "78"
+    }
   },
   {
     "id": "df0773d00ab34aa4ae6acbea286681b9",
@@ -2769,7 +2994,10 @@ var booksDB = [
     "roles": [
       "d_suc",
       "d_pol"
-    ]
+    ],
+    "rate": {
+      "my%": "68"
+    }
   },
   {
     "id": "59f74aa4a95f4b8998f9268a18bbf865",
@@ -2827,7 +3055,10 @@ var booksDB = [
     "roles": [
       "l_vzp",
       "d_pol"
-    ]
+    ],
+    "rate": {
+      "my%": "22"
+    }
   },
   {
     "id": "24fb9569aff04259a9040c6caa4e3721",
@@ -2844,7 +3075,10 @@ var booksDB = [
     "roles": [
       "s_crt",
       "d_suc"
-    ]
+    ],
+    "rate": {
+      "my%": "38"
+    }
   },
   {
     "id": "33eaeb488a094e20bc5444f6138b10e3",
@@ -2861,7 +3095,10 @@ var booksDB = [
     "roles": [
       "d_pol",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "83"
+    }
   },
   {
     "id": "5d9c5abcf5ae4fb48dadd0bc98e6f713",
@@ -2881,7 +3118,10 @@ var booksDB = [
       "t_emp",
       "t_crt",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "87"
+    }
   },
   {
     "id": "a15888e6c1b34ef7bb1897e191530827",
@@ -2899,7 +3139,10 @@ var booksDB = [
       "s_crt",
       "d_pol",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "57"
+    }
   },
   {
     "id": "282e7b2426804638b395aa338d58ea4d",
@@ -2937,7 +3180,10 @@ var booksDB = [
     "roles": [
       "k_int",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "25"
+    }
   },
   {
     "id": "05c21f8d7caa40bc8a4db8e90f43dff1",
@@ -3134,7 +3380,10 @@ var booksDB = [
       "d_pol",
       "k_int",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "78"
+    }
   },
   {
     "id": "4a77439ec95c4687a9d072b44e243fbd",
@@ -3152,7 +3401,10 @@ var booksDB = [
       "d_suc",
       "d_pol",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "60"
+    }
   },
   {
     "id": "c29b2d5efc7a443a923c46dc3f9f7c3b",
@@ -3208,7 +3460,10 @@ var booksDB = [
     "author": "Игорь Клоков",
     "roles": [
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "12"
+    }
   },
   {
     "id": "90745d2cb0f646f4bd08157263287780",
@@ -3245,7 +3500,10 @@ var booksDB = [
       "s_crt",
       "d_org",
       "d_pol"
-    ]
+    ],
+    "rate": {
+      "my%": "19"
+    }
   },
   {
     "id": "c91afcac42354edbbfaea41faf9fd1ae",
@@ -3261,7 +3519,10 @@ var booksDB = [
     "tags": "бизнес полезные советы",
     "roles": [
       "d_pol"
-    ]
+    ],
+    "rate": {
+      "my%": "20"
+    }
   },
   {
     "id": "35fed4a840ac41eb8d5989fee172bbd2",
@@ -3279,7 +3540,10 @@ var booksDB = [
       "d_pol",
       "t_crt",
       "t_qst"
-    ]
+    ],
+    "rate": {
+      "my%": "79"
+    }
   },
   {
     "id": "c1bfd72ec0ce4e87b38d49fa3ce76abf",
@@ -3295,7 +3559,10 @@ var booksDB = [
     "author": "Сам Уолтон",
     "roles": [
       "d_suc"
-    ]
+    ],
+    "rate": {
+      "my%": "52"
+    }
   },
   {
     "id": "bbcb5d448b5f4748af64df46ef7815d6",
@@ -3373,7 +3640,10 @@ var booksDB = [
     "cat": "bz",
     "roles": [
       "d_suc"
-    ]
+    ],
+    "rate": {
+      "my%": "39"
+    }
   },
   {
     "id": "c8353b6c56d1408292a38cba5e87bb08",
@@ -3390,7 +3660,10 @@ var booksDB = [
       "d_org",
       "t_alz",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "58"
+    }
   },
   {
     "id": "ef1792091965499d83e06b11c7e5c95b",
@@ -3469,7 +3742,10 @@ var booksDB = [
       "t_alz",
       "t_crt",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "55"
+    }
   },
   {
     "id": "cfda9ba45a4a40eea489c1585e458e93",
@@ -3492,6 +3768,7 @@ var booksDB = [
       "gr": "23207950"
     },
     "rate": {
+      "my%": "53",
       "mygr": "4",
       "gr": "4.06"
     },
@@ -3586,7 +3863,10 @@ var booksDB = [
     "author": "Клаудия Азула Альтушер",
     "roles": [
       "l_vzp"
-    ]
+    ],
+    "rate": {
+      "my%": "28"
+    }
   },
   {
     "id": "e64e2eba3bb74e54b943e04123124f12",
@@ -3664,6 +3944,9 @@ var booksDB = [
       "t_qst",
       "t_chs"
     ],
+    "rate": {
+      "my%": "72"
+    },
     "cover": true
   },
   {
@@ -3682,7 +3965,10 @@ var booksDB = [
       "l_rzb",
       "t_alz",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "73"
+    }
   },
   {
     "id": "bfb9ec783b624e96810c06a3f9e1d68e",
@@ -3758,6 +4044,7 @@ var booksDB = [
       "gr": "42197189"
     },
     "rate": {
+      "my%": "73",
       "mygr": "5",
       "gr": "3.92"
     },
@@ -3779,7 +4066,10 @@ var booksDB = [
     "roles": [
       "k_int",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "68"
+    }
   },
   {
     "id": "e6025e038dba4693a19e16a5fbd55d1f",
@@ -3797,7 +4087,10 @@ var booksDB = [
     "roles": [
       "k_int",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "67"
+    }
   },
   {
     "id": "7f3b345d56dc4713b28cae1ae55663e1",
@@ -3825,6 +4118,7 @@ var booksDB = [
       "gr": "949515"
     },
     "rate": {
+      "my%": "47",
       "mygr": "4",
       "gr": "4.09"
     },
@@ -3846,7 +4140,10 @@ var booksDB = [
       "d_org",
       "d_pol",
       "t_qst"
-    ]
+    ],
+    "rate": {
+      "my%": "48"
+    }
   },
   {
     "id": "21bdd44a79b4426bac307b4edb3eb290",
@@ -3888,6 +4185,7 @@ var booksDB = [
       "gr": "39090275"
     },
     "rate": {
+      "my%": "80",
       "gr": "5"
     }
   },
@@ -3959,6 +4257,9 @@ var booksDB = [
       "d_pol",
       "t_alz"
     ],
+    "rate": {
+      "my%": "53"
+    },
     "cover": true
   },
   {
@@ -4031,7 +4332,10 @@ var booksDB = [
     "tags": "вода дистилят здоровь неорганика соль фтор",
     "roles": [
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "27"
+    }
   },
   {
     "id": "9ec1a20c8e2644a1b798f11eaca828aa",
@@ -4192,7 +4496,10 @@ var booksDB = [
       "l_rzb",
       "k_int",
       "t_crt"
-    ]
+    ],
+    "rate": {
+      "my%": "83"
+    }
   },
   {
     "id": "e6992983d5a5480e8b2a7d391dc6a359",
@@ -4232,7 +4539,10 @@ var booksDB = [
       "k_int",
       "t_alz",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "62"
+    }
   },
   {
     "id": "a3f6effb24294b2fbbd6065e18de1936",
@@ -4269,7 +4579,10 @@ var booksDB = [
       "l_rzb",
       "k_flw",
       "t_crt"
-    ]
+    ],
+    "rate": {
+      "my%": "68"
+    }
   },
   {
     "id": "8681230fa12e477280ad9ec6a3998ea4",
@@ -4333,7 +4646,10 @@ var booksDB = [
       "s_lif",
       "t_alz",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "35"
+    }
   },
   {
     "id": "4181a5435d9a4b7291a5596f9e045e98",
@@ -4356,6 +4672,7 @@ var booksDB = [
       "gr": "23759169"
     },
     "rate": {
+      "my%": "46",
       "mygr": "3",
       "gr": "4.18"
     },
@@ -4404,7 +4721,10 @@ var booksDB = [
     "tags": "психология реабилитация секты",
     "roles": [
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "49"
+    }
   },
   {
     "id": "b87faa9994174261814eb5bbb1ecdf86",
@@ -4486,6 +4806,7 @@ var booksDB = [
       "gr": "40548394"
     },
     "rate": {
+      "my%": "61",
       "mygr": "4",
       "gr": "4.26"
     },
@@ -4506,7 +4827,10 @@ var booksDB = [
       "t_alz",
       "t_emp",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "44"
+    }
   },
   {
     "id": "5acd8298510f456fa213265738f4cf80",
@@ -4523,7 +4847,10 @@ var booksDB = [
     "roles": [
       "l_lov",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "15"
+    }
   },
   {
     "id": "e30bf116aec5415a9dcfe86433d4fa9a",
@@ -4618,7 +4945,10 @@ var booksDB = [
     "roles": [
       "k_int",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "62"
+    }
   },
   {
     "id": "ff53a507f7a34027826c95246f229ee9",
@@ -4635,7 +4965,10 @@ var booksDB = [
       "t_alz",
       "t_qst",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "64"
+    }
   },
   {
     "id": "7db17abca8c84cb48151b57ba8dbe08a",
@@ -4654,7 +4987,10 @@ var booksDB = [
       "d_pol",
       "k_int",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "68"
+    }
   },
   {
     "id": "d3cbc85b8556497fa954a98b2483e340",
@@ -4672,7 +5008,10 @@ var booksDB = [
       "l_vzp",
       "l_lov",
       "s_lif"
-    ]
+    ],
+    "rate": {
+      "my%": "72"
+    }
   },
   {
     "id": "a39fab30d34041dcb68beaa35d1df1b5",
@@ -4690,7 +5029,10 @@ var booksDB = [
       "l_vzp",
       "l_lov",
       "s_lif"
-    ]
+    ],
+    "rate": {
+      "my%": "72"
+    }
   },
   {
     "id": "5c6be9e0b66f4c06a6db43ced8ede3c4",
@@ -4730,7 +5072,10 @@ var booksDB = [
       "k_int",
       "t_qst",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "69"
+    }
   },
   {
     "id": "325269799a6c47e8854b6abb7d07d8d7",
@@ -4768,7 +5113,10 @@ var booksDB = [
     "tags": "обычаи",
     "roles": [
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "65"
+    }
   },
   {
     "id": "2101814695474d98aab187e722c03ef3",
@@ -4784,7 +5132,10 @@ var booksDB = [
     "tags": "внимание",
     "roles": [
       "s_lif"
-    ]
+    ],
+    "rate": {
+      "my%": "59"
+    }
   },
   {
     "id": "a721eed54ab34bc5a1439e7ba7b6891f",
@@ -4799,7 +5150,10 @@ var booksDB = [
     "cat": "pp",
     "roles": [
       "s_lif"
-    ]
+    ],
+    "rate": {
+      "my%": "49"
+    }
   },
   {
     "id": "3eeda6a7e0af4e048dc99eef1f460d9f",
@@ -4836,7 +5190,10 @@ var booksDB = [
     "cat": "pp",
     "roles": [
       "l_lov"
-    ]
+    ],
+    "rate": {
+      "my%": "39"
+    }
   },
   {
     "id": "7b47b55bfdce42ec980c7e88ff5e1f7d",
@@ -4848,7 +5205,10 @@ var booksDB = [
     "sezons": [
       "06"
     ],
-    "cat": "pp"
+    "cat": "pp",
+    "rate": {
+      "my%": "2"
+    }
   },
   {
     "id": "d782d4ea75ad41ddb3fec828a043f56f",
@@ -4884,7 +5244,10 @@ var booksDB = [
     "roles": [
       "l_rzb",
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "57"
+    }
   },
   {
     "id": "8759f0d157204fcbae2df4f2c08496de",
@@ -4922,7 +5285,10 @@ var booksDB = [
       "l_lov",
       "s_lif",
       "s_crt"
-    ]
+    ],
+    "rate": {
+      "my%": "89"
+    }
   },
   {
     "id": "8bb8d328dc7348d7b25499e7984e8dd3",
@@ -5200,7 +5566,10 @@ var booksDB = [
     "author": "Шмыгевский",
     "roles": [
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "32"
+    }
   },
   {
     "id": "07068f64e24b4a6dad574dca44b6b055",
@@ -5253,6 +5622,7 @@ var booksDB = [
       "gr": "61535"
     },
     "rate": {
+      "my%": "38",
       "gr": "4.14"
     },
     "cover": true
@@ -5290,7 +5660,10 @@ var booksDB = [
     "roles": [
       "l_rzb",
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "40"
+    }
   },
   {
     "id": "e3726adfbfa54283a60b0af63b292a05",
@@ -5343,7 +5716,10 @@ var booksDB = [
     "tags": "америка выживание конткультура хиппи",
     "roles": [
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "18"
+    }
   },
   {
     "id": "14b2fa3578af47a0935b952287353003",
@@ -5381,7 +5757,10 @@ var booksDB = [
     "roles": [
       "k_flw",
       "t_qst"
-    ]
+    ],
+    "rate": {
+      "my%": "19"
+    }
   },
   {
     "id": "3b75030fc8c94e508559730937d3611d",
@@ -5420,7 +5799,10 @@ var booksDB = [
     "roles": [
       "d_suc",
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "17"
+    }
   },
   {
     "id": "0cdc26308fe84bb68a4d8f16cf3ba574",
@@ -5457,7 +5839,10 @@ var booksDB = [
     "roles": [
       "k_int",
       "t_crt"
-    ]
+    ],
+    "rate": {
+      "my%": "30"
+    }
   },
   {
     "id": "ce158d6531d145ccb377aa60de12fd99",
@@ -5475,7 +5860,10 @@ var booksDB = [
       "l_rzb",
       "k_int",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "62"
+    }
   },
   {
     "id": "6fce7f43b2744b9bacb250a685fb8b14",
@@ -5524,7 +5912,10 @@ var booksDB = [
     "roles": [
       "k_flw",
       "t_qst"
-    ]
+    ],
+    "rate": {
+      "my%": "28"
+    }
   },
   {
     "id": "9df65bb43bb943a8ab3adb432283655e",
@@ -5619,7 +6010,10 @@ var booksDB = [
     "author": "Митюрин",
     "roles": [
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "30"
+    }
   },
   {
     "id": "ff7d0c96a8e7417b89570cb8a2f7e8ad",
@@ -5661,7 +6055,10 @@ var booksDB = [
       "k_flw",
       "t_crt",
       "t_qst"
-    ]
+    ],
+    "rate": {
+      "my%": "60"
+    }
   },
   {
     "id": "7af69be61c444d7da9534e51f2d442aa",
@@ -6003,6 +6400,7 @@ var booksDB = [
       "gr": "366624"
     },
     "rate": {
+      "my%": "54",
       "gr": "3.72"
     },
     "cover": true
@@ -6127,7 +6525,10 @@ var booksDB = [
       "t_emp",
       "t_qst",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "92"
+    }
   },
   {
     "id": "85b6663cf3f4478081bdae3d1e58ba3b",
@@ -6207,7 +6608,10 @@ var booksDB = [
       "t_alz",
       "t_crt",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "49"
+    }
   },
   {
     "id": "e5d631fbcfbd450cb9a2fcb754bc3cb9",
@@ -6482,7 +6886,10 @@ var booksDB = [
     "roles": [
       "t_alz",
       "t_qst"
-    ]
+    ],
+    "rate": {
+      "my%": "33"
+    }
   },
   {
     "id": "13cc11172c7745e19f54616f8ba3a554",
@@ -6528,6 +6935,7 @@ var booksDB = [
     "id": "7f19ebd670ed4f6997eeaf863ad85344",
     "type": "book",
     "name": {
+      "en": "Extreme Productivity: Boost Your Results, Reduce Your Hours",
       "ru": "На пике возможностей. Правила Эффективности"
     },
     "all": true,
@@ -6538,7 +6946,13 @@ var booksDB = [
     "author": "Роберт Поузен",
     "roles": [
       "d_pol"
-    ]
+    ],
+    "ids": {
+      "gr": "15819474"
+    },
+    "rate": {
+      "my%": "39"
+    }
   },
   {
     "id": "4bb82b5f071f45808bfb73e6a6ac2418",
@@ -6555,7 +6969,10 @@ var booksDB = [
     "roles": [
       "d_pol",
       "t_emp"
-    ]
+    ],
+    "rate": {
+      "my%": "51"
+    }
   },
   {
     "id": "3aaed701bb6b42a6b914849e479a185c",
@@ -6626,6 +7043,7 @@ var booksDB = [
       "gr": "9762"
     },
     "rate": {
+      "my%": "82",
       "mygr": "4",
       "gr": "4.05"
     },
@@ -6646,7 +7064,10 @@ var booksDB = [
     "roles": [
       "k_int",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "79"
+    }
   },
   {
     "id": "548c51b392594dd4a421efcc851380b0",
@@ -6689,7 +7110,10 @@ var booksDB = [
     "roles": [
       "d_pol",
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "41"
+    }
   },
   {
     "id": "355a87f175954279a8cae34f4c2b9df2",
@@ -6705,7 +7129,10 @@ var booksDB = [
     "author": "Чопра",
     "roles": [
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "39"
+    }
   },
   {
     "id": "03b1004fb65c44f196abeacdfd7d1d6b",
@@ -6760,7 +7187,10 @@ var booksDB = [
     "roles": [
       "k_int",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "83"
+    }
   },
   {
     "id": "98573895d8ef4ba9a9fa1056f061c283",
@@ -6778,7 +7208,10 @@ var booksDB = [
       "d_pol",
       "t_qst",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "47"
+    }
   },
   {
     "id": "fb0c1528f1d046de9dc8511e996a138b",
@@ -6825,7 +7258,10 @@ var booksDB = [
       "d_pol",
       "t_qst",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "40"
+    }
   },
   {
     "id": "397c5190ed344c61939d03169008bc19",
@@ -6885,7 +7321,10 @@ var booksDB = [
     "roles": [
       "s_lif",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "41"
+    }
   },
   {
     "id": "594bdfc68ca84167a6e8915a0b3815ff",
@@ -6943,6 +7382,9 @@ var booksDB = [
     "roles": [
       "k_flw"
     ],
+    "rate": {
+      "my%": "69"
+    },
     "cover": true
   },
   {
@@ -6962,7 +7404,10 @@ var booksDB = [
       "t_alz",
       "t_crt",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "82"
+    }
   },
   {
     "id": "9c9e1d27b8904b04b422aa96b9063f49",
@@ -7033,7 +7478,10 @@ var booksDB = [
     "roles": [
       "s_lif",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "28"
+    }
   },
   {
     "id": "59c4cf2ef9194bf99ef465f04bdef970",
@@ -7050,7 +7498,10 @@ var booksDB = [
     "roles": [
       "t_alz",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "32"
+    }
   },
   {
     "id": "b3f4fb9d594a4b9bb4a0b065a118f4ac",
@@ -7121,6 +7572,7 @@ var booksDB = [
       "gr": "345095"
     },
     "rate": {
+      "my%": "72",
       "mygr": "4",
       "gr": "4.22"
     },
@@ -7180,7 +7632,10 @@ var booksDB = [
     "roles": [
       "d_pol",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "30"
+    }
   },
   {
     "id": "50e8f51c738e4e289074d1d4d48b4c02",
@@ -7218,7 +7673,10 @@ var booksDB = [
     "roles": [
       "l_vzp",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "67"
+    }
   },
   {
     "id": "4b460601e9b145fd8621b426bde81e76",
@@ -7235,7 +7693,10 @@ var booksDB = [
     "roles": [
       "l_rzb",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "50"
+    }
   },
   {
     "id": "a273edff6f5b4418bd783a44e6cb0f70",
@@ -7253,7 +7714,10 @@ var booksDB = [
     "roles": [
       "s_lif",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "52"
+    }
   },
   {
     "id": "5dd63ba993de4245a3bdbfb5296a7c3e",
@@ -7270,7 +7734,10 @@ var booksDB = [
     "roles": [
       "l_rzb",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "58"
+    }
   },
   {
     "id": "dab44ae99e4e44eeaa81c7d31cba343e",
@@ -7287,7 +7754,10 @@ var booksDB = [
     "roles": [
       "l_rzb",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "56"
+    }
   },
   {
     "id": "fe268ef3986b4afdb17a29b2e3ad0f88",
@@ -7304,7 +7774,10 @@ var booksDB = [
     "roles": [
       "l_rzb",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "56"
+    }
   },
   {
     "id": "a462d5c555844932aa08db252dd31d0e",
@@ -7344,7 +7817,10 @@ var booksDB = [
     "roles": [
       "l_rzb",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "20"
+    }
   },
   {
     "id": "e405fc8765694945a4f6d619c6d55ace",
@@ -7394,7 +7870,10 @@ var booksDB = [
     "roles": [
       "l_rzb",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "49"
+    }
   },
   {
     "id": "3b92a09dbf2f46938f5b68ab3c5611dc",
@@ -7412,7 +7891,10 @@ var booksDB = [
     "roles": [
       "l_rzb",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "49"
+    }
   },
   {
     "id": "62d008c264694651bd4904f2b40e8691",
@@ -7429,7 +7911,10 @@ var booksDB = [
     "roles": [
       "l_lov",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "62"
+    }
   },
   {
     "id": "03ca1106beaf41179e67c6bf6f5d8f01",
@@ -7446,7 +7931,10 @@ var booksDB = [
     "roles": [
       "l_rzb",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "60"
+    }
   },
   {
     "id": "b85621794fbc4c4a840655c65d6fcbc9",
@@ -7463,7 +7951,10 @@ var booksDB = [
     "roles": [
       "d_pol",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "38"
+    }
   },
   {
     "id": "c1f9fa1618964793826fcd187218c76d",
@@ -7503,7 +7994,10 @@ var booksDB = [
       "l_rzb",
       "d_pol",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "52"
+    }
   },
   {
     "id": "f16d00d14cb64e2b8a02592ecead92cc",
@@ -7541,7 +8035,10 @@ var booksDB = [
     "roles": [
       "t_alz",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "78"
+    }
   },
   {
     "id": "1d25cba2dbf141f7a82c1e5fb36d0697",
@@ -7560,7 +8057,10 @@ var booksDB = [
       "l_lov",
       "s_lif",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "77"
+    }
   },
   {
     "id": "b6e5a54790334889ab5df9ba0b169c99",
@@ -7619,7 +8119,10 @@ var booksDB = [
       "t_alz",
       "t_crt",
       "t_qst"
-    ]
+    ],
+    "rate": {
+      "my%": "58"
+    }
   },
   {
     "id": "32d4071d217d4d5e8fce1141f2863791",
@@ -7636,7 +8139,10 @@ var booksDB = [
     "roles": [
       "l_rzb",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "20"
+    }
   },
   {
     "id": "0858855ecd0e4790bde2a44427bb9fc5",
@@ -7653,7 +8159,10 @@ var booksDB = [
     "roles": [
       "l_vzp",
       "s_lif"
-    ]
+    ],
+    "rate": {
+      "my%": "30"
+    }
   },
   {
     "id": "235f38fbff184b309a423831c7638137",
@@ -7670,7 +8179,10 @@ var booksDB = [
     "roles": [
       "l_rzb",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "32"
+    }
   },
   {
     "id": "d2cf52c3ea8740bea37080a9dd467803",
@@ -7717,6 +8229,7 @@ var booksDB = [
       "gr": "3756618"
     },
     "rate": {
+      "my%": "94",
       "mygr": "5",
       "gr": "5"
     }
@@ -7765,7 +8278,10 @@ var booksDB = [
       "l_rzb",
       "d_pol",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "52"
+    }
   },
   {
     "id": "32ee6c87a6b44a03884f8f2f5a4fcf38",
@@ -7781,7 +8297,10 @@ var booksDB = [
     "roles": [
       "l_rzb",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "38"
+    }
   },
   {
     "id": "47a57cf60e2349159d030f39d3d49fda",
@@ -7799,7 +8318,10 @@ var booksDB = [
       "l_vzp",
       "d_pol",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "40"
+    }
   },
   {
     "id": "8b70bdda0938463796cbb6021198ba6d",
@@ -7817,7 +8339,10 @@ var booksDB = [
       "l_rzb",
       "l_lov",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "38"
+    }
   },
   {
     "id": "1335d43e66a74463b5bcdc9a6812f32a",
@@ -7856,7 +8381,10 @@ var booksDB = [
       "l_vzp",
       "t_alz",
       "t_crt"
-    ]
+    ],
+    "rate": {
+      "my%": "54"
+    }
   },
   {
     "id": "6a4b557badc1430791dc022d359ac24b",
@@ -7903,7 +8431,10 @@ var booksDB = [
     "roles": [
       "l_lov",
       "s_lif"
-    ]
+    ],
+    "rate": {
+      "my%": "50"
+    }
   },
   {
     "id": "21547daef9dd44ec81de4318246469b2",
@@ -7918,7 +8449,10 @@ var booksDB = [
     "cat": "ps",
     "roles": [
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "24"
+    }
   },
   {
     "id": "063ae6fec7514efcb4a98c647a6e69ea",
@@ -7996,7 +8530,10 @@ var booksDB = [
     "roles": [
       "l_rzb",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "42"
+    }
   },
   {
     "id": "24bee829832d44d6bfc8aa9f2cfa11c6",
@@ -8059,7 +8596,8 @@ var booksDB = [
     "all": true,
     "sezons": [
       "18в",
-      "22л"
+      "22л",
+      "23з"
     ],
     "cat": "ps",
     "author": "Йонге Мингьюр",
@@ -8096,7 +8634,10 @@ var booksDB = [
       "l_rzb",
       "d_pol",
       "t_crt"
-    ]
+    ],
+    "rate": {
+      "my%": "62"
+    }
   },
   {
     "id": "0a49f138680a4f72b9e55bf071898476",
@@ -8138,6 +8679,7 @@ var booksDB = [
       "gr": "63697"
     },
     "rate": {
+      "my%": "58",
       "gr": "4.05"
     },
     "cover": true
@@ -8157,7 +8699,10 @@ var booksDB = [
     "roles": [
       "l_rzb",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "62"
+    }
   },
   {
     "id": "7de47e51de394aadb04cd2ceed1758ef",
@@ -8174,7 +8719,10 @@ var booksDB = [
       "l_vzp",
       "l_rzb",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "63"
+    }
   },
   {
     "id": "bb4c9a254fdc43998cb23c18420f6413",
@@ -8192,7 +8740,10 @@ var booksDB = [
       "d_pol",
       "t_alz",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "52"
+    }
   },
   {
     "id": "b9d954dea49042598e46e81946bad70b",
@@ -8210,7 +8761,10 @@ var booksDB = [
       "l_vzp",
       "l_rzb",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "58"
+    }
   },
   {
     "id": "86db47f4448f4f5a9a038f8c2260350b",
@@ -8248,24 +8802,10 @@ var booksDB = [
       "l_rzb",
       "t_alz",
       "t_chs"
-    ]
-  },
-  {
-    "id": "3a938adbe46a41f4bb3860a421f466bd",
-    "type": "book",
-    "name": {
-      "ru": "12 схем жизни"
-    },
-    "all": true,
-    "sezons": [
-      "09"
     ],
-    "cat": "ps",
-    "author": "Морин Кирби Лассен, Чарлз Эллиот",
-    "roles": [
-      "t_alz",
-      "t_qst"
-    ]
+    "rate": {
+      "my%": "58"
+    }
   },
   {
     "id": "3b14f4ff4f2b4be187d8a15494952969",
@@ -8282,7 +8822,10 @@ var booksDB = [
     "roles": [
       "l_vzp",
       "l_rzb"
-    ]
+    ],
+    "rate": {
+      "my%": "57"
+    }
   },
   {
     "id": "c4dcd456a38242089805511507cfdd54",
@@ -8403,7 +8946,10 @@ var booksDB = [
     "roles": [
       "k_int",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "17"
+    }
   },
   {
     "id": "89ac585c6ae3457d838c417a8fd44301",
@@ -8419,7 +8965,10 @@ var booksDB = [
     "tags": "любовь толтеки умные мысли",
     "roles": [
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "38"
+    }
   },
   {
     "id": "0c2678967aff41ef88befbf0404e136a",
@@ -8500,7 +9049,10 @@ var booksDB = [
     "tags": "деньги мозгоеб пунктами сектообразование сублимация",
     "roles": [
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "2"
+    }
   },
   {
     "id": "c17aab1d37af4aea836346c7e4ac7e7d",
@@ -8513,7 +9065,10 @@ var booksDB = [
       "9"
     ],
     "cat": "ez",
-    "tags": "америка пропоганда"
+    "tags": "америка пропоганда",
+    "rate": {
+      "my%": "4"
+    }
   },
   {
     "id": "c3bf0844b6bd4fab996f811bcb5d71d3",
@@ -8631,7 +9186,10 @@ var booksDB = [
     "tags": "секта",
     "roles": [
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "1"
+    }
   },
   {
     "id": "13abeb8d3ac848b8971c2ecaa54345a4",
@@ -8652,7 +9210,10 @@ var booksDB = [
       "l_lov",
       "k_int",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "18"
+    }
   },
   {
     "id": "be510e3f4a454eb09960a10744c513a0",
@@ -8778,6 +9339,9 @@ var booksDB = [
       "t_alz",
       "t_chs"
     ],
+    "rate": {
+      "my%": "38"
+    },
     "cover": true
   },
   {
@@ -8817,7 +9381,10 @@ var booksDB = [
     "author": "Лиз Бурбо",
     "roles": [
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "2"
+    }
   },
   {
     "id": "74a7307419a04b6f9b7ea0a20e3785ab",
@@ -8849,7 +9416,10 @@ var booksDB = [
     "tags": "денежки формула жизни эхотерика",
     "roles": [
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "12"
+    }
   },
   {
     "id": "673163626b5c4e3fbd58ce1ecf7a5a37",
@@ -8865,7 +9435,10 @@ var booksDB = [
     "tags": "формула жизни эхотерика",
     "roles": [
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "12"
+    }
   },
   {
     "id": "3b38d062f35141319d9aecfcb7e2a765",
@@ -8883,7 +9456,10 @@ var booksDB = [
     "roles": [
       "k_flw",
       "t_qst"
-    ]
+    ],
+    "rate": {
+      "my%": "80"
+    }
   },
   {
     "id": "ed6c6001e92d48ac9a10fd358110254a",
@@ -8918,7 +9494,10 @@ var booksDB = [
     "author": "Шаменков",
     "roles": [
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "3"
+    }
   },
   {
     "id": "182b78892f094f23a6d7442521e64aee",
@@ -8931,7 +9510,10 @@ var booksDB = [
       "5"
     ],
     "cat": "ez",
-    "author": "Норбеков"
+    "author": "Норбеков",
+    "rate": {
+      "my%": "1"
+    }
   },
   {
     "id": "46ed72f8039640708771da3a5b3be7da",
@@ -8950,7 +9532,10 @@ var booksDB = [
       "s_lif",
       "k_int",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "58"
+    }
   },
   {
     "id": "b5a1370c8a444c5793a00ecd08b9e1c9",
@@ -9007,7 +9592,10 @@ var booksDB = [
     "roles": [
       "s_crt",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "59"
+    }
   },
   {
     "id": "483e62b642ea45a28af97b7b64673908",
@@ -9025,7 +9613,10 @@ var booksDB = [
     "roles": [
       "l_lov",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "18"
+    }
   },
   {
     "id": "6757c24c28a24cfe972907e3dbfc192e",
@@ -9061,7 +9652,10 @@ var booksDB = [
     "roles": [
       "s_lif",
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "62"
+    }
   },
   {
     "id": "d87ac8d4f02b4064bc7e3f4a7d98c609",
@@ -9078,7 +9672,10 @@ var booksDB = [
     "roles": [
       "s_lif",
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "60"
+    }
   },
   {
     "id": "80d451a8455c4a07a29e04444ac51ea6",
@@ -9252,7 +9849,10 @@ var booksDB = [
     "roles": [
       "s_lif",
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "30"
+    }
   },
   {
     "id": "67efebb36f384aa0b3ab0652cd42328c",
@@ -9269,7 +9869,10 @@ var booksDB = [
     "roles": [
       "s_lif",
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "38"
+    }
   },
   {
     "id": "9897897abd7243e7802d6f797c6b1157",
@@ -9326,7 +9929,10 @@ var booksDB = [
     "roles": [
       "k_int",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "5"
+    }
   },
   {
     "id": "ca46b4a2698c46f49548480b8ba06d44",
@@ -9421,7 +10027,10 @@ var booksDB = [
     "tags": "диктат подчинение психология религия свобода",
     "roles": [
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "8"
+    }
   },
   {
     "id": "050788204db8483fb7642a551f02a10a",
@@ -9437,7 +10046,10 @@ var booksDB = [
     "tags": "псевдопомощь сектообразование",
     "roles": [
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "2"
+    }
   },
   {
     "id": "08f8439a2fb8470995a2b786ef89c1ab",
@@ -9528,7 +10140,10 @@ var booksDB = [
     "roles": [
       "s_crt",
       "d_pol"
-    ]
+    ],
+    "rate": {
+      "my%": "93"
+    }
   },
   {
     "id": "eef2f034d9bb4366a5e248e595f87820",
@@ -9540,7 +10155,10 @@ var booksDB = [
     "sezons": [
       "5з"
     ],
-    "cat": "cd"
+    "cat": "cd",
+    "rate": {
+      "my%": "48"
+    }
   },
   {
     "id": "055fcc40460d4d929c95285c5fac7964",
@@ -9589,6 +10207,7 @@ var booksDB = [
       "gr": "11365880"
     },
     "rate": {
+      "my%": "60",
       "gr": "4.25"
     },
     "cover": true
@@ -9626,7 +10245,10 @@ var booksDB = [
     "cat": "cd",
     "roles": [
       "s_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "50"
+    }
   },
   {
     "id": "05c7ed3f6225420a838673d64974e9e8",
@@ -9711,7 +10333,10 @@ var booksDB = [
     "tags": "компьютеры базы данных офис",
     "roles": [
       "d_pol"
-    ]
+    ],
+    "rate": {
+      "my%": "50"
+    }
   },
   {
     "id": "de5c4aed8a834c3eb90c15b6cc06a3eb",
@@ -9750,6 +10375,9 @@ var booksDB = [
     "roles": [
       "d_pol"
     ],
+    "rate": {
+      "my%": "60"
+    },
     "cover": true
   },
   {
@@ -9766,7 +10394,10 @@ var booksDB = [
     "tags": "программирование компьютеры алгоритмы",
     "roles": [
       "d_pol"
-    ]
+    ],
+    "rate": {
+      "my%": "70"
+    }
   },
   {
     "id": "4e48760f44ec4addb1ab4fb5ddf1bd94",
@@ -9825,6 +10456,9 @@ var booksDB = [
     "roles": [
       "d_pol"
     ],
+    "rate": {
+      "my%": "75"
+    },
     "cover": true
   },
   {
@@ -9843,6 +10477,9 @@ var booksDB = [
     "roles": [
       "d_pol"
     ],
+    "rate": {
+      "my%": "50"
+    },
     "cover": true
   },
   {
@@ -9862,6 +10499,9 @@ var booksDB = [
       "s_crt",
       "d_pol"
     ],
+    "rate": {
+      "my%": "60"
+    },
     "cover": true
   },
   {
@@ -9878,12 +10518,14 @@ var booksDB = [
       "99"
     ],
     "cat": "cd",
-    "author": "коллектив",
     "tags": "компьютеры новости",
     "roles": [
       "s_crt",
       "k_int"
     ],
+    "rate": {
+      "my%": "87"
+    },
     "cover": true
   },
   {
@@ -9902,6 +10544,9 @@ var booksDB = [
     "roles": [
       "s_flw"
     ],
+    "rate": {
+      "my%": "45"
+    },
     "cover": true
   },
   {
@@ -9919,7 +10564,10 @@ var booksDB = [
     "tags": "программирование компьютеры сети",
     "roles": [
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "45"
+    }
   },
   {
     "id": "7798d94082284facbabb24a8aa6dd8c8",
@@ -9938,6 +10586,9 @@ var booksDB = [
       "d_pol",
       "k_int"
     ],
+    "rate": {
+      "my%": "40"
+    },
     "cover": true
   },
   {
@@ -9974,7 +10625,10 @@ var booksDB = [
     "author": "Итен",
     "roles": [
       "s_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "50"
+    }
   },
   {
     "id": "299bae708344401a9cd8f5d8af1d3322",
@@ -9993,6 +10647,9 @@ var booksDB = [
       "s_lif",
       "s_flw"
     ],
+    "rate": {
+      "my%": "70"
+    },
     "cover": true
   },
   {
@@ -10006,13 +10663,15 @@ var booksDB = [
       "5"
     ],
     "cat": "cd",
-    "author": "коллектив",
     "roles": [
       "s_crt",
       "t_alz",
       "t_emp",
       "t_qst"
-    ]
+    ],
+    "rate": {
+      "my%": "92"
+    }
   },
   {
     "id": "0a7c0ac8a17f498c9e2cb5a114fef799",
@@ -10031,7 +10690,10 @@ var booksDB = [
       "s_lif",
       "d_pol",
       "t_crt"
-    ]
+    ],
+    "rate": {
+      "my%": "60"
+    }
   },
   {
     "id": "e0657b8a9e754adfa0d57a38b9c8d2e8",
@@ -10072,7 +10734,10 @@ var booksDB = [
     "tags": "делфи паскаль программирование компьютеры",
     "roles": [
       "d_pol"
-    ]
+    ],
+    "rate": {
+      "my%": "50"
+    }
   },
   {
     "id": "3729bcdd54184ddaaff1d0f3050c9868",
@@ -10148,7 +10813,10 @@ var booksDB = [
     "roles": [
       "s_flw",
       "s_crt"
-    ]
+    ],
+    "rate": {
+      "my%": "78"
+    }
   },
   {
     "id": "b899f5a888ff490e97ed1e63c820bae7",
@@ -10166,6 +10834,9 @@ var booksDB = [
     "roles": [
       "d_pol"
     ],
+    "rate": {
+      "my%": "70"
+    },
     "cover": true
   },
   {
@@ -10200,7 +10871,10 @@ var booksDB = [
     "author": "D.Margulis",
     "roles": [
       "s_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "40"
+    }
   },
   {
     "id": "8e7f99396aee45139ef082a8c18ded60",
@@ -10216,7 +10890,10 @@ var booksDB = [
     "author": "Harris",
     "roles": [
       "d_pol"
-    ]
+    ],
+    "rate": {
+      "my%": "45"
+    }
   },
   {
     "id": "ae0cb9c1493a4080a5f7653097920bee",
@@ -10234,6 +10911,9 @@ var booksDB = [
     "roles": [
       "d_pol"
     ],
+    "rate": {
+      "my%": "40"
+    },
     "cover": true
   },
   {
@@ -10250,7 +10930,10 @@ var booksDB = [
     "author": "Маргулис Д",
     "roles": [
       "s_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "60"
+    }
   },
   {
     "id": "25fe0f76a7504c84a64634937573c17a",
@@ -10269,6 +10952,9 @@ var booksDB = [
       "s_flw",
       "s_crt"
     ],
+    "rate": {
+      "my%": "50"
+    },
     "cover": true
   },
   {
@@ -10287,6 +10973,9 @@ var booksDB = [
     "roles": [
       "d_pol"
     ],
+    "rate": {
+      "my%": "55"
+    },
     "cover": true
   },
   {
@@ -10306,6 +10995,9 @@ var booksDB = [
       "s_flw",
       "t_alz"
     ],
+    "rate": {
+      "my%": "45"
+    },
     "cover": true
   },
   {
@@ -10669,7 +11361,10 @@ var booksDB = [
     "author": "Питер Уоттс",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "45"
+    }
   },
   {
     "id": "e73a0f7536eb4420b96637309533f1c6",
@@ -10722,17 +11417,21 @@ var booksDB = [
     "id": "c9b8cfb9ff594982956df1f6bc17d41e",
     "type": "book",
     "name": {
-      "ru": "Палата №6 Антон Чехов"
+      "ru": "Палата №6"
     },
     "all": true,
     "sezons": [
       "8"
     ],
     "cat": "hu",
+    "author": " Антон Чехов",
     "tags": "изгнаник классика психушка философия",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "49"
+    }
   },
   {
     "id": "152c523795474ca09d4b34755caa8d42",
@@ -10767,7 +11466,10 @@ var booksDB = [
     "author": "Олдос Хаксли",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "77"
+    }
   },
   {
     "id": "f2e076eb3f26481cb41218128c966b6f",
@@ -10839,7 +11541,10 @@ var booksDB = [
     "roles": [
       "k_flw",
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "58"
+    }
   },
   {
     "id": "b6fead3ab4094bb4b3a6055665e2c7ba",
@@ -10982,7 +11687,10 @@ var booksDB = [
     "author": "Филип Кинред Дик",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "38"
+    }
   },
   {
     "id": "faa8863051854b4f9835366adfad07cb",
@@ -11025,7 +11733,10 @@ var booksDB = [
     "author": "Роберт Хайнлайн",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "42"
+    }
   },
   {
     "id": "3ab225617ec8424599cbcd1d173cbe70",
@@ -11101,7 +11812,10 @@ var booksDB = [
     "author": "Анджей Сапковский",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "80"
+    }
   },
   {
     "id": "941ec0a89ee54a90a240331c8661da51",
@@ -11117,7 +11831,10 @@ var booksDB = [
     "author": "Анджей Сапковский",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "80"
+    }
   },
   {
     "id": "d757068846a849dda2fe50b355b3de98",
@@ -11133,7 +11850,10 @@ var booksDB = [
     "author": "Анджей Сапковский",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "80"
+    }
   },
   {
     "id": "6ed6170dc088461398f7108adcec44d9",
@@ -11149,7 +11869,10 @@ var booksDB = [
     "author": "Анджей Сапковский",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "80"
+    }
   },
   {
     "id": "27051db37c80420ea5d3e0a969fbcd26",
@@ -11235,7 +11958,10 @@ var booksDB = [
     "roles": [
       "k_flw",
       "t_crt"
-    ]
+    ],
+    "rate": {
+      "my%": "60"
+    }
   },
   {
     "id": "fd05b6399aff457eb39dd0926dfb1eaa",
@@ -11385,6 +12111,9 @@ var booksDB = [
       "s_lif",
       "k_flw"
     ],
+    "ids": {
+      "gr": "60688645"
+    },
     "rate": {
       "my%": "53"
     },
@@ -11413,11 +12142,13 @@ var booksDB = [
     "id": "4db3871756974ae9a9236034f7bff1ec",
     "type": "book",
     "name": {
+      "en": "The Chronicles of Amber",
       "ru": "Хроники Амбера"
     },
     "all": true,
     "sezons": [
-      "0"
+      "0",
+      "22о"
     ],
     "cat": "hu",
     "author": "Роджер Желязны",
@@ -11426,8 +12157,13 @@ var booksDB = [
       "s_crt",
       "k_flw"
     ],
+    "ids": {
+      "gr": "21847586"
+    },
     "rate": {
-      "my%": "94"
+      "my%": "95",
+      "mygr": "5",
+      "gr": "4.31"
     },
     "cover": true
   },
@@ -11466,7 +12202,10 @@ var booksDB = [
     "roles": [
       "k_flw",
       "t_qst"
-    ]
+    ],
+    "rate": {
+      "my%": "82"
+    }
   },
   {
     "id": "1adab3f4135d440cbe19a26dad7f3a79",
@@ -11518,7 +12257,11 @@ var booksDB = [
       "3"
     ],
     "cat": "hu",
-    "tags": "рассказ"
+    "author": "Сергей Лукяненко",
+    "tags": "рассказ",
+    "rate": {
+      "my%": "50"
+    }
   },
   {
     "id": "aa191ccea870468e91d9e6c53ba30a26",
@@ -11592,7 +12335,10 @@ var booksDB = [
     "author": "Шекспир",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "77"
+    }
   },
   {
     "id": "5881a6432a124c35bd88054d9345fc61",
@@ -11632,7 +12378,10 @@ var booksDB = [
     ],
     "cat": "hu",
     "author": "Сергей Лукяненко",
-    "tags": "повесть"
+    "tags": "повесть",
+    "rate": {
+      "my%": "50"
+    }
   },
   {
     "id": "3d1dc11dd43d469da94e751d368a87cb",
@@ -11665,10 +12414,14 @@ var booksDB = [
       "3"
     ],
     "cat": "hu",
+    "author": "Сергей Лукяненко",
     "tags": "роман",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "55"
+    }
   },
   {
     "id": "3225da424ae840679980018a260d8a46",
@@ -11792,7 +12545,10 @@ var booksDB = [
     "tags": "роман",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "55"
+    }
   },
   {
     "id": "6fd47e26600d40f48fc141b6d3c2f0ff",
@@ -11913,7 +12669,10 @@ var booksDB = [
     "tags": "сказки сибирь",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "56"
+    }
   },
   {
     "id": "4ffc99171bee4b438db803e34ac8964b",
@@ -12045,7 +12804,10 @@ var booksDB = [
     "tags": "роман",
     "roles": [
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "59"
+    }
   },
   {
     "id": "bbf01ccc14ca407ea58e82011a995c9b",
@@ -12080,7 +12842,10 @@ var booksDB = [
     "tags": "роман",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "33"
+    }
   },
   {
     "id": "2f1bc0a73d0c459b97406d84d3ab8546",
@@ -12095,7 +12860,10 @@ var booksDB = [
     "cat": "hu",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "44"
+    }
   },
   {
     "id": "a1cb7a63587a494296264dce04f25352",
@@ -12110,7 +12878,10 @@ var booksDB = [
     "cat": "hu",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "72"
+    }
   },
   {
     "id": "6218e951bc964a7781d39bb2416a27c5",
@@ -12126,7 +12897,10 @@ var booksDB = [
     "author": "Стругацкие",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "65"
+    }
   },
   {
     "id": "c54067ce7ae146cbb0981bcccfe4d897",
@@ -12144,6 +12918,9 @@ var booksDB = [
     "roles": [
       "k_flw"
     ],
+    "rate": {
+      "my%": "55"
+    },
     "cover": true
   },
   {
@@ -12226,10 +13003,14 @@ var booksDB = [
       "3"
     ],
     "cat": "hu",
+    "author": "Сергей Лукяненко",
     "tags": "роман",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "56"
+    }
   },
   {
     "id": "4faa9460a44d4f928d1c127e43e305ed",
@@ -12261,12 +13042,16 @@ var booksDB = [
       "9"
     ],
     "cat": "hu",
+    "author": "Михаил Веллер",
     "tags": "вдовновляющая жизнь наставничество саморазвитие",
     "roles": [
       "s_lif",
       "k_flw",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "89"
+    }
   },
   {
     "id": "5fcfd777622b47f6914e4f996bfb52ed",
@@ -12445,7 +13230,10 @@ var booksDB = [
     "tags": "роман",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "62"
+    }
   },
   {
     "id": "87216e2163414ce099ba26fa3b5af869",
@@ -12477,10 +13265,14 @@ var booksDB = [
       "3"
     ],
     "cat": "hu",
+    "author": "Сергей Лукяненко",
     "tags": "роман",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "50"
+    }
   },
   {
     "id": "f21984722d9643eca7af54eb7b3b92cf",
@@ -12590,10 +13382,14 @@ var booksDB = [
       "3"
     ],
     "cat": "hu",
+    "author": "Буркин, Луяненко",
     "tags": "роман",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "38"
+    }
   },
   {
     "id": "c0f9234f64b142d68a14608e525e3608",
@@ -12758,10 +13554,14 @@ var booksDB = [
       "8"
     ],
     "cat": "hu",
+    "author": "Е. Замятин",
     "tags": "антиутопия математика",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "5"
+    }
   },
   {
     "id": "7a9c945b0c764171850b785f1d378a04",
@@ -12817,7 +13617,10 @@ var booksDB = [
     "tags": "рассказ",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "47"
+    }
   },
   {
     "id": "f7e287caff174346b7b41bde70f59860",
@@ -13008,7 +13811,10 @@ var booksDB = [
     "tags": "роман",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "52"
+    }
   },
   {
     "id": "bf7a9d9870194350b1e39e0f2f238710",
@@ -13086,7 +13892,11 @@ var booksDB = [
       "s_flw",
       "s_crt",
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "95"
+    },
+    "cover": true
   },
   {
     "id": "f1ae57c010f64bd7a8497bd18f6ed8d0",
@@ -13129,6 +13939,7 @@ var booksDB = [
       "gr": "31331449"
     },
     "rate": {
+      "my%": "75",
       "gr": "4.16"
     },
     "cover": true
@@ -13209,13 +14020,17 @@ var booksDB = [
       "9"
     ],
     "cat": "hu",
+    "author": "Данияр Сугралинов",
     "tags": "мотивация мужчина саморазвитие успех",
     "roles": [
       "s_lif",
       "d_pol",
       "k_flw",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "73"
+    }
   },
   {
     "id": "4765a318f07548ec83fe4b3e213ad7cc",
@@ -13223,7 +14038,7 @@ var booksDB = [
     "name": {
       "ru": "Источник"
     },
-    "all": true,
+    "all": false,
     "sezons": [
       "15"
     ],
@@ -13274,7 +14089,10 @@ var booksDB = [
     "tags": "роман",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "50"
+    }
   },
   {
     "id": "01c4be295d5c41d29fe39b261efa1359",
@@ -13355,7 +14173,10 @@ var booksDB = [
     "tags": "роман",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "50"
+    }
   },
   {
     "id": "66c5f89efada45cc97375a0ce8dd8d0f",
@@ -13373,6 +14194,9 @@ var booksDB = [
     "roles": [
       "k_flw"
     ],
+    "rate": {
+      "my%": "80"
+    },
     "cover": true
   },
   {
@@ -13427,7 +14251,10 @@ var booksDB = [
     "author": "Павел Пряжко",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "72"
+    }
   },
   {
     "id": "e2d39146cb6c42409d4bc83ded207d0e",
@@ -13445,7 +14272,7 @@ var booksDB = [
       "k_flw"
     ],
     "rate": {
-      "my%": "53"
+      "my%": "63"
     }
   },
   {
@@ -13467,19 +14294,6 @@ var booksDB = [
     "rate": {
       "my%": "40"
     }
-  },
-  {
-    "id": "5b313e850af146c8a16d4109872b1d39",
-    "type": "book",
-    "name": {
-      "ru": "Дублер"
-    },
-    "all": true,
-    "sezons": [
-      "3"
-    ],
-    "cat": "hu",
-    "tags": "роман"
   },
   {
     "id": "4a015af0f42a4158a2c7bd9ee410ef5e",
@@ -13557,7 +14371,10 @@ var booksDB = [
     "roles": [
       "k_flw",
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "70"
+    }
   },
   {
     "id": "91b320a4c8e44a6e8bf7515ddf3cd6c4",
@@ -13610,7 +14427,11 @@ var booksDB = [
       "9"
     ],
     "cat": "hu",
-    "tags": "выпивка деньги россия смысл"
+    "author": "Алексей Слаповский",
+    "tags": "выпивка деньги россия смысл",
+    "rate": {
+      "my%": "48"
+    }
   },
   {
     "id": "7e93eab46da545df904e82e4445d391c",
@@ -13642,10 +14463,14 @@ var booksDB = [
       "3"
     ],
     "cat": "hu",
+    "author": "Роберт Хайнлайн",
     "tags": "роман",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "62"
+    }
   },
   {
     "id": "7d7d7fdcaa4c46d1ab571a6747c3bf5c",
@@ -13720,7 +14545,10 @@ var booksDB = [
     "author": "Макс Фрай",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "72"
+    }
   },
   {
     "id": "4648cb7919ee4403916ee9bac55c6fa4",
@@ -13772,10 +14600,14 @@ var booksDB = [
       "8з"
     ],
     "cat": "hu",
+    "author": "Алекс Экслер",
     "tags": "роман",
     "roles": [
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "38"
+    }
   },
   {
     "id": "c98bf5b999ea4e31a49f0102db649b0d",
@@ -13810,7 +14642,10 @@ var booksDB = [
     "author": "Анджей Сапковский",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "75"
+    }
   },
   {
     "id": "a0ffaf18129a46c2909240498757d932",
@@ -13874,6 +14709,7 @@ var booksDB = [
       "gr": "17234350"
     },
     "rate": {
+      "my%": "83",
       "mygr": "5",
       "gr": "3.83"
     },
@@ -13968,7 +14804,10 @@ var booksDB = [
     "roles": [
       "s_lif",
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "89"
+    }
   },
   {
     "id": "8071d583c4cd4ce29b1ec7b7b43d105e",
@@ -14173,7 +15012,10 @@ var booksDB = [
     "tags": "рассказ",
     "roles": [
       "k_flw"
-    ]
+    ],
+    "rate": {
+      "my%": "53"
+    }
   },
   {
     "id": "d0ec13b8864a49a4aad6af9eff6359ea",
@@ -14204,9 +15046,13 @@ var booksDB = [
       "07"
     ],
     "cat": "hu",
+    "author": "Frédéric Beigbeder",
     "roles": [
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "58"
+    }
   },
   {
     "id": "b34d42c3f0d845a19318944d4447c541",
@@ -14222,7 +15068,56 @@ var booksDB = [
     "author": "Коэльо",
     "roles": [
       "k_int"
-    ]
+    ],
+    "rate": {
+      "my%": "68"
+    }
+  },
+  {
+    "id": "b5fe06aed83042ed998eb0b08ea06b3e",
+    "type": "book",
+    "name": {
+      "en": "A Brief History of Thought: A Philosophical Guide to Living",
+      "ru": "Краткая история мысли. Трактат по философии для подрастающих поколений"
+    },
+    "all": true,
+    "sezons": [
+      "21о"
+    ],
+    "cat": "th",
+    "author": "Люк Ферри",
+    "roles": [
+      "l_vzp",
+      "k_flw",
+      "t_alz"
+    ],
+    "ids": {
+      "gr": "12082644"
+    },
+    "rate": {
+      "my%": "83",
+      "mygr": "5",
+      "gr": "3.99"
+    },
+    "cover": true
+  },
+  {
+    "id": "4659d26863ea4fad9c0225dc62b715f2",
+    "type": "book",
+    "name": {
+      "en": "Understanding How We Learn: A Visual Guide"
+    },
+    "all": true,
+    "sezons": [
+      "22л"
+    ],
+    "cat": "th",
+    "ids": {
+      "gr": "39230505"
+    },
+    "rate": {
+      "my%": "70"
+    }
   },
   {
     "id": "ed5369230bbd4870a30cd91a88c5137d",
@@ -14238,6 +15133,9 @@ var booksDB = [
     "author": "Майкл Рей",
     "ids": {
       "gr": "25030993"
+    },
+    "rate": {
+      "my%": "50"
     },
     "cover": true
   },
@@ -14313,12 +15211,17 @@ var booksDB = [
     ],
     "cat": "th",
     "author": "Brown, Peter C.",
+    "roles": [
+      "t_emp",
+      "t_qst"
+    ],
     "ids": {
       "gr": "18770267"
     },
     "rate": {
       "my%": "98",
-      "mygr": "5"
+      "mygr": "5",
+      "gr": "4.17"
     },
     "cover": true
   },
@@ -14409,7 +15312,10 @@ var booksDB = [
       "s_crt",
       "t_alz",
       "t_qst"
-    ]
+    ],
+    "rate": {
+      "my%": "55"
+    }
   },
   {
     "id": "00815a8fddc743ce9712607fb9f38fd6",
@@ -14425,12 +15331,19 @@ var booksDB = [
     ],
     "cat": "th",
     "author": "Adam Grant",
+    "roles": [
+      "t_crt",
+      "t_chs",
+      "l_rzb",
+      "t_qst"
+    ],
     "ids": {
       "gr": "55539565"
     },
     "rate": {
       "my%": "94",
-      "mygr": "5"
+      "mygr": "5",
+      "gr": "4.24"
     },
     "cover": true
   },
@@ -14693,7 +15606,10 @@ var booksDB = [
     "cat": "th",
     "roles": [
       "t_crt"
-    ]
+    ],
+    "rate": {
+      "my%": "57"
+    }
   },
   {
     "id": "24484749e41442328c2836ac1c3ea7e1",
@@ -14767,6 +15683,7 @@ var booksDB = [
       "gr": "113934"
     },
     "rate": {
+      "my%": "90",
       "gr": "4.07"
     },
     "cover": true
@@ -14790,7 +15707,10 @@ var booksDB = [
       "t_alz",
       "t_emp",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "87"
+    }
   },
   {
     "id": "4a2258409a804531a48ac9405171ba7d",
@@ -14839,7 +15759,10 @@ var booksDB = [
     "cat": "th",
     "roles": [
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "45"
+    }
   },
   {
     "id": "e1a1b4795c464ae38696bf023a35a90d",
@@ -14877,7 +15800,10 @@ var booksDB = [
       "s_crt",
       "d_org",
       "d_pol"
-    ]
+    ],
+    "rate": {
+      "my%": "70"
+    }
   },
   {
     "id": "5c1392e1c11e40d8964bfee321dc1a2a",
@@ -14893,7 +15819,10 @@ var booksDB = [
     "author": "Рифкин",
     "roles": [
       "d_org"
-    ]
+    ],
+    "rate": {
+      "my%": "65"
+    }
   },
   {
     "id": "c96c51931ff749fb9e5070b6d974e27b",
@@ -14907,7 +15836,10 @@ var booksDB = [
     ],
     "cat": "th",
     "author": "Владимир Тарасов",
-    "tags": "бизнес война герой метафоры"
+    "tags": "бизнес война герой метафоры",
+    "rate": {
+      "my%": "70"
+    }
   },
   {
     "id": "724d16c3d079499f93f4b120b7429c5b",
@@ -14993,7 +15925,10 @@ var booksDB = [
       "l_rzb",
       "t_alz",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "72"
+    }
   },
   {
     "id": "1ce0f9d4614d4f8589ea3b99c289b585",
@@ -15010,7 +15945,10 @@ var booksDB = [
     "roles": [
       "d_org",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "88"
+    }
   },
   {
     "id": "6c032511f4d44aa4b5a0ccf054fada5c",
@@ -15064,7 +16002,10 @@ var booksDB = [
       "t_alz",
       "t_qst",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "92"
+    }
   },
   {
     "id": "4528d261d7484040bf046e7d808dd587",
@@ -15084,7 +16025,10 @@ var booksDB = [
       "t_alz",
       "t_emp",
       "t_qst"
-    ]
+    ],
+    "rate": {
+      "my%": "79"
+    }
   },
   {
     "id": "e0f633f89ad64dcb95b3659aa005f97e",
@@ -15151,7 +16095,10 @@ var booksDB = [
       "d_pol",
       "t_alz",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "87"
+    }
   },
   {
     "id": "1f627ab98bd64b6686ba667c5d7389d4",
@@ -15203,12 +16150,12 @@ var booksDB = [
       "t_chs"
     ],
     "ids": {
-      "gr": "36324978"
+      "gr": "13588394"
     },
     "rate": {
       "my%": "100",
       "mygr": "5",
-      "gr": "5"
+      "gr": "3.97"
     },
     "cover": true
   },
@@ -15264,7 +16211,10 @@ var booksDB = [
     "author": "Питер Сенге",
     "roles": [
       "d_org"
-    ]
+    ],
+    "rate": {
+      "my%": "77"
+    }
   },
   {
     "id": "c539e142a14c4ea6a4202cb2fc2af491",
@@ -15283,7 +16233,10 @@ var booksDB = [
       "s_flw",
       "s_crt",
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "68"
+    }
   },
   {
     "id": "8dfd9d78d9474044b4b96d7409dff178",
@@ -15299,7 +16252,10 @@ var booksDB = [
     "author": "Тихомиров",
     "roles": [
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "78"
+    }
   },
   {
     "id": "879bfaeb04ff4e6b8672b2945b5b3e84",
@@ -15315,7 +16271,10 @@ var booksDB = [
     "author": "Халперн",
     "roles": [
       "t_crt"
-    ]
+    ],
+    "rate": {
+      "my%": "75"
+    }
   },
   {
     "id": "63adf753bf5e4842a37d4557c62fd4d6",
@@ -15331,7 +16290,10 @@ var booksDB = [
     "tags": "психология внимание",
     "roles": [
       "s_lif"
-    ]
+    ],
+    "rate": {
+      "my%": "78"
+    }
   },
   {
     "id": "bf4b6e0634ee47878827a63ed22f50e2",
@@ -15348,7 +16310,10 @@ var booksDB = [
     "roles": [
       "t_alz",
       "t_qst"
-    ]
+    ],
+    "rate": {
+      "my%": "92"
+    }
   },
   {
     "id": "9a5bfc7585a04f959434eeb73f7e3fa0",
@@ -15420,7 +16385,10 @@ var booksDB = [
     "author": "Блонский",
     "roles": [
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "80"
+    }
   },
   {
     "id": "572be2b503bf4806b489b2fc354403f4",
@@ -15454,7 +16422,10 @@ var booksDB = [
       "s_crt",
       "d_pol",
       "t_qst"
-    ]
+    ],
+    "rate": {
+      "my%": "78"
+    }
   },
   {
     "id": "b21b94d12e51408d93038949cbdada9a",
@@ -15470,7 +16441,10 @@ var booksDB = [
     "author": "Свирид",
     "roles": [
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "75"
+    }
   },
   {
     "id": "b2fa116b45a24e6cbb859bc8ad933cd7",
@@ -15510,7 +16484,10 @@ var booksDB = [
       "s_crt",
       "t_alz",
       "t_qst"
-    ]
+    ],
+    "rate": {
+      "my%": "62"
+    }
   },
   {
     "id": "2b2b9b515a374522841bc5e21d8f01a0",
@@ -15554,6 +16531,7 @@ var booksDB = [
       "gr": "7783191"
     },
     "rate": {
+      "my%": "55",
       "mygr": "3",
       "gr": "3.91"
     },
@@ -15573,7 +16551,10 @@ var booksDB = [
     "author": "Ружиэйро",
     "roles": [
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "60"
+    }
   },
   {
     "id": "1fbca1a87376414e9a3550e3417f1086",
@@ -15589,7 +16570,10 @@ var booksDB = [
     "author": "Надлер, Шозо",
     "roles": [
       "t_alz"
-    ]
+    ],
+    "rate": {
+      "my%": "62"
+    }
   },
   {
     "id": "7b278da8aad44ed9bd77829c855c70eb",
@@ -15701,6 +16685,7 @@ var booksDB = [
       "gr": "20577953"
     },
     "rate": {
+      "my%": "72",
       "mygr": "4",
       "gr": "3.95"
     },
@@ -15789,7 +16774,10 @@ var booksDB = [
     "roles": [
       "l_vzp",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "78"
+    }
   },
   {
     "id": "b7d4033282ea4ce6a75a4a87112a6bb9",
@@ -15806,7 +16794,10 @@ var booksDB = [
     "roles": [
       "l_vzp",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "78"
+    }
   },
   {
     "id": "5d700c477a65450f9ed20a0e962f3123",
@@ -15949,7 +16940,10 @@ var booksDB = [
       "t_alz",
       "t_crt",
       "t_qst"
-    ]
+    ],
+    "rate": {
+      "my%": "86"
+    }
   },
   {
     "id": "1397cfd51c7f4c42a574ce09311f6010",
@@ -15968,7 +16962,10 @@ var booksDB = [
       "d_pol",
       "t_alz",
       "t_qst"
-    ]
+    ],
+    "rate": {
+      "my%": "96"
+    }
   },
   {
     "id": "a4d5ce6f8336465a965b50e80c7f4bb3",
@@ -15985,7 +16982,10 @@ var booksDB = [
     "roles": [
       "t_alz",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "82"
+    }
   },
   {
     "id": "76cd7109e15c464c88c2458144db7cb9",
@@ -16008,7 +17008,10 @@ var booksDB = [
       "d_pol",
       "t_alz",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "81"
+    }
   },
   {
     "id": "0f119198422f4a4f9481055d928427de",
@@ -16029,7 +17032,10 @@ var booksDB = [
       "t_crt",
       "t_qst",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "83"
+    }
   },
   {
     "id": "49110312601b4d968b930464c98799af",
@@ -16060,7 +17066,10 @@ var booksDB = [
     "roles": [
       "s_crt",
       "t_qst"
-    ]
+    ],
+    "rate": {
+      "my%": "53"
+    }
   },
   {
     "id": "9df3f8f8c0d449a6a99569d3dc8c8920",
@@ -16109,7 +17118,10 @@ var booksDB = [
       "t_alz",
       "t_qst",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "67"
+    }
   },
   {
     "id": "9a90705e9de84319863c23b39109b99a",
@@ -16165,6 +17177,7 @@ var booksDB = [
     "id": "1cdcb5e5cce44a39985271e6ed5f0da8",
     "type": "book",
     "name": {
+      "en": "Flowscapes: Water logic",
       "ru": "Водная логика"
     },
     "all": true,
@@ -16186,6 +17199,7 @@ var booksDB = [
       "gr": "41552161"
     },
     "rate": {
+      "my%": "83",
       "mygr": "5",
       "gr": "4.5"
     },
@@ -16265,13 +17279,16 @@ var booksDB = [
       "d_org",
       "t_alz",
       "t_chs"
-    ]
+    ],
+    "rate": {
+      "my%": "89"
+    }
   },
   {
     "id": "d11d14afa65e4b29966ae1a7634194b8",
     "type": "book",
     "name": {
-      "ru": "A Theory Of Fun In Game Design"
+      "en": "A Theory Of Fun In Game Design"
     },
     "all": true,
     "sezons": [
@@ -16282,7 +17299,10 @@ var booksDB = [
       "s_lif",
       "s_flw",
       "d_pol"
-    ]
+    ],
+    "rate": {
+      "my%": "88"
+    }
   },
   {
     "id": "17c91c1fc826405496cf18cc976c3d1a",
@@ -16321,41 +17341,20 @@ var booksDB = [
     ],
     "cat": "th",
     "author": "Hari, Johann",
+    "roles": [
+      "t_emp",
+      "t_qst",
+      "s_crt",
+      "t_crt"
+    ],
     "ids": {
       "gr": "57933306"
     },
     "rate": {
-      "my%": "89"
+      "my%": "89",
+      "mygr": "5",
+      "gr": "4.27"
     },
-    "cover": true
-  },
-  {
-    "id": "c31a0746e0c649f1bf5ef06b1fe1cf0e",
-    "type": "book",
-    "name": {
-      "ru": "Англо-русский словарь, 1979 г."
-    },
-    "all": true,
-    "sezons": [
-      "94"
-    ],
-    "author": "Мюллер",
-    "tags": "английский словарь",
-    "roles": [
-      "k_eng"
-    ],
-    "cover": true
-  },
-  {
-    "id": "386886b71a0e43af868056a94ab3dc3a",
-    "type": "book",
-    "name": {
-      "ru": "Учебный справочник школьника, 1999. 1664 стр "
-    },
-    "all": true,
-    "sezons": [
-      "99"
-    ],
     "cover": true
   },
   {
@@ -16375,37 +17374,5 @@ var booksDB = [
     "rate": {
       "my%": "53"
     }
-  },
-  {
-    "id": "3bba3616f00b42ca8fbe71ec359c0878",
-    "type": "book",
-    "name": {
-      "ru": "БСЭ, 30-ов томов"
-    },
-    "all": true,
-    "sezons": [
-      "94"
-    ],
-    "tags": "энциклопедия",
-    "roles": [
-      "k_int"
-    ],
-    "cover": true
-  },
-  {
-    "id": "d71b5ddec5f846f99f1dd02aced65f66",
-    "type": "book",
-    "name": {
-      "ru": "Ядовитые животные и растения СССР. Справочное пособие"
-    },
-    "all": true,
-    "sezons": [
-      "94"
-    ],
-    "tags": "энциклопедия ядовитые",
-    "roles": [
-      "k_int"
-    ],
-    "cover": true
   }
 ]
