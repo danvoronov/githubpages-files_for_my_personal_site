@@ -17,5 +17,5 @@ const mainMenu = [
 	{id: 5, txt:  '📝 Articles', group: 'b', radius: 60, url: 'articles/'},
 	{id: 10, txt: '📚 Readed', group: 'r', radius: 75, url: 'readed/'},
 	{id: 21, txt: '🔗 YouTube', group: 'c', radius: 15, url: 'https://www.youtube.com/user/DanVoronov/videos'},
-	{id: 22, txt: '🔗 Telegram', group: 'c', radius: 15, url: 'https://t.me/dv_prj'},
+	{id: 22, txt: '🔗 LinkedIN', group: 'c', radius: 15, url: 'https://www.linkedin.com/in/danvoronov/'},
 ]
