@@ -1,4 +1,4 @@
-var booksDB = [
+let booksDB = [
   {
     "id": "6d86b7af0b6441a5a6a1cef77d8a1ac1",
     "type": "book",
@@ -26,7 +26,7 @@ var booksDB = [
       "gr": "58963617"
     },
     "rate": {
-      "my%": "100",
+      "my%": "98",
       "mygr": "5",
       "gr": "4.25"
     },

@@ -43,13 +43,14 @@ function filter_books_by_role(el) {
 
 $(document).ready(async ()=>{   thisurl = new URL(location.toString()); 
 
+    init(getprm('yr'), getprm('cat'), getprm('q'), getprm('a')) 
+
     for (root in roles_names){
         let txt=`<div id="raw${root}" style="background-color: ${roles_colors[root]}; padding: 6px 12px; text-align: right">`
         for (rl in roles[root]) txt+=` <span class="roles cl_${root}" id="${rl}" value="${rl}" onClick="filter_books_by_role(this)" title="${(roles[root][rl][1])?roles[root][rl][1]:''}">${roles[root][rl][0]}</span>`
         $("#filter").append(txt+` &nbsp; <button class='rl_btn' data='${root}'>${roles_names[root]}</button></div>`) 
     }    
 
-    init(getprm('yr'), getprm('cat'), getprm('q'), getprm('a')) 
 
     $(".rl_btn").click(roli_upd);
     $("#reset_btn").click(()=>{ 
