@@ -16,6 +16,6 @@ const mainMenu = [
 	{id: 4, txt: '🎭 ART', group: 'a', radius: 65, url: 'art/'},
 	{id: 5, txt:  '📝 Articles', group: 'b', radius: 60, url: 'articles/'},
 	{id: 10, txt: '📚 Studied', group: 'r', radius: 75, url: 'studied/'},
-	{id: 21, txt: '🔗 YouTube', group: 'c', radius: 15, url: 'https://www.youtube.com/user/DanVoronov/videos'},
+	{id: 21, txt: '🔗 Portfolio', group: 'c', radius: 15, url: 'https://danvoronov.notion.site/Portfolio-Dan-Voronov-161bb25a23f14cddbc3a00242592762b?pvs=74'},
 	{id: 22, txt: '🔗 LinkedIN', group: 'c', radius: 15, url: 'https://www.linkedin.com/in/danvoronov/'},
 ]

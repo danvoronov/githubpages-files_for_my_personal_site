@@ -120,7 +120,7 @@ function redraw({ch_cat, ch_yr, ch_rl, ch_txt}={}) {
 
     let rnm = s.rl.length==0?'':(s.rl.length>1?'<span class="mininf">Crcl:</span> '+Object.keys(roles_names).reduce((a,k)=>{ a[k[0]] = roles_names[k]; return a },{})[s.rl[0][0]]:'<span class="mininf">Role:</span> '+Object.values(roles).reduce((a,e)=>({...e,...a}),{})[s.rl[0]][0])+'.'
     $("#infos").html(`${$('.cur_cat').text()} &nbsp;<span class="mininf">for</span>&nbsp;  ${$('.cur_year').text()} &nbsp;<span class="mininf">year.</span>&nbsp;  ${rnm}`)
-    $("#main").html(`<div id="srez" style="padding-bottom:20px"><div style="font-size:1.3em; padding-bottom:12px; font-weight: bold">Find <span style="color: #007272; font-size:1.3em">${fbooks.length}</span> books:</div><div id="grid"></div></div>`)
+    $("#main").html(`<div id="srez" style="padding-bottom:20px"><div style="font-size:1.3em; padding-bottom:12px; font-weight: bold">Find <span style="color: #007272; font-size:1.3em">${fbooks.length}</span> items:</div><div id="grid"></div></div>`)
 
     const sez_nm =  ['з','в','л','о'] // b.score-a.score || b.fresh-a.fresh
     const BOOK_CUT = 115 
@@ -139,7 +139,7 @@ function redraw({ch_cat, ch_yr, ch_rl, ch_txt}={}) {
     }).slice(0,BOOK_CUT).forEach(apBook)
 
     if (fbooks.length>BOOK_CUT) 
-        $("#srez").append(`<div id="netknig"><h2 style="color: gray">TRIM ${fbooks.length-BOOK_CUT} books</h2></div>`)
+        $("#srez").append(`<div id="netknig"><h2 style="color: gray">TRIM ${fbooks.length-BOOK_CUT} items</h2></div>`)
 
     DOCheight = Math.max( body.scrollHeight, body.offsetHeight, 
                        html.clientHeight, html.scrollHeight, html.offsetHeight );
