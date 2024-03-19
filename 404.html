@@ -5,22 +5,42 @@
     <title>404 - Dan Voronov</title>
     <meta name="description" content="Personal site of Dan Voronov, artist.">
     <meta name="author" content="Dan Voronov">
-  </head>
-  <body id="main">
-  	404 - такой страницы нет / there is no such page
-  	<br/>
-<br/>
-    <script>
-    	document.getElementById("main").appendChild(document.createTextNode("> "+document.referrer));
+    <style>
+      body {
+          background-color: #741818; /* Лучше цвет фона для страницы 404 */
+          color: #ffffff; /* Инвертированный цвет текста */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 80vh;
+          margin: 0;
+      }
+      h1 {
+          font-size: 50px;
+      }
+      a {
+          color: #d5ffe2;
+      }
+  </style>    
+</head>
 
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<body id="main">
 
-  ga('create', 'UA-5293921-1', 'auto');
-  ga('send', 'pageview');
+  <section>
+    <h1>404</h1>
+    <h2>there is no such page &nbsp; >> &nbsp; <a href="/" title="Go to the homepage">Home</a></h2>
+    <h3>такой страницы нет &nbsp; >> &nbsp; <a href="/" title="Перейти на главную страницу">Главная</a></h3>
+    <h3>такої сторінки не існує &nbsp; >> &nbsp; <a href="/" title="Перейти на головну сторінку">Головна</a></h3>
+  </section>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-</script>
-  </body>
+    ga('create', 'UA-5293921-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</body>
 </html>
