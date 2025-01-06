@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defense Consulting Agency</title>
+    <style>
+        :root {
+            --primary-color: #111827;
+            --accent-color: #0047AB;
+            --text-light: #ffffff;
+            --text-olive: #8B8B73;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text-light);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            margin-right: 12px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-olive);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-light);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 6rem 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('/placeholder.svg?height=800&width=1200') center/cover;
+            position: relative;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .hero-logo {
+            width: 256px;
+            height: 256px;
+            flex-shrink: 0;
+        }
+
+        .hero-text {
+            flex-grow: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-olive);
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--text-light);
+            background-image: linear-gradient(45deg,
+                var(--accent-color) 25%,
+                #0055d4 25%,
+                #0055d4 50%,
+                var(--accent-color) 50%,
+                var(--accent-color) 75%,
+                #0055d4 75%,
+                #0055d4);
+            background-size: 20px 20px;
+            animation: stripe-animation 1s linear infinite;
+        }
+
+        @keyframes stripe-animation {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 20px 0;
+            }
+        }
+
+        .btn-primary:hover {
+            background-color: #2563eb;
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--text-olive);
+            color: var(--text-light);
+            margin-left: 1rem;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(139, 139, 115, 0.1);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 5rem 0;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 2rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            border: 1px solid var(--text-olive);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent-color);
+            background-image: linear-gradient(45deg,
+                var(--accent-color) 25%,
+                #0055d4 25%,
+                #0055d4 50%,
+                var(--accent-color) 50%,
+                var(--accent-color) 75%,
+                #0055d4 75%,
+                #0055d4);
+            background-size: 10px 10px;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--text-olive);
+            border-radius: 50%;
+            flex-shrink: 0;
+            background: transparent;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .feature-card p {
+            color: var(--text-olive);
+            margin-left: calc(40px + 1rem);
+        }
+
+        /* Mission Section */
+        .mission {
+            padding: 5rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .mission h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .mission p {
+            color: var(--text-olive);
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.25rem;
+        }
+
+        .image-strip {
+            width: 100%;
+            min-height: 400px;
+            object-fit: cover;
+            margin: 4rem 0;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-info p {
+            color: var(--text-olive);
+            margin-bottom: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            color: var(--text-olive);
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: var(--text-light);
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border: 2px solid currentColor;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .btn {
+                display: block;
+                margin: 1rem 0;
+                text-align: center;
+            }
+
+            .btn-secondary {
+                margin-left: 0;
+            }
+
+            .feature-card p {
+                margin-left: 0;
+            }
+
+            .feature-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .social-links {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                Defense Consulting TRIADA
+                <div class="nav-links">
+                    <a href="#services">Services</a>
+                    <a href="#about">About</a>
+                    <a href="#expertise">Expertise</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <img src="logo.jpg" alt="Company Logo" class="hero-logo">
+                <div class="hero-text">
+                    <h1>Bridging Global Defense Innovation with Ukraine</h1>
+                    <p>Expert consulting agency connecting world-class defense companies with opportunities in Ukraine. 
+                       Young, dynamic team with deep industry expertise.</p>
+                    <div class="cta">
+                        <a href="#services" class="btn btn-primary">Our Services</a>
+                        <a href="#about" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="feature-icon"></div>
+                        <h3>Global Network</h3>
+                    </div>
+                    <p>Connected with leading defense manufacturers and suppliers worldwide</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="feature-icon"></div>
+                        <h3>Defense Expertise</h3>
+                    </div>
+                    <p>Deep understanding of military equipment and defense industry requirements</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="feature-icon"></div>
+                        <h3>Dynamic Team</h3>
+                    </div>
+                    <p>Young professionals with international experience and industry knowledge</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>Facilitating crucial partnerships between Ukrainian and international defense companies 
+               to ensure continuous supply of modern military equipment and technology. Our expertise 
+               bridges the gap between global innovation and local requirements.</p>
+        </div>
+    </section>
+
+    <!--img src="" alt="Defense Industry Partners" class="image-strip"-->
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-info">
+                <p>Ready to discuss how we can help your defense company succeed in Ukraine? Our team is here to assist you.</p>
+                <p>Email: contact@defenselink.com</p>
+                <p>Location: Kyiv, Ukraine</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <div class="social-icon">FB</div>
+                        Facebook
+                    </a>
+                    <a href="#" class="social-link">
+                        <div class="social-icon">TG</div>
+                        Telegram
+                    </a>
+                    <a href="#" class="social-link">
+                        <div class="social-icon">IN</div>
+                        Instagram
+                    </a>
+                    <a href="#" class="social-link">
+                        <div class="social-icon">LI</div>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
