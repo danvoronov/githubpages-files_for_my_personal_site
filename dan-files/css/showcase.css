@@ -20,6 +20,7 @@ h3 {margin: 0}
 .codeinfo {
 	color: #0dabdb;
 }
+.codeinfo a { color: #0dabdb; }
 
 .item:hover {
 	border-color: #f579f7; 

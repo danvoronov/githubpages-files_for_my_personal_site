@@ -66,7 +66,7 @@
       <h3>Coping with jealousy</h3>
       <img src="../dan-files/i/strp/revnost.png" style="width: 552px;">  
       <p><span>2016–17. Kyiv, Kharkiv</span> Integrated transformational experience for overcoming personal limits in relationships. Using psy techniques to work with your states, especially jealousy. </p>
-      I created powerful offline training program + online awareness marathon-diary with personal tasks [facebook group] + discussion support group.
+      <p>I created powerful offline training program + online awareness marathon-diary with personal tasks [facebook group] + discussion support group.</p>
     </div>    
   </div>
   <div class='cont' style="padding-top: 40px;">
@@ -106,5 +106,208 @@
 
 <script src='../dan-files/js/bg.js'></script>
 <script src='../dan-files/js/ga.js'></script>
+<script>
+(function(){
+  const getLang = () => localStorage.getItem('lang') || 'en';
+  const T = {
+    en: {
+      title: 'Startups by Dan Voronov',
+      back: '&lt; back (ESC)',
+      github: 'my github',
+      h1: 'My startups & projects',
+      h2: ['CITY AND MAPS', 'SELF-GROWS', 'PSY TECH'],
+      h3: [
+        'Walkbots tours',
+        'Throught the Kyiv',
+        'Falafel map',
+        'Kyiv urban hikes',
+        '87 online',
+        'Coping with jealousy',
+        'Co-founder of "Sex Education Week"',
+        'Svoyo Delo',
+        'Biorhythms calculator'
+      ],
+      items: [
+        [
+          '<span>2019–25</span> Telegram bots that use live location feature to tell immersive story on the ground.',
+          'The first story — Kyiv occupation and Babiy Yar Holocaust tragedy during WW2, 40+ points, 15km.',
+          '<span class="codeinfo">Started as Google Apps Script and then evolved to fully custom engine with KML parser and Telegram Bot API POST wrapper [node.js].</span>'
+        ],
+        [
+          '<span style="font-size:0.8em">hashtag <a href="https://duckduckgo.com/?q=%23%D0%9A%D0%98%D0%95%D0%92%D0%BD%D0%B0%D1%81%D0%BA%D0%B2%D0%BE%D0%B7%D1%8C&t=h_&ia=web" target="black">#КИЕВнасквозь</a></span>',
+          '<span>2017–19 // 23-...</span> I\'ve developed new Kyiv urban hikes: Throught the City for all day walking. 35–44 km in a group of strangers for free.',
+          '<span class="codeinfo">Official telegram <a href="https://t.me/kievpohod" target="black">@kievpohod</a>. JS code for showing route\'s main points and estimated time on map.</span>'
+        ],
+        [
+          '<span>2016–17</span> Mapping of Kyiv\'s falafel points with price and commenting. Active exploration and degustation around the city.',
+          'Managing community of falafel lovers in vk.com and fb.',
+          '<span class="codeinfo">JS code. MapBox API. DISQUS commenting widget. Data in geoJSON. Archive on <a href="http://apps.danvoronov.com/kievfalafel/" target="black">/kievfalafel</a></span>'
+        ],
+        [
+          '<span>2010–11</span> Open Saturday\'s hikes thru unknown Kyiv. Started from new vk.com section "looking for a travel companion".',
+          'Public speaking about the importance of knowing where you live. Creating video from my Pecha Kucha presentation.',
+          '<span class="codeinfo">Website-catalog <a href="http://danvoronov.com/prj/kievpohod/" target="black">/kievpohod</a> was built with WordPress engine. Using Yandex map and Google Picasa photo albums.</span>'
+        ],
+        [
+          '<span>2017–18</span> Unique self-transformational weekly diary <i>private</i> Facebook group.',
+          'Initial offline and online entrance interviews. Web-app for task catalog (starting as <a target="_blank" href="https://trello.com/b/B4NQ2JAz/87-online">Trello board</a>). Video instructions and everyday communications with participants.',
+          '<span class="codeinfo">Promo site and video was at <i>87.dan.kiev.ua</i></span>'
+        ],
+        [
+          '<span>2016–17. Kyiv, Kharkiv</span> Integrated transformational experience for overcoming personal limits in relationships. Using psy techniques to work with your states, especially jealousy.',
+          'I created powerful offline training program + online awareness marathon-diary with personal tasks [facebook group] + discussion support group.'
+        ],
+        [
+          'podcast-interview: <a href="https://www.mixcloud.com/OFRUkraine/%D1%81%D0%B5%D0%BA%D1%81-%D0%BF%D1%80%D0%BE%D1%81%D0%B2%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2%D1%8B%D0%BF%D1%83%D1%81%D0%BA-6-%D0%BE%D1%80%D0%B3%D0%B0%D0%BD%D0%B8%D0%B7%D0%B0%D1%82%D0%BE%D1%80%D1%8B-sex-education-week/" target="black">mixcloud.com</a>',
+          '<span>2017–18</span> Open educational project "Sex Education Week", Kyiv.',
+          'Unlucky one. Firstly, one of our lectures was attacked with tear-gas by a group of ultra-right anti-LGBTQ activists (<a href="https://kp.ua/incidents/580574-v-kyeve-neyzvestnye-napaly-na-uchastnykov-lektsyy-transhender" target="black">news</a>). Then our Facebook public was hacked and stolen. Our brand was spoiled (<a href="https://danvoronov.medium.com/%D0%BB%D0%B0%D0%B9%D0%BA%D0%B8-%D0%B2-%D0%BD%D0%B5%D0%B1%D0%B5%D0%B7%D0%BF%D0%B5%D1%86%D1%96-9082342bf7aa" target="black">my article</a>).' 
+        ],
+        [
+          '<span>2010–11</span> Online system for career guidance. Based on my <a href="https://maup.com.ua/eng/index.html" target="black">IAPM</a> graduation research and extended with a personality test for greater accuracy. Has database of various professions.',
+          '<span class="codeinfo">Coded and UI/UX designed by me from scratch. LAMP (MySQL, PHP) and jQuery + jQuery UI and Google graph API.</span>',
+          'Was at <i>svoyodelo.com</i>. See <a href="https://github.com/danvoronov/svoyodelo2010" target="black">code on GitHub</a>'
+        ],
+        [
+          '<span>2003–07</span> Windows app for calculating your personal biorhythms cycles by date of birth (not scientific method).',
+          '<span class="codeinfo">Started as personal education project on Turbo Pascal 7.0. Then was recoded in Delphi 5 and 7. In 2005 translated into English and I tried to sell as shareware.</span>',
+          'Rus version <a href="http://www.bioritmi.narod.ru/prog.html" target="black">bioritmi.narod.ru</a> was freeware.'
+        ]
+      ]
+    },
+    uk: {
+      title: 'Стартапи Дана Воронова',
+      back: '← назад (ESC)',
+      github: 'мій GitHub',
+      h1: 'Мої стартапи та проєкти',
+      h2: ['МІСТО ТА МАПИ', 'САМОРОЗВИТОК', 'ПСИХОТЕХ'],
+      h3: [
+        'Тури Walkbots',
+        'Навскрізь Києвом',
+        'Карта фалафелю',
+        'Міські походи Києвом',
+        '87 online',
+        'Як упоратися з ревнощами',
+        'Співзасновник «Sex Education Week»',
+        'Своя Справа',
+        'Калькулятор біоритмів'
+      ],
+      items: [
+        [
+          '<span>2019–25</span> Telegram-боти, які використовують live location, щоб розповідати занурювальні історії на місцевості.',
+          'Перша історія — окупація Києва та трагедія Бабиного Яру під час Другої світової: 40+ точок, 15 км.',
+          '<span class="codeinfo">Починав як Google Apps Script, згодом переріс у повністю власний рушій з KML-парсером і обгорткою над Telegram Bot API (POST) [node.js].</span>'
+        ],
+        [
+          '<span style="font-size:0.8em">хештег <a href="https://duckduckgo.com/?q=%23%D0%9A%D0%98%D0%95%D0%92%D0%BD%D0%B0%D1%81%D0%BA%D0%B2%D0%BE%D0%B7%D1%8C&t=h_&ia=web" target="black">#КИЕВнасквозь</a></span>',
+          '<span>2017–19 // 23-...</span> Я розробив нові київські міські походи: «Навскрізь містом» на цілий день. 35–44 км у групі незнайомців, безкоштовно.',
+          '<span class="codeinfo">Офіційний телеграм <a href="https://t.me/kievpohod" target="black">@kievpohod</a>. JS-код для показу ключових точок маршруту і розрахунку часу на мапі.</span>'
+        ],
+        [
+          '<span>2016–17</span> Мапування київських точок фалафелю з цінами та коментарями. Активні дослідження і дегустації по місту.',
+          'Керування спільнотою поціновувачів фалафелю у vk.com і fb.',
+          '<span class="codeinfo">JS-код. MapBox API. Віджет коментарів DISQUS. Дані у geoJSON. Архів: <a href="http://apps.danvoronov.com/kievfalafel/" target="black">/kievfalafel</a></span>'
+        ],
+        [
+          '<span>2010–11</span> Відкриті суботні походи невідомим Києвом. Почалося з розділу у vk.com «шукаю попутника».',
+          'Публічні виступи про важливість знати місце, де живеш. Відео за матеріалами моєї презентації Pecha Kucha.',
+          '<span class="codeinfo">Сайт-каталог <a href="http://danvoronov.com/prj/kievpohod/" target="black">/kievpohod</a> зроблений на WordPress. Використані Яндекс-карти та фотоальбоми Google Picasa.</span>'
+        ],
+        [
+          '<span>2017–18</span> Унікальний самотрансформаційний щотижневий щоденник — приватна група у Facebook.',
+          'Початкові онлайн та офлайн інтервʼю для входу. Веб-застосунок-каталог завдань (починався як <a target="_blank" href="https://trello.com/b/B4NQ2JAz/87-online">дошка Trello</a>). Відеоінструкції та щоденна комунікація з учасниками.',
+          '<span class="codeinfo">Промо-сайт і відео були на <i>87.dan.kiev.ua</i></span>'
+        ],
+        [
+          '<span>2016–17. Київ, Харків</span> Інтегрований трансформаційний досвід для подолання особистих обмежень у стосунках. Психотехніки для роботи зі станами, особливо з ревнощами.',
+          'Я створив потужну офлайн-програму + онлайн-марафон-щоденник усвідомленості з персональними завданнями [група Facebook] + дискусійну групу підтримки.'
+        ],
+        [
+          'подкаст-інтервʼю: <a href="https://www.mixcloud.com/OFRUkraine/%D1%81%D0%B5%D0%BA%D1%81-%D0%BF%D1%80%D0%BE%D1%81%D0%B2%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2%D1%8B%D0%BF%D1%83%D1%81%D0%BA-6-%D0%BE%D1%80%D0%B3%D0%B0%D0%BD%D0%B8%D0%B7%D0%B0%D1%82%D0%BE%D1%80%D1%8B-sex-education-week/" target="black">mixcloud.com</a>',
+          '<span>2017–18</span> Відкритий освітній проєкт "Sex Education Week", Київ.',
+          'Проєкт із випробуваннями. Спершу одну з наших лекцій атакували сльозогінним газом ультраправі анти-LGBTQ активісти (<a href="https://kp.ua/incidents/580574-v-kyeve-neyzvestnye-napaly-na-uchastnykov-lektsyy-transhender" target="black">новина</a>). Потім наш Facebook-паблік зламали і вкрали. Репутацію бренда було зіпсовано (<a href="https://danvoronov.medium.com/%D0%BB%D0%B0%D0%B9%D0%BA%D0%B8-%D0%B2-%D0%BD%D0%B5%D0%B1%D0%B5%D0%B7%D0%BF%D0%B5%D1%86%D1%96-9082342bf7aa" target="black">моя стаття</a>).' 
+        ],
+        [
+          '<span>2010–11</span> Онлайн-система з профорієнтації. Заснована на моєму дипломному дослідженні в <a href="https://maup.com.ua/eng/index.html" target="black">МАУП</a> і доповнена особистісним тестом для більшої точності. Містить базу професій.',
+          '<span class="codeinfo">Програмування та UI/UX — з нуля, особисто. LAMP (MySQL, PHP), jQuery + jQuery UI та Google Graph API.</span>',
+          'Працював на <i>svoyodelo.com</i>. Код: <a href="https://github.com/danvoronov/svoyodelo2010" target="black">GitHub</a>'
+        ],
+        [
+          '<span>2003–07</span> Windows-додаток для розрахунку особистих біоритмів за датою народження (ненауковий метод).',
+          '<span class="codeinfo">Починав як навчальний проєкт на Turbo Pascal 7.0. Потім переписав у Delphi 5 і 7. У 2005 переклав англійською і пробував продавати як shareware.</span>',
+          'Російська версія <a href="http://www.bioritmi.narod.ru/prog.html" target="black">bioritmi.narod.ru</a> була безкоштовною.'
+        ]
+      ]
+    }
+  };
+  function ensureButton(){
+    var panel = document.getElementById('toppanel');
+    if(!panel) return;
+    var btn = document.getElementById('langToggle');
+    if(btn && btn.parentElement !== panel){ btn.parentElement.removeChild(btn); btn = null; }
+    if(!btn){
+      // ensure panel is a positioning context
+      // panel already has position: fixed in CSS
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.id = 'langToggle';
+      b.style.cssText = 'position:absolute;top:6px;right:24px;padding:3px 8px;background:rgba(255,255,255,0.85);color:#111;border-radius:4px;border:0;cursor:pointer;font:600 12px/1.2 -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Arial, sans-serif;box-shadow:0 1px 3px rgba(0,0,0,0.2)';
+      b.addEventListener('click', function(e){ e.preventDefault(); const next = (getLang() === 'uk') ? 'en' : 'uk'; applyLang(next); });
+      panel.appendChild(b);
+      btn = b;
+    }
+    btn.textContent = (getLang() === 'uk') ? 'EN' : 'UA';
+    btn.setAttribute('aria-label', 'Switch language to ' + (getLang() === 'uk' ? 'English' : 'Ukrainian'));
+  }
+  function applyLang(lang){
+    const t = T[lang] || T.en;
+    // title
+    document.title = t.title;
+    // html lang
+    document.documentElement.lang = (lang === 'uk') ? 'uk' : 'en';
+    // top panel links
+    const back = document.querySelector('#toppanel a.back');
+    if(back) back.innerHTML = '<b>' + t.back + '</b>';
+    const gh = document.querySelectorAll('#toppanel a')[1];
+    if(gh) gh.textContent = t.github;
+    // header
+    const h1 = document.getElementById('hin');
+    if(h1) h1.textContent = t.h1;
+    // section headers
+    const h2s = document.querySelectorAll('.precont > h2');
+    t.h2.forEach(function(val, i){ if(h2s[i]) h2s[i].textContent = val; });
+    // item titles
+    const h3s = document.querySelectorAll('.item > h3');
+    t.h3.forEach(function(val, i){ if(h3s[i]) h3s[i].textContent = val; });
+    // paragraphs inside items
+    const items = document.querySelectorAll('.item');
+    items.forEach(function(it, idx){
+      const ps = it.querySelectorAll('p');
+      const rows = (t.items && t.items[idx]) || [];
+      // preserve embedded media (e.g., Vimeo) if present as the first paragraph
+      const hasIframe = ps.length && ps[0].querySelector('iframe');
+      const start = hasIframe ? 1 : 0;
+      rows.forEach(function(html, j){
+        const p = ps[start + j];
+        if(!p) return;
+        if(p.classList && p.classList.contains('codeinfo')){
+          var m = html.match(/^<span class=\"codeinfo\">([\s\S]*)<\/span>$/);
+          if(m) html = m[1];
+        }
+        p.innerHTML = html;
+      });
+    });
+    // button label and persist
+    localStorage.setItem('lang', lang);
+    const btn = document.getElementById('langToggle');
+    if(btn){
+      btn.textContent = (lang === 'uk') ? 'EN' : 'UA';
+      btn.setAttribute('aria-label', 'Switch language to ' + (lang === 'uk' ? 'English' : 'Ukrainian'));
+    }
+  }
+  function initLang(){ ensureButton(); applyLang(getLang()); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initLang); else initLang();
+  window.addEventListener('storage', function(e){ if(e.key === 'lang') applyLang(localStorage.getItem('lang') || 'en'); });
+})();
+</script>
 </body></html>
 

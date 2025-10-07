@@ -4,7 +4,7 @@ var rad = 720;
 
 var graph = new Object;									
 graph.links = new Array;				
-graph.nodes = mainMenu									
+graph.nodes = (Array.isArray(window.mainMenu) ? window.mainMenu.map(function(n){ return Object.assign({}, n); }) : [] )									
 graph.links.push( { source:  0, target: 1, value: 50 } );	
 graph.links.push( { source:  0, target: 2, value: 50 } );	
 graph.links.push( { source:  0, target: 3, value: 20 } );	
