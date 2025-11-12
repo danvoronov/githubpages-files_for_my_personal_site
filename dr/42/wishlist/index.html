@@ -98,11 +98,6 @@
 
         .category-section {
             margin-bottom: 50px;
-            transition: opacity 0.3s ease;
-        }
-
-        .category-section.faded {
-            opacity: 0.5;
         }
 
         .category-title {
@@ -441,9 +436,6 @@
                 wishlistItems = data || [];
                 renderWishlist();
                 document.getElementById('loading').style.display = 'none';
-                
-                // Оновлюємо opacity після рендерингу
-                setTimeout(updateCategoryOpacity, 100);
             } catch (error) {
                 console.error('Error loading wishlist:', error);
                 showError('Помилка завантаження вішліста: ' + error.message);
@@ -491,9 +483,6 @@
             }
 
             renderWishlist();
-            
-            // Оновлюємо opacity після realtime оновлення
-            setTimeout(updateCategoryOpacity, 100);
         }
 
         // ===========================================
@@ -630,52 +619,6 @@
             }
         }
 
-        // ===========================================
-        // UPDATE OPACITY ON SCROLL
-        // ===========================================
-        function updateCategoryOpacity() {
-            const sections = document.querySelectorAll('.category-section');
-            if (sections.length === 0) return;
-            
-            const headerHeight = document.querySelector('header').offsetHeight;
-            const scrollPosition = window.scrollY + headerHeight + 100; // точка відліку трохи нижче header
-            
-            let closestSection = null;
-            let minDistance = Infinity;
-            
-            // Знаходимо найближчу секцію до точки відліку
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const distance = Math.abs(sectionTop - scrollPosition);
-                
-                if (distance < minDistance) {
-                    minDistance = distance;
-                    closestSection = section;
-                }
-            });
-            
-            // Встановлюємо opacity для всіх секцій
-            sections.forEach(section => {
-                if (section === closestSection) {
-                    section.classList.remove('faded');
-                } else {
-                    section.classList.add('faded');
-                }
-            });
-        }
-
-        // Оновлюємо при скролі
-        let scrollTimeout;
-        window.addEventListener('scroll', () => {
-            clearTimeout(scrollTimeout);
-            scrollTimeout = setTimeout(updateCategoryOpacity, 50);
-        });
-
-        // Оновлюємо при завантаженні та зміні розміру вікна
-        window.addEventListener('load', () => {
-            setTimeout(updateCategoryOpacity, 200);
-        });
-        window.addEventListener('resize', updateCategoryOpacity);
 
         // ===========================================
         // RESERVATION ACTIONS
@@ -761,9 +704,6 @@
         document.addEventListener('DOMContentLoaded', () => {
             loadWishlist();
             subscribeToChanges();
-            
-            // Перша перевірка opacity після рендерингу
-            setTimeout(updateCategoryOpacity, 100);
         });
 
         // Cleanup on page unload
