@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎂 Мій Вішліст на День Народження 2025</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #ff4757 100%);
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 20px 20px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            padding: 12px 20px;
+            background: rgba(255, 107, 53, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        h1 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .header-filters {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .content-wrapper {
+            padding-top: 70px;
+        }
+
+
+        .filter-btn {
+            padding: 5px 12px;
+            border: 1px solid white;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 0;
+            cursor: pointer;
+            font-size: 0.8em;
+            transition: all 0.2s ease;
+            backdrop-filter: blur(10px);
+            white-space: nowrap;
+        }
+
+        .filter-btn:hover {
+            background: rgba(255, 255, 255, 0.35);
+        }
+
+        .filter-btn.active {
+            background: white;
+            color: #ff6b35;
+            font-weight: 600;
+        }
+
+        .category-badge {
+            display: inline-block;
+            padding: 5px 12px;
+            background: rgba(255, 107, 53, 0.1);
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            border-radius: 15px;
+            font-size: 0.85em;
+            margin-bottom: 10px;
+            color: #ff6b35;
+            font-weight: 500;
+        }
+
+
+        .category-section {
+            margin-bottom: 50px;
+            transition: opacity 0.3s ease;
+        }
+
+        .category-section.faded {
+            opacity: 0.5;
+        }
+
+        .category-title {
+            font-size: 1.1em;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 500;
+        }
+
+        .category-title::after {
+            content: '';
+            flex: 1;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .wishlist-grid {
+            display: grid;
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+
+        /* Перша категорія: < 300₴ - маленькі карточки */
+        .category-section[id*="< 300₴"] .wishlist-grid {
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        }
+
+        /* Друга категорія: 300-1000₴ - середні карточки */
+        .category-section[id*="300-1000₴"] .wishlist-grid {
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        }
+
+        /* Третя категорія: 1000-3500₴ - великі карточки */
+        .category-section[id*="1000-3500₴"] .wishlist-grid {
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+        }
+
+        .wishlist-item {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 0;
+            padding: 0;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .item-button-wrapper {
+            padding: 15px;
+            padding-bottom: 10px;
+        }
+
+        .item-body {
+            display: flex;
+            gap: 15px;
+            padding: 10px 15px 15px 15px;
+        }
+
+        .item-emoji {
+            flex-shrink: 0;
+            font-size: 3em;
+            line-height: 1;
+            width: 60px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        /* Маленькі емодзі для дешевих подарунків */
+        .category-section[id*="< 300₴"] .item-emoji {
+            font-size: 2.2em;
+            width: 45px;
+        }
+
+        /* Середні емодзі */
+        .category-section[id*="300-1000₴"] .item-emoji {
+            font-size: 3em;
+            width: 60px;
+        }
+
+        /* Великі емодзі для дорогих подарунків */
+        .category-section[id*="1000-3500₴"] .item-emoji {
+            font-size: 3.8em;
+            width: 75px;
+        }
+
+        .item-details {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .wishlist-item.reserved {
+            background: rgba(240, 240, 240, 0.95);
+            opacity: 0.8;
+        }
+
+        .wishlist-item.my-reservation {
+            border: 3px solid #4CAF50;
+            background: rgba(240, 255, 240, 0.95);
+        }
+
+        .wishlist-item.starred {
+            box-shadow: 0 0 25px rgba(138, 43, 226, 0.6);
+            border: 2px solid rgba(138, 43, 226, 0.4);
+        }
+
+        .item-title {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            margin-top: 0;
+            color: #333;
+            font-weight: 600;
+        }
+
+        /* Маленькі заголовки для дешевих подарунків */
+        .category-section[id*="< 300₴"] .item-title {
+            font-size: 1em;
+        }
+
+        /* Середні заголовки */
+        .category-section[id*="300-1000₴"] .item-title {
+            font-size: 1.2em;
+        }
+
+        /* Великі заголовки для дорогих подарунків */
+        .category-section[id*="1000-3500₴"] .item-title {
+            font-size: 1.4em;
+        }
+
+        .item-description {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        /* Менший текст для дешевих подарунків */
+        .category-section[id*="< 300₴"] .item-description {
+            font-size: 0.85em;
+        }
+
+        /* Більший текст для дорогих подарунків */
+        .category-section[id*="1000-3500₴"] .item-description {
+            font-size: 1.05em;
+        }
+
+        .item-link {
+            color: #ff6b35;
+            text-decoration: none;
+            word-break: break-all;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .item-link:hover {
+            text-decoration: underline;
+        }
+
+        .item-price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+
+        .action-btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 0;
+            font-size: 0.95em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .reserve-btn {
+            background: #7fa582;
+            color: white;
+        }
+
+        .reserve-btn:hover {
+            background: #4CAF50;
+            transform: scale(1.02);
+        }
+
+        .cancel-btn {
+            background: #2196F3;
+            color: white;
+        }
+
+        .cancel-btn:hover {
+            background: #0b7dda;
+            transform: scale(1.02);
+        }
+
+        .reserved-btn {
+            background: #FFC0CB;
+            color: #666;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        .action-btn:disabled {
+            background: #FFC0CB;
+            color: #666;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        .loading {
+            text-align: center;
+            color: white;
+            font-size: 1.5em;
+            padding: 50px;
+        }
+
+        .error {
+            background: #f44336;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+
+        .empty-state {
+            text-align: center;
+            color: white;
+            font-size: 1.3em;
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.2em;
+            }
+
+            header {
+                padding: 10px 15px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .header-filters {
+                width: 100%;
+                justify-content: flex-start;
+            }
+
+            .content-wrapper {
+                padding-top: 100px;
+            }
+
+            .wishlist-grid,
+            .category-section[id*="< 300₴"] .wishlist-grid,
+            .category-section[id*="300-1000₴"] .wishlist-grid,
+            .category-section[id*="1000-3500₴"] .wishlist-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-btn {
+                font-size: 0.75em;
+                padding: 4px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎁 Дан Вішліст 2025</h1>
+            <div class="header-filters">
+                <button class="filter-btn" onclick="scrollToCategory('< 300₴ ❤️')">приблизно < 300₴</button>
+                <button class="filter-btn" onclick="scrollToCategory('300-1000₴ 🎁')">приблизно 300-1000₴</button>
+                <button class="filter-btn" onclick="scrollToCategory('1000-3500₴ ✨')">приблизно 1000-3500₴</button>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <div id="error-container"></div>
+            <div id="loading" class="loading">Завантаження вішліста...</div>
+            <div id="wishlist-container"></div>
+        </div>
+    </div>
+
+
+    <script>
+        // ===========================================
+        // CONFIGURATION - ЗАМЕНИТЕ НА ВАШИ ДАННЫЕ
+        // ===========================================
+        const SUPABASE_URL = 'https://vfrjtyhimgwgwhzkqodj.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZmcmp0eWhpbWd3Z3doemtxb2RqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI5MDY3MDgsImV4cCI6MjA3ODQ4MjcwOH0.Fb_NmogsQ-2xFzSFfDC-s3940FYVbZv_bH8qjy6LvLk';
+
+        // ===========================================
+        // INITIALIZATION
+        // ===========================================
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        
+        let wishlistItems = [];
+        let realtimeChannel = null;
+
+        // Generate or retrieve user token
+        function getUserToken() {
+            let token = localStorage.getItem('wishlist_user_token');
+            if (!token) {
+                token = 'user_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+                localStorage.setItem('wishlist_user_token', token);
+            }
+            return token;
+        }
+
+        const userToken = getUserToken();
+
+        // ===========================================
+        // DATA LOADING
+        // ===========================================
+        async function loadWishlist() {
+            try {
+                const { data, error } = await supabase
+                    .from('wishlist')
+                    .select('*')
+                    .order('created_at', { ascending: true });
+
+                if (error) throw error;
+
+                wishlistItems = data || [];
+                renderWishlist();
+                document.getElementById('loading').style.display = 'none';
+                
+                // Оновлюємо opacity після рендерингу
+                setTimeout(updateCategoryOpacity, 100);
+            } catch (error) {
+                console.error('Error loading wishlist:', error);
+                showError('Помилка завантаження вішліста: ' + error.message);
+                document.getElementById('loading').style.display = 'none';
+            }
+        }
+
+        // ===========================================
+        // REALTIME SUBSCRIPTION
+        // ===========================================
+        function subscribeToChanges() {
+            realtimeChannel = supabase
+                .channel('wishlist_changes')
+                .on(
+                    'postgres_changes',
+                    {
+                        event: '*',
+                        schema: 'public',
+                        table: 'wishlist'
+                    },
+                    (payload) => {
+                        console.log('Realtime update:', payload);
+                        handleRealtimeUpdate(payload);
+                    }
+                )
+                .subscribe();
+        }
+
+        function handleRealtimeUpdate(payload) {
+            const { eventType, new: newRecord, old: oldRecord } = payload;
+
+            switch (eventType) {
+                case 'INSERT':
+                    wishlistItems.push(newRecord);
+                    break;
+                case 'UPDATE':
+                    const updateIndex = wishlistItems.findIndex(item => item.id === newRecord.id);
+                    if (updateIndex !== -1) {
+                        wishlistItems[updateIndex] = newRecord;
+                    }
+                    break;
+                case 'DELETE':
+                    wishlistItems = wishlistItems.filter(item => item.id !== oldRecord.id);
+                    break;
+            }
+
+            renderWishlist();
+            
+            // Оновлюємо opacity після realtime оновлення
+            setTimeout(updateCategoryOpacity, 100);
+        }
+
+        // ===========================================
+        // UTILITY FUNCTIONS FOR URL PARSING
+        // ===========================================
+        function parseNotesForUrl(notes) {
+            if (!notes) return { text: '', url: null };
+            
+            // Регулярний вираз для пошуку URL
+            const urlRegex = /(https?:\/\/[^\s]+)/g;
+            const match = notes.match(urlRegex);
+            
+            if (match && match.length > 0) {
+                const url = match[0];
+                const text = notes.replace(urlRegex, '').trim();
+                return { text, url };
+            }
+            
+            return { text: notes, url: null };
+        }
+
+        // ===========================================
+        // RENDERING
+        // ===========================================
+        function renderWishlist() {
+            const container = document.getElementById('wishlist-container');
+
+            if (wishlistItems.length === 0) {
+                container.innerHTML = '<div class="empty-state">🎁 Немає подарунків</div>';
+                return;
+            }
+
+            // Групуємо подарунки за категоріями у порядку від дешевих до дорогих
+            const categories = [
+                { id: '< 300₴ ❤️', display: 'приблизно < 300₴' },
+                { id: '300-1000₴ 🎁', display: 'приблизно 300-1000₴' },
+                { id: '1000-3500₴ ✨', display: 'приблизно 1000-3500₴' }
+            ];
+
+            let html = '';
+            
+            categories.forEach(category => {
+                const itemsInCategory = wishlistItems.filter(item => item.category === category.id);
+                
+                // Сортуємо: спочатку is_starred, потім решта
+                const sortedItems = itemsInCategory.sort((a, b) => {
+                    if (a.is_starred && !b.is_starred) return -1;
+                    if (!a.is_starred && b.is_starred) return 1;
+                    return 0;
+                });
+                
+                if (sortedItems.length > 0) {
+                    html += `
+                        <div class="category-section" id="category-${category.id}">
+                            <h2 class="category-title">${category.display}</h2>
+                            <div class="wishlist-grid">
+                                ${sortedItems.map(item => renderItem(item)).join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+            });
+
+            container.innerHTML = html;
+        }
+
+        function renderItem(item) {
+            const isReserved = item.reserved_by !== null;
+            const isMyReservation = item.reserved_by_token === userToken;
+            const isStarred = item.is_starred;
+            let itemClass = '';
+            
+            if (isMyReservation) {
+                itemClass = 'my-reservation';
+            } else if (isReserved) {
+                itemClass = 'reserved';
+            }
+            
+            if (isStarred) {
+                itemClass += ' starred';
+            }
+            
+            const { text, url } = parseNotesForUrl(item.notes);
+
+            return `
+                <div class="wishlist-item ${itemClass}">
+                    <div class="item-button-wrapper">
+                        ${isMyReservation ? `
+                            <button class="action-btn cancel-btn" onclick="cancelReservation(${item.id})">
+                                Передумати
+                            </button>
+                        ` : !isReserved ? `
+                            <button class="action-btn reserve-btn" onclick="reserveItem(${item.id})">
+                                Забронювати
+                            </button>
+                        ` : `
+                            <button class="action-btn reserved-btn" disabled>
+                                Уже забронювано
+                            </button>
+                        `}
+                    </div>
+                    
+                    <div class="item-body">
+                        ${item.emoji ? `
+                            <div class="item-emoji">${item.emoji}</div>
+                        ` : ''}
+                        
+                        <div class="item-details">
+                            <h3 class="item-title">${escapeHtml(item.title)}</h3>
+                            
+                            ${text ? `<p class="item-description">${escapeHtml(text)}</p>` : ''}
+                            
+                            ${url ? `<a href="${escapeHtml(url)}" target="_blank" class="item-link">🔗 Посилання на товар</a>` : ''}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // ===========================================
+        // SCROLL TO CATEGORY
+        // ===========================================
+        function scrollToCategory(category) {
+            const element = document.getElementById(`category-${category}`);
+            if (element) {
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = elementPosition - headerHeight - 20; // 20px додатковий відступ
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // ===========================================
+        // UPDATE OPACITY ON SCROLL
+        // ===========================================
+        function updateCategoryOpacity() {
+            const sections = document.querySelectorAll('.category-section');
+            if (sections.length === 0) return;
+            
+            const headerHeight = document.querySelector('header').offsetHeight;
+            const scrollPosition = window.scrollY + headerHeight + 100; // точка відліку трохи нижче header
+            
+            let closestSection = null;
+            let minDistance = Infinity;
+            
+            // Знаходимо найближчу секцію до точки відліку
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const distance = Math.abs(sectionTop - scrollPosition);
+                
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    closestSection = section;
+                }
+            });
+            
+            // Встановлюємо opacity для всіх секцій
+            sections.forEach(section => {
+                if (section === closestSection) {
+                    section.classList.remove('faded');
+                } else {
+                    section.classList.add('faded');
+                }
+            });
+        }
+
+        // Оновлюємо при скролі
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(updateCategoryOpacity, 50);
+        });
+
+        // Оновлюємо при завантаженні та зміні розміру вікна
+        window.addEventListener('load', () => {
+            setTimeout(updateCategoryOpacity, 200);
+        });
+        window.addEventListener('resize', updateCategoryOpacity);
+
+        // ===========================================
+        // RESERVATION ACTIONS
+        // ===========================================
+        async function reserveItem(itemId) {
+            try {
+                const { data, error } = await supabase
+                    .from('wishlist')
+                    .update({
+                        reserved_by: 'anonymous',
+                        reserved_by_token: userToken,
+                        reserved_at: new Date().toISOString()
+                    })
+                    .eq('id', itemId)
+                    .is('reserved_by', null)
+                    .select();
+
+                if (error) throw error;
+
+                if (!data || data.length === 0) {
+                    alert('Цей подарунок вже зарезервовано кимось іншим!');
+                    await loadWishlist(); // Reload to get latest state
+                } else {
+                    // Success - realtime will update the UI
+                }
+            } catch (error) {
+                console.error('Error reserving item:', error);
+                alert('Помилка при резервуванні: ' + error.message);
+            }
+        }
+
+        async function cancelReservation(itemId) {
+            if (!confirm('Ви впевнені, що хочете скасувати бронювання?')) {
+                return;
+            }
+
+            try {
+                const { data, error } = await supabase
+                    .from('wishlist')
+                    .update({
+                        reserved_by: null,
+                        reserved_by_token: null,
+                        reserved_at: null
+                    })
+                    .eq('id', itemId)
+                    .eq('reserved_by_token', userToken)
+                    .select();
+
+                if (error) throw error;
+
+                if (!data || data.length === 0) {
+                    alert('Не вдалося скасувати резервацію. Можливо, ви не є власником цієї резервації.');
+                    await loadWishlist();
+                }
+            } catch (error) {
+                console.error('Error canceling reservation:', error);
+                alert('Помилка при скасуванні резервації: ' + error.message);
+            }
+        }
+
+
+
+        // ===========================================
+        // UTILITY FUNCTIONS
+        // ===========================================
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function showError(message) {
+            const errorContainer = document.getElementById('error-container');
+            errorContainer.innerHTML = `<div class="error">${escapeHtml(message)}</div>`;
+            setTimeout(() => {
+                errorContainer.innerHTML = '';
+            }, 5000);
+        }
+
+        // ===========================================
+        // INITIALIZATION
+        // ===========================================
+        document.addEventListener('DOMContentLoaded', () => {
+            loadWishlist();
+            subscribeToChanges();
+            
+            // Перша перевірка opacity після рендерингу
+            setTimeout(updateCategoryOpacity, 100);
+        });
+
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', () => {
+            if (realtimeChannel) {
+                supabase.removeChannel(realtimeChannel);
+            }
+        });
+    </script>
+</body>
+</html>
