@@ -123,24 +123,22 @@
             margin-bottom: 20px;
         }
 
-        /* Перша категорія: < 300₴ - маленькі карточки */
-        .category-section[id*="< 300₴"] .wishlist-grid {
+
+        .category-section[id*="s"] .wishlist-grid {
             grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
         }
 
-        /* Друга категорія: 300-1000₴ - середні карточки */
-        .category-section[id*="300-1000₴"] .wishlist-grid {
+        .category-section[id*="m"] .wishlist-grid {
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         }
 
-        /* Третя категорія: 1000-3500₴ - великі карточки */
-        .category-section[id*="1000-3500₴"] .wishlist-grid {
+        .category-section[id*="l"] .wishlist-grid {
             grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
         }
 
         .wishlist-item {
             background: rgba(255, 255, 255, 0.95);
-            border-radius: 0;
+            border-radius: 2px;
             padding: 0;
             border: 1px solid rgba(255, 255, 255, 0.3);
             position: relative;
@@ -171,19 +169,19 @@
         }
 
         /* Маленькі емодзі для дешевих подарунків */
-        .category-section[id*="< 300₴"] .item-emoji {
+        .category-section[id*="s"] .item-emoji {
             font-size: 2.2em;
             width: 45px;
         }
 
         /* Середні емодзі */
-        .category-section[id*="300-1000₴"] .item-emoji {
+        .category-section[id*="m"] .item-emoji {
             font-size: 3em;
             width: 60px;
         }
 
         /* Великі емодзі для дорогих подарунків */
-        .category-section[id*="1000-3500₴"] .item-emoji {
+        .category-section[id*="l"] .item-emoji {
             font-size: 3.8em;
             width: 75px;
         }
@@ -204,8 +202,9 @@
         }
 
         .wishlist-item.starred {
-            box-shadow: 0 0 25px rgba(138, 43, 226, 0.6);
-            border: 2px solid rgba(138, 43, 226, 0.4);
+            box-shadow: 0 0 15px rgba(138, 43, 226, 0.6);
+            border: 3px solid rgba(138, 43, 226, 0.4);
+            border-radius: 3px;
         }
 
         .item-title {
@@ -217,17 +216,17 @@
         }
 
         /* Маленькі заголовки для дешевих подарунків */
-        .category-section[id*="< 300₴"] .item-title {
+        .category-section[id*="s"] .item-title {
             font-size: 1em;
         }
 
         /* Середні заголовки */
-        .category-section[id*="300-1000₴"] .item-title {
+        .category-section[id*="m"] .item-title {
             font-size: 1.2em;
         }
 
         /* Великі заголовки для дорогих подарунків */
-        .category-section[id*="1000-3500₴"] .item-title {
+        .category-section[id*="l"] .item-title {
             font-size: 1.4em;
         }
 
@@ -238,12 +237,12 @@
         }
 
         /* Менший текст для дешевих подарунків */
-        .category-section[id*="< 300₴"] .item-description {
+        .category-section[id*="s"] .item-description {
             font-size: 0.85em;
         }
 
         /* Більший текст для дорогих подарунків */
-        .category-section[id*="1000-3500₴"] .item-description {
+        .category-section[id*="l"] .item-description {
             font-size: 1.05em;
         }
 
@@ -340,6 +339,11 @@
             backdrop-filter: blur(10px);
         }
 
+        .monobanka a {
+            color: black;
+            font-weight: bold;
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 1.2em;
@@ -362,9 +366,9 @@
             }
 
             .wishlist-grid,
-            .category-section[id*="< 300₴"] .wishlist-grid,
-            .category-section[id*="300-1000₴"] .wishlist-grid,
-            .category-section[id*="1000-3500₴"] .wishlist-grid {
+            .category-section[id*="s"] .wishlist-grid,
+            .category-section[id*="m"] .wishlist-grid,
+            .category-section[id*="l"] .wishlist-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -378,11 +382,12 @@
 <body>
     <div class="container">
         <header>
-            <h1>🎁 Дан Вішліст 2025</h1>
+            <h1>Дан 🎁 Вішліст (2025)</h1>
+            <div class="monobanka">чи можна 💸 <a href="https://send.monobank.ua/jar/9eDKjTLDou">поповнити монобанку</a></div>
             <div class="header-filters">
-                <button class="filter-btn" onclick="scrollToCategory('< 300₴ ❤️')">приблизно < 300₴</button>
-                <button class="filter-btn" onclick="scrollToCategory('300-1000₴ 🎁')">приблизно 300-1000₴</button>
-                <button class="filter-btn" onclick="scrollToCategory('1000-3500₴ ✨')">приблизно 1000-3500₴</button>
+                <button class="filter-btn" onclick="scrollToCategory('s')">меньше 300₴</button>
+                <button class="filter-btn" onclick="scrollToCategory('m')">300-1500₴</button>
+                <button class="filter-btn" onclick="scrollToCategory('l')">більше 1500₴</button>
             </div>
         </header>
 
@@ -517,9 +522,9 @@
 
             // Групуємо подарунки за категоріями у порядку від дешевих до дорогих
             const categories = [
-                { id: '< 300₴ ❤️', display: 'приблизно < 300₴' },
-                { id: '300-1000₴ 🎁', display: 'приблизно 300-1000₴' },
-                { id: '1000-3500₴ ✨', display: 'приблизно 1000-3500₴' }
+                { id: 's', display: 'приблизно до 7€' },
+                { id: 'm', display: 'приблизно 7-30€' },
+                { id: 'l', display: 'приблизно від 30€' }
             ];
 
             let html = '';
@@ -576,11 +581,11 @@
                             </button>
                         ` : !isReserved ? `
                             <button class="action-btn reserve-btn" onclick="reserveItem(${item.id})">
-                                Забронювати
+                                Я зможу!
                             </button>
                         ` : `
                             <button class="action-btn reserved-btn" disabled>
-                                Уже забронювано
+                                Забронювано
                             </button>
                         `}
                     </div>
@@ -595,7 +600,7 @@
                             
                             ${text ? `<p class="item-description">${escapeHtml(text)}</p>` : ''}
                             
-                            ${url ? `<a href="${escapeHtml(url)}" target="_blank" class="item-link">[ Посилання приклад ]</a>` : ''}
+                            ${url ? `<a href="${escapeHtml(url)}" target="_blank" class="item-link">[ Дивитися приклад ]</a>` : ''}
                         </div>
                     </div>
                 </div>
