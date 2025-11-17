@@ -1,0 +1,245 @@
+/* Robot Stars Effect - CSS */
+/* Подключите этот файл для визуальных стилей эффекта */
+
+.robot-stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    transform-origin: 50% 50%;
+}
+
+.robot-star {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+    animation: fall infinite;
+    will-change: transform;
+    image-rendering: pixelated;
+}
+
+/* Следим за моментами резких прыжков через animation events */
+.robot-star.jumping {
+    animation: none;
+}
+
+.robot-star::before,
+.robot-star::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    transform: translate(-50%, -50%);
+}
+
+.robot-star::before {
+    transform: translate(-50%, -50%) rotate(60deg);
+}
+
+.robot-star::after {
+    transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.robot-star .line-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    transform: translate(-50%, -50%);
+}
+
+/* След от прыжка */
+.robot-star-trail {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+    animation: fadeOut 0.8s ease-out forwards;
+    opacity: 0.6;
+}
+
+.robot-star-trail::before,
+.robot-star-trail::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    transform: translate(-50%, -50%);
+}
+
+.robot-star-trail::before {
+    transform: translate(-50%, -50%) rotate(60deg);
+}
+
+.robot-star-trail::after {
+    transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.robot-star-trail .line-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    transform: translate(-50%, -50%);
+}
+
+/* Анимация исчезновения следа */
+@keyframes fadeOut {
+    0% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
+/* Роботизированные анимации падения */
+@keyframes fall {
+    0% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+        animation-timing-function: steps(1);
+    }
+    12% {
+        transform: translateX(0) translateY(120px) rotate(0deg);
+        animation-timing-function: steps(1);
+    }
+    13% {
+        transform: translateX(-40px) translateY(120px) rotate(90deg);
+        animation-timing-function: steps(1);
+    }
+    25% {
+        transform: translateX(-40px) translateY(250px) rotate(90deg);
+        animation-timing-function: steps(1);
+    }
+    26% {
+        transform: translateX(60px) translateY(250px) rotate(180deg);
+        animation-timing-function: steps(1);
+    }
+    50% {
+        transform: translateX(60px) translateY(500px) rotate(180deg);
+        animation-timing-function: steps(1);
+    }
+    51% {
+        transform: translateX(-20px) translateY(500px) rotate(270deg);
+        animation-timing-function: steps(1);
+    }
+    75% {
+        transform: translateX(-20px) translateY(750px) rotate(270deg);
+        animation-timing-function: steps(1);
+    }
+    76% {
+        transform: translateX(40px) translateY(750px) rotate(360deg);
+        animation-timing-function: steps(1);
+    }
+    100% {
+        transform: translateX(40px) translateY(1000px) rotate(360deg);
+    }
+}
+
+@keyframes fall2 {
+    0% {
+        transform: translateX(0) translateY(0) rotate(0deg) scale(1);
+        animation-timing-function: steps(2);
+    }
+    16% {
+        transform: translateX(0) translateY(160px) rotate(0deg) scale(1);
+        animation-timing-function: steps(1);
+    }
+    17% {
+        transform: translateX(80px) translateY(160px) rotate(45deg) scale(1.3);
+        animation-timing-function: steps(2);
+    }
+    33% {
+        transform: translateX(80px) translateY(330px) rotate(45deg) scale(1.3);
+        animation-timing-function: steps(1);
+    }
+    34% {
+        transform: translateX(-50px) translateY(330px) rotate(180deg) scale(0.7);
+        animation-timing-function: steps(2);
+    }
+    50% {
+        transform: translateX(-50px) translateY(500px) rotate(180deg) scale(0.7);
+        animation-timing-function: steps(1);
+    }
+    51% {
+        transform: translateX(20px) translateY(500px) rotate(270deg) scale(1.1);
+        animation-timing-function: steps(2);
+    }
+    66% {
+        transform: translateX(20px) translateY(660px) rotate(270deg) scale(1.1);
+        animation-timing-function: steps(1);
+    }
+    67% {
+        transform: translateX(30px) translateY(660px) rotate(360deg) scale(1);
+        animation-timing-function: steps(2);
+    }
+    100% {
+        transform: translateX(30px) translateY(1000px) rotate(360deg) scale(1);
+    }
+}
+
+@keyframes fall3 {
+    0% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+        animation-timing-function: steps(1);
+    }
+    10% {
+        transform: translateX(0) translateY(100px) rotate(0deg);
+        animation-timing-function: steps(1);
+    }
+    11% {
+        transform: translateX(-60px) translateY(100px) rotate(-90deg);
+        animation-timing-function: steps(1);
+    }
+    20% {
+        transform: translateX(-60px) translateY(200px) rotate(-90deg);
+        animation-timing-function: steps(1);
+    }
+    21% {
+        transform: translateX(40px) translateY(200px) rotate(0deg);
+        animation-timing-function: steps(1);
+    }
+    40% {
+        transform: translateX(40px) translateY(400px) rotate(0deg);
+        animation-timing-function: steps(1);
+    }
+    41% {
+        transform: translateX(-40px) translateY(400px) rotate(-180deg);
+        animation-timing-function: steps(1);
+    }
+    60% {
+        transform: translateX(-40px) translateY(600px) rotate(-180deg);
+        animation-timing-function: steps(1);
+    }
+    61% {
+        transform: translateX(70px) translateY(600px) rotate(90deg);
+        animation-timing-function: steps(1);
+    }
+    80% {
+        transform: translateX(70px) translateY(800px) rotate(90deg);
+        animation-timing-function: steps(1);
+    }
+    81% {
+        transform: translateX(0px) translateY(800px) rotate(180deg);
+        animation-timing-function: steps(1);
+    }
+    100% {
+        transform: translateX(0px) translateY(1000px) rotate(180deg);
+    }
+}
