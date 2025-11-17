@@ -21,6 +21,10 @@
             margin: 0;
         }
 
+        #wishlist-container {
+            padding-top: 24px;
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -249,15 +253,18 @@
 
         .item-link {
             color: #ff6b35;
+            background-color: #6f19a4;
             text-decoration: none;
             word-break: break-all;
-            font-size: 0.9em;
+            font-size: 1.1em;
+            padding: 2px 8px 4px;
             display: inline-block;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .item-link:hover {
             text-decoration: underline;
+            background-color: white;
         }
 
         .item-price {
@@ -601,7 +608,7 @@
                             
                             ${text ? `<p class="item-description">${escapeHtml(text)}</p>` : ''}
                             
-                            ${url ? `<a href="${escapeHtml(url)}" target="_blank" class="item-link">[ Дивитися приклад ]</a>` : ''}
+                            ${url ? `<a href="${escapeHtml(url)}" target="_blank" class="item-link">[ Як це виглядає? ]</a>` : ''}
                         </div>
                     </div>
                 </div>
