@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🎂 Мій Вішліст на День Народження 2025</title>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <link rel="stylesheet" href="robot-stars.css">
     <style>
         * {
@@ -408,118 +407,244 @@
 
 
     <script>
-        // ===========================================
-        // CONFIGURATION - ЗАМЕНИТЕ НА ВАШИ ДАННЫЕ
-        // ===========================================
-        const SUPABASE_URL = 'https://vfrjtyhimgwgwhzkqodj.supabase.co';
-        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZmcmp0eWhpbWd3Z3doemtxb2RqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI5MDY3MDgsImV4cCI6MjA3ODQ4MjcwOH0.Fb_NmogsQ-2xFzSFfDC-s3940FYVbZv_bH8qjy6LvLk';
-
-        // ===========================================
-        // INITIALIZATION
-        // ===========================================
-        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-        
-        let wishlistItems = [];
-        let realtimeChannel = null;
-
-        // Generate or retrieve user token
-        function getUserToken() {
-            let token = localStorage.getItem('wishlist_user_token');
-            if (!token) {
-                token = 'user_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-                localStorage.setItem('wishlist_user_token', token);
+        // Статичні дані вішліста, зняті із Supabase
+        const wishlistItems = [
+            {
+                "id": 19,
+                "title": "Блокнот у крапку",
+                "emoji": "📓",
+                "category": "s",
+                "is_starred": false,
+                "notes": "Axent https://office-mix.com.ua/ua/kniga-zapisna-partnersoft-125h195-96-arkushiv-tochka-axent-8310/",
+                "reserved_by": null,
+                "reserved_by_token": null,
+                "reserved_at": null,
+                "created_at": "2025-11-12T12:21:02.980762+02:00"
+            },
+            {
+                "id": 2,
+                "title": "Компактна клавіатура USB (механіка)",
+                "emoji": "⌨️",
+                "category": "l",
+                "is_starred": true,
+                "notes": "Без цифрового блоку. Тиха. Наприклад, A4Tech Bloody S87 - краще біла Energy White https://www.bloody.com/en/product.php?pid=11&id=352",
+                "reserved_by": null,
+                "reserved_by_token": null,
+                "reserved_at": null,
+                "created_at": "2025-11-12T12:21:02.980762+02:00"
+            },
+            {
+                "id": 25,
+                "title": "Приправа для картоплі АТБ",
+                "emoji": "🤌",
+                "category": "s",
+                "is_starred": false,
+                "notes": "https://www.atbmarket.com/product/priprava-25g-svoa-linia-do-kartopli-sumis-pranoaromaticna",
+                "reserved_by": "anonymous",
+                "reserved_by_token": "user_1763617447278_skrkrvq8c",
+                "reserved_at": "2025-11-20T07:46:57.205+02:00",
+                "created_at": "2025-11-12T16:20:43.241636+02:00"
+            },
+            {
+                "id": 24,
+                "title": "Підписка на Claude Code",
+                "emoji": "🤖",
+                "category": "m",
+                "is_starred": false,
+                "notes": "Pro коштує 20$/місяц https://claude.com/product/claude-code",
+                "reserved_by": "anonymous",
+                "reserved_by_token": "user_1763038641266_lvkzvan4v",
+                "reserved_at": "2025-11-22T12:11:13.041+02:00",
+                "created_at": "2025-11-12T16:18:18.978366+02:00"
+            },
+            {
+                "id": 21,
+                "title": "Рушники 140х70 см",
+                "emoji": "🚿",
+                "category": "m",
+                "is_starred": false,
+                "notes": "Для ванної, 2 шт https://rozetka.com.ua/ua/lovely-svi-6906611241198/p504711504/",
+                "reserved_by": null,
+                "reserved_by_token": null,
+                "reserved_at": null,
+                "created_at": "2025-11-12T12:21:02.980762+02:00"
+            },
+            {
+                "id": 29,
+                "title": "Баскетбольний мяч",
+                "emoji": "🏀",
+                "category": "m",
+                "is_starred": false,
+                "notes": "Розмір: 6 https://hotline.ua/sport/igrovye-myachi/23116/",
+                "reserved_by": null,
+                "reserved_by_token": null,
+                "reserved_at": null,
+                "created_at": "2025-11-13T15:50:47.163442+02:00"
+            },
+            {
+                "id": 36,
+                "title": "Гра Вибухові кошенята",
+                "emoji": "💥",
+                "category": "m",
+                "is_starred": false,
+                "notes": "Та протектори для цих карт https://desktopgames.com.ua/ua/vibuhovi-koshenyata.html",
+                "reserved_by": "anonymous",
+                "reserved_by_token": "user_1763591195180_floosd9iu",
+                "reserved_at": "2025-11-27T19:38:32.419+02:00",
+                "created_at": "2025-11-17T20:59:14.861156+02:00"
+            },
+            {
+                "id": 12,
+                "title": "Пляшка для води 0.75-1л",
+                "emoji": "💧",
+                "category": "m",
+                "is_starred": true,
+                "notes": "Краще Uzspace https://rozetka.com.ua/ua/uzspace-6955482333365/p439715081/",
+                "reserved_by": "anonymous",
+                "reserved_by_token": "user_1763591195180_floosd9iu",
+                "reserved_at": "2025-11-27T19:38:50.416+02:00",
+                "created_at": "2025-11-12T12:21:02.980762+02:00"
+            },
+            {
+                "id": 23,
+                "title": "USB Кабель для зарядки ноутбука",
+                "emoji": "🔌",
+                "category": "s",
+                "is_starred": true,
+                "notes": "Type-C to Type-C. 100 Watt 2 м https://rozetka.com.ua/ua/baseus-catklf-alg1/p352176084/",
+                "reserved_by": null,
+                "reserved_by_token": null,
+                "reserved_at": null,
+                "created_at": "2025-11-12T15:19:14.318247+02:00"
+            },
+            {
+                "id": 3,
+                "title": "Урбан рюкзак",
+                "emoji": "🎒",
+                "category": "l",
+                "is_starred": false,
+                "notes": "Краще темно синій, з місцем під ноутбук https://roncato.ua/ua/delovoj-rjukzak-17-roncato-easy-office-41272123",
+                "reserved_by": null,
+                "reserved_by_token": null,
+                "reserved_at": null,
+                "created_at": "2025-11-12T12:21:02.980762+02:00"
+            },
+            {
+                "id": 30,
+                "title": "Набір маркерів для малювання",
+                "emoji": "🖍️",
+                "category": "s",
+                "is_starred": false,
+                "notes": "від 24 шт. Краще двостороні https://leo-shop.com.ua/ua/nabor-sketch-markerov-dlia-rysovanyia-touch-48-sht./",
+                "reserved_by": null,
+                "reserved_by_token": null,
+                "reserved_at": null,
+                "created_at": "2025-11-14T12:25:50.844375+02:00"
+            },
+            {
+                "id": 28,
+                "title": "Гітара Укулеле",
+                "emoji": "🎼",
+                "category": "m",
+                "is_starred": false,
+                "notes": "Stagg N https://rockstar.com.ua/ua/stagg-n-us-white-rasprodazha-demo2-uk.html",
+                "reserved_by": null,
+                "reserved_by_token": null,
+                "reserved_at": null,
+                "created_at": "2025-11-13T15:43:55.420189+02:00"
+            },
+            {
+                "id": 35,
+                "title": "Raspberry Pi",
+                "emoji": "⚙️",
+                "category": "l",
+                "is_starred": false,
+                "notes": "мініатюрні одноплатні комп’ютери https://raspberrypi.vdmais.ua/",
+                "reserved_by": null,
+                "reserved_by_token": null,
+                "reserved_at": null,
+                "created_at": "2025-11-17T12:30:51.991845+02:00"
+            },
+            {
+                "id": 32,
+                "title": "LEGO Classic",
+                "emoji": "👾",
+                "category": "l",
+                "is_starred": false,
+                "notes": "Коробка кубиків, десь 800+ деталей https://hotline.ua/ua/deti/detskie-konstruktory/121202-316672/?sort=priceDown",
+                "reserved_by": null,
+                "reserved_by_token": null,
+                "reserved_at": null,
+                "created_at": "2025-11-14T12:30:24.39976+02:00"
+            },
+            {
+                "id": 33,
+                "title": "LEGO Speed Champions Mercedes",
+                "emoji": "🏎️",
+                "category": "l",
+                "is_starred": false,
+                "notes": "Mercedes-AMG G 63 і Mercedes-AMG SL 63 (набір 76924) https://hotline.ua/ua/deti-detskie-konstruktory/lego-mercedes-amg-g-63-mercedes-amg-sl-63-76924/ ",
+                "reserved_by": null,
+                "reserved_by_token": null,
+                "reserved_at": null,
+                "created_at": "2025-11-14T12:34:58.575117+02:00"
+            },
+            {
+                "id": 34,
+                "title": "LEGO Ideas Колекція мінералів",
+                "emoji": "🪨",
+                "category": "l",
+                "is_starred": false,
+                "notes": "набір 21362 https://hotline.ua/ua/deti-detskie-konstruktory/lego-ideas-kolekcya-mneralv-21362/",
+                "reserved_by": null,
+                "reserved_by_token": null,
+                "reserved_at": null,
+                "created_at": "2025-11-14T12:37:09.934265+02:00"
+            },
+            {
+                "id": 6,
+                "title": "Набір для чайної церемонії",
+                "emoji": "🍵",
+                "category": "l",
+                "is_starred": false,
+                "notes": "Чабань. Чайник, піалки, підставка, із чохлом https://rozetka.com.ua/ua/415199481/p415199481/",
+                "reserved_by": "anonymous",
+                "reserved_by_token": "user_1762946957034_2lvq9x7ur",
+                "reserved_at": "2025-11-12T16:25:20.753+02:00",
+                "created_at": "2025-11-12T12:21:02.980762+02:00"
+            },
+            {
+                "id": 1,
+                "title": "Микрофон для стрімів/подкастів",
+                "emoji": "🎤",
+                "category": "l",
+                "is_starred": false,
+                "notes": " Динамічний, USB підключення. Краще, Fifine та білий https://fifine.com.ua/category/mikrofony/dlia-podkastu/?filters=typ-mikrofonu[77]|interfeysy-pidkliuchennia[288-222]",
+                "reserved_by": null,
+                "reserved_by_token": null,
+                "reserved_at": null,
+                "created_at": "2025-11-12T12:21:02.980762+02:00"
             }
-            return token;
-        }
+        ];
 
-        const userToken = getUserToken();
+        const categories = [
+            { id: 's', display: 'приблизно до 7€' },
+            { id: 'm', display: 'приблизно 7-30€' },
+            { id: 'l', display: 'приблизно від 30€' }
+        ];
 
-        // ===========================================
-        // DATA LOADING
-        // ===========================================
-        async function loadWishlist() {
-            try {
-                const { data, error } = await supabase
-                    .from('wishlist')
-                    .select('*')
-                    .order('created_at', { ascending: true });
-
-                if (error) throw error;
-
-                wishlistItems = data || [];
-                renderWishlist();
-                document.getElementById('loading').style.display = 'none';
-            } catch (error) {
-                console.error('Error loading wishlist:', error);
-                showError('Помилка завантаження вішліста: ' + error.message);
-                document.getElementById('loading').style.display = 'none';
-            }
-        }
-
-        // ===========================================
-        // REALTIME SUBSCRIPTION
-        // ===========================================
-        function subscribeToChanges() {
-            realtimeChannel = supabase
-                .channel('wishlist_changes')
-                .on(
-                    'postgres_changes',
-                    {
-                        event: '*',
-                        schema: 'public',
-                        table: 'wishlist'
-                    },
-                    (payload) => {
-                        console.log('Realtime update:', payload);
-                        handleRealtimeUpdate(payload);
-                    }
-                )
-                .subscribe();
-        }
-
-        function handleRealtimeUpdate(payload) {
-            const { eventType, new: newRecord, old: oldRecord } = payload;
-
-            switch (eventType) {
-                case 'INSERT':
-                    wishlistItems.push(newRecord);
-                    break;
-                case 'UPDATE':
-                    const updateIndex = wishlistItems.findIndex(item => item.id === newRecord.id);
-                    if (updateIndex !== -1) {
-                        wishlistItems[updateIndex] = newRecord;
-                    }
-                    break;
-                case 'DELETE':
-                    wishlistItems = wishlistItems.filter(item => item.id !== oldRecord.id);
-                    break;
-            }
-
-            renderWishlist();
-        }
-
-        // ===========================================
-        // UTILITY FUNCTIONS FOR URL PARSING
-        // ===========================================
         function parseNotesForUrl(notes) {
             if (!notes) return { text: '', url: null };
-            
-            // Регулярний вираз для пошуку URL
             const urlRegex = /(https?:\/\/[^\s]+)/g;
             const match = notes.match(urlRegex);
-            
             if (match && match.length > 0) {
                 const url = match[0];
                 const text = notes.replace(urlRegex, '').trim();
                 return { text, url };
             }
-            
             return { text: notes, url: null };
         }
 
-        // ===========================================
-        // RENDERING
-        // ===========================================
         function renderWishlist() {
             const container = document.getElementById('wishlist-container');
 
@@ -528,19 +653,11 @@
                 return;
             }
 
-            // Групуємо подарунки за категоріями у порядку від дешевих до дорогих
-            const categories = [
-                { id: 's', display: 'приблизно до 7€' },
-                { id: 'm', display: 'приблизно 7-30€' },
-                { id: 'l', display: 'приблизно від 30€' }
-            ];
-
             let html = '';
             
             categories.forEach(category => {
                 const itemsInCategory = wishlistItems.filter(item => item.category === category.id);
                 
-                // Сортуємо: спочатку is_starred, потім решта
                 const sortedItems = itemsInCategory.sort((a, b) => {
                     if (a.is_starred && !b.is_starred) return -1;
                     if (!a.is_starred && b.is_starred) return 1;
@@ -563,39 +680,24 @@
         }
 
         function renderItem(item) {
-            const isReserved = item.reserved_by !== null;
-            const isMyReservation = item.reserved_by_token === userToken;
+            const isReserved = Boolean(item.reserved_by);
             const isStarred = item.is_starred;
-            let itemClass = '';
-            
-            if (isMyReservation) {
-                itemClass = 'my-reservation';
-            } else if (isReserved) {
-                itemClass = 'reserved';
-            }
+            let itemClass = isReserved ? 'reserved' : '';
             
             if (isStarred) {
                 itemClass += ' starred';
             }
             
             const { text, url } = parseNotesForUrl(item.notes);
+            const buttonLabel = isReserved ? 'Забронювано' : 'Я зможу!';
+            const buttonClass = isReserved ? 'reserved-btn' : 'reserve-btn';
 
             return `
-                <div class="wishlist-item ${itemClass}">
+                <div class="wishlist-item ${itemClass.trim()}">
                     <div class="item-button-wrapper">
-                        ${isMyReservation ? `
-                            <button class="action-btn cancel-btn" onclick="cancelReservation(${item.id})">
-                                Передумати
-                            </button>
-                        ` : !isReserved ? `
-                            <button class="action-btn reserve-btn" onclick="reserveItem(${item.id})">
-                                Я зможу!
-                            </button>
-                        ` : `
-                            <button class="action-btn reserved-btn" disabled>
-                                Забронювано
-                            </button>
-                        `}
+                        <button class="action-btn ${buttonClass}" disabled title="Резервація закрита">
+                            ${buttonLabel}
+                        </button>
                     </div>
                     
                     <div class="item-body">
@@ -615,15 +717,12 @@
             `;
         }
 
-        // ===========================================
-        // SCROLL TO CATEGORY
-        // ===========================================
         function scrollToCategory(category) {
             const element = document.getElementById(`category-${category}`);
             if (element) {
                 const headerHeight = document.querySelector('header').offsetHeight;
                 const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-                const offsetPosition = elementPosition - headerHeight - 20; // 20px додатковий відступ
+                const offsetPosition = elementPosition - headerHeight - 20;
                 
                 window.scrollTo({
                     top: offsetPosition,
@@ -632,98 +731,15 @@
             }
         }
 
-
-        // ===========================================
-        // RESERVATION ACTIONS
-        // ===========================================
-        async function reserveItem(itemId) {
-            try {
-                const { data, error } = await supabase
-                    .from('wishlist')
-                    .update({
-                        reserved_by: 'anonymous',
-                        reserved_by_token: userToken,
-                        reserved_at: new Date().toISOString()
-                    })
-                    .eq('id', itemId)
-                    .is('reserved_by', null)
-                    .select();
-
-                if (error) throw error;
-
-                if (!data || data.length === 0) {
-                    alert('Цей подарунок вже зарезервовано кимось іншим!');
-                    await loadWishlist(); // Reload to get latest state
-                } else {
-                    // Success - realtime will update the UI
-                }
-            } catch (error) {
-                console.error('Error reserving item:', error);
-                alert('Помилка при резервуванні: ' + error.message);
-            }
-        }
-
-        async function cancelReservation(itemId) {
-            if (!confirm('Ви впевнені, що хочете скасувати бронювання?')) {
-                return;
-            }
-
-            try {
-                const { data, error } = await supabase
-                    .from('wishlist')
-                    .update({
-                        reserved_by: null,
-                        reserved_by_token: null,
-                        reserved_at: null
-                    })
-                    .eq('id', itemId)
-                    .eq('reserved_by_token', userToken)
-                    .select();
-
-                if (error) throw error;
-
-                if (!data || data.length === 0) {
-                    alert('Не вдалося скасувати резервацію. Можливо, ви не є власником цієї резервації.');
-                    await loadWishlist();
-                }
-            } catch (error) {
-                console.error('Error canceling reservation:', error);
-                alert('Помилка при скасуванні резервації: ' + error.message);
-            }
-        }
-
-
-
-        // ===========================================
-        // UTILITY FUNCTIONS
-        // ===========================================
         function escapeHtml(text) {
             const div = document.createElement('div');
             div.textContent = text;
             return div.innerHTML;
         }
 
-        function showError(message) {
-            const errorContainer = document.getElementById('error-container');
-            errorContainer.innerHTML = `<div class="error">${escapeHtml(message)}</div>`;
-            setTimeout(() => {
-                errorContainer.innerHTML = '';
-            }, 5000);
-        }
-
-        // ===========================================
-        // INITIALIZATION
-        // ===========================================
         document.addEventListener('DOMContentLoaded', () => {
-            loadWishlist();
-            subscribeToChanges();
-        });
-
-        // Cleanup on page unload
-        window.addEventListener('beforeunload', () => {
-            if (realtimeChannel) {
-                supabase.removeChannel(realtimeChannel);
-            }
+            renderWishlist();
+            document.getElementById('loading').style.display = 'none';
         });
     </script>
     <script src="robot-stars.js"></script>
