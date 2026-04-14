@@ -31,13 +31,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
+          cache: bun
 
       - name: Install dependencies
-        run: npm install
+        run: bun install
 
       - name: Build site
-        run: npm run build:full
+        run: bun run build:full
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
