@@ -1,0 +1,19 @@
+node_modules/
+_site/
+
+# Local editor settings
+.idea/
+.vscode/
+
+# Obsidian vault metadata and local trash
+**/.obsidian/
+**/.trash/
+markdown/README.md
+
+# OS junk
+**/.DS_Store
+**/Thumbs.db
+
+# Logs and temp files
+*.log
+*.tmp

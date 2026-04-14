@@ -1,0 +1,21 @@
+---
+layout: updates-layout.njk
+permalink: updates/search/index.html
+title: Updates Search
+description: Search across Dan Voronov's updates archive.
+---
+<a href="/updates/" data-esc-back style="color: #DD4723"><b>&lt; back (ESC)</b></a>  |   <span style="padding: 25px 0;color:black">Updates · <a href="/updates/feed.xml" style="color: #DD4723">RSS feed</a></span>
+
+<h1 style="padding: 25px 0;color:black">Search updates</h1>
+<p style="color:black">
+  Client-side search over the full markdown archive. Type tags, titles, names, links, or fragments of the post text.
+</p>
+
+<p>
+  <label for="updates-search-input" style="color:#666">Search:</label>
+  <input id="updates-search-input" type="search" placeholder="for example: geoguessr, ремnote, birthday, AI" style="font-size:16px;padding:8px;" autocomplete="off">
+</p>
+<p id="updates-search-status" style="color:#666">Loading index...</p>
+<div id="updates-search-results" aria-live="polite"></div>
+
+<script src="/updates/search.js" defer></script>

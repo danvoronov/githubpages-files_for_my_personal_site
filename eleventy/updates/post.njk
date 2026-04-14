@@ -1,0 +1,38 @@
+---
+layout: updates-layout.njk
+pagination:
+  data: updates
+  size: 1
+  alias: post
+permalink: "{{ post.outputPath }}"
+---
+<p style="display:flex; justify-content:space-between; align-items:baseline; gap:12px;">
+  <span>
+    <a href="/updates/" data-esc-back style="color: #DD4723"><b>&lt; back (ESC)</b></a>
+    <span style="color:#666"> | </span>
+    <a href="/updates/search/" style="color: #DD4723">Search</a>
+    <span style="color:#666"> | </span>
+    <a href="/updates/feed.xml" style="color: #DD4723">RSS</a>
+  </span>
+  <time datetime="{{ post.date }}" style="color:#666; white-space:nowrap;">{{ post.date | readableDateTime }}</time>
+</p>
+<style>
+  .prose {
+    padding: 45px 45px 0;
+  }
+
+  .prose h2 {
+    margin-top: 45px;
+  }
+</style>
+<hr style="color:black" />
+<div class="prose">
+  {{ post.contentHtml | safe }}
+</div>
+{% if post.tags and post.tags.length %}
+<p style="padding-top:20px;">
+  {% for tag in post.tags %}
+  <span style="background:#eee;padding:4px 8px;border-radius:4px;margin-right:8px;">{{ tag }}</span>
+  {% endfor %}
+</p>
+{% endif %}

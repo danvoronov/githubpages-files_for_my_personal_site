@@ -1,0 +1,17 @@
+{
+  "name": "danvoronov-com",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "clean": "bun scripts/clean-site.cjs",
+    "build": "bun scripts/run-eleventy.cjs",
+    "build:full": "bun scripts/run-eleventy.cjs --copy-site-root",
+    "serve": "bun scripts/run-eleventy.cjs --copy-site-root --serve",
+    "serve:updates": "bun scripts/run-eleventy.cjs --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^14.1.0"
+  }
+}

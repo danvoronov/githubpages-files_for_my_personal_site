@@ -22,16 +22,53 @@
 (function(){
   const getLang = () => localStorage.getItem('lang') || 'en';
   const menuByLang = (lang) => (lang === 'uk' ? (window.mainMenu_uk || window.mainMenu) : window.mainMenu);
+  function applyMultilineLabels(){
+    if(window.d3 && window.graph && Array.isArray(graph.nodes)){
+      d3.select('#graph').select('svg').select('.texts').selectAll('text').each(function(d){
+        const textNode = d3.select(this);
+        const lines = String((d && d.txt) || '').split('\n');
+        const lineHeightEm = 1.05;
+        const startDy = lines.length > 1 ? -((lines.length - 1) * lineHeightEm) / 2 : 0;
+        const currentX = (d && typeof d.x === 'number') ? d.x : Number(textNode.attr('x') || 0);
+        textNode.text(null);
+        lines.forEach(function(line, index){
+          textNode.append('tspan')
+            .attr('x', currentX)
+            .attr('dy', (index === 0 ? startDy : lineHeightEm) + 'em')
+            .text(line);
+        });
+      });
+      return;
+    }
+
+    var texts = document.querySelectorAll('#graph svg .texts text');
+    texts.forEach(function(t, i){
+      const value = (graph.nodes[i] && graph.nodes[i].txt) || '';
+      const lines = String(value).split('\n');
+      const lineHeightEm = 1.05;
+      const startDy = lines.length > 1 ? -((lines.length - 1) * lineHeightEm) / 2 : 0;
+      const currentX = (graph.nodes[i] && typeof graph.nodes[i].x === 'number')
+        ? graph.nodes[i].x
+        : Number(t.getAttribute('x') || 0);
+      t.textContent = '';
+      lines.forEach(function(line, index){
+        const span = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
+        span.setAttribute('x', String(currentX));
+        span.setAttribute('dy', (index === 0 ? startDy : lineHeightEm) + 'em');
+        span.textContent = line;
+        t.appendChild(span);
+      });
+    });
+  }
   function applyLang(lang){
     const src = menuByLang(lang);
     const map = new Map(src.map(item => [item.id, item.txt]));
     if(window.graph && Array.isArray(graph.nodes)){
       graph.nodes.forEach(n => { if(map.has(n.id)) n.txt = map.get(n.id); });
       if(window.d3){
-        d3.select('#graph').select('svg').select('.texts').selectAll('text').text(d => d.txt);
+        applyMultilineLabels();
       } else {
-        var texts = document.querySelectorAll('#graph svg .texts text');
-        texts.forEach(function(t, i){ t.textContent = (graph.nodes[i] && graph.nodes[i].txt) || t.textContent; });
+        applyMultilineLabels();
       }
     }
     localStorage.setItem('lang', lang);

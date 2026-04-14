@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head profile="http://gmpg.org/xfn/11">
+  {% set pageTitle = post.title if post else title %}
+  {% set pageDescription = post.excerpt if post else (description or site.updatesDescription) %}
+  <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+  <title>{% if pageTitle %}{{ pageTitle | htmlEscape | safe }} | {% endif %}{{ site.name }}</title>
+  <meta name="description" content="{{ pageDescription | htmlEscape | safe }}">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/updates/feed.xml" />
+  <link rel="stylesheet" type="text/css" href="/ru/dan-wpdata/themes/dan-kiev-ua/style.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="/ru/dan-wpdata/themes/dan-kiev-ua/header.css" media="screen" />
+  <link href="/ru/dan-wpdata/themes/dan-kiev-ua/styles/default.css" rel="stylesheet" type="text/css" />
+  <link href="/ru/dan-wpdata/themes/dan-kiev-ua/custom.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    .entry strong{ color: lightgreen; }
+    .entry { padding-top: 25px; }
+    hr {color: #fff;}
+  </style>
+</head>
+<body class="custom">
+  <div id="page-background"></div>
+  <div id="page-content">
+    <div id="wrap">
+      <div id="content" class="white" style="border: 10px solid #e5950c;">
+        <div id="main-full">
+          <div class="post">
+            <div class="entry">
+              {{ content | safe }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      document.addEventListener("keydown", function (event) {
+        if (event.key !== "Escape") {
+          return;
+        }
+
+        const backLink = document.querySelector("[data-esc-back]");
+
+        if (!backLink || !backLink.href) {
+          return;
+        }
+
+        event.preventDefault();
+        window.location.href = backLink.href;
+      });
+    })();
+  </script>
+</body>
+</html>

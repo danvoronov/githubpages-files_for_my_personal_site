@@ -1,39 +1,73 @@
 const colorMap = {
-	'm':'d12e4b',
-	'na':'5b0b1f',
-	'n':'61c282',
-	'a':'9158ad',
-	'b':'5f58ad',
-	'r':'cf7b02',
-	'c':'657475'
+	'm': 'd12e4b',
+	'na': '5b0b1f',
+	'n': '61c282',
+	'u': '2f557c',
+	'a': '9158ad',
+	'b': '5f58ad',
+	'r': 'cf7b02',
+	'c': '657475'
+};
+
+const menuItems = [
+	{ id: 0, group: 'm', radius: 350 },
+	{ id: 2, group: 'na', radius: 96, url: 'startups/' },
+	{ id: 1, group: 'na', radius: 92, url: 'educator/' },
+	{ id: 3, group: 'r', radius: 75, url: 'studied/' },
+	{ id: 4, group: 'a', radius: 65, url: 'art/' },
+	{ id: 5, group: 'n', radius: 45, url: 'now/' },
+	{ id: 6, group: 'b', radius: 60, url: 'articles/' },
+	{ id: 7, group: 'u', radius: 58, url: 'updates/' },
+	{ id: 8, group: 'c', radius: 7 },
+	{ id: 9, group: 'c', radius: 7 },
+	{ id: 10, group: 'c', radius: 6 },
+	{ id: 21, group: 'c', radius: 15, url: 'https://danvoronov.notion.site/Portfolio-Dan-Voronov-161bb25a23f14cddbc3a00242592762b?pvs=74' },
+	{ id: 22, group: 'c', radius: 15, url: 'https://www.linkedin.com/in/danvoronov/' }
+];
+
+const menuLabels = {
+	en: {
+		0: 'DanVóronov',
+		1: '🗣 Speaker\n& Tutor',
+		2: '🔨 Startups\n& Projects',
+		3: '📚 Studied',
+		4: '🧪 ART',
+		5: '⏳ Now',
+		6: '📝 Articles',
+		7: '✳️ Updates',
+		8: '',
+		9: '',
+		10: '',
+		21: 'Portfolio',
+		22: 'LinkedIn'
+	},
+	uk: {
+		0: 'Дан Вóронов',
+		1: '🗣 Спікер\nі тьютор',
+		2: '🔨 Стартапи\nта проєкти',
+		3: '📚 Вивчене',
+		4: '🧪 Мистецтво',
+		5: '⏳ Зараз',
+		6: '📝 Статті',
+		7: '✳️ Оновлення',
+		8: '',
+		9: '',
+		10: '',
+		21: 'Портфоліо',
+		22: 'LinkedIn'
+	}
+};
+
+function buildMenu(locale) {
+	const labels = menuLabels[locale];
+	return menuItems.map(function(item) {
+		return Object.assign({}, item, { txt: labels[item.id] || '' });
+	});
 }
 
-const mainMenu = [
-	{id: 0, txt: 'DanVóronov', group: 'm', radius: 340},
-	{id: 2, txt: '⚙️ Startups & Projects', group: 'na', radius: 120, url: 'startups/'},
-	{id: 1, txt: '🗣 Speaker & Tutor', group: 'na', radius: 110, url: 'educator/'},
-	{id: 3, txt: '⏳ Now', group: 'n', radius: 45, url: 'now/'},
-	{id: 4, txt: '🎭 ART', group: 'a', radius: 65, url: 'art/'},
-	{id: 5, txt:  '📝 Articles', group: 'b', radius: 60, url: 'articles/'},
-	{id: 10, txt: '📚 Studied', group: 'r', radius: 75, url: 'studied/'},
-	{id: 21, txt: '🔗 Portfolio', group: 'c', radius: 15, url: 'https://danvoronov.notion.site/Portfolio-Dan-Voronov-161bb25a23f14cddbc3a00242592762b?pvs=74'},
-	{id: 22, txt: '🔗 LinkedIn', group: 'c', radius: 15, url: 'https://www.linkedin.com/in/danvoronov/'},
-]
+const mainMenu = buildMenu('en');
+const mainMenu_uk = buildMenu('uk');
 
-// Ukrainian localization of menu labels
-const mainMenu_uk = [
-	{id: 0, txt: 'Дан Вóронов', group: 'm', radius: 340},
-	{id: 2, txt: '⚙️ Стартапи та проєкти', group: 'na', radius: 120, url: 'startups/'},
-	{id: 1, txt: '🗣 Спікер і тьютор', group: 'na', radius: 110, url: 'educator/'},
-	{id: 3, txt: '⏳ Зараз', group: 'n', radius: 45, url: 'now/'},
-	{id: 4, txt: '🎭 Мистецтво', group: 'a', radius: 65, url: 'art/'},
-	{id: 5, txt:  '📝 Статті', group: 'b', radius: 60, url: 'articles/'},
-	{id: 10, txt: '📚 Вивчене', group: 'r', radius: 75, url: 'studied/'},
-	{id: 21, txt: '🔗 Портфоліо', group: 'c', radius: 15, url: 'https://danvoronov.notion.site/Portfolio-Dan-Voronov-161bb25a23f14cddbc3a00242592762b?pvs=74'},
-	{id: 22, txt: '🔗 LinkedIn', group: 'c', radius: 15, url: 'https://www.linkedin.com/in/danvoronov/'},
-]
-
-// Expose to window for inline scripts
 if (typeof window !== 'undefined') {
 	window.mainMenu = mainMenu;
 	window.mainMenu_uk = mainMenu_uk;

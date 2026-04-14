@@ -5,15 +5,31 @@
 
 .nodes circle {
   fill-opacity: .4;
+  transform-box: fill-box;
+  transform-origin: center;
 }
 .nodes circle:not(#el0) {
     cursor: pointer;
     fill-opacity: .7;
+    transition: transform 0.18s ease, fill-opacity 0.18s ease, stroke-width 0.18s ease;
 }
 .nodes circle:not(#el0):hover  {
   stroke: #9620c7;
   stroke-opacity: .6;
   stroke-width: 4px;
+  animation: pulse-node 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse-node {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .texts text {
