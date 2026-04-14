@@ -10,7 +10,7 @@ eleventyComputed:
   description: "{{ site.updatesDescription }}"
 ---
 <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
-  <a href="/" data-esc-back style="color: #DD4723"><b>&lt; back (ESC)</b></a>
+  <span><a href="/" data-esc-back style="color: #DD4723"><b>&lt; back (ESC)</b></a> | <a href="/updates/search/" style="color: #DD4723">Search archive</a></span>
   {% if pagination.href.previous or pagination.href.next %}
   <span>
     {% if pagination.href.previous %}
@@ -27,9 +27,7 @@ eleventyComputed:
   {% endif %}
 </div>
 
-<p style="color:black">{{ updates | length }} posts</p>
-
- · <a href="/updates/search/" style="color: #DD4723">Search archive</a> · <a href="/updates/feed.xml" style="color: #DD4723">RSS feed</a>
+<p style="color:black">{{ updates | length }} posts · <a href="/updates/feed.xml" style="color: #DD4723">RSS feed</a></p>
 
 <style>
   #content ul.updates-index-list {
