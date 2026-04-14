@@ -8,6 +8,10 @@ ga('send', 'pageview');
 document.onkeydown = (event) => {
     if((event.keyCode ? event.keyCode : event.which) == '27'){
       event.preventDefault();
-      window.location.href = '../'; //one level up
+      if (history.length > 1) {
+        history.back();
+      } else {
+        window.location.href = '../';
+      }
     }
 };

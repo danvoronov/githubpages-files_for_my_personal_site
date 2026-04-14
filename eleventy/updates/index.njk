@@ -9,9 +9,27 @@ eleventyComputed:
   title: "{% if pagination.pageNumber == 0 %}Updates{% else %}Updates - Page {{ pagination.pageNumber + 1 }}{% endif %}"
   description: "{{ site.updatesDescription }}"
 ---
-<a href="/" data-esc-back style="color: #DD4723"><b>&lt; back (ESC)</b></a>  |   <a href="/updates/search/" style="color: #DD4723">Search archive</a> · <a href="/updates/feed.xml" style="color: #DD4723">RSS feed</a>
+<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+  <a href="/" data-esc-back style="color: #DD4723"><b>&lt; back (ESC)</b></a>
+  {% if pagination.href.previous or pagination.href.next %}
+  <span>
+    {% if pagination.href.previous %}
+    <a href="{{ pagination.href.previous }}" style="color: #DD4723">&lt; Newer</a>
+    {% endif %}
+    {% if pagination.href.previous and pagination.href.next %}
+    <span style="color:#666"> | </span>
+    {% endif %}
+    {% if pagination.href.next %}
+    <a href="{{ pagination.href.next }}" style="color: #DD4723">Older &gt;</a>
+    {% endif %}
+    <span style="color:#666"> | Page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}</span>
+  </span>
+  {% endif %}
+</div>
 
 <p style="color:black">{{ updates | length }} posts</p>
+
+ · <a href="/updates/search/" style="color: #DD4723">Search archive</a> · <a href="/updates/feed.xml" style="color: #DD4723">RSS feed</a>
 
 <style>
   #content ul.updates-index-list {
@@ -104,7 +122,7 @@ eleventyComputed:
 </ul>
 
 {% if pagination.href.previous or pagination.href.next %}
-<p style="padding-top:23px;">
+<div style="padding-top:23px; text-align:center;">
   {% if pagination.href.previous %}
   <a href="{{ pagination.href.previous }}" style="color: #DD4723">&lt; Newer</a>
   {% endif %}
@@ -115,5 +133,5 @@ eleventyComputed:
   <a href="{{ pagination.href.next }}" style="color: #DD4723">Older &gt;</a>
   {% endif %}
   <span style="color:#666"> | Page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}</span>
-</p>
+</div>
 {% endif %}
