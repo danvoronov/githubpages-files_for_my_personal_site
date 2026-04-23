@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мислення з ШІ — Дан Воронов</title>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&family=Onest:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a18;
+    --paper: #f4f0e8;
+    --accent: #e5950c;
+    --muted: #7a7568;
+    --line: #d4cfc4;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {background-color: #1caf69;}
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Onest', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    min-height: 100vh;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  /* GRAIN OVERLAY */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.5;
+  }
+
+  .page {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 80px 32px 120px;
+  }
+
+  /* HEADER */
+  header {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 40px;
+    margin-bottom: 60px;
+    animation: fadeUp 0.8s ease both;
+  }
+
+  .label {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+
+  h1 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: clamp(32px, 6vw, 52px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+
+  h1 span {
+    color: var(--accent);
+  }
+
+  .subtitle {
+    font-size: 17px;
+    color: var(--muted);
+    font-weight: 300;
+  }
+
+  /* PHOTO */
+  .photo-block {
+    margin-bottom: 60px;
+    animation: fadeUp 0.8s 0.1s ease both;
+  }
+
+  .photo-placeholder {
+    width: 100%;
+    aspect-ratio: 16/7;
+    background: var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 300;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .photo-placeholder::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(0,0,0,0.02) 10px,
+      rgba(0,0,0,0.02) 11px
+    );
+  }
+
+  /* ABOUT */
+  .about {
+    margin-bottom: 60px;
+    animation: fadeUp 0.8s 0.2s ease both;
+  }
+
+  .section-label {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+  }
+
+  .about p {
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+
+  .about p:last-child { margin-bottom: 0; }
+
+  /* FOR WHOM */
+  .for-whom {
+    margin-bottom: 60px;
+    animation: fadeUp 0.8s 0.3s ease both;
+  }
+
+  .for-whom h2 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 24px;
+    letter-spacing: -0.01em;
+  }
+
+  .items {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .item {
+    display: flex;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: flex-start;
+  }
+
+  .item-num {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 11px;
+    color: var(--accent);
+    font-weight: 400;
+    min-width: 24px;
+    padding-top: 2px;
+  }
+
+  .item-text {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+
+  /* FORMAT */
+  .format {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 40px;
+    margin-bottom: 60px;
+    animation: fadeUp 0.8s 0.4s ease both;
+  }
+
+  .format .section-label {
+    color: #c8472a;
+  }
+
+  .format-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 24px;
+  }
+
+  .format-item {}
+
+  .format-item .fi-label {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(244,240,232,0.4);
+    margin-bottom: 8px;
+  }
+
+  .format-item .fi-value {
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+
+  /* CTA */
+  .cta {
+    animation: fadeUp 0.8s 0.5s ease both;
+  }
+
+  .cta h2 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+  }
+
+  .cta p {
+    font-size: 15px;
+    color: var(--muted);
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--paper);
+    text-decoration: none;
+    font-family: 'Unbounded', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 18px 40px;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .btn:hover {
+    background: #a33520;
+    transform: translateY(-1px);
+  }
+
+  .contact-note {
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .contact-note a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* FOOTER */
+  footer {
+    margin-top: 80px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+    font-size: 12px;
+    color: var(--muted);
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 480px) {
+    .page { padding: 48px 20px 80px; }
+    .format { padding: 28px 24px; }
+    .format-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+    .format-item .fi-value { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <p class="label">Дан Воронов — консультація</p>
+    <h1>Мислення<br>з <span>ШІ</span></h1>
+    <p class="subtitle">Особиста розмова про те, як продуктивно думати разом з інструментами штучного інтелекту — а не просто ними користуватись</p>
+  </header>
+
+  <div class="photo-block">
+    <img src="ChatGPT Image Apr 23, 2026, 04_31_42 PM.png" style="width: 620px;">
+  </div>
+
+  <div class="about">
+    <p class="section-label">Про що це</p>
+    <p>ШІ змінює середовище швидше, ніж ми встигаємо адаптуватись. Більшість людей вивчають окремі інструменти — але не змінюють спосіб мислення.</p>
+    <p>Я допомагаю побачити, де саме ваш підхід до задач, рішень і роботи вже можна посилити — і як це зробити без залежності від конкретного сервісу чи моделі.</p>
+    <p>Це не курс і не навчання промптам. Це допомога вам у вашій ситуації.</p>
+  </div>
+
+  <div class="for-whom">
+    <p class="section-label">Для кого</p>
+    <div class="items">
+      <div class="item">
+        <span class="item-num">01</span>
+        <span class="item-text">Ви чуєте про ШІ всюди, але не розумієте де він реально вам стане у пригоді</span>
+      </div>
+      <div class="item">
+        <span class="item-num">02</span>
+        <span class="item-text">Ви вже користуєтесь ChatGPT або Cursor, але відчуваєте що використовуєте не весь потенціал</span>
+      </div>
+      <div class="item">
+        <span class="item-num">03</span>
+        <span class="item-text">Ви хочете зрозуміти як ШІ змінює вашу сферу і що з цим робити</span>
+      </div>
+      <div class="item">
+        <span class="item-num">04</span>
+        <span class="item-text">Вам потрібен живий думаючий співрозмовник, а не черговий туторіал на YouTube</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="format">
+    <p class="section-label">Формат</p>
+    <div class="format-grid">
+      <div class="format-item">
+        <p class="fi-label">Тривалість</p>
+        <p class="fi-value">30 хвилин</p>
+      </div>
+      <div class="format-item">
+        <p class="fi-label">Вартість</p>
+        <p class="fi-value">300 грн</p>
+      </div>
+      <div class="format-item">
+        <p class="fi-label">Формат</p>
+        <p class="fi-value">Відеодзвінок</p>
+      </div>
+      <div class="format-item">
+        <p class="fi-label">Місць на тиждень</p>
+        <p class="fi-value">2</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta">
+    <p class="section-label">Записатись</p>
+    <h2>Готові поговорити?</h2>
+    <p>Напишіть мені в Telegram — коротко розкажіть про свою ситуацію, і ми домовимось про зручний час.</p>
+    <a class="btn" href="https://t.me/danvoronov" target="_blank">Написати в Telegram</a>
+    <p class="contact-note">або на пошту <a href="mailto:dan.voronov@gmail.com">dan.voronov@pm.me</a></p>
+  </div>
+
+  <footer>
+    danvoronov.com 
+  </footer>
+
+</div>
+</body>
+</html>
