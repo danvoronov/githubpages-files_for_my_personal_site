@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мислення з ШІ — Дан Воронов</title>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&family=Onest:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.3/src/lite-yt-embed.css">
+<script src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.3/src/lite-yt-embed.js"></script>
+<style>
+  :root {
+    --ink: #1a1a18;
+    --paper: #f4f0e8;
+    --accent: #e5950c;
+    --muted: #7a7568;
+    --line: #d4cfc4;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {background-color: #1caf69;}
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Onest', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    min-height: 100vh;
+    max-width: 1000px;
+    margin: 20px auto 0;
+    border: 10px solid var(--accent);
+  }
+
+  /* GRAIN OVERLAY */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.5;
+  }
+
+  .page {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 80px 32px 120px;
+  }
+
+  /* HEADER */
+  header {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 40px;
+    margin-bottom: 60px;
+    animation: fadeUp 0.8s ease both;
+  }
+
+  .label {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+
+  h1 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: clamp(32px, 6vw, 52px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+
+  h1 span {
+    color: var(--accent);
+  }
+
+  .subtitle {
+    font-size: 17px;
+    color: var(--muted);
+    font-weight: 300;
+  }
+
+  /* PHOTO */
+  .photo-block {
+    margin-bottom: 60px;
+    animation: fadeUp 0.8s 0.1s ease both;
+  }
+
+  .hero-photo {
+    display: block;
+    width: 100%;
+    border: 10px solid var(--accent);
+  }
+
+  .photo-placeholder {
+    width: 100%;
+    aspect-ratio: 16/7;
+    background: var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 300;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .photo-placeholder::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(0,0,0,0.02) 10px,
+      rgba(0,0,0,0.02) 11px
+    );
+  }
+
+  /* ABOUT */
+  .about {
+    margin-bottom: 60px;
+    animation: fadeUp 0.8s 0.2s ease both;
+  }
+
+  .section-label {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+  }
+
+  .about p {
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+
+  .about p:last-child { margin-bottom: 0; }
+
+  .warning {
+    margin-bottom: 60px;
+    animation: fadeUp 0.8s 0.2s ease both;
+  }  
+  .warning p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+
+  .warning p:last-child { margin-bottom: 0; }
+
+
+  /* FOR WHOM */
+  .for-whom {
+    margin-bottom: 60px;
+    animation: fadeUp 0.8s 0.3s ease both;
+  }
+
+  .for-whom h2 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 24px;
+    letter-spacing: -0.01em;
+  }
+
+  .items {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .item {
+    display: flex;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: flex-start;
+  }
+
+  .item-num {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 11px;
+    color: var(--accent);
+    font-weight: 400;
+    min-width: 24px;
+    padding-top: 2px;
+  }
+
+  .item-text {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+
+  /* FORMAT */
+  .format {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 40px;
+    margin-bottom: 60px;
+    animation: fadeUp 0.8s 0.4s ease both;
+  }
+
+  .format .section-label {
+    color: #c8472a;
+  }
+
+  .format-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 24px;
+  }
+
+  .format-item {}
+
+  .format-item .fi-label {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(244,240,232,0.4);
+    margin-bottom: 8px;
+  }
+
+  .format-item .fi-value {
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+
+  /* PROOF */
+  .proof {
+    margin-bottom: 60px;
+    animation: fadeUp 0.8s 0.35s ease both;
+  }
+
+  .proof h2 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 24px;
+    letter-spacing: -0.01em;
+  }
+
+  .proof-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .proof-card {
+    border: 1px solid var(--line);
+    background: #fbf8f2;
+    overflow: hidden;
+  }
+
+  .proof-media {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+  }
+
+  lite-youtube.proof-media {
+    --lite-youtube-aspect-ratio: 56.25%;
+    background-color: #000;
+  }
+
+  .proof-copy {
+    padding: 18px;
+  }
+
+  .proof-copy p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--ink);
+  }
+
+  .proof-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .proof-link-icon {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 auto;
+  }
+
+  /* CTA */
+  .cta {
+    animation: fadeUp 0.8s 0.5s ease both;
+  }
+
+  .cta h2 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+  }
+
+  .cta p {
+    font-size: 15px;
+    color: var(--muted);
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--paper);
+    text-decoration: none;
+    font-family: 'Unbounded', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 18px 40px;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .btn:hover {
+    background: #a33520;
+    transform: translateY(-1px);
+  }
+
+  .contact-note {
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .contact-note a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+  }
+
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 480px) {
+    .page { padding: 48px 20px 80px; }
+    .format { padding: 28px 24px; }
+    .format-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+    .format-item .fi-value { font-size: 18px; }
+    .proof-grid { grid-template-columns: 1fr; }
+  }
+    .label-author-link {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .label-author-link:hover {
+      text-decoration: underline;
+    }  
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <p class="label">
+       <a
+        class="label-author-link"
+        href="https://danvoronov.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Дан Воронов</a>
+     — швидка консультація
+   </p>
+    <h1>Мислення<br>з <span>ШІ</span></h1>
+    <p class="subtitle">Особиста зустріч про те, як продуктивно думати разом з інструментами штучного інтелекту — а не просто ними користуватись</p>
+  </header>
+
+  <div class="photo-block">
+    <img class="hero-photo" src="dan.png" alt="Ілюстрація про мислення з ШІ">
+  </div>
+
+  <div class="about">
+    <p class="section-label">Про що це</p>
+    <p>ШІ змінює середовище швидше, ніж ми встигаємо адаптуватись. Більшість людей вивчають окремі інструменти — але не змінюють спосіб мислення.</p>
+    <p>Це не курс і не навчання промптам. Це допомога вам у вашій ситуації.</p>
+    <p>З'ясуємо, де саме ваше мислення, підхід до задач, рішень і роботи можна посилити — і як це зробити зараз.</p>
+  </div>
+
+  <div class="for-whom">
+    <p class="section-label">Для кого</p>
+    <div class="items">
+      <div class="item">
+        <span class="item-num">01</span>
+        <span class="item-text">Чуєте про ШІ звідусіль, але не розумієте, як він реально працює</span>
+      </div>
+      <div class="item">
+        <span class="item-num">02</span>
+        <span class="item-text">Користуєтесь ChatGPT/Cursor/..., але відчуваєте, що можна краще</span>
+      </div>
+      <div class="item">
+        <span class="item-num">03</span>
+        <span class="item-text">Вам потрібен живий думаючий досвідчений співрозмовник</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="proof">
+    <h2>Працюю з ШІ з першого дня ChatGPT в Україні</h2>
+    <div class="proof-grid">
+      <div class="proof-card">
+        <img class="proof-media" src="2026-04-23_20-50.png" alt="Скриншот блогу Code With LLM">
+        <div class="proof-copy">
+          <p>Веду <a href="https://aicode.danvoronov.com/">блог про ШІ в програмуванні</a></p>
+        </div>
+      </div>
+      <div class="proof-card">
+        <lite-youtube class="proof-media" videoid="LMrtNZUPG1I" playlabel="Play Video" data-title="Рік у кодингу" style="background-image: url('https://i.ytimg.com/vi_webp/LMrtNZUPG1I/hqdefault.webp');">
+          <noscript>
+            <iframe width="560" height="315" title="Рік у кодингу" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen src="https://www.youtube-nocookie.com/embed/LMrtNZUPG1I?autoplay=1&amp;playsinline=1"></iframe>
+          </noscript>
+        </lite-youtube>
+        <div class="proof-copy">
+          <p><span class="proof-link"><img class="proof-link-icon" src="youtube.svg" alt="YouTube">Підсумовую</span> <a href="https://www.youtube.com/watch?v=LMrtNZUPG1I" target="_blank">2025 ШІ-рік</a></p>
+        </div>        
+      </div>
+      <div class="proof-card">
+        <lite-youtube class="proof-media" videoid="EyypyMnDr1U" playlabel="Play Video" data-title="Відео про ШІ та програмування 1" style="background-image: url('https://i.ytimg.com/vi_webp/EyypyMnDr1U/hqdefault.webp');">
+          <noscript>
+            <iframe width="560" height="315" title="Відео про ШІ та програмування 1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen src="https://www.youtube-nocookie.com/embed/EyypyMnDr1U?autoplay=1&amp;playsinline=1"></iframe>
+          </noscript>
+        </lite-youtube>
+        <div class="proof-copy">
+          <p><span class="proof-link"><img class="proof-link-icon" src="youtube.svg" alt="YouTube"> Розповідаю <a href="https://www.youtube.com/watch?v=EyypyMnDr1U" target="_blank">чому GPT обманює</a></p>
+        </div>
+      </div>
+      <div class="proof-card">
+        <lite-youtube class="proof-media" videoid="N8AsXPhuess" playlabel="Play Video" data-title="Відео про ШІ та програмування 2" style="background-image: url('https://i.ytimg.com/vi_webp/N8AsXPhuess/hqdefault.webp');">
+          <noscript>
+            <iframe width="560" height="315" title="Відео про ШІ та програмування 2" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen src="https://www.youtube-nocookie.com/embed/N8AsXPhuess?autoplay=1&amp;playsinline=1"></iframe>
+          </noscript>
+        </lite-youtube>
+        <div class="proof-copy">
+          <p><span class="proof-link"><img class="proof-link-icon" src="youtube.svg" alt="YouTube"> Досліджую <a href="https://www.youtube.com/watch?v=N8AsXPhuess" target="_blank">навчання дорослих</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="about">
+    <p class="section-label">Отримаєте</p>
+    <p>🔸 Спокійний розбір вашого поточного підходу: як ви вже використовуєте ШІ, що у вас працює, а де зараз є зайва складність або "сліпі зони".</p>
+    <p>🔸 Кілька конкретних ідей, які можна спробувати саме у вашій ситуації, без універсальних рецептів і без прив'язки до одного інструменту.</p>
+    <p>🔸 Зрозуміліший вектор розвитку: на що варто звернути увагу далі, що поки можна відкласти, і як рухатись без перевантаження.</p>
+  </div>
+
+  <div class="format">
+    <p class="section-label">Формат</p>
+    <div class="format-grid">
+      <div class="format-item">
+        <p class="fi-label">Тривалість</p>
+        <p class="fi-value">30 хвилин</p>
+      </div>
+      <div class="format-item">
+        <p class="fi-label">Вартість</p>
+        <p class="fi-value">300 грн</p>
+      </div>
+      <div class="format-item">
+        <p class="fi-label">Формат</p>
+        <p class="fi-value">Відеодзвінок</p>
+      </div>
+      <div class="format-item">
+        <p class="fi-label">Місць на тиждень</p>
+        <p class="fi-value">2</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning">
+    <p>Науковці вже б'ють на сполох: бездумне делегування завдань нейромережам призводить до "когнітивної атрофії". Згідно з дослідженнями (зокрема від MIT), якщо використовувати ChatGPT просто як "чарівну кнопку", яка робить роботу за людину, здатність до самостійного критичного мислення стрімко падає. Мозок лінується, і з часом втрачає навички мислення.</p>
+    <p>Але є й інший бік. Спільне дослідження Гарвардської бізнес-школи та Boston Consulting Group довело, що фахівці, які використовують ШІ як партнера, розширюють свої здібності. Вони виконують складні задачі на 25% швидше і видають на понад 40% якісніший результат.</p>
+  </div>  
+
+  <div class="cta">
+    <h2>Готові поговорити?</h2>
+    <p>Напишіть мені → домовимось про зручний час.</p>
+    <a class="btn" href="https://t.me/danvoronov" target="_blank">Написати в Telegram</a>
+    <p class="contact-note">або на пошту <a href="mailto:dan.voronov@gmail.com">dan.voronov@pm.me</a></p>
+  </div>
+
+</div>
+</body>
+</html>
