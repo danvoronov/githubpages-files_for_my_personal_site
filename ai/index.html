@@ -379,7 +379,124 @@
 
     .label-author-link:hover {
       text-decoration: underline;
-    }  
+    }
+
+    /* TOOLS */
+    .tools {
+      margin-bottom: 60px;
+      animation: fadeUp 0.8s 0.45s ease both;
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 24px;
+    }
+
+    .tools-col {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .tools-header {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .tools-col a {
+      font-size: 15px;
+      color: var(--ink);
+      text-decoration: none;
+      display: inline-block;
+      width: fit-content;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .tools-col a::before {
+      content: '✓';
+      font-size: 11px;
+      margin-right: 8px;
+      color: var(--accent);
+    }
+
+    .tools-col a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    @media (max-width: 480px) {
+      .tools-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+    }
+
+    /* TIMELINE */
+    .timeline {
+      margin-top: 32px;
+    }
+
+    .timeline-labels-top,
+    .timeline-labels-bottom {
+      display: flex;
+      width: 100%;
+      font-size: 12px;
+      font-family: 'Unbounded', sans-serif;
+      letter-spacing: 0.05em;
+    }
+
+    .timeline-labels-top {
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .timeline-labels-bottom {
+      margin-top: 8px;
+      color: var(--ink);
+      font-size: 11px;
+    }
+
+    .timeline-labels-top span,
+    .timeline-labels-bottom span {
+      text-align: center;
+    }
+
+    .timeline-labels-top span:nth-child(1),
+    .timeline-labels-bottom span:nth-child(1) { width: 12.5%; }
+    .timeline-labels-top span:nth-child(2),
+    .timeline-labels-bottom span:nth-child(2) { width: 25%; }
+    .timeline-labels-top span:nth-child(3),
+    .timeline-labels-bottom span:nth-child(3) { width: 37.5%; }
+    .timeline-labels-top span:nth-child(4),
+    .timeline-labels-bottom span:nth-child(4) { width: 25%; }
+
+    .timeline-bar {
+      display: flex;
+      width: 100%;
+      height: 28px;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+
+    .tl-seg { height: 100%; }
+    .tl-1 { width: 12.5%; background: #7a7568; }
+    .tl-2 { width: 25%; background: #004E89; }
+    .tl-3 { width: 37.5%; background: #00A676; }
+    .tl-4 { width: 25%; background: #FF6B35; }
+
+    @media (max-width: 480px) {
+      .timeline-labels-top,
+      .timeline-labels-bottom {
+        font-size: 10px;
+      }
+      .timeline-bar { height: 20px; }
+    }
 </style>
 </head>
 <body>
@@ -428,6 +545,11 @@
     </div>
   </div>
 
+  <div class="warning">
+    <p>Науковці вже б'ють на сполох: бездумне делегування завдань нейромережам призводить до "когнітивної атрофії". Згідно з дослідженнями (зокрема від MIT), якщо використовувати ChatGPT просто як "чарівну кнопку", яка робить роботу за людину, здатність до самостійного критичного мислення стрімко падає. Мозок лінується, і з часом втрачає навички мислення.</p>
+    <p>Але є й інший бік. Спільне дослідження Гарвардської бізнес-школи та Boston Consulting Group довело, що фахівці, які використовують ШІ як партнера, розширюють свої здібності. Вони виконують складні задачі на 25% швидше і видають на понад 40% якісніший результат.</p>
+  </div>    
+
   <div class="proof">
     <h2>Працюю з ШІ з першого дня ChatGPT в Україні</h2>
     <div class="proof-grid">
@@ -470,23 +592,76 @@
     </div>
   </div>
 
-  <div class="about">
-    <p class="section-label">Отримаєте</p>
-    <p>🔸 Спокійний розбір вашого поточного підходу: як ви вже використовуєте ШІ, що у вас працює, а де зараз є зайва складність або "сліпі зони".</p>
-    <p>🔸 Кілька конкретних ідей, які можна спробувати саме у вашій ситуації, без універсальних рецептів і без прив'язки до одного інструменту.</p>
-    <p>🔸 Зрозуміліший вектор розвитку: на що варто звернути увагу далі, що поки можна відкласти, і як рухатись без перевантаження.</p>
-  </div>
+   <div class="tools">
+     <p class="section-label">Мої інструменти</p>
+     <div class="tools-grid">
+       <div class="tools-col">
+         <p class="tools-header">Chats</p>
+         <a href="https://grok.com/" target="_blank">Grok</a>
+         <a href="https://aistudio.google.com/" target="_blank">AI Studio</a>
+         <a href="https://chatgpt.com/" target="_blank">ChatGPT</a>
+         <a href="https://claude.ai/" target="_blank">Claude</a>
+       </div>
+       <div class="tools-col">
+         <p class="tools-header">&nbsp;</p>
+         <a href="https://chat.mistral.ai/" target="_blank">LeChat</a>
+         <a href="https://chat.qwenlm.ai/" target="_blank">Qwen Chat</a>
+         <a href="https://z.ai/" target="_blank">Z-ai</a>
+         <a href="https://chat.deepseek.com/" target="_blank">DeepSeek</a>
+       </div>
+       <div class="tools-col">
+         <p class="tools-header">&nbsp;</p>
+         <a href="https://kimi.moonshot.cn/" target="_blank">Kimi AI</a>
+         <a href="https://hailuoai.com/" target="_blank">MiniMax</a>
+         <a href="https://copilot.microsoft.com/" target="_blank">Copilot bing</a>
+         <a href="https://gemini.google.com/" target="_blank">Gemini</a>
+       </div>
+       <div class="tools-col">
+         <p class="tools-header">Coding</p>
+         <a href="https://openai.com/" target="_blank">Codex</a>
+         <a href="https://opencode.ai/" target="_blank">OpenCode</a>
+         <a href="https://cursor.com/" target="_blank">Cursor</a>
+       </div>
+     </div>
+   </div>
+
+   <div class="about">
+     <p class="section-label">Отримаєте</p>
+     <p>🔸 Спокійний розбір вашого поточного підходу: як ви вже використовуєте ШІ, що у вас працює, а де зараз є зайва складність або "сліпі зони".</p>
+     <p>🔸 Кілька конкретних ідей, які можна спробувати саме у вашій ситуації, без універсальних рецептів і без прив'язки до одного інструменту.</p>
+     <p>🔸 Зрозуміліший вектор розвитку: на що варто звернути увагу далі, що поки можна відкласти, і як рухатись без перевантаження.</p>
+
+     <div class="timeline">
+       <div class="timeline-labels-top">
+         <span>5 хв</span>
+         <span>10 хв</span>
+         <span>15 хв</span>
+         <span>10 хв</span>
+       </div>
+       <div class="timeline-bar">
+         <div class="tl-seg tl-1"></div>
+         <div class="tl-seg tl-2"></div>
+         <div class="tl-seg tl-3"></div>
+         <div class="tl-seg tl-4"></div>
+       </div>
+       <div class="timeline-labels-bottom">
+         <span>Чек-ін</span>
+         <span>Діагностика проблеми</span>
+         <span>Розбір шляхів</span>
+         <span>Переносимо в життя</span>
+       </div>
+     </div>
+   </div>
 
   <div class="format">
-    <p class="section-label">Формат</p>
     <div class="format-grid">
-      <div class="format-item">
-        <p class="fi-label">Тривалість</p>
-        <p class="fi-value">30 хвилин</p>
-      </div>
+       <div class="format-item">
+         <p class="fi-label">Тривалість</p>
+         <p class="fi-value">40 хвилин</p>
+       </div>
       <div class="format-item">
         <p class="fi-label">Вартість</p>
-        <p class="fi-value">300 грн</p>
+        <p class="fi-value">400 грн</p>
       </div>
       <div class="format-item">
         <p class="fi-label">Формат</p>
@@ -499,13 +674,8 @@
     </div>
   </div>
 
-  <div class="warning">
-    <p>Науковці вже б'ють на сполох: бездумне делегування завдань нейромережам призводить до "когнітивної атрофії". Згідно з дослідженнями (зокрема від MIT), якщо використовувати ChatGPT просто як "чарівну кнопку", яка робить роботу за людину, здатність до самостійного критичного мислення стрімко падає. Мозок лінується, і з часом втрачає навички мислення.</p>
-    <p>Але є й інший бік. Спільне дослідження Гарвардської бізнес-школи та Boston Consulting Group довело, що фахівці, які використовують ШІ як партнера, розширюють свої здібності. Вони виконують складні задачі на 25% швидше і видають на понад 40% якісніший результат.</p>
-  </div>  
-
-  <div class="cta">
-    <h2>Готові поговорити?</h2>
+   <div class="cta">
+     <h2>Готові поговорити?</h2>
     <p>Напишіть мені → домовимось про зручний час.</p>
     <a class="btn" href="https://t.me/danvoronov" target="_blank">Написати в Telegram</a>
     <p class="contact-note">або на пошту <a href="mailto:dan.voronov@gmail.com">dan.voronov@pm.me</a></p>
