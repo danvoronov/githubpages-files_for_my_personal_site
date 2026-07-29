@@ -11,10 +11,80 @@
         background-color: black;
         background:url("dan-files/Milky_Way_Galaxy.jpg") no-repeat center center fixed;  
     }
+    .subprojects-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 9999;
+        background: #000000;
+        border-top: 1px solid #222222;
+        padding: 7px 16px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        font-size: 13px;
+        color: #cccccc;
+    }
+    .subprojects-bar .subprojects-title {
+        position: absolute;
+        left: 16px;
+        font-weight: 600;
+        color: #ffffff;
+        white-space: nowrap;
+    }
+    .subprojects-bar .subprojects-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+    .subprojects-bar a {
+        color: #b5bbd9;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.15s ease, text-decoration 0.15s ease;
+    }
+    .subprojects-bar a:hover {
+        color: #ffffff;
+        text-decoration: underline;
+    }
+    .subprojects-bar .sep {
+        color: #444444;
+        user-select: none;
+    }
+    @media (max-width: 640px) {
+        .subprojects-bar {
+            flex-direction: column;
+            gap: 4px;
+            padding: 6px 12px;
+        }
+        .subprojects-bar .subprojects-title {
+            position: static;
+            align-self: flex-start;
+        }
+    }
 </style>
 </head>
 <body>
   <div id="graph"></div>
+
+  <div class="subprojects-bar" role="navigation" aria-label="Subprojects">
+    <span class="subprojects-title" id="subprojectsLabel">my subprojects:</span>
+    <div class="subprojects-links">
+      <a href="https://apps.danvoronov.com/" target="_blank" rel="noopener">apps.danvoronov.com</a>
+      <span class="sep">•</span>
+      <a href="https://aicode.danvoronov.com/" target="_blank" rel="noopener">aicode.danvoronov.com</a>
+      <span class="sep">•</span>
+      <a href="https://empathy.danvoronov.com/" target="_blank" rel="noopener">empathy.danvoronov.com</a>
+    </div>
+  </div>
+
 <script src="menu.js"></script>
 <script src="dan-files/js/graph.js"></script>
 <script src="dan-files/js/ga.js"></script>
@@ -78,6 +148,10 @@
       btn.setAttribute('aria-label', 'Switch language to ' + (lang === 'uk' ? 'English' : 'Ukrainian'));
     }
     document.documentElement.lang = (lang === 'uk') ? 'uk' : 'en';
+    const subprojectsLabel = document.getElementById('subprojectsLabel');
+    if(subprojectsLabel){
+      subprojectsLabel.textContent = (lang === 'uk') ? 'мої підпроєкти:' : 'my subprojects:';
+    }
   }
   function ensureButton(){
     let btn = document.getElementById('langToggle');
