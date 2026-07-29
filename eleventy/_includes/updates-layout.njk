@@ -13,16 +13,152 @@
   <link href="/ru/dan-wpdata/themes/dan-kiev-ua/styles/default.css" rel="stylesheet" type="text/css" />
   <link href="/ru/dan-wpdata/themes/dan-kiev-ua/custom.css" rel="stylesheet" type="text/css" />
   <style type="text/css">
-    .entry strong{ color: lightgreen; }
-    .entry { padding-top: 25px; }
-    hr {color: #fff;}
+    html,
+    body {
+      min-height: 100%;
+      background: #54D98F;
+    }
+
+    body.custom {
+      margin: 0;
+      background: #54D98F;
+      color: #3f4652;
+    }
+
+    #page-background {
+      position: fixed;
+      inset: 0;
+      background: #54D98F;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    #page-content {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      background: #54D98F;
+    }
+
+    #wrap {
+      box-sizing: border-box;
+      padding: 12px 0 36px;
+    }
+
+    #content.updates-shell {
+      box-sizing: border-box;
+      width: min(1162px, calc(100vw - 32px));
+      min-height: 0;
+      margin: 0 auto;
+      background: #fff;
+      border: 10px solid #e5950c;
+    }
+
+    #content.updates-shell #main-full {
+      width: auto;
+      padding: 0;
+    }
+
+    #content.updates-shell .post {
+      padding: 0;
+      font-size: 125%;
+    }
+
+    #content.updates-shell .entry {
+      padding: 28px 24px 26px;
+      line-height: 1.45;
+    }
+
+    #content.updates-shell .entry p {
+      margin: 0 0 14px;
+      padding: 0;
+      line-height: 1.45;
+    }
+
+    #content.updates-shell .entry strong {
+      color: #4b8f62;
+      font-weight: 700;
+    }
+
+    #content.updates-shell .entry hr {
+      height: 1px;
+      margin: 12px 0 16px;
+      border: 0;
+      background: #5d6570;
+    }
+
+    .updates-post-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .updates-post-nav__links {
+      min-width: 0;
+    }
+
+    .updates-post-nav time {
+      color: #4f5967;
+      white-space: nowrap;
+    }
+
+    .prose {
+      margin: 0;
+    }
+
+    .prose h2 {
+      margin-top: 36px;
+    }
+
+    .updates-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 22px 0 0;
+      padding: 0;
+    }
+
+    .updates-tag {
+      display: inline-block;
+      padding: 4px 9px;
+      border-radius: 4px;
+      background: #ededed;
+      color: #4f5967;
+      line-height: 1.2;
+    }
+
+    @media (max-width: 720px) {
+      #wrap {
+        padding: 8px 0 24px;
+      }
+
+      #content.updates-shell {
+        width: min(100vw - 16px, 1162px);
+        border-width: 8px;
+      }
+
+      #content.updates-shell .entry {
+        padding: 20px 16px 22px;
+      }
+
+      .updates-post-nav {
+        display: block;
+      }
+
+      .updates-post-nav time {
+        display: block;
+        margin-top: 8px;
+      }
+    }
   </style>
 </head>
 <body class="custom">
   <div id="page-background"></div>
   <div id="page-content">
     <div id="wrap">
-      <div id="content" class="white" style="border: 10px solid #e5950c;">
+      <div id="content" class="white updates-shell">
         <div id="main-full">
           <div class="post">
             <div class="entry">

@@ -34,11 +34,17 @@ function formatDateOnly(value) {
 }
 
 function formatDateTime(value) {
-  if (typeof value !== "string" || value.length < 16) {
+  if (typeof value !== "string") {
     return formatDateOnly(value);
   }
 
-  return `${value.slice(0, 10)} ${value.slice(11, 16)}`;
+  const match = value.match(/^(\d{4}-\d{2}-\d{2})[-T ](\d{2})[-:](\d{2})/);
+
+  if (!match) {
+    return formatDateOnly(value);
+  }
+
+  return `${match[1]} ${match[2]}:${match[3]}`;
 }
 
 module.exports = function (eleventyConfig) {

@@ -6,33 +6,26 @@ pagination:
   alias: post
 permalink: "{{ post.outputPath }}"
 ---
-<p style="display:flex; justify-content:space-between; align-items:baseline; gap:12px;">
-  <span>
+<p class="updates-post-nav">
+  <span class="updates-post-nav__links">
     <a href="/updates/" data-esc-back style="color: #DD4723"><b>&lt; back (ESC)</b></a>
     <span style="color:#666"> | </span>
     <a href="/updates/search/" style="color: #DD4723">Search</a>
     <span style="color:#666"> | </span>
     <a href="/updates/feed.xml" style="color: #DD4723">RSS</a>
   </span>
-  <time datetime="{{ post.date }}" style="color:#666; white-space:nowrap;">{{ post.date | readableDateTime }}</time>
+  <time datetime="{{ post.date }}">{{ post.date | readableDateTime }}</time>
 </p>
 <style>
-  .prose {
-    padding: 45px 45px 0;
-  }
-
-  .prose h2 {
-    margin-top: 45px;
-  }
 </style>
-<hr style="color:black" />
+<hr />
 <div class="prose">
   {{ post.contentHtml | safe }}
 </div>
 {% if post.tags and post.tags.length %}
-<p style="padding-top:20px;">
+<p class="updates-tags">
   {% for tag in post.tags %}
-  <span style="background:#eee;padding:4px 8px;border-radius:4px;margin-right:8px;">{{ tag }}</span>
+  <span class="updates-tag">{{ tag }}</span>
   {% endfor %}
 </p>
 {% endif %}
