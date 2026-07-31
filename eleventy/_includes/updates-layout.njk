@@ -61,27 +61,21 @@
 
     #content.updates-shell .post {
       padding: 0;
-      font-size: 125%;
+      font-size: clamp(19px, 0.8vw + 14px, 26px);
     }
 
     #content.updates-shell .entry {
       box-sizing: border-box;
       width: 100%;
-      max-width: 930px;
-      margin: 0 auto;
-      padding: 28px 24px 26px;
-      line-height: 1.45;
-    }
-
-    #content.updates-shell .entry > * {
-      box-sizing: border-box;
-      max-width: 100%;
+      padding: 32px 32px 36px;
+      line-height: 1.55;
+      font-size: clamp(19px, 0.8vw + 14px, 26px);
     }
 
     #content.updates-shell .entry p {
       margin: 0 0 14px;
       padding: 0;
-      line-height: 1.45;
+      line-height: 1.55;
     }
 
     #content.updates-shell .entry strong {
@@ -91,7 +85,7 @@
 
     #content.updates-shell .entry hr {
       height: 1px;
-      margin: 12px 0 16px;
+      margin: 20px 0 36px;
       border: 0;
       background: #5d6570;
     }
@@ -101,7 +95,8 @@
       justify-content: space-between;
       align-items: baseline;
       gap: 16px;
-      margin-bottom: 12px;
+      width: 100%;
+      margin-bottom: 36px;
     }
 
     .updates-post-nav__links {
@@ -113,19 +108,50 @@
       white-space: nowrap;
     }
 
-    .prose {
-      margin: 0;
+    .prose,
+    .updates-index-content {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 930px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .prose > *,
+    .updates-index-content > * {
+      box-sizing: border-box;
+      max-width: 100%;
     }
 
     .prose h2 {
       margin-top: 36px;
     }
 
+    #content.updates-shell .entry ul,
+    .prose ul {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+
+    a[href*="/feed.xml"],
+    .rss-link {
+      color: #DD4723;
+      text-decoration: underline dotted #DD4723 !important;
+      text-underline-offset: 3px;
+    }
+
+    a[href*="/feed.xml"]:hover,
+    .rss-link:hover {
+      text-decoration: underline solid #DD4723 !important;
+    }
+
+    #content.updates-shell .entry p.updates-tags,
     .updates-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin: 50px 0 0;
+      max-width: 930px;
+      margin: 64px auto 36px !important;
       padding: 0;
     }
 
@@ -136,6 +162,15 @@
       background: #ededed;
       color: #4f5967;
       line-height: 1.2;
+    }
+
+    #content.updates-shell .entry p.updates-rss-footer,
+    .updates-rss-footer {
+      max-width: 930px;
+      margin: 32px auto 0 !important;
+      padding: 0;
+      color: #6d6257;
+      font-size: 0.95rem;
     }
 
     @media (max-width: 720px) {
@@ -180,20 +215,28 @@
   </div>
   <script>
     (function () {
-      function openLinksInNewTab() {
+      function openExternalLinksInNewTab() {
         const links = document.querySelectorAll("a");
         for (let i = 0; i < links.length; i++) {
-          links[i].setAttribute("target", "_blank");
-          if (!links[i].hasAttribute("rel")) {
-            links[i].setAttribute("rel", "noopener");
+          const href = links[i].getAttribute("href");
+          if (href && /^https?:\/\//i.test(href)) {
+            try {
+              const url = new URL(href, window.location.href);
+              if (url.hostname !== window.location.hostname) {
+                links[i].setAttribute("target", "_blank");
+                if (!links[i].hasAttribute("rel")) {
+                  links[i].setAttribute("rel", "noopener");
+                }
+              }
+            } catch (_e) {}
           }
         }
       }
 
       if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", openLinksInNewTab);
+        document.addEventListener("DOMContentLoaded", openExternalLinksInNewTab);
       } else {
-        openLinksInNewTab();
+        openExternalLinksInNewTab();
       }
 
       document.addEventListener("keydown", function (event) {

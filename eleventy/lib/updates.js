@@ -15,8 +15,14 @@ const defaultLinkOpen = markdown.renderer.rules.link_open || function (tokens, i
 };
 
 markdown.renderer.rules.link_open = function (tokens, idx, options, env, self) {
-  tokens[idx].attrSet("target", "_blank");
-  tokens[idx].attrSet("rel", "noopener");
+  const hrefIdx = tokens[idx].attrIndex("href");
+  if (hrefIdx >= 0) {
+    const href = tokens[idx].attrs[hrefIdx][1];
+    if (href && /^https?:\/\//i.test(href)) {
+      tokens[idx].attrSet("target", "_blank");
+      tokens[idx].attrSet("rel", "noopener");
+    }
+  }
   return defaultLinkOpen(tokens, idx, options, env, self);
 };
 
@@ -107,7 +113,7 @@ function renderAssetEmbed(target) {
     return `<figure class="update-embed"><audio controls preload="metadata" src="${assetUrl}"></audio></figure>`;
   }
 
-  return `<p><a href="${assetUrl}" target="_blank" rel="noopener">Attachment: ${escapeHtml(label)}</a></p>`;
+  return `<p><a href="${assetUrl}">Attachment: ${escapeHtml(label)}</a></p>`;
 }
 
 function renderNoteEmbed(target, updatesBySlug, stack) {
@@ -117,11 +123,11 @@ function renderNoteEmbed(target, updatesBySlug, stack) {
   const embedded = updatesBySlug.get(slug);
 
   if (!embedded) {
-    return `<p><a href="${toWikiUrl(target)}" target="_blank" rel="noopener">${escapeHtml(slug)}</a></p>`;
+    return `<p><a href="${toWikiUrl(target)}">${escapeHtml(slug)}</a></p>`;
   }
 
   if (stack.includes(slug)) {
-    return `<p><a href="${embedded.url}" target="_blank" rel="noopener">${escapeHtml(embedded.title)}</a></p>`;
+    return `<p><a href="${embedded.url}">${escapeHtml(embedded.title)}</a></p>`;
   }
 
   const embeddedHtml = renderUpdateMarkdown(embedded.rawContent, updatesBySlug, [...stack, slug]);
@@ -129,7 +135,7 @@ function renderNoteEmbed(target, updatesBySlug, stack) {
   return [
     `<aside class="note-embed">`,
     `<p class="note-embed__label">Embedded update</p>`,
-    `<h2 class="note-embed__title"><a href="${embedded.url}" target="_blank" rel="noopener">${escapeHtml(embedded.title)}</a></h2>`,
+    `<h2 class="note-embed__title"><a href="${embedded.url}">${escapeHtml(embedded.title)}</a></h2>`,
     `<div class="note-embed__content">${embeddedHtml}</div>`,
     `</aside>`
   ].join("");

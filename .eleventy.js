@@ -44,7 +44,7 @@ function formatDateTime(value) {
     return formatDateOnly(value);
   }
 
-  return `<strong>${match[1]}</strong> ${match[2]}:${match[3]}`;
+  return `<strong>${match[1]}</strong> <span style="color:#888;">${match[2]}:${match[3]}</span>`;
 }
 
 module.exports = function (eleventyConfig) {
@@ -59,8 +59,14 @@ module.exports = function (eleventyConfig) {
   };
 
   md.renderer.rules.link_open = function (tokens, idx, options, env, self) {
-    tokens[idx].attrSet("target", "_blank");
-    tokens[idx].attrSet("rel", "noopener");
+    const hrefIdx = tokens[idx].attrIndex("href");
+    if (hrefIdx >= 0) {
+      const href = tokens[idx].attrs[hrefIdx][1];
+      if (href && /^https?:\/\//i.test(href)) {
+        tokens[idx].attrSet("target", "_blank");
+        tokens[idx].attrSet("rel", "noopener");
+      }
+    }
     return defaultLinkOpen(tokens, idx, options, env, self);
   };
 

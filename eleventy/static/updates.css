@@ -279,7 +279,6 @@ audio {
 }
 
 .prose p,
-.prose ul,
 .prose ol,
 .prose blockquote,
 .prose pre,
@@ -287,6 +286,11 @@ audio {
 .prose h3 {
   margin-top: 0;
   margin-bottom: 1em;
+}
+
+.prose ul {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .prose h2,
