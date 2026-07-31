@@ -65,8 +65,17 @@
     }
 
     #content.updates-shell .entry {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 930px;
+      margin: 0 auto;
       padding: 28px 24px 26px;
       line-height: 1.45;
+    }
+
+    #content.updates-shell .entry > * {
+      box-sizing: border-box;
+      max-width: 100%;
     }
 
     #content.updates-shell .entry p {
@@ -116,7 +125,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin: 22px 0 0;
+      margin: 50px 0 0;
       padding: 0;
     }
 
@@ -171,6 +180,22 @@
   </div>
   <script>
     (function () {
+      function openLinksInNewTab() {
+        const links = document.querySelectorAll("a");
+        for (let i = 0; i < links.length; i++) {
+          links[i].setAttribute("target", "_blank");
+          if (!links[i].hasAttribute("rel")) {
+            links[i].setAttribute("rel", "noopener");
+          }
+        }
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", openLinksInNewTab);
+      } else {
+        openLinksInNewTab();
+      }
+
       document.addEventListener("keydown", function (event) {
         if (event.key !== "Escape") {
           return;

@@ -8,13 +8,13 @@ permalink: "{{ post.outputPath }}"
 ---
 <p class="updates-post-nav">
   <span class="updates-post-nav__links">
-    <a href="/updates/" data-esc-back style="color: #DD4723"><b>&lt; back (ESC)</b></a>
+    <a href="/updates/" data-esc-back style="color: #DD4723" target="_blank" rel="noopener"><b>&lt; back (ESC)</b></a>
     <span style="color:#666"> | </span>
-    <a href="/updates/search/" style="color: #DD4723">Search</a>
+    <a href="/updates/search/" style="color: #DD4723" target="_blank" rel="noopener">Search</a>
     <span style="color:#666"> | </span>
-    <a href="/updates/feed.xml" style="color: #DD4723">RSS</a>
+    <a href="/updates/feed.xml" style="color: #DD4723" target="_blank" rel="noopener">RSS</a>
   </span>
-  <time datetime="{{ post.date }}">{{ post.date | readableDateTime }}</time>
+  <time datetime="{{ post.date }}">{{ post.date | readableDateTime | safe }}</time>
 </p>
 <style>
 </style>

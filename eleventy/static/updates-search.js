@@ -62,9 +62,9 @@
               <time datetime="${escapeHtml(post.date)}">${escapeHtml(post.date.slice(0, 10))}</time>
               <span>${escapeHtml(post.mediaKind || "update")}</span>
             </div>
-            <h2><a href="${escapeHtml(post.url)}">${escapeHtml(post.title)}</a></h2>
+            <h2><a href="${escapeHtml(post.url)}" target="_blank" rel="noopener">${escapeHtml(post.title)}</a></h2>
             <p>${escapeHtml(post.excerpt || "")}</p>
-            <a class="update-card__link" href="${escapeHtml(post.url)}">Open update</a>
+            <a class="update-card__link" href="${escapeHtml(post.url)}" target="_blank" rel="noopener">Open update</a>
           </article>
         `
       )

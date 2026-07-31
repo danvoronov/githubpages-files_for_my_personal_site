@@ -10,24 +10,24 @@ eleventyComputed:
   description: "{{ site.updatesDescription }}"
 ---
 <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
-  <span><a href="/" data-esc-back style="color: #DD4723"><b>&lt; back (ESC)</b></a> | <a href="/updates/search/" style="color: #DD4723">Search archive</a></span>
+  <span><a href="/" data-esc-back style="color: #DD4723" target="_blank" rel="noopener"><b>&lt; back (ESC)</b></a> | <a href="/updates/search/" style="color: #DD4723" target="_blank" rel="noopener">Search archive</a></span>
   {% if pagination.href.previous or pagination.href.next %}
   <span>
     {% if pagination.href.previous %}
-    <a href="{{ pagination.href.previous }}" style="color: #DD4723">&lt; Newer</a>
+    <a href="{{ pagination.href.previous }}" style="color: #DD4723" target="_blank" rel="noopener">&lt; Newer</a>
     {% endif %}
     {% if pagination.href.previous and pagination.href.next %}
     <span style="color:#666"> | </span>
     {% endif %}
     {% if pagination.href.next %}
-    <a href="{{ pagination.href.next }}" style="color: #DD4723">Older &gt;</a>
+    <a href="{{ pagination.href.next }}" style="color: #DD4723" target="_blank" rel="noopener">Older &gt;</a>
     {% endif %}
     <span style="color:#666"> | Page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}</span>
   </span>
   {% endif %}
 </div>
 
-<p style="color:black">{{ updates | length }} posts · <a href="/updates/feed.xml" style="color: #DD4723">RSS feed</a></p>
+<p style="color:black">{{ updates | length }} posts · <a href="/updates/feed.xml" style="color: #DD4723" target="_blank" rel="noopener">RSS feed</a></p>
 
 <style>
   #content ul.updates-index-list {
@@ -113,7 +113,7 @@ eleventyComputed:
       <span class="updates-index-separator" aria-hidden="true">&nbsp;</span>
       <time datetime="{{ post.date }}" class="updates-index-date">{{ postMonthDay }}</time>
       <span class="updates-index-separator" aria-hidden="true">&nbsp;</span>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <a href="{{ post.url }}" target="_blank" rel="noopener">{{ post.title }}</a>
     </div>
   </li>
   {% endfor %}
@@ -122,13 +122,13 @@ eleventyComputed:
 {% if pagination.href.previous or pagination.href.next %}
 <div style="padding-top:23px; text-align:center;">
   {% if pagination.href.previous %}
-  <a href="{{ pagination.href.previous }}" style="color: #DD4723">&lt; Newer</a>
+  <a href="{{ pagination.href.previous }}" style="color: #DD4723" target="_blank" rel="noopener">&lt; Newer</a>
   {% endif %}
   {% if pagination.href.previous and pagination.href.next %}
   <span style="color:#666"> | </span>
   {% endif %}
   {% if pagination.href.next %}
-  <a href="{{ pagination.href.next }}" style="color: #DD4723">Older &gt;</a>
+  <a href="{{ pagination.href.next }}" style="color: #DD4723" target="_blank" rel="noopener">Older &gt;</a>
   {% endif %}
   <span style="color:#666"> | Page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}</span>
 </div>

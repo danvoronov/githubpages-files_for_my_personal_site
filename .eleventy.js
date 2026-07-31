@@ -44,18 +44,27 @@ function formatDateTime(value) {
     return formatDateOnly(value);
   }
 
-  return `${match[1]} ${match[2]}:${match[3]}`;
+  return `<strong>${match[1]}</strong> ${match[2]}:${match[3]}`;
 }
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.setLibrary(
-    "md",
-    new MarkdownIt({
-      html: true,
-      linkify: true,
-      typographer: true
-    })
-  );
+  const md = new MarkdownIt({
+    html: true,
+    linkify: true,
+    typographer: true
+  });
+
+  const defaultLinkOpen = md.renderer.rules.link_open || function (tokens, idx, options, env, self) {
+    return self.renderToken(tokens, idx, options);
+  };
+
+  md.renderer.rules.link_open = function (tokens, idx, options, env, self) {
+    tokens[idx].attrSet("target", "_blank");
+    tokens[idx].attrSet("rel", "noopener");
+    return defaultLinkOpen(tokens, idx, options, env, self);
+  };
+
+  eleventyConfig.setLibrary("md", md);
 
   eleventyConfig.addPassthroughCopy({
     "markdown/updates/assets": "updates/assets"
