@@ -8,7 +8,7 @@ _site/
 # Obsidian vault metadata and local trash
 **/.obsidian/
 **/.trash/
-markdown/README.md
+updates-md/README.md
 
 # OS junk
 **/.DS_Store

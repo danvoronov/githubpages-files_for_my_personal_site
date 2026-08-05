@@ -3,7 +3,7 @@ const path = require("path");
 const matter = require("gray-matter");
 const MarkdownIt = require("markdown-it");
 
-const updatesRoot = path.join(process.cwd(), "markdown", "updates");
+const updatesRoot = path.join(process.cwd(), "updates-md", "updates");
 const markdown = new MarkdownIt({
   html: true,
   linkify: true,

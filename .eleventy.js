@@ -11,7 +11,7 @@ const passthroughExcludes = new Set([
   ".eleventy.js",
   "_site",
   "eleventy",
-  "markdown",
+  "updates-md",
   "node_modules",
   "package.json",
   "package-lock.json"
@@ -73,7 +73,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary("md", md);
 
   eleventyConfig.addPassthroughCopy({
-    "markdown/updates/assets": "updates/assets"
+    "updates-md/updates/assets": "updates/assets"
   });
   eleventyConfig.addPassthroughCopy({
     "eleventy/static/updates.css": "updates/styles.css"
