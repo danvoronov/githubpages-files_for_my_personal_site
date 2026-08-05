@@ -113,7 +113,7 @@ function renderAssetEmbed(target) {
     return `<figure class="update-embed"><audio controls preload="metadata" src="${assetUrl}"></audio></figure>`;
   }
 
-  return `<p><a href="${assetUrl}">Attachment: ${escapeHtml(label)}</a></p>`;
+  return `<p><a href="${assetUrl}">Вкладення: ${escapeHtml(label)}</a></p>`;
 }
 
 function renderNoteEmbed(target, updatesBySlug, stack) {
@@ -134,7 +134,7 @@ function renderNoteEmbed(target, updatesBySlug, stack) {
 
   return [
     `<aside class="note-embed">`,
-    `<p class="note-embed__label">Embedded update</p>`,
+    `<p class="note-embed__label">Вкладений запис</p>`,
     `<h2 class="note-embed__title"><a href="${embedded.url}">${escapeHtml(embedded.title)}</a></h2>`,
     `<div class="note-embed__content">${embeddedHtml}</div>`,
     `</aside>`
@@ -192,7 +192,12 @@ function buildExcerpt(rawContent, fallbackTitle) {
 }
 
 function normalizeDisplayTitle(title) {
-  return String(title).replace(/^(Photo post|Video post|Voice message|Location post)\s+\d+$/i, "$1");
+  const str = String(title);
+  if (/^Photo post\s+\d+$/i.test(str) || str === "Photo post") return "Фотопост";
+  if (/^Video post\s+\d+$/i.test(str) || str === "Video post") return "Відеопост";
+  if (/^Voice message\s+\d+$/i.test(str) || str === "Voice message") return "Голосове повідомлення";
+  if (/^Location post\s+\d+$/i.test(str) || str === "Location post") return "Локація";
+  return str;
 }
 
 function loadUpdates() {
@@ -235,12 +240,32 @@ function loadUpdates() {
 
   const updatesBySlug = new Map(records.map((record) => [record.slug, record]));
 
-  return records.map((record) => {
+  return records.map((record, index) => {
     const contentHtml = renderUpdateMarkdown(record.rawContent, updatesBySlug, [record.slug]);
+    const prevRecord = records[index + 1];
+    const nextRecord = records[index - 1];
+
+    const prevPost = prevRecord
+      ? {
+          url: prevRecord.url,
+          title: prevRecord.title,
+          date: prevRecord.date
+        }
+      : null;
+
+    const nextPost = nextRecord
+      ? {
+          url: nextRecord.url,
+          title: nextRecord.title,
+          date: nextRecord.date
+        }
+      : null;
 
     return {
       ...record,
       contentHtml,
+      prevPost,
+      nextPost,
       excerpt: buildExcerpt(record.rawContent, record.title),
       searchText: stripMarkdown(record.rawContent)
     };

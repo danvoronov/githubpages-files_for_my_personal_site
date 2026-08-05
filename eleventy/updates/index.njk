@@ -6,29 +6,29 @@ pagination:
   alias: posts
 permalink: "{% if pagination.pageNumber == 0 %}updates/index.html{% else %}updates/page/{{ pagination.pageNumber + 1 }}/index.html{% endif %}"
 eleventyComputed:
-  title: "{% if pagination.pageNumber == 0 %}Updates{% else %}Updates - Page {{ pagination.pageNumber + 1 }}{% endif %}"
+  title: "{% if pagination.pageNumber == 0 %}Оновлення{% else %}Оновлення — Сторінка {{ pagination.pageNumber + 1 }}{% endif %}"
   description: "{{ site.updatesDescription }}"
 ---
 <div class="updates-post-nav" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
-  <span><a href="/" data-esc-back style="color: #DD4723"><b>&lt; back (ESC)</b></a> | <a href="/updates/search/" style="color: #DD4723">&#x2315; Search archive</a></span>
+  <span><a href="/" data-esc-back style="color: #DD4723"><b>&lt; назад (ESC)</b></a> | <a href="/updates/search/" style="color: #DD4723">&#x2315; Пошук по архіву</a></span>
   {% if pagination.href.previous or pagination.href.next %}
   <span>
     {% if pagination.href.previous %}
-    <a href="{{ pagination.href.previous }}" style="color: #DD4723">&lt; Newer</a>
+    <a href="{{ pagination.href.previous }}" style="color: #DD4723">&lt; Новіші</a>
     {% endif %}
     {% if pagination.href.previous and pagination.href.next %}
     <span style="color:#666"> | </span>
     {% endif %}
     {% if pagination.href.next %}
-    <a href="{{ pagination.href.next }}" style="color: #DD4723">Older &gt;</a>
+    <a href="{{ pagination.href.next }}" style="color: #DD4723">Старіші &gt;</a>
     {% endif %}
-    <span style="color:#666"> | Page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}</span>
+    <span style="color:#666"> | Сторінка {{ pagination.pageNumber + 1 }} з {{ pagination.pages.length }}</span>
   </span>
   {% endif %}
 </div>
 
 <div class="updates-index-content">
-  <p style="color:black">{{ updates | length }} posts · <a href="/updates/feed.xml" class="rss-link" style="color: #DD4723">RSS feed</a></p>
+  <p style="color:black">{{ updates | length }} записів · <a href="/updates/feed.xml" class="rss-link" style="color: #DD4723">RSS-стрічка</a></p>
 
   <style>
     #content ul.updates-index-list {
@@ -123,15 +123,15 @@ eleventyComputed:
   {% if pagination.href.previous or pagination.href.next %}
   <div style="padding-top:23px; text-align:center;">
     {% if pagination.href.previous %}
-    <a href="{{ pagination.href.previous }}" style="color: #DD4723">&lt; Newer</a>
+    <a href="{{ pagination.href.previous }}" style="color: #DD4723">&lt; Новіші</a>
     {% endif %}
     {% if pagination.href.previous and pagination.href.next %}
     <span style="color:#666"> | </span>
     {% endif %}
     {% if pagination.href.next %}
-    <a href="{{ pagination.href.next }}" style="color: #DD4723">Older &gt;</a>
+    <a href="{{ pagination.href.next }}" style="color: #DD4723">Старіші &gt;</a>
     {% endif %}
-    <span style="color:#666"> | Page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}</span>
+    <span style="color:#666"> | Сторінка {{ pagination.pageNumber + 1 }} з {{ pagination.pages.length }}</span>
   </div>
   {% endif %}
 </div>

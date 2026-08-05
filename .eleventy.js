@@ -102,15 +102,15 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("htmlEscape", escapeHtml);
   eleventyConfig.addFilter("updateKindLabel", (value) => {
     const labels = {
-      text: "text",
-      photo: "photo",
-      video: "video",
-      voice: "voice",
-      audio: "audio",
-      file: "file"
+      text: "текст",
+      photo: "фото",
+      video: "відео",
+      voice: "голос",
+      audio: "аудіо",
+      file: "файл"
     };
 
-    return labels[value] || value || "update";
+    return labels[value] || value || "оновлення";
   });
 
   return {

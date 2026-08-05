@@ -49,22 +49,22 @@
   function renderResults(items, query) {
     if (!items.length) {
       resultsRoot.innerHTML = "";
-      status.textContent = query ? "No matches." : "Type to search the archive.";
+      status.textContent = query ? "Нічого не знайдено." : "Введіть текст для пошуку по архіву.";
       return;
     }
 
-    status.textContent = `${items.length} match${items.length === 1 ? "" : "es"}.`;
+    status.textContent = `Знайдено записів: ${items.length}`;
     resultsRoot.innerHTML = items
       .map(
         (post) => `
           <article class="update-card">
             <div class="update-card__meta">
               <time datetime="${escapeHtml(post.date)}">${escapeHtml(post.date.slice(0, 10))}</time>
-              <span>${escapeHtml(post.mediaKind || "update")}</span>
+              <span>${escapeHtml(post.mediaKind || "опубліковано")}</span>
             </div>
             <h2><a href="${escapeHtml(post.url)}">${escapeHtml(post.title)}</a></h2>
             <p>${escapeHtml(post.excerpt || "")}</p>
-            <a class="update-card__link" href="${escapeHtml(post.url)}">Open update</a>
+            <a class="update-card__link" href="${escapeHtml(post.url)}">Читати далі</a>
           </article>
         `
       )
@@ -77,7 +77,7 @@
     const response = await fetch("/updates/search.json");
     searchIndex = await response.json();
   } catch (_error) {
-    status.textContent = "Could not load the search index.";
+    status.textContent = "Не вдалося завантажити індекс пошуку.";
     return;
   }
 
@@ -122,7 +122,7 @@
     runSearch(nextQuery);
   });
 
-  status.textContent = "Type to search the archive.";
+  status.textContent = "Введіть текст для пошуку по архіву.";
   runSearch(initialQuery);
 })();
 

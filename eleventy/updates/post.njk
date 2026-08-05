@@ -8,9 +8,9 @@ permalink: "{{ post.outputPath }}"
 ---
 <p class="updates-post-nav">
   <span class="updates-post-nav__links">
-    <a href="/updates/" data-esc-back style="color: #DD4723"><b>&lt; back (ESC)</b></a>
+    <a href="/updates/" data-esc-back style="color: #DD4723"><b>&lt; назад до списку (ESC)</b></a>
     <span style="color:#666"> | </span>
-    <a href="/updates/search/" style="color: #DD4723">&#x2315; Search</a>
+    <a href="/updates/search/" style="color: #DD4723">&#x2315; Пошук</a>
   </span>
   <time datetime="{{ post.date }}">{{ post.date | readableDateTime | safe }}</time>
 </p>
@@ -27,6 +27,11 @@ permalink: "{{ post.outputPath }}"
   {% endfor %}
 </p>
 {% endif %}
+{% if post.prevPost %}
+<p class="updates-prev-post">
+  Попередній запис: <a href="{{ post.prevPost.url }}" style="color: #DD4723">{{ post.prevPost.title }}</a> <span style="color: #6d6257; font-size: 0.9em;">({{ post.prevPost.date | readableDateTime | safe }})</span>
+</p>
+{% endif %}
 <p class="updates-rss-footer">
-  Subscribe to updates via <a href="/updates/feed.xml" class="rss-link" style="color: #DD4723">RSS feed</a>.
+  Підписатися на оновлення через <a href="/updates/feed.xml" class="rss-link" style="color: #DD4723">RSS-стрічку</a>.
 </p>
