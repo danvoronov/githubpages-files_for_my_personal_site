@@ -278,8 +278,11 @@ audio {
   margin-bottom: 0;
 }
 
+.prose p:has(+ ul, + ol) {
+  margin-bottom: 4px;
+}
+
 .prose p,
-.prose ol,
 .prose blockquote,
 .prose pre,
 .prose h2,
@@ -288,8 +291,35 @@ audio {
   margin-bottom: 1em;
 }
 
-.prose ul {
+.prose ul,
+.prose ol {
   margin-top: 0;
+  margin-bottom: 1em;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.prose ul {
+  list-style-type: disc;
+  padding-left: 28px;
+}
+
+.prose ol {
+  list-style-type: decimal;
+  padding-left: 28px;
+}
+
+.prose ul li,
+.prose ol li {
+  padding: 2px 0;
+  line-height: 1.55;
+}
+
+.prose li p {
+  margin: 0 0 6px;
+}
+
+.prose li p:last-child {
   margin-bottom: 0;
 }
 

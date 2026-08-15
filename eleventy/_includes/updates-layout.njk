@@ -71,7 +71,7 @@
     }
 
     #content.updates-shell .entry p {
-      margin: 0 0 14px;
+      margin: 0 0 18px;
       padding: 0;
       line-height: 1.55;
     }
@@ -133,10 +133,72 @@
       margin-top: 36px;
     }
 
+    #content.updates-shell .entry p:has(+ ul, + ol),
+    .prose p:has(+ ul, + ol) {
+      margin-bottom: 4px !important;
+    }
+
+    #content.updates-shell .entry ul,
+    #content.updates-shell .entry ol,
+    .prose ul,
+    .prose ol {
+      margin-top: 0 !important;
+      margin-bottom: 18px !important;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      line-height: 1.55;
+    }
+
     #content.updates-shell .entry ul,
     .prose ul {
-      margin-top: 0 !important;
+      list-style-type: disc;
+      padding-left: 28px;
+    }
+
+    #content.updates-shell .entry ol,
+    .prose ol {
+      list-style-type: decimal;
+      padding-left: 28px;
+    }
+
+    #content.updates-shell .entry ul li,
+    #content.updates-shell .entry ol li,
+    .prose ul li,
+    .prose ol li {
+      padding: 2px 0;
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    #content.updates-shell .entry li p,
+    .prose li p {
+      margin: 0 0 6px !important;
+      line-height: 1.55;
+    }
+
+    #content.updates-shell .entry li p:last-child,
+    .prose li p:last-child {
       margin-bottom: 0 !important;
+    }
+
+    #content.updates-shell .entry ul ul,
+    #content.updates-shell .entry ol ul,
+    .prose ul ul,
+    .prose ol ul {
+      list-style-type: circle;
+      margin-top: 2px !important;
+      margin-bottom: 2px !important;
+      padding-left: 22px;
+    }
+
+    #content.updates-shell .entry ul ol,
+    #content.updates-shell .entry ol ol,
+    .prose ul ol,
+    .prose ol ol {
+      list-style-type: decimal;
+      margin-top: 2px !important;
+      margin-bottom: 2px !important;
+      padding-left: 22px;
     }
 
     a[href*="/feed.xml"],
