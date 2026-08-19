@@ -200,6 +200,24 @@ function normalizeDisplayTitle(title) {
   return str;
 }
 
+function findFirstImage(rawContent) {
+  const obsidianMatch = rawContent.match(/!\[\[([^\]|]+)(?:\|[^\]]*)?\]\]/);
+  if (obsidianMatch) {
+    const rawPath = obsidianMatch[1].trim();
+    const extension = path.extname(rawPath).toLowerCase();
+    if ([".jpg", ".jpeg", ".png", ".gif", ".webp", ".avif"].includes(extension)) {
+      return toAssetUrl(rawPath);
+    }
+  }
+
+  const markdownMatch = rawContent.match(/!\[.*?\]\((https?:\/\/[^\s)]+|\/[^\s)]+)\)/);
+  if (markdownMatch) {
+    return markdownMatch[1];
+  }
+
+  return null;
+}
+
 function loadUpdates() {
   const files = walkMarkdownFiles(updatesRoot);
 
@@ -225,6 +243,7 @@ function loadUpdates() {
         replyToMessageId: parsed.data.reply_to_message_id ?? null,
         forwardedFrom: parsed.data.forwarded_from || null,
         rawContent: sanitizedContent,
+        imageUrl: findFirstImage(sanitizedContent),
         url: toUpdateUrl(slug),
         outputPath: toOutputPath(slug),
         sourcePath: normalizeSlashes(path.relative(process.cwd(), filePath))

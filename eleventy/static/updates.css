@@ -433,6 +433,82 @@ mark {
   border: 1px solid rgba(35, 29, 22, 0.08);
 }
 
+.updates-tags-sep {
+  display: inline-flex;
+  align-items: center;
+  color: var(--muted);
+  font-weight: normal;
+  user-select: none;
+  padding: 0 4px;
+}
+
+.share-buttons {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.share-buttons a {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 1.2;
+  color: #ffffff !important;
+  transition: opacity 0.15s ease, background-color 0.15s ease;
+}
+
+.share-buttons a:hover {
+  opacity: 0.9;
+  text-decoration: none !important;
+}
+
+.share-buttons a.share-btn--x {
+  background: #000000;
+}
+.share-buttons a.share-btn--x:hover {
+  background: #222222;
+}
+
+.share-buttons a.share-btn--telegram {
+  background: #2481cc;
+}
+.share-buttons a.share-btn--telegram:hover {
+  background: #1c6ba8;
+}
+
+.share-buttons a.share-btn--facebook {
+  background: #1877f2;
+}
+.share-buttons a.share-btn--facebook:hover {
+  background: #1462c7;
+}
+
+.updates-prev-post {
+  box-sizing: border-box;
+  max-width: 930px;
+  margin: 44px auto 24px;
+  padding: 16px 20px;
+  border: 1px solid #e5950c;
+  border-radius: 8px;
+  background: #fffdf8;
+  color: var(--muted);
+  font-size: 1.15rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.updates-prev-post a {
+  font-weight: 600;
+}
+
 @media (max-width: 720px) {
   body {
     font-size: 17px;

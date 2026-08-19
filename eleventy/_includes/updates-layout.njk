@@ -3,9 +3,36 @@
 <head profile="http://gmpg.org/xfn/11">
   {% set pageTitle = post.title if post else title %}
   {% set pageDescription = post.excerpt if post else (description or site.updatesDescription) %}
+  {% set pageRelativeUrl = post.url if post else page.url %}
+  {% set canonicalUrl = pageRelativeUrl | absoluteUrl(site.url) %}
+  {% set pageImage = (post.imageUrl if (post and post.imageUrl) else (site.image or "/dan-files/i/dan_doska_4site.jpg")) | absoluteUrl(site.url) %}
+  {% set siteTitle = ((pageTitle | htmlEscape | safe) ~ " | " ~ site.name) if pageTitle else site.name %}
   <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
-  <title>{% if pageTitle %}{{ pageTitle | htmlEscape | safe }} | {% endif %}{{ site.name }}</title>
+  <title>{{ siteTitle }}</title>
   <meta name="description" content="{{ pageDescription | htmlEscape | safe }}">
+
+  <!-- Open Graph / Facebook / Slack / Discord -->
+  <meta property="og:type" content="{% if post %}article{% else %}website{% endif %}">
+  <meta property="og:site_name" content="{{ site.name | htmlEscape | safe }}">
+  <meta property="og:title" content="{{ siteTitle }}">
+  <meta property="og:description" content="{{ pageDescription | htmlEscape | safe }}">
+  <meta property="og:url" content="{{ canonicalUrl }}">
+  {% if pageImage %}
+  <meta property="og:image" content="{{ pageImage }}">
+  {% endif %}
+  {% if post and post.date %}
+  <meta property="article:published_time" content="{{ post.date }}">
+  {% endif %}
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="{% if post and post.imageUrl %}summary_large_image{% else %}summary{% endif %}">
+  <meta name="twitter:title" content="{{ siteTitle }}">
+  <meta name="twitter:description" content="{{ pageDescription | htmlEscape | safe }}">
+  {% if pageImage %}
+  <meta name="twitter:image" content="{{ pageImage }}">
+  {% endif %}
+
+  <link rel="canonical" href="{{ canonicalUrl }}">
   <link rel="icon" href="/favicon.ico">
   <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/updates/feed.xml" />
   <link rel="stylesheet" type="text/css" href="/ru/dan-wpdata/themes/dan-kiev-ua/style.css" media="screen" />
@@ -217,6 +244,7 @@
     .updates-tags {
       display: flex;
       flex-wrap: wrap;
+      align-items: center;
       gap: 8px;
       max-width: 930px;
       margin: 64px auto 36px !important;
@@ -232,14 +260,86 @@
       line-height: 1.2;
     }
 
+    .updates-tags-sep {
+      display: inline-flex;
+      align-items: center;
+      color: #888;
+      font-weight: normal;
+      user-select: none;
+      padding: 0 4px;
+    }
+
+    #content.updates-shell .entry .share-buttons,
+    .share-buttons {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+    }
+
+    #content.updates-shell .entry .share-buttons a,
+    .share-buttons a {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      line-height: 1.2;
+      color: #ffffff !important;
+      transition: opacity 0.15s ease, background-color 0.15s ease;
+    }
+
+    #content.updates-shell .entry .share-buttons a:hover,
+    .share-buttons a:hover {
+      opacity: 0.9;
+      text-decoration: none !important;
+    }
+
+    #content.updates-shell .entry .share-buttons a.share-btn--x,
+    .share-buttons a.share-btn--x {
+      background: #000000;
+    }
+    #content.updates-shell .entry .share-buttons a.share-btn--x:hover,
+    .share-buttons a.share-btn--x:hover {
+      background: #222222;
+    }
+
+    #content.updates-shell .entry .share-buttons a.share-btn--telegram,
+    .share-buttons a.share-btn--telegram {
+      background: #2481cc;
+    }
+    #content.updates-shell .entry .share-buttons a.share-btn--telegram:hover,
+    .share-buttons a.share-btn--telegram:hover {
+      background: #1c6ba8;
+    }
+
+    #content.updates-shell .entry .share-buttons a.share-btn--facebook,
+    .share-buttons a.share-btn--facebook {
+      background: #1877f2;
+    }
+    #content.updates-shell .entry .share-buttons a.share-btn--facebook:hover,
+    .share-buttons a.share-btn--facebook:hover {
+      background: #1462c7;
+    }
+
     #content.updates-shell .entry p.updates-prev-post,
     .updates-prev-post {
+      box-sizing: border-box;
       max-width: 930px;
-      margin: 36px auto 0 !important;
-      padding: 0;
+      margin: 44px auto 24px !important;
+      padding: 16px 20px !important;
+      border: 1px solid #e5950c;
+      border-radius: 8px;
+      background: #fffdf8;
       color: #4f5967;
-      font-size: 1.25rem;
-      line-height: 1.4;
+      font-size: 1.15rem;
+      line-height: 1.5;
+      text-align: center;
     }
 
     .updates-prev-post a {

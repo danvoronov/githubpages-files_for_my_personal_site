@@ -100,6 +100,19 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("readableDate", formatDateOnly);
   eleventyConfig.addFilter("readableDateTime", formatDateTime);
   eleventyConfig.addFilter("htmlEscape", escapeHtml);
+  eleventyConfig.addFilter("urlencode", (value) => {
+    return encodeURIComponent(String(value ?? ""));
+  });
+  eleventyConfig.addFilter("absoluteUrl", (url, base = "https://danvoronov.com") => {
+    if (!url) {
+      return "";
+    }
+    if (/^https?:\/\//i.test(url)) {
+      return url;
+    }
+    const pathPart = url.startsWith("/") ? url : `/${url}`;
+    return `${String(base).replace(/\/+$/, "")}${pathPart}`;
+  });
   eleventyConfig.addFilter("updateKindLabel", (value) => {
     const labels = {
       text: "текст",

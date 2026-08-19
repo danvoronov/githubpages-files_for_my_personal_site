@@ -6,6 +6,19 @@ pagination:
   alias: post
 permalink: "{{ post.outputPath }}"
 ---
+{% macro shareButtons(url, title) %}
+<span class="share-buttons">
+  <a class="share-btn share-btn--x"
+     href="https://twitter.com/intent/tweet?url={{ url | urlencode }}&text={{ title | urlencode }}"
+     target="_blank" rel="noopener">Поділитися в X</a>
+  <a class="share-btn share-btn--telegram"
+     href="https://t.me/share/url?url={{ url | urlencode }}&text={{ title | urlencode }}"
+     target="_blank" rel="noopener">Поділитися в Telegram</a>
+  <a class="share-btn share-btn--facebook"
+     href="https://www.facebook.com/sharer/sharer.php?u={{ url | urlencode }}"
+     target="_blank" rel="noopener">Поділитися в Facebook</a>
+</span>
+{% endmacro %}
 <p class="updates-post-nav">
   <span class="updates-post-nav__links">
     <a href="/updates/" data-esc-back style="color: #DD4723"><b>&lt; назад до списку (ESC)</b></a>
@@ -20,13 +33,15 @@ permalink: "{{ post.outputPath }}"
 <div class="prose">
   {{ post.contentHtml | safe }}
 </div>
-{% if post.tags and post.tags.length %}
 <p class="updates-tags">
+  {% if post.tags and post.tags.length %}
   {% for tag in post.tags %}
   <span class="updates-tag">{{ tag }}</span>
   {% endfor %}
+  <span class="updates-tags-sep"> | </span>
+  {% endif %}
+  {{ shareButtons(post.url | absoluteUrl(site.url), post.title) }}
 </p>
-{% endif %}
 {% if post.prevPost %}
 <p class="updates-prev-post">
   Попередній запис: <a href="{{ post.prevPost.url }}" style="color: #DD4723">{{ post.prevPost.title }}</a> <span style="color: #6d6257; font-size: 0.9em;">({{ post.prevPost.date | readableDateTime | safe }})</span>
