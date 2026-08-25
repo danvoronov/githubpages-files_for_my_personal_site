@@ -341,9 +341,22 @@ audio {
 
 .update-embed img,
 .update-embed video {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
   border-radius: 16px;
   border: 1px solid var(--line);
   box-shadow: 0 12px 30px rgba(68, 46, 28, 0.12);
+}
+
+.update-embed,
+.prose figure {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 mark {

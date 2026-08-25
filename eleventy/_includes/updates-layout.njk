@@ -355,6 +355,32 @@
       font-size: 0.95rem;
     }
 
+    /* Images: never overflow container, always fit width */
+    .prose img,
+    .prose video,
+    .prose figure,
+    .update-embed,
+    .update-embed img,
+    .update-embed video {
+      max-width: 100%;
+      height: auto;
+      box-sizing: border-box;
+    }
+
+    .prose figure,
+    .update-embed {
+      width: 100%;
+      max-width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      overflow: hidden;
+    }
+
+    .prose img,
+    .update-embed img {
+      display: block;
+    }
+
     @media (max-width: 720px) {
       #wrap {
         padding: 8px 0 24px;
