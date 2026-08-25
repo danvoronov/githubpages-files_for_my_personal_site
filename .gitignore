@@ -10,6 +10,8 @@ _site/
 **/.trash/
 updates-md/README.md
 
+.claudian
+
 # OS junk
 **/.DS_Store
 **/Thumbs.db
