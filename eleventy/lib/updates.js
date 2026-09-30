@@ -10,6 +10,45 @@ const markdown = new MarkdownIt({
   typographer: true
 });
 
+function youtubeVideoId(value) {
+  if (!/^https?:\/\/\S+$/i.test(value)) return null;
+
+  let url;
+  try {
+    url = new URL(value);
+  } catch (_) {
+    return null;
+  }
+
+  const host = url.hostname.toLowerCase();
+  const pathParts = url.pathname.split("/").filter(Boolean);
+  let id = null;
+
+  if (host === "youtu.be" && pathParts.length === 1) {
+    id = pathParts[0];
+  } else if (["youtube.com", "www.youtube.com", "m.youtube.com"].includes(host)) {
+    if (url.pathname === "/watch") {
+      id = url.searchParams.get("v");
+    } else if (pathParts.length === 2 && ["shorts", "live", "embed"].includes(pathParts[0])) {
+      id = pathParts[1];
+    }
+  }
+
+  return id && /^[A-Za-z0-9_-]{11}$/.test(id) ? id : null;
+}
+
+markdown.block.ruler.before("paragraph", "youtube_video", (state, startLine, endLine, silent) => {
+  const sourceLine = state.src.slice(state.bMarks[startLine], state.eMarks[startLine]).trim();
+  const id = youtubeVideoId(sourceLine);
+  if (!id) return false;
+  if (silent) return true;
+
+  const token = state.push("html_block", "", 0);
+  token.content = `<figure class="update-embed update-embed--youtube"><iframe src="https://www.youtube-nocookie.com/embed/${id}" title="YouTube video player" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><figcaption><a href="${escapeHtml(sourceLine)}" target="_blank" rel="noopener">${escapeHtml(sourceLine)}</a></figcaption></figure>\n`;
+  state.line = startLine + 1;
+  return true;
+}, { alt: ["paragraph"] });
+
 const defaultLinkOpen = markdown.renderer.rules.link_open || function (tokens, idx, options, env, self) {
   return self.renderToken(tokens, idx, options);
 };
