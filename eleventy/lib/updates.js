@@ -37,14 +37,29 @@ function youtubeVideoId(value) {
   return id && /^[A-Za-z0-9_-]{11}$/.test(id) ? id : null;
 }
 
+function standaloneYoutubeLink(sourceLine) {
+  const directId = youtubeVideoId(sourceLine);
+  if (directId) return { id: directId, url: sourceLine };
+
+  const children = markdown.parseInline(sourceLine, {})[0]?.children || [];
+  if (children[0]?.type !== "link_open" || children[children.length - 1]?.type !== "link_close") {
+    return null;
+  }
+  if (children.filter((child) => child.type === "link_open").length !== 1) return null;
+
+  const url = children[0].attrGet("href");
+  const id = youtubeVideoId(url);
+  return id ? { id, url } : null;
+}
+
 markdown.block.ruler.before("paragraph", "youtube_video", (state, startLine, endLine, silent) => {
   const sourceLine = state.src.slice(state.bMarks[startLine], state.eMarks[startLine]).trim();
-  const id = youtubeVideoId(sourceLine);
-  if (!id) return false;
+  const video = standaloneYoutubeLink(sourceLine);
+  if (!video) return false;
   if (silent) return true;
 
   const token = state.push("html_block", "", 0);
-  token.content = `<figure class="update-embed update-embed--youtube"><iframe src="https://www.youtube-nocookie.com/embed/${id}" title="YouTube video player" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><figcaption><a href="${escapeHtml(sourceLine)}" target="_blank" rel="noopener">${escapeHtml(sourceLine)}</a></figcaption></figure>\n`;
+  token.content = `<figure class="update-embed update-embed--youtube"><iframe src="https://www.youtube-nocookie.com/embed/${video.id}" title="YouTube video player" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><figcaption><a href="${escapeHtml(video.url)}" target="_blank" rel="noopener">${escapeHtml(video.url)}</a></figcaption></figure>\n`;
   state.line = startLine + 1;
   return true;
 }, { alt: ["paragraph"] });
