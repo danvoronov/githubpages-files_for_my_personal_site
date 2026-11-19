@@ -1,11 +1,11 @@
 <!doctype html>
-<html>
+<html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>#КИЕВнасквозь 2019 – Дан Воронов</title>
   <meta name="description" content="Идем пешком сквозь Киев.">
   <meta name="author" content="Dan Voronov">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>  
   <style>
 	  body {background-color: #b1e3ad; padding: 10px; margin: 0; font-family: sans-serif; color: black; font-size: 17px; } 
 	  a { color: black}
@@ -31,6 +31,10 @@ box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.3);
         height: 100%;
       }
   </style>	  
+  <link rel="stylesheet" href="/dan-files/maps/leaflet/leaflet.css">
+  <link rel="stylesheet" href="/dan-files/maps/project-map.css">
+  <script defer src="/dan-files/maps/leaflet/leaflet.js"></script>
+  <script defer src="/dan-files/maps/project-map.js"></script>
 </head>
 
 <body>
@@ -47,55 +51,7 @@ box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.3);
 <div class="overbox3 sha"> 	<p><a href="https://www.facebook.com/events/396387434331439/" target="_blank">facebook</a> </p></div>
 <div class="overbox4 sha"> 	<p><a href="https://t.me/nightkyiv19" target="_blank">telegram чат</a> </p></div>
 	<div class="mapouter"><div class="gmap_canvas">	
-   <div id="map"></div></div></div>
-    <script>
-
-      var map;
-      var date_start = new Date('August 16 2019 21:00:00 GMT+0300');
-      var date_toshow  = new Date();
-
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 11,
-          center: {lat: 50.47558, lng:  30.570} // lng это лево право
-        });
-
- 		kmlLayerMap = new google.maps.KmlLayer({
-	 		url: ' https://danvoronov.com/ru/kyivnaskvoz/kml/nochnoi19.kmz', 
-	 		preserveViewport: true,
-	 		map: map
-	 	});
-
-	 	kmlLayerMap.addListener('click', function(kmlEvent) {
-		  var km = '', prefix = '';
-          if (parseFloat(kmlEvent.featureData.description) >= 0) {
-          	var km = kmlEvent.featureData.description;
-          
-          if (km == 0) {date_toshow.setTime(date_start.getTime() - (15*60*1000));    prefix = "Сбор до ";    }   
-          	else if (km > 1) {
-	          	prefix = 'Прогноз в ';	          	
-	          	if (km<19) minut = km*15;
-	          		else if (km<29) minut = km*16.5;
-	          			else minut = km*17;
-	          	if (km>7) minut = minut + 10;
-	          	if (km>13) minut = minut + 10;
-	          	if (km>22.7) minut = minut + 30;	          	
-	          	if (km>27) minut = minut + 15;	          	
-	          	date_toshow.setTime(date_start.getTime() + (minut*60*1000));   
-	         }                   
-          
-          var minutes = (date_toshow.getMinutes() < 10? '0' : '') + date_toshow.getMinutes();
-          kmlEvent.featureData.infoWindowHtml = '<div style="font-family: Roboto,Arial,sans-serif; font-size: small"><h3>'+kmlEvent.featureData.name+'</h3><p>'+prefix+date_toshow.getHours()+':'+minutes+'.</p></div>';
-          }
-          
-        });
-	 	
-	 	
-      }
-
-    </script>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA33-_N7A0WgbkCACA83IeqtcOK3iyXkEY&callback=initMap" async defer></script>	
+   <div id="map" role="region" aria-label="Маршрут прогулки на карте" data-route="../kml/2019-08-16.geojson" data-max-zoom="11"></div></div></div>
 
 </body>
 </html>

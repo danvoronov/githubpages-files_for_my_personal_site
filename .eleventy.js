@@ -1,5 +1,7 @@
 const path = require("node:path");
-const MarkdownIt = require("markdown-it");
+const site = require("./eleventy/_data/site");
+const { markdown } = require("./eleventy/lib/updates");
+const { escapeHtml, applyExternalLinks } = require("./eleventy/lib/html");
 const { repairArticleArchive } = require("./eleventy/lib/article-archive");
 const { stripArchivedAnalytics } = require("./eleventy/lib/legacy-analytics");
 
@@ -30,14 +32,6 @@ const publicCopyOptions = {
   filter: (relativePath) => !relativePath.split("/").some((part) => part.startsWith("."))
 };
 
-function escapeHtml(value) {
-  return String(value ?? "")
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}
-
 function formatDateOnly(value) {
   if (typeof value !== "string" || value.length < 10) {
     return "";
@@ -57,33 +51,16 @@ function formatDateTime(value) {
     return formatDateOnly(value);
   }
 
-  return `<strong>${match[1]}</strong> <span style="color:#888;">${match[2]}:${match[3]}</span>`;
+  return `<strong>${match[1]}</strong> <span class="updates-time-clock">${match[2]}:${match[3]}</span>`;
 }
 
 module.exports = function (eleventyConfig) {
-  const md = new MarkdownIt({
-    html: true,
-    linkify: true,
-    typographer: true
+  eleventyConfig.setLibrary("md", markdown);
+  eleventyConfig.addWatchTarget("./updates-md/updates/");
+  eleventyConfig.addTransform("updates-external-links", function (html) {
+    if (!this.page.url?.startsWith("/updates/") || !this.page.outputPath?.endsWith(".html")) return html;
+    return applyExternalLinks(html, site.url);
   });
-
-  const defaultLinkOpen = md.renderer.rules.link_open || function (tokens, idx, options, env, self) {
-    return self.renderToken(tokens, idx, options);
-  };
-
-  md.renderer.rules.link_open = function (tokens, idx, options, env, self) {
-    const hrefIdx = tokens[idx].attrIndex("href");
-    if (hrefIdx >= 0) {
-      const href = tokens[idx].attrs[hrefIdx][1];
-      if (href && /^https?:\/\//i.test(href)) {
-        tokens[idx].attrSet("target", "_blank");
-        tokens[idx].attrSet("rel", "noopener");
-      }
-    }
-    return defaultLinkOpen(tokens, idx, options, env, self);
-  };
-
-  eleventyConfig.setLibrary("md", md);
 
   eleventyConfig.addPassthroughCopy({
     "updates-md/updates/assets": "updates/assets"
@@ -92,7 +69,8 @@ module.exports = function (eleventyConfig) {
     "eleventy/static/updates.css": "updates/styles.css"
   });
   eleventyConfig.addPassthroughCopy({
-    "eleventy/static/updates-search.js": "updates/search.js"
+    "eleventy/static/updates-search.js": "updates/search.js",
+    "eleventy/static/updates-navigation.js": "updates/navigation.js"
   });
   eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy(".nojekyll");
@@ -120,7 +98,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("urlencode", (value) => {
     return encodeURIComponent(String(value ?? ""));
   });
-  eleventyConfig.addFilter("absoluteUrl", (url, base = "https://danvoronov.com") => {
+  eleventyConfig.addFilter("absoluteUrl", (url, base = site.url) => {
     if (!url) {
       return "";
     }

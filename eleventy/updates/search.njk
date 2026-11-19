@@ -5,20 +5,20 @@ title: Пошук по оновленнях
 description: Пошук по архіву оновлень Дана Воронова.
 ---
 <div class="updates-post-nav">
-  <a href="/updates/" data-esc-back style="color: #DD4723"><b>&lt; назад (ESC)</b></a>  |   <span style="color:black">Оновлення · <a href="/updates/feed.xml" class="rss-link" style="color: #DD4723">RSS-стрічка</a></span>
+  <a href="/updates/" data-esc-back class="updates-link"><b>&lt; назад (ESC)</b></a>  |   <span class="updates-text">Оновлення · <a href="/updates/feed.xml" class="rss-link">RSS-стрічка</a></span>
 </div>
 
 <div class="prose">
-  <h1 style="padding: 15px 0;color:black">&#x2315; Пошук по оновленнях</h1>
-  <p style="color:black">
+  <h1 class="updates-search-title updates-text">&#x2315; Пошук по оновленнях</h1>
+  <p class="updates-text">
     Пошук по архіву оновлень. Шукайте за тегами, заголовками, іменами, посиланнями або фрагментами тексту.
   </p>
 
   <p>
-    <label for="updates-search-input" style="color:#666">Пошук:</label>
-    <input id="updates-search-input" type="search" placeholder="наприклад: geoguessr, ремnote, birthday, AI" style="font-size:16px;padding:8px;" autocomplete="off">
+    <label for="updates-search-input" class="updates-muted">Пошук:</label>
+    <input id="updates-search-input" type="search" placeholder="наприклад: geoguessr, ремnote, birthday, AI" autocomplete="off">
   </p>
-  <p id="updates-search-status" role="status" style="color:#666">Завантаження індексу...</p>
+  <p id="updates-search-status" role="status" class="updates-muted">Завантаження індексу...</p>
   <div id="updates-search-results"></div>
 </div>
 

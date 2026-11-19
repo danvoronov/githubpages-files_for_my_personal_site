@@ -4,6 +4,7 @@ const matter = require("gray-matter");
 const yaml = require("js-yaml");
 const { DateTime } = require("luxon");
 const MarkdownIt = require("markdown-it");
+const { escapeHtml } = require("./html");
 
 const updatesRoot = path.join(process.cwd(), "updates-md", "updates");
 const updatesTimeZone = "Europe/Kyiv";
@@ -68,34 +69,10 @@ markdown.block.ruler.before("paragraph", "youtube_video", (state, startLine, end
   if (silent) return true;
 
   const token = state.push("html_block", "", 0);
-  token.content = `<figure class="update-embed update-embed--youtube"><iframe src="https://www.youtube-nocookie.com/embed/${video.id}" title="YouTube video player" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><figcaption><a href="${escapeHtml(video.url)}" target="_blank" rel="noopener">${escapeHtml(video.url)}</a></figcaption></figure>\n`;
+  token.content = `<figure class="update-embed update-embed--youtube"><iframe src="https://www.youtube-nocookie.com/embed/${video.id}" title="YouTube video player" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><figcaption><a href="${escapeHtml(video.url)}">${escapeHtml(video.url)}</a></figcaption></figure>\n`;
   state.line = startLine + 1;
   return true;
 }, { alt: ["paragraph"] });
-
-const defaultLinkOpen = markdown.renderer.rules.link_open || function (tokens, idx, options, env, self) {
-  return self.renderToken(tokens, idx, options);
-};
-
-markdown.renderer.rules.link_open = function (tokens, idx, options, env, self) {
-  const hrefIdx = tokens[idx].attrIndex("href");
-  if (hrefIdx >= 0) {
-    const href = tokens[idx].attrs[hrefIdx][1];
-    if (href && /^https?:\/\//i.test(href)) {
-      tokens[idx].attrSet("target", "_blank");
-      tokens[idx].attrSet("rel", "noopener");
-    }
-  }
-  return defaultLinkOpen(tokens, idx, options, env, self);
-};
-
-function escapeHtml(value) {
-  return String(value)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}
 
 function normalizeSlashes(value) {
   return value.replace(/\\/g, "/");
@@ -461,5 +438,6 @@ function loadUpdates() {
 }
 
 module.exports = {
-  loadUpdates
+  loadUpdates,
+  markdown
 };

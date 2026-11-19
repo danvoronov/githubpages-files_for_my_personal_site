@@ -1,11 +1,12 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>#WHEREISMYGRANNY / #ГДЕМОЯБАБУЛЯ – Dan Voronov</title>
   <meta name="description" content="#WHEREISMYGRANNY perfomance by Dan Voronov. Перфоманс #ГДЕМОЯБАБУЛЯ, Дан Воронов. 18 марта 2018.">
   <meta name="author" content="Dan Voronov">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>  
+  <script src="/dan-files/js/lib/jquery-3.6.0.min.js"></script>
   <style>
 	  body {background-color: black; padding: 10px; margin: 0; font-family: sans-serif; color: black } 
 	  a { color: black}
@@ -29,6 +30,10 @@ color: rgba(140, 18, 100, 1); }
         height: 100%;
       }
   </style>	  
+  <link rel="stylesheet" href="/dan-files/maps/leaflet/leaflet.css">
+  <link rel="stylesheet" href="/dan-files/maps/project-map.css">
+  <script defer src="/dan-files/maps/leaflet/leaflet.js"></script>
+  <script defer src="/dan-files/maps/project-map.js"></script>
 </head>
 
 <body>
@@ -55,28 +60,7 @@ color: rgba(140, 18, 100, 1); }
 	<p><a href="https://www.facebook.com/events/349015648915371/" target="_blank">facebook event</a> </p>
 </div>
 	<div class="mapouter"><div class="gmap_canvas">	
-   <div id="map"></div></div></div>
-    <script>
-
-      var map;
-
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 16,
-          center: {lat: 50.499869, lng: 30.632933}
-        });
-
- 		new google.maps.KmlLayer({
-	 		url: 'http://danvoronov.com/prj/whereismygranny/lesn31.kmz', 
-	 		preserveViewport: true,
-	 		suppressInfoWindows: true,
-	 		map: map
-	 	});
-      }
-
-    </script>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA33-_N7A0WgbkCACA83IeqtcOK3iyXkEY&callback=initMap" async defer></script>	
+   <div id="map" role="region" aria-label="Performance route on a map" data-route="route.geojson" data-max-zoom="16" data-layout="left"></div></div></div>
 
 <script>	  
 	function changelang() {  $(".overbox-eng").hide();

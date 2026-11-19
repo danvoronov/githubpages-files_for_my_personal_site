@@ -1,11 +1,11 @@
 <!doctype html>
-<html>
+<html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>#КИЕВнасквозь – Дан Воронов</title>
   <meta name="description" content="Идем пешком сквозь Киев.">
   <meta name="author" content="Dan Voronov">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>  
   <style>
 	  body {background-color: #b1e3ad; padding: 10px; margin: 0; font-family: sans-serif; color: black } 
 	  a { color: black}
@@ -30,6 +30,10 @@ box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.3);
         height: 100%;
       }
   </style>	  
+  <link rel="stylesheet" href="/dan-files/maps/leaflet/leaflet.css">
+  <link rel="stylesheet" href="/dan-files/maps/project-map.css">
+  <script defer src="/dan-files/maps/leaflet/leaflet.js"></script>
+  <script defer src="/dan-files/maps/project-map.js"></script>
 </head>
 
 <body>
@@ -47,148 +51,7 @@ box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.3);
 	<p><a href="https://www.facebook.com/events/1678910312185096/" target="_blank">facebook ивент</a> </p>
 </div>
 	<div class="mapouter"><div class="gmap_canvas">	
-   <div id="map"></div></div></div>
-    <script>
-
-      var map;
-      var markers = [];
-      var markers_m = [];      
-      var marker;
-      var danPath;
-      var tocek = 0;
-      var date_start = new Date('April 16 2018 11:45:00 GMT+0300');
-      var date_toshow  = new Date();      
-      
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 11,
-          center: {lat: 50.45458, lng:  30.53521}
-        });
-
- 		kmlLayerMap = new google.maps.KmlLayer({
-	 		url: ' https://danvoronov.com/ru/kievpohod/2018-04-16/kml/pohod1604_net.kmz', 
-	 		preserveViewport: true,
-	 		map: map
-	 	});
-	 	
-	 	kmlLayerMap.addListener('click', function(kmlEvent) {
-		  var km = '', prefix = '';
-          if (parseFloat(kmlEvent.featureData.description) >= 0) {
-          	var km = kmlEvent.featureData.description;
-          
-          if (km == 0) date_toshow.setTime(date_start.getTime() - (15*60*1000));        
-          	else if (km > 0) {
-	          	prefix = km+' км. Прогноз в ';	          	
-	          	if (km<19) minut = km*15;
-	          		else minut = km*16.5;
-	          	if (km>10) minut = minut + 45;
-	          	if (km>=18) minut = minut + 15+40;	          	
-	          	date_toshow.setTime(date_start.getTime() + (minut*60*1000));   
-	         }     
-          
-          var minutes = (date_toshow.getMinutes() < 10? '0' : '') + date_toshow.getMinutes();
-          kmlEvent.featureData.infoWindowHtml = '<div style="font-family: Roboto,Arial,sans-serif; font-size: small"><h3>'+kmlEvent.featureData.name+'</h3><p>'+prefix+date_toshow.getHours()+':'+minutes+'.</p></div>';
-          // ono <div style="font-family: Roboto,Arial,sans-serif; font-size: small"><h3>Гонты ул</h3></div>
-          }
-          
-        });
-	 	
- 		new google.maps.KmlLayer({
-	 		url: ' https://danvoronov.com/ru/kievpohod/2018-04-16/kml/pohod1604_final.kmz', 
-	 		preserveViewport: true,
-	 		suppressInfoWindows: true,
-	 		map: map
-	 	});	 		 	
-
-		/* Change markers on zoom */
-		google.maps.event.addListener(map, 'zoom_changed', function() {
-		    var zoom = map.getZoom(); 
-//		    console.log(zoom);
-		    // iterate over markers and call setVisible
-		    for (i = 0; i < markers.length; i++) {
-		        markers[i].setVisible(zoom >= 14);
-		        markers_m[i].setVisible(zoom >= 16);		        
-		    }
-		});
-	 	
-		doAjax();
-      }
-
-	    var secwait = 60*5; 	    var route_id = 416; 	    var hui_id = 3233;
-
-
-	function doAjax() {		
-    $.ajax({
-        type: 'GET',
-        url: 'rec.php?route='+route_id+'&hui='+hui_id+'&after='+tocek,
-        success: function (jsonto) {
-            if (jsonto != 'wait') {
-	            	            
-              //  console.log(jsonto);
-                result = JSON.parse(jsonto);
-                
-                	if (tocek == 0) {
-	                	 new google.maps.Rectangle({
-				          strokeColor: '#FF0000',
-				          strokeOpacity: 0.8,
-				          strokeWeight: 2,
-				          fillColor: '#FF0000',
-				          fillOpacity: 0.35,
-				          map: map,
-				          bounds: {
-				            north: parseFloat(result[0]["lat"]) +0.0001,
-				            south: parseFloat(result[0]["lat"]) -0.0001,
-				            east: parseFloat(result[0]["lon"]) + 0.00016,
-				            west: parseFloat(result[0]["lon"]) - 0.00016
-				          }
-				        });
-				        new google.maps.Marker({
-				          position: new google.maps.LatLng(parseFloat(result[0]["lat"]), parseFloat(result[0]["lon"])),
-				          label: 'START 🚩',
-				          icon: {
-						      path: google.maps.SymbolPath.CIRCLE,
-						      scale: 0
-						    },
-				          map: map
-				        });
-	                	
-                	}
-                	                	
-                	for (var i = 0, len = result.length; i < len; i++) {
-			 						
-						
-						if(i>0){
-							var date = new Date(parseInt(result[i]["time"]));
-							
-							marker = new google.maps.Marker({
-					          position: new google.maps.LatLng(parseFloat(result[i]["lat"]), parseFloat(result[i]["lon"])),
-					          label: '🕓  '+date.getHours()+':'+ (date.getMinutes()<10?'0':'') + date.getMinutes(),
-							  icon: {
-							      path: google.maps.SymbolPath.CIRCLE,
-							      scale: 1
-							    },
-					          map: map,
-					          visible: false
-					        });
-	
-							if (i % 2 == 1)							
-								markers.push(marker);
-								else markers_m.push(marker);
-						}
-					}
-					
-			//		console.log('tocka - ' + tocek);
-					
-                
-            }  
-        }
-    });	
-
-	}
-
-</script>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA33-_N7A0WgbkCACA83IeqtcOK3iyXkEY&callback=initMap" async defer></script>	
+   <div id="map" role="region" aria-label="Маршрут прогулки на карте" data-route="kml/map.geojson" data-max-zoom="11"></div></div></div>
 
 </body>
 </html>

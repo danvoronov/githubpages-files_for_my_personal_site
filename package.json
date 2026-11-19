@@ -7,7 +7,9 @@
     "build": "bun scripts/run-eleventy.cjs",
     "build:full": "bun scripts/run-eleventy.cjs --copy-site-root",
     "serve": "bun scripts/run-eleventy.cjs --copy-site-root --serve",
-    "serve:updates": "bun scripts/run-eleventy.cjs --serve"
+    "serve:updates": "bun scripts/run-eleventy.cjs --serve",
+    "install:chromium": "playwright install chromium",
+    "check": "bun scripts/check-site.cjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
@@ -15,6 +17,8 @@
     "htmlparser2": "^7.2.0",
     "js-yaml": "^4.1.1",
     "luxon": "^3.7.2",
-    "markdown-it": "^14.1.0"
+    "markdown-it": "^14.1.0",
+    "parse-srcset": "1.0.2",
+    "playwright": "1.65.0"
   }
 }

@@ -1,0 +1,49 @@
+#map {
+  isolation: isolate;
+}
+
+.project-map-marker {
+  display: grid;
+  place-items: center;
+}
+
+.project-map-marker span {
+  width: 13px;
+  height: 13px;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px #0009;
+  background: #0288d1;
+}
+
+.project-map-error {
+  padding: 10px;
+  background: white;
+}
+
+@media (max-width: 850px) {
+  body .overbox,
+  body .overbox2,
+  body .overbox3,
+  body .overbox4,
+  body .overbox-eng,
+  body .overboxtxt {
+    position: static;
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+    padding: 5px;
+    margin: 0 0 8px;
+  }
+
+  body .overboxtxt {
+    font-size: clamp(21px, 6vw, 34px);
+    overflow-wrap: anywhere;
+  }
+
+  body .mapouter,
+  body .gmap_canvas {
+    width: 100%;
+    height: max(360px, 65vh);
+  }
+}
