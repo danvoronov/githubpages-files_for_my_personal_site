@@ -1,15 +1,49 @@
 <!DOCTYPE html>
-<html><head>
+<html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Dan Voronov. Personal site"><meta name="author" content="Dan Voronov">
-<script src="dan-files/js/lib/jquery-3.6.0.min.js"></script>
 <script src="dan-files/js/lib/d3.v4.min.js"></script> 
 <title>Dan Voronov ☀️ Дан Воронов</title> 
 <link rel="stylesheet" href="dan-files/css/graph.css">	
 <style type="text/css">
-    body { margin:0; padding:0; background-size: cover;
-        background-color: black;
-        background:url("dan-files/Milky_Way_Galaxy.jpg") no-repeat center center fixed;  
+    body { margin:0; padding:0;
+        background: black url("dan-files/Milky_Way_Galaxy.jpg") no-repeat center / cover fixed;
+        background-image: image-set(
+            url("dan-files/Milky_Way_Galaxy.webp") type("image/webp"),
+            url("dan-files/Milky_Way_Galaxy.jpg") type("image/jpeg")
+        );
+    }
+    .main-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px 16px;
+        padding: 10px 72px 0;
+        font: 600 14px/1.4 system-ui, sans-serif;
+    }
+    .main-links a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 32px;
+        padding: 0 5px;
+        color: #fdf9e7;
+        text-underline-offset: 3px;
+    }
+    .main-links a:focus-visible {
+        outline: 2px solid #fff;
+        outline-offset: 3px;
+    }
+    #graph {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 78vh;
+        height: 78svh;
+        min-height: 260px;
+        overflow: hidden;
+    }
+    #graph:empty {
+        display: none;
     }
     .subprojects-bar {
         position: fixed;
@@ -59,6 +93,16 @@
         user-select: none;
     }
     @media (max-width: 640px) {
+        body {
+            padding-bottom: 80px;
+            background-image: image-set(
+                url("dan-files/Milky_Way_Galaxy-960.webp") type("image/webp"),
+                url("dan-files/Milky_Way_Galaxy.jpg") type("image/jpeg")
+            );
+        }
+        .main-links {
+            padding: 44px 12px 0;
+        }
         .subprojects-bar {
             flex-direction: column;
             gap: 4px;
@@ -72,10 +116,21 @@
 </style>
 </head>
 <body>
-  <div id="graph"></div>
+  <nav class="main-links" id="mainNavigation" aria-label="Main navigation">
+    <a data-menu-id="1" href="educator/">Speaker &amp; Tutor</a>
+    <a data-menu-id="2" href="startups/">Startups &amp; Projects</a>
+    <a data-menu-id="3" href="studied/">Studied</a>
+    <a data-menu-id="4" href="art/">Art</a>
+    <a data-menu-id="5" href="now/">Now</a>
+    <a data-menu-id="6" href="articles/">Articles</a>
+    <a data-menu-id="7" href="updates/">Updates</a>
+    <a data-menu-id="21" href="https://danvoronov.notion.site/Portfolio-Dan-Voronov-161bb25a23f14cddbc3a00242592762b?pvs=74" target="_blank" rel="noopener">Portfolio</a>
+    <a data-menu-id="22" href="https://www.linkedin.com/in/danvoronov/" target="_blank" rel="noopener">LinkedIn</a>
+  </nav>
+  <div id="graph" aria-hidden="true"></div>
 
   <div class="subprojects-bar" role="navigation" aria-label="Subprojects">
-    <span class="subprojects-title" id="subprojectsLabel">my subprojects:</span>
+    <span class="subprojects-title" id="subprojectsLabel">Other projects:</span>
     <div class="subprojects-links">
       <a href="https://apps.danvoronov.com/" target="_blank" rel="noopener">apps.danvoronov.com</a>
       <span class="sep">•</span>
@@ -87,7 +142,7 @@
 
 <script src="menu.js"></script>
 <script src="dan-files/js/graph.js"></script>
-<script src="dan-files/js/ga.js"></script>
+<script src="dan-files/js/back-navigation.js"></script>
 <script>
 (function(){
   const getLang = () => localStorage.getItem('lang') || 'en';
@@ -133,13 +188,14 @@
   function applyLang(lang){
     const src = menuByLang(lang);
     const map = new Map(src.map(item => [item.id, item.txt]));
+    menuLinks.forEach((link, id) => {
+      const label = map.get(id).replace(/\n/g, ' ').replace(/^[^\p{L}]+/u, '');
+      link.textContent = label;
+    });
+    document.getElementById('mainNavigation').setAttribute('aria-label', lang === 'uk' ? 'Основна навігація' : 'Main navigation');
     if(window.graph && Array.isArray(graph.nodes)){
       graph.nodes.forEach(n => { if(map.has(n.id)) n.txt = map.get(n.id); });
-      if(window.d3){
-        applyMultilineLabels();
-      } else {
-        applyMultilineLabels();
-      }
+      applyMultilineLabels();
     }
     localStorage.setItem('lang', lang);
     const btn = document.getElementById('langToggle');
@@ -150,7 +206,7 @@
     document.documentElement.lang = (lang === 'uk') ? 'uk' : 'en';
     const subprojectsLabel = document.getElementById('subprojectsLabel');
     if(subprojectsLabel){
-      subprojectsLabel.textContent = (lang === 'uk') ? 'мої підпроєкти:' : 'my subprojects:';
+      subprojectsLabel.textContent = (lang === 'uk') ? 'мої підпроєкти:' : 'Other projects:';
     }
   }
   function ensureButton(){

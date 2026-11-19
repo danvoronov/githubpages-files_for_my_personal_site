@@ -1,21 +1,34 @@
-const fs = require("fs");
-const path = require("path");
+const path = require("node:path");
 const MarkdownIt = require("markdown-it");
+const { repairArticleArchive } = require("./eleventy/lib/article-archive");
+const { stripArchivedAnalytics } = require("./eleventy/lib/legacy-analytics");
 
-const projectRoot = __dirname;
-const copyLegacySiteRoot = process.env.ELEVENTY_COPY_SITE_ROOT === "true";
-const passthroughExcludes = new Set([
-  ".git",
-  ".github",
-  ".gitignore",
-  ".eleventy.js",
-  "_site",
-  "eleventy",
-  "updates-md",
-  "node_modules",
-  "package.json",
-  "package-lock.json"
-]);
+const copyFullSite = process.env.ELEVENTY_COPY_SITE_ROOT === "true";
+const publicSitePaths = [
+  "404.html",
+  "87",
+  "about",
+  "ai",
+  "art",
+  "articles",
+  "dan-files",
+  "dr",
+  "educator",
+  "index.html",
+  "lifechanging",
+  "menu.js",
+  "now",
+  "prj",
+  "ru",
+  "startups",
+  "studied",
+  "worldviews"
+];
+const updatesTheme = "ru/dan-wpdata/themes/dan-kiev-ua";
+const publicCopyOptions = {
+  dot: false,
+  filter: (relativePath) => !relativePath.split("/").some((part) => part.startsWith("."))
+};
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -74,7 +87,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({
     "updates-md/updates/assets": "updates/assets"
-  });
+  }, publicCopyOptions);
   eleventyConfig.addPassthroughCopy({
     "eleventy/static/updates.css": "updates/styles.css"
   });
@@ -85,16 +98,20 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy(".nojekyll");
   eleventyConfig.addPassthroughCopy("CNAME");
 
-  // Keep local builds scoped to Eleventy output unless the full legacy site
-  // copy is explicitly requested for deploys.
-  if (copyLegacySiteRoot) {
-    for (const entry of fs.readdirSync(projectRoot, { withFileTypes: true })) {
-      if (passthroughExcludes.has(entry.name)) {
-        continue;
-      }
-
-      eleventyConfig.addPassthroughCopy(entry.name);
+  if (copyFullSite) {
+    for (const publicPath of publicSitePaths) {
+      eleventyConfig.addPassthroughCopy(publicPath, publicCopyOptions);
     }
+    eleventyConfig.on("eleventy.after", ({ directories, outputMode }) => {
+      if (outputMode !== "fs") return;
+      repairArticleArchive(directories.output);
+      stripArchivedAnalytics(path.join(directories.output, "prj", "kievpohod"));
+    });
+  } else {
+    for (const stylesheet of ["style.css", "reset.css", "styles/default.css", "custom.css"]) {
+      eleventyConfig.addPassthroughCopy(`${updatesTheme}/${stylesheet}`);
+    }
+    eleventyConfig.addPassthroughCopy("dan-files/i/dan_doska_4site.jpg");
   }
 
   eleventyConfig.addFilter("readableDate", formatDateOnly);

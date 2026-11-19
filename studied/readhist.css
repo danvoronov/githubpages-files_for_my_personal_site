@@ -21,7 +21,8 @@ progress {opacity: 0.4;}
 }
 
 #infos{
-	width: 100%;
+	flex: 1;
+	min-width: 0;
 	font-size: 0.7em;
 	text-align: left;
 	padding-left: 10px;
@@ -44,16 +45,27 @@ progress {opacity: 0.4;}
 	padding-top: 20px;
 }
 
-#panel input {
-	font-size: 1.3em;
-	width: 540px;
+#find {
+	display: flex;
+	gap: 6px;
+	min-width: 0;
+	margin: 0;
 }
+#flt_txt {
+	box-sizing: border-box;
+	width: min(400px, 32vw);
+	min-width: 0;
+	font-size: 16px;
+}
+#mobile-filters { display: none; }
 #panel {
 	background-color: #ff4381;
 	color: white;
 	display: flex;
 	text-align: center;
-	padding: 7px 0 12px;
+	align-items: start;
+	gap: 8px;
+	padding: 7px 10px 12px;
 	box-shadow: inset 1px -3px 20px -12px #4e0f6b;
 }
 
@@ -71,6 +83,7 @@ progress {opacity: 0.4;}
 #centerflex{
 	flex: 10;
 	flex-basis: 58%;
+	min-width: 0;
 }
 
 .hl{
@@ -94,16 +107,23 @@ progress {opacity: 0.4;}
 	text-align: left;
 }
 
-.lfftr:hover{ color: white;}
-.lfftr{
-	cursor: pointer;
-	padding-top: 10px;
+.lfftr, .rtftr {
+	display: block;
+	width: 100%;
+	border: 0;
+	background: none;
+	padding: 10px 0 0;
+	color: inherit;
+	font: inherit;
+	text-align: inherit;
 }
-.rtftr:hover{ color: white;}
-.rtftr{
-	cursor: pointer;
-	padding-top: 10px;
+.lfftr.bkg, .rtftr.bkg {
+	background-color: #4e0f6b;
+	padding: 12px;
+	text-align: center;
 }
+
+.lfftr:hover, .rtftr:hover { color: white; }
 .cur_cat {color: #edc06f; font-weight: bold; }
 .cur_year {color: #8cd2ff; font-weight: bold; }
 
@@ -129,6 +149,8 @@ progress {opacity: 0.4;}
     color: rgb(0, 0, 0,1);
     border: none;
     cursor: pointer;
+    background: transparent;
+    font-family: inherit;
     padding: 2px 6px;
     margin: 0 2px;
     font-weight: bold;
@@ -146,6 +168,7 @@ progress {opacity: 0.4;}
 }
 
 #reset_btn{
+	width: auto;
 	color: #ff4381;
 	box-shadow: 0px 0px 20px -10px #4e0f6b;
 }
@@ -158,15 +181,6 @@ progress {opacity: 0.4;}
 .flt {
 	padding: 8px 20px;
 	background-color: lightsalmon;	
-}
-
-.cattag{
-	font-size:0.8em;
-	border: darkviolet 1px solid;
-	 border-radius: 5px;
-	 padding: 1px 5px;
-	color: white;
-	background-color: #034a33;
 }
 
 #grid{
@@ -185,7 +199,9 @@ progress {opacity: 0.4;}
 .el{
 	padding: 5px;
 	margin:  5px;
-	width:  178px;
+	width: 178px;
+	min-width: 0;
+	overflow-wrap: anywhere;
 	border: 1px solid lightsalmon;
 	background-color: white;
 	border-radius: 6px;
@@ -219,6 +235,8 @@ progress {opacity: 0.4;}
 	text-align:center; 	
 }
 
+
+.book-cover { max-width: 100%; height: auto; }
 
 .gric img {
 	filter: opacity(60%);
@@ -264,4 +282,50 @@ progress {opacity: 0.4;}
   padding: 15px; /* Some padding */
   border-radius: 10px; /* Rounded corners */
   font-size: 18px; /* Increase font size */
+}
+
+@media (max-width: 820px) {
+	#content { display: block; }
+	#panel { flex-wrap: wrap; }
+	#infos { flex-basis: 100%; padding: 0; }
+	#find { flex: 1; }
+	#flt_txt { width: 100%; }
+	#panel button { min-height: 40px; }
+	.leftfilter, .rightfilter { display: none; }
+	#mobile-filters {
+		display: grid;
+		grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+		gap: 8px;
+		padding: 10px;
+		color: white;
+	}
+	#mobile-filters label {
+		display: grid;
+		gap: 4px;
+		min-width: 0;
+	}
+	#mobile-filters select {
+		width: 100%;
+		min-width: 0;
+		min-height: 40px;
+		font-size: 16px;
+	}
+	#filter > div {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 4px;
+	}
+	#filter button {
+		width: auto;
+		min-height: 32px;
+	}
+	.wrapper { padding: 12px; }
+	#grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, 132px), 1fr));
+		gap: 8px;
+	}
+	.el { width: auto; margin: 0; }
+	#scrllbtn { bottom: 12px; right: 12px; }
 }

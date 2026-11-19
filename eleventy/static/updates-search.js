@@ -2,6 +2,7 @@
   const input = document.getElementById("updates-search-input");
   const status = document.getElementById("updates-search-status");
   const resultsRoot = document.getElementById("updates-search-results");
+  const resultLimit = 60;
 
   if (!input || !status || !resultsRoot) {
     return;
@@ -46,14 +47,17 @@
     return score;
   }
 
-  function renderResults(items, query) {
+  function renderResults(items, query, total = 0) {
     if (!items.length) {
       resultsRoot.innerHTML = "";
       status.textContent = query ? "Нічого не знайдено." : "Введіть текст для пошуку по архіву.";
       return;
     }
 
-    status.textContent = `Знайдено записів: ${items.length}`;
+    const count = `Знайдено записів: ${total}.`;
+    status.textContent = total > items.length
+      ? `${count} Показано перші ${items.length}.`
+      : count;
     resultsRoot.innerHTML = items
       .map(
         (post) => `
@@ -75,7 +79,9 @@
 
   try {
     const response = await fetch("/updates/search.json");
+    if (!response.ok) throw new Error("Search index request failed");
     searchIndex = await response.json();
+    if (!Array.isArray(searchIndex)) throw new Error("Unexpected search index format");
   } catch (_error) {
     status.textContent = "Не вдалося завантажити індекс пошуку.";
     return;
@@ -100,12 +106,11 @@
           return right.score - left.score;
         }
 
-        return right.post.date.localeCompare(left.post.date);
-      })
-      .slice(0, 60)
-      .map((entry) => entry.post);
+        return Date.parse(right.post.date) - Date.parse(left.post.date);
+      });
 
-    renderResults(matches, query);
+    const visible = matches.slice(0, resultLimit).map((entry) => entry.post);
+    renderResults(visible, query, matches.length);
   }
 
   input.addEventListener("input", function () {

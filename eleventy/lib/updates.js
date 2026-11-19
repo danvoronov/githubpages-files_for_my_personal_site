@@ -1,9 +1,18 @@
 const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
+const yaml = require("js-yaml");
+const { DateTime } = require("luxon");
 const MarkdownIt = require("markdown-it");
 
 const updatesRoot = path.join(process.cwd(), "updates-md", "updates");
+const updatesTimeZone = "Europe/Kyiv";
+const frontMatterOptions = {
+  engines: {
+    // Keep YAML timestamps as written, including an explicit offset when present.
+    yaml: (source) => yaml.load(source, { schema: yaml.CORE_SCHEMA })
+  }
+};
 const markdown = new MarkdownIt({
   html: true,
   linkify: true,
@@ -177,7 +186,7 @@ function toAssetUrl(target) {
   }
 
   relativePath = resolveAssetFallback(relativePath);
-  return encodeURI(`/updates/${relativePath}`);
+  return encodeURI(`/updates/${relativePath}`).replace(/[?#]/g, encodeURIComponent);
 }
 
 // Rewrite bare/relative markdown image src via toAssetUrl (supports Obsidian bare names like "Pasted image.png")
@@ -278,6 +287,14 @@ function replaceEmbeds(rawContent, updatesBySlug, stack) {
 
 function replaceWikiLinks(rawContent) {
   return rawContent.replace(/\[\[([^|\]]+)(?:\|([^\]]+))?\]\]/g, (_match, target, label) => {
+    const normalized = normalizeSlashes(target.trim());
+    const isAssetPath = /^(?:\.\.?\/|\/)*assets\//.test(normalized);
+    const isAssetFilename = !normalized.includes("/") && getAssetFolderForExtension(path.extname(normalized));
+    if (isAssetPath || isAssetFilename) {
+      const linkText = label?.trim() || path.posix.basename(normalized);
+      return `[${linkText}](<${toAssetUrl(normalized)}>)`;
+    }
+
     const linkText = (label || target).trim();
 
     return `[${linkText}](${toWikiUrl(target)})`;
@@ -362,17 +379,31 @@ function findFirstImage(rawContent) {
   return null;
 }
 
+function normalizeUpdateDate(value, slug, filePath) {
+  const filenameDate = slug.replace(/^(\d{4}-\d{2}-\d{2})-(\d{2})-(\d{2})(?:_\d+)?$/, "$1T$2:$3");
+  const date = DateTime.fromISO(String(value ?? "").trim() || filenameDate, {
+    zone: updatesTimeZone,
+    setZone: true
+  });
+
+  if (!date.isValid) {
+    throw new Error(`Invalid update date in ${path.relative(process.cwd(), filePath)}: ${value ?? slug}`);
+  }
+
+  return date.toISO({ suppressMilliseconds: true });
+}
+
 function loadUpdates() {
   const files = walkMarkdownFiles(updatesRoot);
 
   const records = files
     .map((filePath) => {
       const fileContents = fs.readFileSync(filePath, "utf8");
-      const parsed = matter(fileContents);
+      const parsed = matter(fileContents, frontMatterOptions);
       const slug = path.basename(filePath, ".md");
       const rawTitle = parsed.data.title || slug;
       const title = normalizeDisplayTitle(rawTitle);
-      const date = typeof parsed.data.date === "string" ? parsed.data.date : slug;
+      const date = normalizeUpdateDate(parsed.data.date, slug, filePath);
       const sanitizedContent = sanitizeUpdateContent(parsed.content);
 
       return {
@@ -393,13 +424,7 @@ function loadUpdates() {
         sourcePath: normalizeSlashes(path.relative(process.cwd(), filePath))
       };
     })
-    .sort((left, right) => {
-      if (left.date === right.date) {
-        return right.slug.localeCompare(left.slug);
-      }
-
-      return right.date.localeCompare(left.date);
-    });
+    .sort((left, right) => Date.parse(right.date) - Date.parse(left.date) || right.slug.localeCompare(left.slug));
 
   const updatesBySlug = new Map(records.map((record) => [record.slug, record]));
 

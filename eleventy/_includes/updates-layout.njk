@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html>
-<head profile="http://gmpg.org/xfn/11">
+<html lang="uk">
+<head>
   {% set pageTitle = post.title if post else title %}
   {% set pageDescription = post.excerpt if post else (description or site.updatesDescription) %}
   {% set pageRelativeUrl = post.url if post else page.url %}
   {% set canonicalUrl = pageRelativeUrl | absoluteUrl(site.url) %}
   {% set pageImage = (post.imageUrl if (post and post.imageUrl) else (site.image or "/dan-files/i/dan_doska_4site.jpg")) | absoluteUrl(site.url) %}
   {% set siteTitle = ((pageTitle | htmlEscape | safe) ~ " | " ~ site.name) if pageTitle else site.name %}
-  <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ siteTitle }}</title>
   <meta name="description" content="{{ pageDescription | htmlEscape | safe }}">
 
@@ -36,7 +37,6 @@
   <link rel="icon" href="/favicon.ico">
   <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/updates/feed.xml" />
   <link rel="stylesheet" type="text/css" href="/ru/dan-wpdata/themes/dan-kiev-ua/style.css" media="screen" />
-  <link rel="stylesheet" type="text/css" href="/ru/dan-wpdata/themes/dan-kiev-ua/header.css" media="screen" />
   <link href="/ru/dan-wpdata/themes/dan-kiev-ua/styles/default.css" rel="stylesheet" type="text/css" />
   <link href="/ru/dan-wpdata/themes/dan-kiev-ua/custom.css" rel="stylesheet" type="text/css" />
   <style type="text/css">
@@ -95,6 +95,7 @@
       width: 100%;
       padding: 32px 32px 36px;
       line-height: 1.55;
+      overflow-wrap: anywhere;
     }
 
     #content.updates-shell .entry p {
@@ -145,6 +146,16 @@
 
     .prose > * {
       box-sizing: border-box;
+      max-width: 100%;
+    }
+
+    .prose pre {
+      overflow-x: auto;
+    }
+
+    .prose iframe,
+    .prose audio,
+    #updates-search-input {
       max-width: 100%;
     }
 
@@ -403,7 +414,7 @@
       }
 
       #content.updates-shell {
-        width: min(100vw - 16px, 1162px);
+        width: calc(100% - 16px);
         border-width: 8px;
       }
 

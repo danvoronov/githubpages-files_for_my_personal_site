@@ -47,10 +47,6 @@ graph.nodes.forEach(function(node) {
 	node.y = anchor.y;
 });
 
-$("#graph").css("width", "100%").css("height", "100vh")
-    .css("display", "flex").css("align-items", "center").css("justify-content", "center")
-    .css("overflow", "hidden");
-
 	var svg = d3.select("#graph").append("svg")
 		.attr("viewBox", `0 0 ${rad+60} ${rad+20}`)
 		.attr("width", "100%").attr("height", "100%")

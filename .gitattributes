@@ -1,0 +1,8 @@
+* text=auto eol=lf
+
+# Preserve existing mixed or CRLF blobs until they are deliberately normalized.
+art/index.html -text
+dan-files/css/showcase.css -text
+dan-files/js/bg.js -text
+educator/index.html -text
+startups/index.html -text

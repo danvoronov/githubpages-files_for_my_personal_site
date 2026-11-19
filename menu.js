@@ -11,19 +11,23 @@ const colorMap = {
 
 const menuItems = [
 	{ id: 0, group: 'm', radius: 350 },
-	{ id: 2, group: 'na', radius: 96, url: 'startups/' },
-	{ id: 1, group: 'na', radius: 92, url: 'educator/' },
-	{ id: 3, group: 'r', radius: 75, url: 'studied/' },
-	{ id: 4, group: 'a', radius: 65, url: 'art/' },
-	{ id: 5, group: 'n', radius: 45, url: 'now/' },
-	{ id: 6, group: 'b', radius: 60, url: 'articles/' },
-	{ id: 7, group: 'u', radius: 58, url: 'updates/' },
+	{ id: 2, group: 'na', radius: 96 },
+	{ id: 1, group: 'na', radius: 92 },
+	{ id: 3, group: 'r', radius: 75 },
+	{ id: 4, group: 'a', radius: 65 },
+	{ id: 5, group: 'n', radius: 45 },
+	{ id: 6, group: 'b', radius: 60 },
+	{ id: 7, group: 'u', radius: 58 },
 	{ id: 8, group: 'c', radius: 7 },
 	{ id: 9, group: 'c', radius: 7 },
 	{ id: 10, group: 'c', radius: 6 },
-	{ id: 21, group: 'c', radius: 15, url: 'https://danvoronov.notion.site/Portfolio-Dan-Voronov-161bb25a23f14cddbc3a00242592762b?pvs=74' },
-	{ id: 22, group: 'c', radius: 15, url: 'https://www.linkedin.com/in/danvoronov/' }
+	{ id: 21, group: 'c', radius: 15 },
+	{ id: 22, group: 'c', radius: 15 }
 ];
+
+const menuLinks = new Map(
+	Array.from(document.querySelectorAll('#mainNavigation a[data-menu-id]'), link => [Number(link.dataset.menuId), link])
+);
 
 const menuLabels = {
 	en: {
@@ -31,7 +35,7 @@ const menuLabels = {
 		1: '🗣 Speaker\n& Tutor',
 		2: '🔨 Startups\n& Projects',
 		3: '📚 Studied',
-		4: '🧪 ART',
+		4: '🧪 Art',
 		5: '⏳ Now',
 		6: '📝 Articles',
 		7: '✳️ Updates',
@@ -61,7 +65,10 @@ const menuLabels = {
 function buildMenu(locale) {
 	const labels = menuLabels[locale];
 	return menuItems.map(function(item) {
-		return Object.assign({}, item, { txt: labels[item.id] || '' });
+		return Object.assign({}, item, {
+			txt: labels[item.id] || '',
+			url: menuLinks.get(item.id)?.getAttribute('href')
+		});
 	});
 }
 

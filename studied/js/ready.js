@@ -1,125 +1,119 @@
-var thisurl;
+const s = { rl: [], cat: "", yr: "", q: "", fix: "" };
 
-var s = {
-    rl: [],
-    cat: "",
-    yr: "",
-    q: "",
-    fix: ""
+const cat_click = ch_cat => redraw({ ch_cat });
+const yr_click = ch_yr => redraw({ ch_yr });
+
+function clearRoles() {
+    $("#filter button").removeClass("rl_active act_btn").attr("aria-pressed", "false");
+    $("#filter .roles").css("color", "");
 }
 
-const cat_click = ch_cat => redraw({ch_cat}) 
-const yr_click = ch_yr => redraw({ch_yr}) 
+function restoreFilters() {
+    const params = new URLSearchParams(location.search);
+    const category = params.get("cat");
+    const year = params.get("yr") || "";
+    const query = params.get("q") || "";
 
-function init(url_yr, url_cat, url_q, url_fix) {
+    s.cat = Object.hasOwn(cats_data, category)
+        ? category
+        : Object.keys(cats_data).find(key => cats_data[key] === category) || "";
+    s.yr = /^\d{1,2}$/.test(year) ? year.padStart(2, "0") : "";
+    s.q = query.trim().toLowerCase();
+    s.fix = params.get("a") === "y" && s.yr ? "y" : s.cat ? "c" : s.yr ? "y" : "";
 
-    let c = Object.keys(cats_data).filter(k=>cats_data[k]===url_cat); 
-    s.cat = c[0]?c[0]:''
-    s.yr = url_yr?url_yr:''
-    s.q = url_q?url_q:''
-    if (url_q) { $("#flt_txt").val(url_q); return redraw({ch_txt:true}) }
-    
-    if (url_fix=='c') return redraw({ch_cat: s.cat})
-    if (url_fix=='y') return redraw({ch_yr:  s.yr })
-
-    redraw()  
-    
+    clearRoles();
+    $("#flt_txt").val(query);
+    redraw({ syncHistory: false, refreshRoleMatches: Boolean(s.q) });
 }
-
-
-function roli_upd() {
-    $('.roles').removeClass('rl_active')
-    $(".rl_btn").removeClass('act_btn')
-    $(this).addClass('act_btn')
-    $('.cl_'+$(this).attr('data')).addClass('rl_active')
-    redraw({ch_rl:true}) 
-}
-function filter_books_by_role(el) {
-    $('.roles').removeClass('rl_active')
-    $(".rl_btn").removeClass('act_btn')
-    $(el).addClass('rl_active')
-    redraw({ch_rl:true}) 
-}
-
-$(document).ready(async ()=>{   thisurl = new URL(location.toString()); 
-
-    init(getprm('yr'), getprm('cat'), getprm('q'), getprm('a')) 
-
-    for (root in roles_names){
-        let txt=`<div id="raw${root}" style="background-color: ${roles_colors[root]}; padding: 6px 12px; text-align: right">`
-        for (rl in roles[root]) txt+=` <span class="roles cl_${root}" id="${rl}" value="${rl}" onClick="filter_books_by_role(this)" title="${(roles[root][rl][1])?roles[root][rl][1]:''}">${roles[root][rl][0]}</span>`
-        $("#filter").append(txt+` &nbsp; <button class='rl_btn' data='${root}'>${roles_names[root]}</button></div>`) 
-    }    
-
-
-    $(".rl_btn").click(roli_upd);
-    $("#reset_btn").click(()=>{ 
-        $('.roles').css("color","").removeClass('rl_active')
-        $(".rl_btn").removeClass('act_btn')
-        $("#flt_txt").val(''); 
-        s.fix=''; s.cat=''; s.rl=[]; s.yr=''; s.q=''
-        redraw() 
-    }); 
-
-    document.onkeydown = (event) => {
-        
-        let keyCode = event.keyCode ? event.keyCode : event.which
-        if(keyCode == '27') {
-            event.preventDefault();
-            window.location.href = '../../'; //two level up
-        }
-        
-        // if(e.key === "ArrowLeft") $("#prev").click()
-        // if(e.key === "ArrowRight") $("#next").click()    
-    };
-
-    $('#flt_txt').keyup(function(e){    
-        var code = (e.keyCode ? e.keyCode : e.which);
-        if (code !== 13 && code !== 27) return  // 13 энтер 27 эскейп
-        e.preventDefault();
-    
-        if (code === 27) $("#flt_txt").val('')
-        s.q = $("#flt_txt").val().toLowerCase().trim()
-        $(".roles").css("color","").removeClass('rl_active')
-        $(".rl_btn").removeClass('act_btn')
-        redraw(s.q==''?{}:{ch_txt:true}) 
-    });
-
-
- 
-})
-
-const getprm = name=> decodeURIComponent((new RegExp('[?|&]'+name+'=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
 
 function setURL() {
-    var search_params = new URLSearchParams();
-
-    if($("#flt_txt").val()!='') search_params.set('q', $("#flt_txt").val());
-    if(s.yr) search_params.set('yr', +s.yr);
-    if(s.fix) search_params.set('a', s.fix);
-    if(s.cat && cats_data[s.cat]) search_params.set('cat', s.cat );
-
-    thisurl.search = search_params.toString();
-    window.history.pushState('s','DanBooks', thisurl.toString());
+    const url = new URL(location.href);
+    const filters = { q: $("#flt_txt").val().trim(), yr: s.yr, a: s.fix, cat: s.cat };
+    for (const [name, value] of Object.entries(filters)) {
+        if (value) url.searchParams.set(name, value);
+        else url.searchParams.delete(name);
+    }
+    if (url.href !== location.href) history.pushState(null, "", url);
 }
 
+function buildRoles() {
+    for (const [root, name] of Object.entries(roles_names)) {
+        const row = $("<div>").css({
+            backgroundColor: roles_colors[root],
+            padding: "6px 12px",
+            textAlign: "right"
+        });
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-var body = document.body,
-    html = document.documentElement,
-    mybutton = document.getElementById("scrllbtn");
+        for (const [id, [label, description]] of Object.entries(roles[root])) {
+            const button = $("<button>", {
+                type: "button",
+                class: "roles",
+                id,
+                title: description || "",
+                "aria-pressed": "false",
+                text: label
+            }).on("click", () => {
+                clearRoles();
+                button.addClass("rl_active").attr("aria-pressed", "true");
+                redraw({ ch_rl: true });
+            });
+            row.append(button, " ");
+        }
 
-var DOCheight = Math.max( body.scrollHeight, body.offsetHeight, 
-                       html.clientHeight, html.scrollHeight, html.offsetHeight );
-
-function scrollFunction() {
-  if (body.scrollTop >  DOCheight*.7 || html.scrollTop > DOCheight*.7) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
+        const group = $("<button>", {
+            type: "button",
+            class: "rl_btn",
+            "aria-pressed": "false",
+            text: name
+        }).on("click", () => {
+            clearRoles();
+            row.find(".roles").addClass("rl_active").attr("aria-pressed", "true");
+            group.addClass("act_btn").attr("aria-pressed", "true");
+            redraw({ ch_rl: true });
+        });
+        row.append(group);
+        $("#filter").append(row);
+    }
 }
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() { body.scrollTop = 0; html.scrollTop = 0; } 
+$(function () {
+    buildRoles();
+    restoreFilters();
+    window.addEventListener("popstate", restoreFilters);
+    $("#category-filter").on("change", event => cat_click(event.target.value));
+    $("#year-filter").on("change", event => yr_click(event.target.value));
+
+    $("#find").on("submit", event => {
+        event.preventDefault();
+        s.q = $("#flt_txt").val().trim().toLowerCase();
+        clearRoles();
+        redraw({ ch_txt: true });
+    });
+    $("#reset_btn").on("click", () => {
+        clearRoles();
+        $("#flt_txt").val("");
+        Object.assign(s, { cat: "", yr: "", q: "", fix: "" });
+        redraw();
+    });
+
+    document.addEventListener("keydown", event => {
+        if (event.key !== "Escape") return;
+        event.preventDefault();
+        if (event.target.id === "flt_txt") {
+            $("#flt_txt").val("");
+            s.q = "";
+            clearRoles();
+            redraw();
+        } else {
+            location.href = "../";
+        }
+    });
+    window.addEventListener("scroll", () => {
+        const pageHeight = document.documentElement.scrollHeight;
+        $("#scrllbtn").toggle(window.scrollY > pageHeight * .7);
+    }, { passive: true });
+});
+
+function topFunction() {
+    window.scrollTo(0, 0);
+}
