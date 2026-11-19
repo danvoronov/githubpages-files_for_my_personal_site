@@ -33,6 +33,12 @@
         outline: 2px solid #fff;
         outline-offset: 3px;
     }
+    .main-menu {
+        position: relative;
+    }
+    .main-menu-toggle {
+        display: none;
+    }
     #graph {
         display: flex;
         align-items: center;
@@ -42,8 +48,33 @@
         min-height: 260px;
         overflow: hidden;
     }
-    #graph:empty {
+    #graph:empty,
+    #graph[hidden] {
         display: none;
+    }
+    @media (hover: hover) {
+        body:has(> #graph:not([hidden]) .nodes circle[cx]) .main-menu:not(:hover):not(:focus-within) .main-links {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+    @media (hover: none) {
+        body:has(> #graph:not([hidden]) .nodes circle[cx]) .main-menu-toggle {
+            display: block;
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            padding: 6px 10px;
+            min-height: 32px;
+            border: 0;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.85);
+            color: #111;
+            font: 600 12px/1.2 system-ui, sans-serif;
+        }
+        body:has(> #graph:not([hidden]) .nodes circle[cx]) .main-menu-toggle[aria-expanded="false"] + .main-links {
+            visibility: hidden;
+        }
     }
     .subprojects-bar {
         position: fixed;
@@ -116,17 +147,20 @@
 </style>
 </head>
 <body>
-  <nav class="main-links" id="mainNavigation" aria-label="Main navigation">
-    <a data-menu-id="1" href="educator/">Speaker &amp; Tutor</a>
-    <a data-menu-id="2" href="startups/">Startups &amp; Projects</a>
-    <a data-menu-id="3" href="studied/">Studied</a>
-    <a data-menu-id="4" href="art/">Art</a>
-    <a data-menu-id="5" href="now/">Now</a>
-    <a data-menu-id="6" href="articles/">Articles</a>
-    <a data-menu-id="7" href="updates/">Updates</a>
-    <a data-menu-id="21" href="https://danvoronov.notion.site/Portfolio-Dan-Voronov-161bb25a23f14cddbc3a00242592762b?pvs=74" target="_blank" rel="noopener">Portfolio</a>
-    <a data-menu-id="22" href="https://www.linkedin.com/in/danvoronov/" target="_blank" rel="noopener">LinkedIn</a>
-  </nav>
+  <div class="main-menu">
+    <button class="main-menu-toggle" type="button" aria-expanded="false" aria-controls="mainNavigation">Menu</button>
+    <nav class="main-links" id="mainNavigation" aria-label="Main navigation">
+      <a data-menu-id="1" href="educator/">Speaker &amp; Tutor</a>
+      <a data-menu-id="2" href="startups/">Startups &amp; Projects</a>
+      <a data-menu-id="3" href="studied/">Studied</a>
+      <a data-menu-id="4" href="art/">Art</a>
+      <a data-menu-id="5" href="now/">Now</a>
+      <a data-menu-id="6" href="articles/">Articles</a>
+      <a data-menu-id="7" href="updates/">Updates</a>
+      <a data-menu-id="21" href="https://danvoronov.notion.site/Portfolio-Dan-Voronov-161bb25a23f14cddbc3a00242592762b?pvs=74" target="_blank" rel="noopener">Portfolio</a>
+      <a data-menu-id="22" href="https://www.linkedin.com/in/danvoronov/" target="_blank" rel="noopener">LinkedIn</a>
+    </nav>
+  </div>
   <div id="graph" aria-hidden="true"></div>
 
   <div class="subprojects-bar" role="navigation" aria-label="Subprojects">
@@ -145,6 +179,10 @@
 <script src="dan-files/js/back-navigation.js"></script>
 <script>
 (function(){
+  const menuToggle = document.querySelector('.main-menu-toggle');
+  menuToggle.addEventListener('click', () => {
+    menuToggle.setAttribute('aria-expanded', String(menuToggle.getAttribute('aria-expanded') === 'false'));
+  });
   const getLang = () => localStorage.getItem('lang') || 'en';
   const menuByLang = (lang) => (lang === 'uk' ? (window.mainMenu_uk || window.mainMenu) : window.mainMenu);
   function applyMultilineLabels(){
@@ -193,6 +231,7 @@
       link.textContent = label;
     });
     document.getElementById('mainNavigation').setAttribute('aria-label', lang === 'uk' ? 'Основна навігація' : 'Main navigation');
+    menuToggle.textContent = lang === 'uk' ? 'Меню' : 'Menu';
     if(window.graph && Array.isArray(graph.nodes)){
       graph.nodes.forEach(n => { if(map.has(n.id)) n.txt = map.get(n.id); });
       applyMultilineLabels();
