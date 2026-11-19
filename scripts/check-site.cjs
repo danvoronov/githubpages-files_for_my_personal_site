@@ -12,7 +12,7 @@ const output = path.resolve(__dirname, "../_site");
 const productionHost = new URL(siteUrl).hostname;
 const urlAttributes = {
   a: ["href"], area: ["href"], link: ["href"], script: ["src"],
-  iframe: ["src"], img: ["src"], input: ["src"], source: ["src"],
+  iframe: ["src"], img: ["src", "data-lazy-src", "data-src"], input: ["src"], source: ["src"],
   audio: ["src"], video: ["src", "poster"], object: ["data"],
   embed: ["src"], track: ["src"], form: ["action"]
 };
@@ -186,6 +186,31 @@ async function checkStudied(page, baseUrl) {
   console.log("Checked Studied filters across reload, browser back, and a legacy link.");
 }
 
+async function checkRepairedLinks(page, baseUrl) {
+  for (const [oldPath, newPath] of [
+    ["/ru/2018/02/28/mozg-chto-i-zachem-ono-tut/", "/articles/2018/02/28/mozg-chto-i-zachem-ono-tut/"],
+    ["/readed/", "/studied/"],
+    ["/prj/", "/startups/"]
+  ]) {
+    const suffix = "?ref=legacy#archive";
+    await page.goto(baseUrl + oldPath + suffix);
+    await page.waitForURL(baseUrl + newPath + suffix);
+  }
+
+  await page.goto(baseUrl + "/ai/");
+  const email = page.locator(".contact-note a");
+  assert.equal(await email.getAttribute("href"), "mailto:" + (await email.innerText()).trim());
+
+  await page.goto(baseUrl + "/");
+  const menuToggle = page.locator(".main-menu-toggle");
+  await page.locator("#graph .nodes circle[cx]").first().waitFor({ state: "attached" });
+  await menuToggle.click();
+  await page.keyboard.press("Escape");
+  assert.equal(page.url(), baseUrl + "/");
+  assert.equal(await menuToggle.getAttribute("aria-expanded"), "false");
+  console.log("Checked legacy redirects, contact email, and Escape on the homepage.");
+}
+
 async function checkInChromium() {
   const server = Bun.serve({
     hostname: "127.0.0.1",
@@ -204,13 +229,14 @@ async function checkInChromium() {
   let browser;
   try {
     browser = await chromium.launch({ executablePath: process.env.CHROMIUM_EXECUTABLE_PATH });
-    const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
+    const page = await browser.newPage({ viewport: { width: 390, height: 844 }, hasTouch: true });
     const baseUrl = server.url.origin;
     await page.route("**/*", (route) => route.request().url().startsWith(baseUrl + "/")
       ? route.continue() : route.abort());
     await checkRss(page);
     await checkUpdates(page, baseUrl);
     await checkStudied(page, baseUrl);
+    await checkRepairedLinks(page, baseUrl);
   } finally {
     await browser?.close();
     server.stop(true);

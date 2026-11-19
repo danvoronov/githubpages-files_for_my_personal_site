@@ -1,5 +1,3 @@
-const fs = require("node:fs");
-const path = require("node:path");
 const { Parser } = require("htmlparser2");
 
 const analyticsUrl = /^(?:https?:)?\/\/(?:www\.)?google-analytics\.com\/analytics\.js(?:[?#]|$)/i;
@@ -42,14 +40,4 @@ function stripUniversalAnalytics(html) {
   return parts.join("");
 }
 
-function stripArchivedAnalytics(directory) {
-  for (const entry of fs.readdirSync(directory, { recursive: true, withFileTypes: true })) {
-    if (!entry.isFile() || !entry.name.endsWith(".html")) continue;
-    const file = path.join(entry.parentPath, entry.name);
-    const html = fs.readFileSync(file, "utf8");
-    const cleaned = stripUniversalAnalytics(html);
-    if (cleaned !== html) fs.writeFileSync(file, cleaned);
-  }
-}
-
-module.exports = { stripUniversalAnalytics, stripArchivedAnalytics };
+module.exports = { stripUniversalAnalytics };

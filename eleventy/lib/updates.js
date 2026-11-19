@@ -20,6 +20,30 @@ const markdown = new MarkdownIt({
   typographer: true
 });
 
+function headingId(text) {
+  return text.normalize("NFKC").toLowerCase().trim()
+    .replace(/[^\p{L}\p{N}\p{M}_-]+/gu, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+markdown.core.ruler.push("update_heading_ids", (state) => {
+  const usedIds = new Set();
+  for (const [index, token] of state.tokens.entries()) {
+    if (token.type !== "heading_open") continue;
+    const heading = state.tokens[index + 1];
+    const text = heading.children
+      .filter(({ type }) => ["text", "code_inline", "image"].includes(type))
+      .map(({ content }) => content).join("");
+    const base = headingId(text) || "heading";
+    let id = base;
+    for (let suffix = 2; usedIds.has(id); suffix += 1) {
+      id = `${base}-${suffix}`;
+    }
+    usedIds.add(id);
+    token.attrSet("id", id);
+  }
+});
+
 function youtubeVideoId(value) {
   if (!/^https?:\/\/\S+$/i.test(value)) return null;
 
@@ -122,6 +146,7 @@ function walkMarkdownFiles(dirPath) {
   const results = [];
 
   for (const entry of fs.readdirSync(dirPath, { withFileTypes: true })) {
+    if (entry.name.startsWith(".") || entry.name === "assets") continue;
     const fullPath = path.join(dirPath, entry.name);
 
     if (entry.isDirectory()) {
@@ -166,6 +191,15 @@ function toAssetUrl(target) {
   return encodeURI(`/updates/${relativePath}`).replace(/[?#]/g, encodeURIComponent);
 }
 
+function markdownAssetUrl(url) {
+  try {
+    return toAssetUrl(decodeURIComponent(url));
+  } catch (error) {
+    if (!(error instanceof URIError)) throw error;
+    return toAssetUrl(url);
+  }
+}
+
 // Rewrite bare/relative markdown image src via toAssetUrl (supports Obsidian bare names like "Pasted image.png")
 const defaultImageRule = markdown.renderer.rules.image || function (tokens, idx, options, env, self) {
   return self.renderToken(tokens, idx, options);
@@ -175,15 +209,17 @@ markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
   if (srcIdx >= 0) {
     const src = tokens[idx].attrs[srcIdx][1];
     if (src && !/^https?:\/\//i.test(src) && !src.startsWith("/") && !src.startsWith("data:")) {
-      tokens[idx].attrs[srcIdx][1] = toAssetUrl(src);
+      tokens[idx].attrs[srcIdx][1] = markdownAssetUrl(src);
     }
   }
   return defaultImageRule(tokens, idx, options, env, self);
 };
 
 function toWikiUrl(target) {
-  const [rawSlug] = target.split("#");
-  return toUpdateUrl(rawSlug.trim());
+  const [rawSlug, heading] = target.split("#", 2);
+  const slug = rawSlug.trim();
+  const id = heading ? headingId(heading) || "heading" : "";
+  return (slug ? toUpdateUrl(slug) : "") + (id ? "#" + encodeURIComponent(id) : "");
 }
 
 function preprocessObsidian(rawContent) {
@@ -191,7 +227,6 @@ function preprocessObsidian(rawContent) {
     .replace(/%%[\s\S]*?%%/g, "")
     .replace(/^\s*_?Reply to Telegram message ID:\s*\d+_?\s*$(?:\r?\n)?/gim, "")
     .replace(/^\s*_?Forwarded from:\s*.+_?\s*$(?:\r?\n)?/gim, "")
-    .trim()
     .replace(/\r?\n{3,}/g, "\n\n")
     .replace(/==([^=\n](?:.*?[^=\n])?)==/g, "<mark>$1</mark>");
 }
@@ -293,16 +328,28 @@ function replaceMarkdownImages(rawContent) {
     if (!url || /^https?:\/\//i.test(url) || url.startsWith("/") || url.startsWith("data:")) return _match;
     // Skip if url already looks like an absolute /updates/assets path
     if (url.startsWith("/updates/")) return _match;
-    const assetUrl = toAssetUrl(url);
+    const assetUrl = markdownAssetUrl(url);
     return `![${alt}](${assetUrl}${title})`;
   });
 }
 
 function renderUpdateMarkdown(rawContent, updatesBySlug, stack = []) {
-  const preprocessed = preprocessObsidian(rawContent);
-  const withEmbeds = replaceEmbeds(preprocessed, updatesBySlug, stack);
-  const withImages = replaceMarkdownImages(withEmbeds);
-  return markdown.render(replaceWikiLinks(withImages));
+  function convertObsidian(source) {
+    const preprocessed = preprocessObsidian(source);
+    const withEmbeds = replaceEmbeds(preprocessed, updatesBySlug, stack);
+    return replaceWikiLinks(replaceMarkdownImages(withEmbeds));
+  }
+
+  const lines = rawContent.split(/\r?\n/);
+  const codeBlocks = markdown.parse(rawContent, {}).filter((token) => token.type === "fence");
+  const parts = [];
+  let line = 0;
+  for (const { map: [start, end] } of codeBlocks) {
+    parts.push(convertObsidian(lines.slice(line, start).join("\n")), lines.slice(start, end).join("\n"));
+    line = end;
+  }
+  parts.push(convertObsidian(lines.slice(line).join("\n")));
+  return markdown.render(parts.filter(Boolean).join("\n"));
 }
 
 function stripMarkdown(rawContent) {
@@ -373,11 +420,18 @@ function normalizeUpdateDate(value, slug, filePath) {
 function loadUpdates() {
   const files = walkMarkdownFiles(updatesRoot);
 
+  const publishedSlugs = new Map();
   const records = files
-    .map((filePath) => {
+    .flatMap((filePath) => {
       const fileContents = fs.readFileSync(filePath, "utf8");
       const parsed = matter(fileContents, frontMatterOptions);
+      if (parsed.data.draft === true) return [];
       const slug = path.basename(filePath, ".md");
+      const sourcePath = normalizeSlashes(path.relative(process.cwd(), filePath));
+      if (publishedSlugs.has(slug)) {
+        throw new Error(`Duplicate Updates URL ${toUpdateUrl(slug)}: ${publishedSlugs.get(slug)} and ${sourcePath}`);
+      }
+      publishedSlugs.set(slug, sourcePath);
       const rawTitle = parsed.data.title || slug;
       const title = normalizeDisplayTitle(rawTitle);
       const date = normalizeUpdateDate(parsed.data.date, slug, filePath);
@@ -398,7 +452,7 @@ function loadUpdates() {
         imageUrl: findFirstImage(sanitizedContent),
         url: toUpdateUrl(slug),
         outputPath: toOutputPath(slug),
-        sourcePath: normalizeSlashes(path.relative(process.cwd(), filePath))
+        sourcePath
       };
     })
     .sort((left, right) => Date.parse(right.date) - Date.parse(left.date) || right.slug.localeCompare(left.slug));

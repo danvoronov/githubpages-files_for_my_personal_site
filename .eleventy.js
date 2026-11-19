@@ -1,9 +1,7 @@
-const path = require("node:path");
 const site = require("./eleventy/_data/site");
 const { markdown } = require("./eleventy/lib/updates");
 const { escapeHtml, applyExternalLinks } = require("./eleventy/lib/html");
 const { repairArticleArchive } = require("./eleventy/lib/article-archive");
-const { stripArchivedAnalytics } = require("./eleventy/lib/legacy-analytics");
 
 const copyFullSite = process.env.ELEVENTY_COPY_SITE_ROOT === "true";
 const publicSitePaths = [
@@ -83,7 +81,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.on("eleventy.after", ({ directories, outputMode }) => {
       if (outputMode !== "fs") return;
       repairArticleArchive(directories.output);
-      stripArchivedAnalytics(path.join(directories.output, "prj", "kievpohod"));
     });
   } else {
     for (const stylesheet of ["style.css", "reset.css", "styles/default.css", "custom.css"]) {

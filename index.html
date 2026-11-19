@@ -176,12 +176,17 @@
 
 <script src="menu.js"></script>
 <script src="dan-files/js/graph.js"></script>
-<script src="dan-files/js/back-navigation.js"></script>
 <script>
 (function(){
   const menuToggle = document.querySelector('.main-menu-toggle');
   menuToggle.addEventListener('click', () => {
     menuToggle.setAttribute('aria-expanded', String(menuToggle.getAttribute('aria-expanded') === 'false'));
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape' || menuToggle.getAttribute('aria-expanded') !== 'true') return;
+    event.preventDefault();
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.focus();
   });
   const getLang = () => localStorage.getItem('lang') || 'en';
   const menuByLang = (lang) => (lang === 'uk' ? (window.mainMenu_uk || window.mainMenu) : window.mainMenu);

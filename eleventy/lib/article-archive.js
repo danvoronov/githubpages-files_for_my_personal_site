@@ -5,7 +5,19 @@ const site = require("../_data/site");
 const { stripUniversalAnalytics } = require("./legacy-analytics");
 
 const siteHosts = new Set([new URL(site.url).hostname, "www.danvoronov.com"]);
+const oldSiteHosts = new Set(["dan.kiev.ua", "www.dan.kiev.ua"]);
+const archivePage = /^\/articles\/(?:\d{4}\/|category\/|tag\/).*\/index\.html$/;
 const archiveAliases = new Map([
+  ["/ru/", "/articles/"],
+  ["/prj/", "/startups/"],
+  ["/readed/", "/studied/"],
+  ["/prochital/", "/studied/"],
+  ["/ru/87/", "/87/"],
+  ["/articles/87/", "/87/"],
+  ["/kievpohod", "/prj/kievpohod/"],
+  ["/theater/", "/art/theater/"],
+  ["/soshenko33/", "/prj/soshenko33/"],
+  ["/whereismygranny/", "/prj/whereismygranny/"],
   ["/articles/blog/index.html", "/articles/"],
   ["/articles/ru/index.html", "/articles/"],
   ["/articles/2008/03/27/kyiv-minicamp-Март/index.html", "/articles/2008/03/27/kyiv-minicamp-march/"],
@@ -16,14 +28,13 @@ const archiveAliases = new Map([
   ["/ru/favicon.ico", "/favicon.ico"],
   ["/ru/files/NeTolkoOdinocestvo_SbornikRasskazov_(DanVoronov).pdf", "/dan-files/my/NeTolkoOdinocestvo_SbornikRasskazov_(DanVoronov).pdf"]
 ]);
-const educatorLegacyRoutes = [
-  "/ru/2018/06/05/dnevnikovost-kak-ya-vedu-dnevnik/",
-  "/ru/2013/06/12/myishlenie-tsikl-lektsiy-v-svobodnoy-shkole/",
-  "/ru/tag/lichnost/page/4/"
-];
-
 const unavailablePlugin = /^\/ru\/dan-wpdata\/plugins\/(?:accesspress-social-share|daves-wordpress-live-search|easy-fancybox|top-10)\//;
 const unavailableThemeFile = /^\/ru\/dan-wpdata\/themes\/dan-kiev-ua\/(?:header\.css|includes\/js\/(?:jquery\.easing\.min|loopedSlider)\.js)$/;
+const referenceAttributes = {
+  a: ["href"], link: ["href"], script: ["src"], iframe: ["src"],
+  img: ["src", "data-lazy-src", "data-src"], source: ["src"], video: ["src", "poster"],
+  audio: ["src"], embed: ["src"], object: ["data"]
+};
 
 function escapeAttribute(value) {
   return value.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
@@ -47,7 +58,7 @@ function removeMissingReference(tag, attributes, pathname) {
   );
 }
 
-function patchArticle(html, resolveReference) {
+function patchReferences(html, resolveReference) {
   const changes = [];
   let positions;
   let script;
@@ -57,7 +68,7 @@ function patchArticle(html, resolveReference) {
       positions = {};
     },
     onattribute(name, _value, quote) {
-      if ((name === "href" || name === "src") && quote !== undefined) {
+      if (quote !== undefined) {
         // For an unquoted value, the parser's end index points at its delimiter.
         positions[name] ??= [parser.startIndex, parser.endIndex + (quote === null ? 0 : 1)];
       }
@@ -66,20 +77,20 @@ function patchArticle(html, resolveReference) {
       const [start, end] = [parser.startIndex, parser.endIndex + 1];
       if (tag === "script") script = { start, end, src: attributes.src, remove: false };
 
-      if (tag !== "a" && tag !== "link" && tag !== "script") return;
-      const attr = tag === "script" ? "src" : "href";
-      if (!attributes[attr] || !positions[attr]) return;
-      const replacement = resolveReference(tag, attributes, attributes[attr]);
-      if (replacement === null) return;
+      for (const attr of referenceAttributes[tag] || []) {
+        if (!attributes[attr] || !positions[attr]) continue;
+        const replacement = resolveReference(tag, attributes, attributes[attr], attr);
+        if (replacement === null) continue;
 
-      if (replacement === false) {
-        if (tag === "script") script.remove = true;
-        else changes.push([start, end, ""]);
-        return;
+        if (replacement === false) {
+          if (tag === "script") script.remove = true;
+          else changes.push([start, end, ""]);
+          return;
+        }
+
+        const [from, to] = positions[attr];
+        changes.push([from, to, attr + '="' + escapeAttribute(replacement) + '"']);
       }
-
-      const [from, to] = positions[attr];
-      changes.push([from, to, attr + '="' + escapeAttribute(replacement) + '"']);
     },
     onclosetag(tag, implied) {
       if (tag !== "script" || implied || !script) return;
@@ -96,7 +107,7 @@ function patchArticle(html, resolveReference) {
 
   const segments = [];
   let offset = 0;
-  for (const [start, end, value] of changes) {
+  for (const [start, end, value] of changes.sort(([left], [right]) => left - right)) {
     segments.push(html.slice(offset, start), value);
     offset = end;
   }
@@ -122,14 +133,31 @@ function repairArticleArchive(output) {
     return hasFile(route.endsWith("/") ? route + "index.html" : route);
   }
 
+  function existingPath(route) {
+    if (!route) return null;
+    if (hasRoute(route)) return route;
+    return !route.endsWith("/") && hasRoute(route + "/") ? route + "/" : null;
+  }
+
   function replacementPath(route) {
     const alias = archiveAliases.get(route) || archiveAliases.get(pageRoute(route));
     if (alias) return alias;
+    if (/^\/(?:ru\/|articles\/)?kievpohod\/\d{4}-\d{2}-\d{2}\//.test(route)) {
+      return route.replace(/^\/(?:ru\/|articles\/)?kievpohod\//, "/prj/kyivnaskvoz/");
+    }
+    if (/^\/(?:ru\/|articles\/)?(?:kievpohod|kyivnaskvoz)\//.test(route)) {
+      return route.replace(/^\/(?:ru\/|articles\/)?/, "/prj/");
+    }
+    if (route.startsWith("/blog/")) {
+      const article = route.replace("/blog/", "/articles/");
+      return archiveAliases.get(article) || article;
+    }
     if (route.startsWith("/articles/wp-includes/")) return route.replace("/articles/", "/ru/dan-wpdata/");
     if (route.startsWith("/ru/dan-wpdata/wp-json/")) return route.replace("/ru/dan-wpdata/", "/articles/");
     if (route.startsWith("/ru/dan-files/")) return route.slice(3);
     if (route.startsWith("/ru/") && !route.startsWith("/ru/dan-wpdata/")) {
-      return route.replace("/ru/", "/articles/");
+      const article = route.replace("/ru/", "/articles/");
+      return archiveAliases.get(article) || article;
     }
     return null;
   }
@@ -137,43 +165,81 @@ function repairArticleArchive(output) {
   function registerRedirect(route, destination) {
     const from = pageRoute(route);
     const to = pageRoute(destination);
-    if (from.startsWith("/ru/") && from.endsWith("/") && to.endsWith("/")) {
+    if (from !== to && from.endsWith("/") && to.endsWith("/") && hasRoute(to)) {
       redirects.set(from, to);
     }
   }
 
-  for (const route of educatorLegacyRoutes) {
-    const destination = replacementPath(route);
-    if (hasRoute(destination)) registerRedirect(route, destination);
+  for (const [route, destination] of archiveAliases) {
+    registerRedirect(route, destination);
   }
 
-  const articles = path.join(root, "articles");
-  for (const entry of fs.readdirSync(articles, { recursive: true, withFileTypes: true })) {
-    if (!entry.isFile() || !entry.name.endsWith(".html")) continue;
-
+  function repairPage(entry) {
     const filename = path.join(entry.parentPath, entry.name);
     const source = fs.readFileSync(filename, "utf8");
     const route = "/" + path.relative(root, filename).split(path.sep).join("/");
     const base = site.url + pageRoute(route);
 
-    const repaired = patchArticle(stripUniversalAnalytics(source), (tag, attributes, value) => {
+    const archived = stripUniversalAnalytics(source)
+      .replace(/<a\b[^>]*\bhref=["']https?:\/\/plus\.google\.com\/share\?[^"']*["'][^>]*>[\s\S]*?<\/a>/gi, "")
+      .replace(/<a\b[^>]*\bhref=["']https?:\/\/picasaweb\.google\.com(?:\.ua)?\/[^"']*["'][^>]*>([\s\S]*?)<\/a>/gi,
+        "$1 (альбом недоступен)");
+    const repaired = patchReferences(archived, (tag, attributes, value, attribute) => {
       if (tag === "a" && /^remnote\.com\/invite\//.test(value)) return "https://" + value;
 
       let url;
       let pathname;
       try {
+        // The WordPress lazy-loader uses a transparent placeholder in src.
+        if (tag === "img" && attribute === "src" && value.includes("/1x1.trans.gif") &&
+            attributes["data-lazy-src"]) {
+          const lazyUrl = URL.parse(attributes["data-lazy-src"], base);
+          if (lazyUrl && oldSiteHosts.has(lazyUrl.hostname)) {
+            const localPath = replacementPath(decodeURIComponent(lazyUrl.pathname));
+            if (localPath && hasRoute(localPath)) {
+              return encodeURI(localPath) + lazyUrl.search + lazyUrl.hash;
+            }
+          }
+        }
         url = new URL(value, base);
-        if (!["http:", "https:"].includes(url.protocol) || !siteHosts.has(url.hostname)) return null;
+        if (!["http:", "https:"].includes(url.protocol)) return null;
         pathname = decodeURIComponent(url.pathname);
       } catch {
         return null;
       }
 
-      const replacement = replacementPath(pathname);
-      if (replacement && hasRoute(replacement)) {
-        registerRedirect(pathname, replacement);
+      if (tag === "link" && url.hostname === "feeds.feedburner.com" && pathname === "/DanKievUa") {
+        return false;
+      }
+
+      const oldHost = oldSiteHosts.has(url.hostname);
+      if (!oldHost && !siteHosts.has(url.hostname)) {
+        if (url.protocol === "http:" && (
+          /^lh\d+\.ggpht\.com$/.test(url.hostname) ||
+          (tag === "iframe" && url.hostname === "www.youtube.com") ||
+          (tag === "link" && url.hostname === "fonts.googleapis.com")
+        )) {
+          url.protocol = "https:";
+          return url.href;
+        }
+        return null;
+      }
+
+      let replacement = existingPath(replacementPath(pathname));
+      if (!replacement && oldHost && pathname !== "/") {
+        replacement = existingPath(pathname) || existingPath("/articles" + pathname);
+        if (!replacement && pathname.startsWith("/dan-wpdata/")) {
+          replacement = existingPath("/ru" + pathname);
+        }
+        if (!replacement && pathname.startsWith("/files/")) {
+          replacement = existingPath(archiveAliases.get("/ru" + pathname));
+        }
+      }
+      if (replacement) {
+        if (pathname.startsWith("/ru/")) registerRedirect(pathname, replacement);
         return encodeURI(pageRoute(replacement)) + url.search + url.hash;
       }
+      if (oldHost) return null;
       if (!hasRoute(pathname)) {
         return removeMissingReference(tag, attributes, pathname) ? false : null;
       }
@@ -186,6 +252,22 @@ function repairArticleArchive(output) {
     });
 
     if (repaired !== source) fs.writeFileSync(filename, repaired);
+  }
+
+  for (const directory of ["articles", "prj/kievpohod", "prj/kyivnaskvoz"]) {
+    for (const entry of fs.readdirSync(path.join(root, directory), { recursive: true, withFileTypes: true })) {
+      if (!entry.isFile() || !entry.name.endsWith(".html")) continue;
+      const route = "/" + path.relative(root, path.join(entry.parentPath, entry.name)).split(path.sep).join("/");
+      if (archivePage.test(route)) {
+        // These WordPress paths moved from /ru/ to /articles/ as a group.
+        registerRedirect(route.replace("/articles/", "/ru/"), route);
+      } else if (route.startsWith("/prj/") && route.endsWith("/index.html")) {
+        for (const prefix of ["/ru/", "/articles/"]) {
+          registerRedirect(route.replace("/prj/", prefix), route);
+        }
+      }
+      repairPage(entry);
+    }
   }
 
   for (const [from, to] of redirects) {
