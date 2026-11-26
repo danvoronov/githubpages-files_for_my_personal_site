@@ -7,11 +7,20 @@
       "devDependencies": {
         "@11ty/eleventy": "^3.1.2",
         "gray-matter": "^4.0.3",
+        "htmlparser2": "^7.2.0",
+        "js-yaml": "^4.1.1",
+        "luxon": "^3.7.2",
         "markdown-it": "^14.1.0",
+        "parse-srcset": "1.0.2",
+        "playwright": "1.65.0",
       },
     },
   },
   "packages": {
+    "playwright": ["playwright@1.65.0", "", { "dependencies": { "playwright-core": "1.65.0" }, "bin": { "playwright": "cli.js" } }, "sha512-F3AMWcR44qMBt4kq+6Kb6mX7bjGXshktKFOPULd7reED6ZJWevjbNRqysP7q+AATE9kdPEZBibex1BYsvpVoeA=="],
+
+    "playwright-core": ["playwright-core@1.65.0", "", { "bin": { "playwright-core": "cli.js" } }, "sha512-vNSKgH6YqtN7cdT/L334zo0a+YwkrpicyrHJlWWPIm/Q+Nn2SWInil01oT0mbu96U4GgoRtCYQD9CzJQgju+lA=="],
+
     "@11ty/dependency-tree": ["@11ty/dependency-tree@4.0.2", "", { "dependencies": { "@11ty/eleventy-utils": "^2.0.1" } }, "sha512-RTF6VTZHatYf7fSZBUN3RKwiUeJh5dhWV61gDPrHhQF2/gzruAkYz8yXuvGLx3w3ZBKreGrR+MfYpSVkdbdbLA=="],
 
     "@11ty/dependency-tree-esm": ["@11ty/dependency-tree-esm@2.0.4", "", { "dependencies": { "@11ty/eleventy-utils": "^2.0.7", "acorn": "^8.15.0", "dependency-graph": "^1.0.0", "normalize-path": "^3.0.0" } }, "sha512-MYKC0Ac77ILr1HnRJalzKDlb9Z8To3kXQCltx299pUXXUFtJ1RIONtULlknknqW8cLe19DLVgmxVCtjEFm7h0A=="],
